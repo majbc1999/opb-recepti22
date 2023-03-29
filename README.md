@@ -1,2 +1,4 @@
 # opb-recepti
-Samo preverjam kam mi bo to poslalo.
+
+## ER diagram
+![ER diagram](opb-recepti.png)
