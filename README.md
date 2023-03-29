@@ -1,4 +1,4 @@
 # opb-recepti
 
 ## ER diagram
-<img src="opb-recepti.png" width="128"/>
+![ER diagram](diagram/opb-recepti.png)
