@@ -1,270 +1,664 @@
-id_recepta,kategorija
-1,Appetizer
-1,Lunch
-1,School Lunch
-1,Snack
-2,Breakfast
-2,Brunch
-2,Dinner
-2,Lunch
-3,Dinner
-3,Lunch
-3,Side Dish
-8,Dinner
-10,Dinner
-10,Lunch
-11,Breakfast
-11,Brunch
-11,Dessert
-11,Snack
-12,Dinner
-13,Appetizer
-14,Appetizer
-14,Lunch
-15,Dinner
-16,Breakfast
-16,Brunch
-17,Dinner
-19,Dinner
-21,Appetizer
-21,Breakfast
-21,Brunch
-21,Side Dish
-25,Side Dish
-26,Side Dish
-27,Side Dish
-28,Dinner
-31,Appetizer
-35,Dinner
-35,Lunch
-36,Dinner
-37,Breakfast
-37,Brunch
-37,Dinner
-39,Dinner
-39,Lunch
-40,Dinner
-40,Lunch
-40,Salad
-41,Dessert
-43,Dinner
-43,Lunch
-44,Breakfast
-46,Breakfast
-46,Brunch
-51,Dinner
-52,Dinner
-54,Dinner
-54,Lunch
-56,Appetizer
-56,Dinner
-56,Lunch
-57,Dinner
-58,Dinner
-59,Dinner
-59,Lunch
-62,Dinner
-63,Breakfast
-63,Brunch
-65,Lunch
-66,Dinner
-67,Salad
-67,Side Dish
-72,Dinner
-73,Dinner
-74,Appetizer
-74,Dinner
-74,Lunch
-75,Dinner
-75,Lunch
-75,Meal Prep
-77,Breakfast
-77,Brunch
-77,Lunch
-78,Side Dish
-79,Lunch
-80,Dinner
-83,Dessert
-84,Dinner
-84,Lunch
-85,Dessert
-87,Salad
-90,Dinner
-90,Lunch
-91,Dinner
-91,Lunch
-91,Snack
-92,Dinner
-92,Lunch
-92,Meal Prep
-92,Side Dish
-94,Appetizer
-94,condiment
-94,Snack
-95,Side Dish
-96,Brunch
-96,Dessert
-96,Snack
-97,Lunch
-97,Salad
-98,Dinner
-100,Dinner
-101,Lunch
-101,Salad
-101,Side Dish
-102,Dinner
-102,Lunch
-104,Dinner
-104,Lunch
-106,Dinner
-106,Lunch
-107,Lunch
-107,Salad
-108,Appetizer
-108,Lunch
-109,Dinner
-109,Lunch
-110,Breakfast
-110,Meal Prep
-111,Dinner
-111,Side Dish
-112,Appetizer
-114,Breakfast
-114,Brunch
-114,Dinner
-114,Lunch
-115,Breakfast
-115,Brunch
-115,Dinner
-115,Lunch
-115,Meal Prep
-116,Dinner
-116,Lunch
-117,Dessert
-118,Breakfast
-119,Dinner
-119,Lunch
-120,Appetizer
-120,Dinner
-120,Lunch
-121,cookies
-121,Dessert
-121,Snack
-122,Dinner
-122,Lunch
-122,Salad
-124,Salad
-125,Dinner
-126,Dinner
-128,Dinner
-128,Lunch
-129,Breakfast
-129,Brunch
-129,Dinner
-129,Lunch
-129,Meal Prep
-133,Appetizer
-133,Snack
-135,Dinner
-135,Lunch
-136,Breakfast
-136,Meal Prep
-136,Snack
-139,Lunch
-139,Salad
-139,Side Dish
-141,Dinner
-141,Lunch
-142,Dinner
-143,Breakfast
-143,Lunch
-145,Dinner
-145,Lunch
-146,Dinner
-146,Lunch
-148,Dinner
-149,Dinner
-149,Lunch
-150,Dinner
-150,Lunch
-151,Breakfast
-151,Brunch
-151,Dessert
-152,Breakfast
-152,Brunch
-152,Meal Prep
-153,Dinner
-155,Side Dish
-156,cookies
-156,Dessert
-158,Side Dish
-160,Dessert
-161,Appetizer
-161,Side Dish
-162,Breakfast
-162,Brunch
-162,Meal Prep
-163,Dinner
-164,Breakfast
-164,Brunch
-165,Dessert
-166,Side Dish
-167,Dinner
-167,Lunch
-168,Lunch
-173,Dinner
-173,Lunch
-173,Meal Prep
-173,School Lunch
-173,Snack
-174,Brunch
-174,Dinner
-174,Lunch
-176,Side Dish
-178,Breakfast
-178,Brunch
-178,Dinner
-178,Lunch
-178,Meal Prep
-179,Dinner
-180,Dinner
-181,Dinner
-182,Appetizer
-182,Lunch
-182,School Lunch
-182,Snack
-184,Dinner
-184,Lunch
-184,Side Dish
-185,Appetizer
-185,Dinner
-185,Lunch
-186,Dinner
-186,Lunch
-186,Soup
-188,Side Dish
-189,Dessert
-190,Dinner
-191,Dinner
-193,Breakfast
-193,Brunch
-197,Dinner
-197,Lunch
-197,Meal Prep
-198,Dinner
-198,Lunch
-200,Side Dish
-203,Appetizer
-203,Side Dish
-204,Side Dish
-205,Dessert
-205,Snack
-208,Breakfast
-208,Brunch
-208,Dessert
-208,Snack
-209,Dinner
-210,Breakfast
-210,Brunch
-210,Dessert
-213,Dessert
+id_recepta,kategorija
+
+1,Dinner
+
+1, Lunch
+
+1, Meal Prep
+
+2,Dinner
+
+3,Dinner
+
+3, Lunch
+
+3, Salad
+
+4,Breakfast
+
+4, Brunch
+
+4, Snack
+
+5,Lunch
+
+5, Salad
+
+5, Side Dish
+
+6,Dinner
+
+7,Side Dish
+
+8,Breakfast
+
+9,Appetizer
+
+9, Dinner
+
+10,Lunch
+
+11,Dinner
+
+12,Breakfast
+
+14,Dessert
+
+16,Dessert
+
+18,Breakfast
+
+18, Brunch
+
+18, Dinner
+
+18, Lunch
+
+20,Lunch
+
+20, Meal Prep
+
+20, Salad
+
+21,Appetizer
+
+21, Breakfast
+
+21, Brunch
+
+21, Lunch
+
+21, Snack
+
+22,Lunch
+
+22, Salad
+
+23,Dinner
+
+23, Lunch
+
+24,Appetizer
+
+24, Side Dish
+
+25,Dinner
+
+26,Breakfast
+
+26, Brunch
+
+27,Dinner
+
+27, Lunch
+
+29,Dinner
+
+29, Lunch
+
+29, Soup
+
+30,Appetizer
+
+31,Lunch
+
+31, Salad
+
+32,Dinner
+
+33,Dinner
+
+34,Dinner
+
+36,Dinner
+
+37,Breakfast
+
+37, Meal Prep
+
+38,Dinner
+
+38, Soup
+
+39,Dinner
+
+40,Dinner
+
+40, Lunch
+
+41,Dinner
+
+41, Soup
+
+42,Soup
+
+43,Dinner
+
+43, Lunch
+
+43, Meal Prep
+
+44,Dinner
+
+45,Dinner
+
+46,Dinner
+
+47,Dinner
+
+49,Breakfast
+
+49, Brunch
+
+49, Meal Prep
+
+50,Appetizer
+
+51,Dessert
+
+51, Snack
+
+52,Appetizer
+
+53,Dinner
+
+53, Lunch
+
+54,Appetizer
+
+54, Dinner
+
+54, Lunch
+
+55,Lunch
+
+55, Salad
+
+56,Dinner
+
+57,Dinner
+
+57, Lunch
+
+58,Dinner
+
+58, Lunch
+
+58, Soup
+
+59,Appetizer
+
+60,Salad
+
+60, Side Dish
+
+61,Dinner
+
+61, Lunch
+
+62,Dinner
+
+62, Side Dish
+
+64,Breakfast
+
+65,Dinner
+
+66,Dinner
+
+66, Lunch
+
+66, Meal Prep
+
+67,Dinner
+
+67, Lunch
+
+67, Soup
+
+68,Salad
+
+69,Side Dish
+
+70,Dinner
+
+71,Dinner
+
+71, Lunch
+
+71, Soup
+
+72,Breakfast
+
+73,Dinner
+
+74,Dinner
+
+74, Lunch
+
+75,Dinner
+
+76,Dinner
+
+76, Lunch
+
+76, Salad
+
+77,Dinner
+
+77, Lunch
+
+78,Dinner
+
+78, Lunch
+
+78, Meal Prep
+
+79,Appetizer
+
+79, Dip
+
+80,Appetizer
+
+81,Breakfast
+
+81, Brunch
+
+82,Breakfast
+
+82, Brunch
+
+82, Meal Prep
+
+83,Dinner
+
+84,cookies
+
+84, Dessert
+
+85,Appetizer
+
+85, Dinner
+
+85, Lunch
+
+86,Dinner
+
+87,Appetizer
+
+87, Dinner
+
+87, Side Dish
+
+88,Dinner
+
+89,Breakfast
+
+89, Brunch
+
+90,Lunch
+
+90, Side Dish
+
+92,Dip
+
+93,Dinner
+
+94,Appetizer
+
+95,Side Dish
+
+96,Breakfast
+
+97,Appetizer
+
+97, Dinner
+
+98,Side Dish
+
+99,Dinner
+
+100,Breakfast
+
+101,Dinner
+
+101, Lunch
+
+101, Soup
+
+102,Dinner
+
+102, Side Dish
+
+103,Salad
+
+104,Dinner
+
+105,Side Dish
+
+105, thanksgiving side dish
+
+106,Side Dish
+
+107,Side Dish
+
+108,Side Dish
+
+109,Breakfast
+
+110,Dinner
+
+110, Soup
+
+111,Dinner
+
+111, Lunch
+
+111, Meal Prep
+
+111, School Lunch
+
+111, Snack
+
+112,Side Dish
+
+113,Sauce
+
+114,Dinner
+
+115,Dinner
+
+116,Appetizer
+
+116, Snack
+
+117,Side Dish
+
+118,Dinner
+
+118, Lunch
+
+119,Breakfast
+
+120,Breakfast
+
+120, Brunch
+
+121,Dinner
+
+121, Soup
+
+122,Dinner
+
+122, Lunch
+
+123,Dinner
+
+124,Dinner
+
+125,Dinner
+
+125, Lunch
+
+125, Salad
+
+125, Side Dish
+
+126,Appetizer
+
+126, Lunch
+
+126, School Lunch
+
+126, Snack
+
+127,Dinner
+
+128,Appetizer
+
+129,Side Dish
+
+130,main dish
+
+130, Side Dish
+
+131,Side Dish
+
+132,Dinner
+
+133,Breakfast
+
+133, Brunch
+
+133, Snack
+
+134,Breakfast
+
+134, Brunch
+
+135,Salad
+
+136,Dinner
+
+136, Soup
+
+137,Dinner
+
+137, Lunch
+
+138,Breakfast
+
+138, Brunch
+
+139,Dinner
+
+139, Lunch
+
+140,Breakfast
+
+140, Brunch
+
+142,Dinner
+
+143,Side Dish
+
+144,Breakfast
+
+145,Dinner
+
+145, Lunch
+
+145, Soup
+
+146,Dinner
+
+147,Breakfast
+
+147, Brunch
+
+147, Lunch
+
+148,Dinner
+
+149,Breakfast
+
+149, Snack
+
+150,Dinner
+
+150, Lunch
+
+151,Dinner
+
+151, Soup
+
+152,Appetizer
+
+152, Side Dish
+
+153,Dinner
+
+153, Lunch
+
+154,Side Dish
+
+155,Breakfast
+
+155, Brunch
+
+155, Lunch
+
+156,Breakfast
+
+156, Brunch
+
+157,Soup
+
+158,Appetizer
+
+158, Dinner
+
+158, Lunch
+
+159,BBQ Side dish
+
+159, Side Dish
+
+160,Side Dish
+
+160, Snack
+
+161,Lunch
+
+161, Salad
+
+162,Appetizer
+
+162, Dinner
+
+162, Lunch
+
+162, School Lunch
+
+163,Dinner
+
+163, Side Dish
+
+164,Breakfast
+
+164, Snack
+
+165,Dinner
+
+166,Dinner
+
+166, Lunch
+
+167,Dinner
+
+168,Breakfast
+
+169,Side Dish
+
+170,condiment
+
+171,Dinner
+
+172,Dinner
+
+174,Appetizer
+
+174, Dip
+
+174, Salad
+
+174, Side Dish
+
+175,Dip
+
+176,Dinner
+
+176, Lunch
+
+176, Side Dish
+
+177,Salad
+
+177, Side Dish
+
+178,Dinner
+
+178, Lunch
+
+179,Dinner
+
+180,Dinner
+
+181,Breakfast
+
+181, Dessert
+
+181, Snack
+
+182,Lunch
+
+182, Meal Prep
+
+182, Salad
+
+183,Dinner
+
+183, Lunch
+
+183, Salad
+
+184,Lunch
+
+184, Salad
+
+185,Breakfast
+
+185, Meal Prep
+
+185, Snack
+
+187,Dinner
+
+187, Lunch
+
+188,Dinner
+
+188, Lunch
+
+188, Salad
+
+189,Appetizer
+
+189, condiment
+
+189, Snack
+
+190,Dinner
+
+190, Lunch
+
+190, Salad
+
+191,Dinner
+
+191, Lunch
+
+192,Dinner
+
+192, Lunch
+
+192, Meal Prep
+
+192, Salad
+
+193,Breakfast
+
+193, Dessert
+
+193, Snack
+
