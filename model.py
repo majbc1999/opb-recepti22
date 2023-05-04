@@ -4,12 +4,12 @@ from dataclasses_json import dataclass_json
 @dataclass_json
 @dataclass
 
-class Recepti:
+class Recept:
     id: int = field(default=0)
+    ime: str = field(default='')
     st_porcij: int = field(default=0)
-    cas_kuhanja: int = field(default=0)
-    zahtevnost: int = field(default=1)
-    #datum_objave:  
+    cas_priprave: int = field(default=0)
+    cas_kuhanja: int = field(default=0) 
 
 @dataclass
 
@@ -29,7 +29,7 @@ class Sestavine:
 
 @dataclass
 
-class NutrienskaVrrednost:
+class NutrienstkaVrednost:
     id: int = field(default=0)
     mascobe : int = field(default=0)
     ogljikovi_hidrati : int = field(default=0)
