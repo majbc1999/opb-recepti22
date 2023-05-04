@@ -29,7 +29,7 @@ class Sestavine:
 
 @dataclass
 
-class Nutrienska_vr:
+class NutrienskaVrrednost:
     id: int = field(default=0)
     mascobe : int = field(default=0)
     ogljikovi_hidrati : int = field(default=0)
@@ -55,6 +55,6 @@ class Komentarji:
 @dataclass_json
 @dataclass
 
-class Tipi_receptov:
+class TipiReceptov:
     id: int = field(default=0)
     ime: str = field(default="")
