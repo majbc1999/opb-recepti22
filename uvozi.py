@@ -1,13 +1,12 @@
 import pandas as pd
 from pandas import DataFrame
 
-from Data.Database import Repo
-from Data.Modeli import *
+from Database import Repo
+from model import *
 from typing import Dict
 from re import sub
 import dataclasses
 
-from model import Recepti
 
 
 # Vse kar delamo z bazo se nahaja v razredu Repo.
@@ -25,8 +24,6 @@ def uvozi_recepte(pot):
 
     df = pd.read_csv(pot, sep=";",skiprows=[0], encoding="Windows-1250")
 
-    # Iz stolpcev razberemo katera leta imamo
-    recepti = dict()
     
     for row in df.itertuples():
         locena_vrstica = row.split(',')
@@ -44,8 +41,8 @@ def uvozi_recepte(pot):
         else:
             continue
         
-        recept = repo.dodaj_recept(
-            Recepti(
+        repo.dodaj_recept(
+            Recept(
                 ime=locena_vrstica[1],
                 st_porcij=locena_vrstica[6],
                 cas_priprave=locena_vrstica[2],
@@ -53,7 +50,51 @@ def uvozi_recepte(pot):
             )
         )
 
-       
+def uvozi_kategorije(pot):
+    df = pd.read_csv(pot, sep=";",skiprows=[0], encoding="Windows-1250")
+
+
+    for row in df.itertuples():
+        locena_vrstica = row.split(',')
+
+        repo.dodaj_kategorijo(
+
+            Kategorija(
+            ime = locena_vrstica[1],
+            )
+        )
+
+def uvozi_sestavine_receptov(pot):
+    df = pd.read_csv(pot, sep=";",skiprows=[0], encoding="Windows-1250")
+
+
+    for row in df.itertuples():
+        locena_vrstica = row.split(',')
+
+        repo.dodaj_sestavino(
+
+            SestavineReceptov(
+            id = locena_vrstica[0],
+            ime = locena_vrstica[1],
+            )
+        )
+
+
+def uvozi_postopke(pot):
+    df = pd.read_csv(pot, sep=";",skiprows=[0], encoding="Windows-1250")
+
+    #ne smemo lociti na vejice, saj se pojavijo tudi v povedih!
+    for row in df.itertuples():
+        locena_vrstica = row.split(',', 2)
+
+        repo.dodaj_postopek(
+
+            Postopek(
+            id = locena_vrstica[0],
+            st_koraka = locena_vrstica[1],
+            postopek = locena_vrstica[2],
+            )
+        )
 
 def uvozi_csv(pot, ime):
     """
@@ -78,37 +119,41 @@ def uvozi_csv(pot, ime):
 # Primeri uporabe. Zakomentiraj določene vrstice, če jih ne želiš izvajat!
     
 
-pot = "Data/cene.csv"
-
-
+pot = "obelani_podatki/recepti.csv"
+##pot = "obelani_podatki/kategorije.csv"
+##pot = "obelani_podatki/sestavine_receptov.csv"
+##pot = "obelani_podatki/postopki.csv"
 
 # Uvozi csv s cenami izdelkov v ločene (in povezane) entitete
 # Tabele morajo biti prej ustvarjene, da zadeva deluje
 
-# uvozi_cene(pot)
+uvozi_recepte(pot)
+##uvozi_kategorije(pot)
+##uvozi_sestavine_receptov(pot)
+##uvozi_postopke(pot)
 
 # Uvozi csv s cenami, le da tokar uvozi le eno tabelo, ki jo
 # predhodno še ustvari, če ne obstaja.
 
-# uvozi_csv(pot, "NovaTabela")
+uvozi_csv(pot, "NovaTabela")
 
 
 
-
+## A TO SPLOH RABVA? NE RAZUMM CIST KAJ DELA SPODNJA STVAR? USTVARJA NOVE KATEGORIJE?
 # S pomočjo generične metode dobimo seznam izdelkov in kategorij
 # Privzete nastavi
 
 # Dobimo prvih 100 izdelkov
-izdelki = repo.dobi_gen(Izdelek, skip=0, take=100)
+recepti = repo.dobi_gen(Recept, skip=0, take=100)
 
-t = repo.dobi_gen(IzdelekDto)
+t = repo.dobi_gen(ReceptPosSes)
 
 # Dobimo prvih 10 kategorij
-kategorije = repo.dobi_gen(KategorijaIzdelka)
+kategorije = repo.dobi_gen(Kategorija)
 
 # Dodamo novo kategorijo
 
-nova_kategorija = KategorijaIzdelka(
+nova_kategorija = Kategorija(
     oznaka="Nova kategorija"
 )
 
@@ -118,26 +163,26 @@ repo.dodaj_gen(nova_kategorija)
 # serial vrednosti iz baze in jo lahko uporabimo naprej.
 
 
-# Dodamo nov izdelek v to kategorijo
-novi_izdelek = Izdelek(
-    ime = 'Novi izdelek',
+# Dodamo nov recept v to kategorijo
+novi_recept = Recept(
+    ime = 'Novi recept',
     kategorija=nova_kategorija.id
 )
-repo.dodaj_gen(novi_izdelek)
+repo.dodaj_gen(novi_recept)
 
 
-# Dobimo izdelek z idjem 832
-izdelek = repo.dobi_gen_id(Izdelek, 832)
+# Dobimo recept z idjem 832
+recept = repo.dobi_gen_id(Recept, 832)
 
 # izdelku spremenimo ime in ga posodobimo v bazi
-izdelek.ime += " spremenjeno ime"
-repo.posodobi_gen(izdelek)
+recept.ime += " spremenjeno ime"
+repo.posodobi_gen(recept)
 
 
 
-# spremenimo seznam izdelkov in ga shranimo v bazo
+# spremenimo seznam receptov in ga shranimo v bazo
 
-for i in izdelki:
+for i in recepti:
     i.ime = f'({i.ime})'
 
-repo.posodobi_list_gen(izdelki)
+repo.posodobi_list_gen(recepti)

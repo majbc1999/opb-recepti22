@@ -17,11 +17,12 @@ import dataclasses
 T = TypeVar(
     "T",
     Recept,
+    ReceptPosSes,
     Postopek,
     Sestavine,
     NutrienstkaVrednost,
     Uporabnik,
-    TipiReceptov
+    Kategorija,
     )
 
 class Repo:
@@ -190,24 +191,21 @@ class Repo:
         if use_camel_case:
             col = self.camel_case(col)
         
-        match col_type:
-
-            case "int":
-                return f'"{col}" BIGINT{" PRIMARY KEY" if  is_key else ""}'
-            case "int32":
-                return f'"{col}" BIGINT{" PRIMARY KEY" if  is_key else ""}'
-         
-            case "int64":
-                return f'"{col}" BIGINT{" PRIMARY KEY" if  is_key else ""}'
-            case "float":
-                return f'"{col}" FLOAT'
-            case "float32":
-                return f'"{col}" FLOAT'
-            case "float64":
-                return f'"{col}" FLOAT'
-        
+        if col_type == "int":
+            return f'"{col}" BIGINT{" PRIMARY KEY" if  is_key else ""}'
+        elif col_type == "int32":
+            return f'"{col}" BIGINT{" PRIMARY KEY" if  is_key else ""}'
+        elif col_type == "int64":
+            return f'"{col}" BIGINT{" PRIMARY KEY" if  is_key else ""}'
+        elif col_type == "float":
+            return f'"{col}" FLOAT'
+        elif col_type == "float32":
+            return f'"{col}" FLOAT'
+        elif col_type == "float64":
+            return f'"{col}" FLOAT'
+        else:
         # če ni ujemanj stolpec naredimo kar kot text
-        return f'"{col}" TEXT{" PRIMARY KEY" if  is_key else ""}'
+            return f'"{col}" TEXT{" PRIMARY KEY" if  is_key else ""}'
     
     def df_to_sql_create(self, df: DataFrame, name: str, add_serial=False, use_camel_case=True) -> str:
         """
@@ -268,43 +266,33 @@ class Repo:
         self.cur.execute(sql_cmd)
         self.conn.commit()
 
-
-    def izdelki(self) -> List[IzdelekDto]: 
-        izdelki = self.cur.execute(
+    def recepti(self) -> List[ReceptPosSes]:
+        recepti = self.cur.execute(
             """
-            SELECT i.id, i.ime, k.oznaka FROM Izdelki i
-            left join KategorijaIzdelka k on i.kategorija = k.id
+            SELECT i.id, i.ime, i.st_porcij, i.cas_priprave, i.cas_kuhanja, 
+            i.postopek, j.sestavine FROM Recepti i left join Postopek k on i.postopek = k.id
+            FROM Recepti j left join SestavineReceptov s on j.sestavine = s.id
             """)
 
-        return [IzdelekDto(id, ime, oznaka) for (id, ime, oznaka) in izdelki]
-    
-    def cena_izdelkov(self) -> List[CenaIzdelkaDto]:
+        return [ReceptPosSes(id, ime, st_porcij, cas_priprave, cas_kuhanja, postopek, sestavine) for
+                (id, ime, st_porcij, cas_priprave, cas_kuhanja, postopek, sestavine) in recepti]
 
-        
-        self.cur.execute(
-            """
-            select c.id, i.id as izdelek_id, i.ime, k.oznaka, c.leto, c.cena from cenaizdelka c
-                left join izdelek i on i.id = c.izdelek_id
-                left join kategorijaizdelka k on k.id = i.kategorija;
-             """
-        )
-
-        return [CenaIzdelkaDto(id, izdelek_id, ime, oznaka, leto, cena) for (id, izdelek_id, ime, oznaka, leto, cena) in self.cur.fetchall()]
     
-    def dobi_izdelek(self, ime_izdelka: str) -> Izdelek:
-        # Preverimo, če izdelek že obstaja
+    
+    def dobi_recept(self, ime_recepta: str) -> Recept:
+        # Preverimo, če recept že obstaja
         self.cur.execute("""
-            SELECT id, ime, kategorija from Izdelek
+            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja from Recept
             WHERE ime = %s
-          """, (ime_izdelka,))
+          """, (ime_recepta,))
         
         row = self.cur.fetchone()
 
         if row:
-            id, ime, kategorija = row
-            return Izdelek(id, ime, kategorija)
+            id, ime, st_porcij, cas_priprave, cas_kuhanja = row
+            return Recept(id, ime, st_porcij, cas_priprave, cas_kuhanja)
         
-        raise Exception("Izdelek z imenom " + ime_izdelka + " ne obstaja")
+        raise Exception("Recept z imenom " + ime_recepta + " ne obstaja")
 
     
     def dodaj_recept(self, recept: Recept) -> Recept:
@@ -329,14 +317,14 @@ class Repo:
         return recept
 
 
-    def dodaj_kategorijo(self, kategorija: KategorijaIzdelka) -> KategorijaIzdelka:
+    def dodaj_kategorijo(self, kategorija: Kategorija) -> Kategorija:
 
 
         # Preverimo, če določena kategorija že obstaja
         self.cur.execute("""
-            SELECT id from KategorijaIzdelka
-            WHERE oznaka = %s
-          """, (kategorija.oznaka,))
+            SELECT id from Kategorija
+            WHERE ime = %s
+          """, (kategorija.ime,))
         
         row = self.cur.fetchone()
         
@@ -347,8 +335,8 @@ class Repo:
 
         # Če še ne obstaja jo vnesemo in vrnemo njen id
         self.cur.execute("""
-            INSERT INTO KategorijaIzdelka (oznaka)
-              VALUES (%s) RETURNING id; """, (kategorija.oznaka,))
+            INSERT INTO Kategorija (ime)
+              VALUES (%s) RETURNING id; """, (kategorija.ime,))
         self.conn.commit()
         kategorija.id = self.cur.fetchone()[0]
 
@@ -356,27 +344,57 @@ class Repo:
 
         return kategorija
     
-    def dodaj_ceno_izdelka(self, cena_izdelka: CenaIzdelka) -> CenaIzdelka:
 
-         # Preverimo, če določena kategorija že obstaja
+    def dodaj_postopek(self, postopek : Postopek) -> Postopek:
+
+        #ta pogoj mora preveriti ce obstaja postopek z dolocenim id in postopkom, saj bo vec postopkov 
+        #shranjenih pod isti id in vec istih pod razlicnega
         self.cur.execute("""
-            SELECT id, izdelek_id, leto, cena from CenaIzdelka
-            WHERE izdelek_id = %s and leto = %s
-          """, (cena_izdelka.izdelek_id, date(int(cena_izdelka.leto), 1, 1)))
+            SELECT id from Postopek
+            WHERE id = %s, ime = %s
+          """, (postopek.id, postopek.postopek))
         
         row = self.cur.fetchone()
-        if row:
-            cena_izdelka.id = row[0]
-            return cena_izdelka
         
-        # Dodamo novo ceno izdelka
+        if row:
+            postopek.id = row[0]
+            return postopek
 
+
+        # Če še ne obstaja jo vnesemo in vrnemo njen id
         self.cur.execute("""
-            INSERT INTO CenaIzdelka (izdelek_id, leto, cena)
-              VALUES (%s, %s, %s) RETURNING id; """, (cena_izdelka.izdelek_id, date(int(cena_izdelka.leto), 1, 1), cena_izdelka.cena,))
+            INSERT INTO Postopek (id, st_koraka, postopek)
+              VALUES (%s,, %s, %s) RETURNING id; """, (postopek.id, postopek.st_koraka, postopek.postopek))
         self.conn.commit()
 
-        cena_izdelka.id = self.cur.fetchone()[0]
-        return cena_izdelka
+
+    def dodaj_sestavino(self, sestavina : SestavineReceptov) -> SestavineReceptov:
+
+        #ta pogoj mora preveriti ce obstaja sestavina z dolocenim id in imenom, saj bo vec sestavin 
+        #shranjenih pod isti id in vec istih pod razlicnega
+        self.cur.execute("""
+            SELECT id from SestavineReceptov
+            WHERE id = %s, ime = %s
+          """, (sestavina.id, sestavina.ime,))
+        
+        row = self.cur.fetchone()
+        
+        if row:
+            sestavina.id = row[0]
+            return sestavina
+
+
+        # Če še ne obstaja jo vnesemo in vrnemo njen id
+        self.cur.execute("""
+            INSERT INTO SestavineReceptov (id, ime)
+              VALUES (%s, %s) RETURNING id; """, (sestavina.id, sestavina.ime))
+        self.conn.commit()
+    
+  
+  #Vprasanje:
+
+  ##sej se da joinat vec 'vsrtic' ene tabele, ce jih ima vec isti id?
+
+  #dodat moram se moznost spreminjanja receptov in brisanja
 
     
