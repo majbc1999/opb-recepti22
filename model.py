@@ -14,7 +14,7 @@ class Recept:
 @dataclass
 
 class ReceptPosSes:
-    id: int = field(default=0)
+    id_recepta: int = field(default=0)
     ime: str = field(default='')
     st_porcij: int = field(default=0)
     cas_priprave: int = field(default=0)
@@ -26,7 +26,7 @@ class ReceptPosSes:
 @dataclass
 
 class Postopek:
-    id: int = field(default=0)
+    id_recepta: int = field(default=0)
     st_koraka: int = field(default=0)
     postopek: str = field(default="")
 
@@ -34,8 +34,10 @@ class Postopek:
 @dataclass
 
 class SestavineReceptov:
-    id: int = field(default=0)
-    ime: list = field(default='')
+    id_recepta: int = field(default=0)
+    kolicina: str = field(default='')
+    enota: str = field(default='')
+    sestavina: list = field(default='')
 
 @dataclass_json
 @dataclass
@@ -51,7 +53,7 @@ class Sestavine:
 @dataclass
 
 class NutrienstkaVrednost:
-    id: int = field(default=0)
+    id_recepta: int = field(default=0)
     mascobe : int = field(default=0)
     ogljikovi_hidrati : int = field(default=0)
     kalorije : int = field(default=0)
@@ -79,3 +81,15 @@ class Komentarji:
 class Kategorija:
     id_recepta: int = field(default=0)
     kategorija: str = field(default="")
+
+@dataclass_json
+@dataclass
+class Kulinarika:
+    id_recepta: int = field(default=0)
+    kulinarika: str = field(default="")
+
+@dataclass_json
+@dataclass
+class Oznaka:
+    id_recepta: int = field(default=0)
+    oznaka: str = field(default="")
