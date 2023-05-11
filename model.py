@@ -27,7 +27,7 @@ class ReceptPosSes:
 
 class Postopek:
     id: int = field(default=0)
-    st_koraka = int = field(default=0)
+    st_koraka: int = field(default=0)
     postopek: str = field(default="")
 
 @dataclass_json
@@ -77,5 +77,5 @@ class Komentarji:
 @dataclass
 
 class Kategorija:
-    id: int = field(default=0)
-    ime: str = field(default="")
+    id_recepta: int = field(default=0)
+    kategorija: str = field(default="")
