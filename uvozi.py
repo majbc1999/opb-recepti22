@@ -22,45 +22,45 @@ def uvozi_recepte(pot):
     razred Repo za klic funkcij za uvoz v bazo.
     """
 
-    df = pd.read_csv(pot, sep=";",skiprows=[0], encoding="Windows-1250")
+    df = pd.read_csv(pot)
 
     
     for row in df.itertuples():
-        locena_vrstica = row.split(',')
-        if locena_vrstica[3] != 'mins' or locena_vrstica[3] != 'hr':
+        # row je seznam posamezne vrstice, ki se začne z indexom 1
+        if row[4] != 'mins' or row[4] != 'hr' or row[4] != 'hrs':
             print(row)
-        elif locena_vrstica[3] == 'hr':
-            locena_vrstica[2] = 60 * int(locena_vrstica[2])
+        elif row[4] == 'hr':
+            row[3] = 60 * int(row[3])
         else:
             continue
 
-        if locena_vrstica[5] != 'mins' or locena_vrstica[5] != 'hr':
+        if row[6] != 'mins' or row[6] != 'hr' or row[6] != 'hrs':
             print(row)
-        elif locena_vrstica[5] == 'hr':
-            locena_vrstica[4] = 60 * int(locena_vrstica[4])
+        elif row[6] == 'hr':
+            row[5] = 60 * int(row[5])
         else:
             continue
         
         repo.dodaj_recept(
             Recept(
-                ime=locena_vrstica[1],
-                st_porcij=locena_vrstica[6],
-                cas_priprave=locena_vrstica[2],
-                cas_kuhanja=locena_vrstica[4] 
+                ime=row[2],
+                st_porcij=row[7],
+                cas_priprave=row[3],
+                cas_kuhanja=row[5] 
             )
         )
 
 def uvozi_kategorije(pot):
-    df = pd.read_csv(pot, sep=";",skiprows=[0], encoding="Windows-1250")
+    df = pd.read_csv(pot)
 
 
     for row in df.itertuples():
-        locena_vrstica = row.split(',')
 
         repo.dodaj_kategorijo(
 
             Kategorija(
-            ime = locena_vrstica[1],
+            id_recepta = row[1],
+            kategorija = row[2]
             )
         )
 
@@ -119,23 +119,23 @@ def uvozi_csv(pot, ime):
 # Primeri uporabe. Zakomentiraj določene vrstice, če jih ne želiš izvajat!
     
 
-pot = "obelani_podatki/recepti.csv"
-##pot = "obelani_podatki/kategorije.csv"
+##pot = "obdelani-podatki/recepti.csv"
+pot = "obdelani-podatki/kategorije.csv"
 ##pot = "obelani_podatki/sestavine_receptov.csv"
 ##pot = "obelani_podatki/postopki.csv"
 
 # Uvozi csv s cenami izdelkov v ločene (in povezane) entitete
 # Tabele morajo biti prej ustvarjene, da zadeva deluje
 
-uvozi_recepte(pot)
-##uvozi_kategorije(pot)
+##uvozi_recepte(pot)
+uvozi_kategorije(pot)
 ##uvozi_sestavine_receptov(pot)
 ##uvozi_postopke(pot)
 
 # Uvozi csv s cenami, le da tokar uvozi le eno tabelo, ki jo
 # predhodno še ustvari, če ne obstaja.
 
-uvozi_csv(pot, "NovaTabela")
+#uvozi_csv(pot, "NovaTabela")
 
 
 

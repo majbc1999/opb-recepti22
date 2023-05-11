@@ -2,7 +2,7 @@
 import psycopg2, psycopg2.extensions, psycopg2.extras
 psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo problemov s šumniki
 
-from typing import List, TypeVar, Type, Callable
+from typing import List, TypeVar, Type
 from model import *
 from pandas import DataFrame
 from re import sub
@@ -274,6 +274,14 @@ class Repo:
             FROM Recepti j left join SestavineReceptov s on j.sestavine = s.id
             """)
 
+            # """ 
+            # SELECT i.id, i.ime, i.st_porcij, i.cas_priprave, i.cas_kuhanja, 
+            # j.id_recepta, j.st_koraka, j.korak
+            # k.id_recepta, k.kolicine, k.enota, k.sestavina FROM recepti i
+            # LEFT JOIN postopki j ON i.id = j.id_recepta
+            # LEFT JOIN sestavine_receptov ON i.id = k.id_recepta
+            # """
+
         return [ReceptPosSes(id, ime, st_porcij, cas_priprave, cas_kuhanja, postopek, sestavine) for
                 (id, ime, st_porcij, cas_priprave, cas_kuhanja, postopek, sestavine) in recepti]
 
@@ -299,8 +307,8 @@ class Repo:
 
         # Preverimo, če izdelek že obstaja
         self.cur.execute("""
-            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja from Recept
-            WHERE ime_recepta = %s
+            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja from recepti
+            WHERE ime = %s
           """, (recept.ime,))
         
         row = self.cur.fetchone()
@@ -310,7 +318,7 @@ class Repo:
 
         # Sedaj dodamo izdelek
         self.cur.execute("""
-            INSERT INTO Recept (ime, st_porcij, cas_priprave, cas_kuhanja)
+            INSERT INTO recepti (ime, st_porcij, cas_priprave, cas_kuhanja)
               VALUES (%s, %s, %s, %s) RETURNING id; """, (recept.ime, recept.st_porcij, recept.cas_priprave, recept.cas_kuhanja))
         recept.id = self.cur.fetchone()[0]
         self.conn.commit()
@@ -322,25 +330,22 @@ class Repo:
 
         # Preverimo, če določena kategorija že obstaja
         self.cur.execute("""
-            SELECT id from Kategorija
-            WHERE ime = %s
-          """, (kategorija.ime,))
+            SELECT id_recepta, kategorija from kategorije
+            WHERE id_recepta = %s AND kategorija = %s 
+          """, (kategorija.id_recepta, kategorija.kategorija,))
         
         row = self.cur.fetchone()
         
         if row:
-            kategorija.id = row[0]
+            kategorija.id_recepta = row[0]
             return kategorija
 
 
         # Če še ne obstaja jo vnesemo in vrnemo njen id
         self.cur.execute("""
-            INSERT INTO Kategorija (ime)
-              VALUES (%s) RETURNING id; """, (kategorija.ime,))
+            INSERT INTO kategorije (id_recepta, kategorija)
+              VALUES (%s, %s) """, (kategorija.id_recepta, kategorija.kategorija,))
         self.conn.commit()
-        kategorija.id = self.cur.fetchone()[0]
-
-        
 
         return kategorija
     
@@ -397,4 +402,66 @@ class Repo:
 
   #dodat moram se moznost spreminjanja receptov in brisanja
 
+    def brisi_recept(self, recept : Recept) -> List[Recept]:
+        # Preverimo, če recept obstaja. Če obstaja, izbrišemo vrstice z id-jem
+        # recepta, ki ga želimo zbrisati v vseh tabelah
+        self.cur.execute("""
+            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja from Recept
+            WHERE ime_recepta = %s
+          """, (recept.ime))
+        
+        row = self.cur.fetchone()
+
+        if row:
+            recept.id = row[0]
+            # Zbrišem v tabeli recepti
+            self.cur.execute("""
+            DELETE FROM recepti
+            WHERE id = %s
+            """, (recept.id))
+
+            # Za vsako od ostalih tabel izbrišem vrstice z ukazom spodaj
+            tabele = ['sestavine_receptov', 'oznake', 'nutrientske_vrednosti',
+                      'kategorije', 'kulinarike']
+            
+            for t in tabele:
+                self.cur.execute(("""
+                DELETE FROM %s
+                WHERE id_recepta = %s
+                """, (t, recept.id)))
+            
+
+
+
+            ## Če ne bo delalo s for zanko, je treba brisati iz vsake tabele posebej
+            ## Zbrišem v tabeli sestavine_receptov
+            #self.cur.execute(("""
+            #DELETE FROM sestavine_receptov
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+
+            ## Zbrišem v tabeli oznake
+            #self.cur.execute(("""
+            #DELETE FROM oznake
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+
+            ## Zbrišem v tabeli nutrientske_vrednosti
+            #self.cur.execute(("""
+            #DELETE FROM nutrientske_vrednosti
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+
+            ## Zbrišem v tabeli kategorije
+            #self.cur.execute(("""
+            #DELETE FROM kategorije
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+
+            ## Zbrišem v tabeli kulinarike
+            #self.cur.execute(("""
+            #DELETE FROM kulinarike
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+            
     
