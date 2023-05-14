@@ -62,13 +62,6 @@ class NutrienstkaVrednost:
 @dataclass_json
 @dataclass
 
-class Uporabnik:
-    id: int = field(default=0)
-    ime: str = field(default="")
-
-@dataclass_json
-@dataclass
-
 class Komentarji:
     id: int = field(default=0)
     avtor: str = field(default="")
@@ -83,6 +76,11 @@ class Kategorija:
     kategorija: str = field(default="")
 
 @dataclass_json
+
+class VseKategorije:
+    kategorija: str = field(default="")
+
+@dataclass_json
 @dataclass
 class Kulinarika:
     id_recepta: int = field(default=0)
@@ -93,3 +91,16 @@ class Kulinarika:
 class Oznaka:
     id_recepta: int = field(default=0)
     oznaka: str = field(default="")
+
+@dataclass_json
+@dataclass
+class Uporabnik:
+    username: str = field(default="")
+    role: str = field(default="")
+    password_hash: str = field(default="")
+    last_login: str = field(default="")
+
+@dataclass
+class UporabnikDto:
+    username: str = field(default="")
+    role: str = field(default="")

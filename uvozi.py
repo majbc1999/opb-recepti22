@@ -167,16 +167,11 @@ def uvozi_csv(pot, ime):
 
 ##pot = "obdelani-podatki/recepti.csv"
 ##pot = "obdelani-podatki/kategorije.csv"
-<<<<<<< HEAD
-##pot = "obelani-podatki/sestavine-receptov.csv"
-##pot = "obelani_podatki/postopki.csv"
-=======
 ##pot = "obdelani-podatki/sestavine-receptov.csv"
 ##pot = "obdelani-podatki/postopki.csv"
 ##pot = "obdelani-podatki/kulinarike.csv"
 ##pot = "obdelani-podatki/oznake.csv"
 pot = "obdelani-podatki/sestavine.csv"
->>>>>>> 297af3e797c4756f73f6cdfd7aeb1c908c518172
 
 # Uvozi csv s cenami izdelkov v ločene (in povezane) entitete
 # Tabele morajo biti prej ustvarjene, da zadeva deluje

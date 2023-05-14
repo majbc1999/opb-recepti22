@@ -285,7 +285,17 @@ class Repo:
 
         return [ReceptPosSes(id, ime, st_porcij, cas_priprave, cas_kuhanja, postopek, sestavine) for
                 (id, ime, st_porcij, cas_priprave, cas_kuhanja, postopek, sestavine) in recepti]
+    
 
+    def kategorije(self, skip: int = 0, take: int = 10) -> List[VseKategorije]:
+        self.cur.execute(
+            f"""
+            SELECT kategorija FROM Kategorija GROUP BY kategorija
+            limit {take}
+            offset{skip};
+            """
+        )
+        return [Kategorija(id_recepta, kategorija) for (id_recepta, kategorija) in self.cur.fetchall()]
     
     
     def dobi_recept(self, ime_recepta: str) -> Recept:
