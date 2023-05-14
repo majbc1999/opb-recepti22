@@ -1,902 +1,1804 @@
-ime,kalorije,kjoule,voda,proteini,ogljikovi hidrati,sladkor,mascobe,vlaknine
-Adzuki beans cooked,131,548,65.9,7.2,24.8,24.8,0.1,
-Agar-agar seaweed dried,365,1526,4.6,6.0,80.0,80.0,0.0,8.4
-Alaska pollak raw,75,314,81.5,16.7,0.0,0.0,0.8,0.0
-Alfalfa sprouted seeds raw ,43,181,87.9,4.1,3.9,3.9,0.7,2.4
-Almond oil,882,3687,0.2,0.0,0.0,0.0,99.8,0.0
-Almond paste,445,1860,15.0,10.0,43.5,43.5,24.5,6.0
-Almonds,583,2437,10.7,19.5,6.2,6.2,52.0,10.6
-Anchovy european raw,102,427,76.6,20.1,0.0,0.0,2.3,0.0
-Anise seed,425,1777,4.0,10.0,55.0,55.0,15.0,15.0
-Apple cider 5 % v/v,10,42,96.5,0.0,2.5,2.5,0.0,0.0
-Apple fresh,54,229,84.3,0.4,12.0,12.0,0.0,2.3
-Apple juice bottled unsweetened,42,180,88.4,0.1,10.5,10.5,0.0,0.0
-Apple pie Dutch,248,1036,48.5,4.2,35.0,35.0,9.8,1.5
-Applesauce canned sweetened,81,341,78.5,0.2,19.2,19.2,0.1,1.0
-Apricot canned no skin,74,310,80.3,0.5,17.0,17.0,0.1,1.1
-Apricot dried,274,1145,26.9,5.0,58.5,58.5,0.1,8.5
-Apricot fresh,60,252,83.4,1.4,11.5,11.5,0.4,2.3
-Arachide oil peanut,879,3674,0.5,0.0,0.0,0.0,99.5,0.0
-Artichokes harts,46,195,87.3,2.7,7.6,7.6,0.3,1.1
-Artichokes raw,52,218,85.5,2.4,9.5,9.5,0.1,1.5
-Arugula raw,13,58,95.0,1.3,1.0,1.0,0.2,1.5
-Asparagus white canned,22,94,93.3,1.9,3.2,3.2,0.1,0.5
-Asparagus white raw,17,73,94.1,1.9,1.3,1.3,0.2,1.5
-Avocados raw,188,790,70.4,2.6,1.5,1.5,18.1,6.4
-Bacon cured european-style raw,373,1559,47.0,18.0,0.0,0.0,34.0,0.0
-Bacon cured grilled,262,1095,60.7,15.8,0.2,0.2,22.3,0.0
-Bacon cured raw,399,1668,45.0,15.2,0.4,0.4,37.9,0.5
-Bacon pork,882,3687,0.1,0.2,0.0,0.0,99.7,0.0
-Bacon raw without skin,329,1375,53.2,16.7,0.0,0.0,29.1,0.0
-Bagels plain,313,1308,26.4,10.0,55.0,55.0,5.1,2.5
-Baklava Turkish pastry,464,1940,13.4,4.0,55.6,55.6,25.0,1.0
-Bamboo shoots raw,28,119,91.6,2.5,3.5,3.5,0.2,1.2
-Bananas fresh,86,363,76.8,1.2,18.8,18.8,0.2,2.0
-Barley flakes,386,1613,0.9,9.1,77.0,77.0,2.0,10.0
-Barley flour,301,1258,26.0,11.0,58.0,58.0,2.0,2.0
-Barley raw,333,1392,11.4,11.0,59.5,59.5,2.1,15.0
-Basil dried,308,1287,18.1,14.4,44.5,44.5,4.0,18.0
-Basil fresh,47,197,86.2,3.0,5.0,5.0,0.8,4.0
-Bass freshwater mixed species raw,87,366,80.0,15.0,0.0,0.0,3.0,0.0
-Beans butter/green cooked,24,103,89.5,2.5,3.6,3.6,0.0,3.4
-Beans butter/green raw,36,152,85.9,2.4,6.0,6.0,0.3,3.5
-Beans white cooked,114,480,65.9,7.5,14.5,14.5,0.6,10.5
-Beef chuck shoulder tender lean raw,110,461,74.3,22.6,0.0,0.0,2.1,0.0
-Beef chunks cooked,198,833,60.0,30.0,0.5,0.5,8.5,0.0
-Beef chunks raw,115,483,74.0,22.1,0.0,0.0,2.9,0.0
-Beef loin tip flaps raw,171,713,68.0,20.8,0.0,0.0,9.7,0.0
-Beef ribeye,146,613,70.0,22.8,0.2,0.2,6.0,0.0
-Beef ribeye prepared,199,836,61.8,26.0,1.0,1.0,10.2,0.0
-Beef roulade lean,154,648,69.7,21.0,0.8,0.8,7.5,0.0
-Beef shank meat,114,480,73.8,22.6,0.0,0.0,2.6,0.0
-Beef sirloin roulade,126,530,72.5,22.5,0.0,0.0,4.0,0.0
-Beef smoked lean,152,640,69.0,22.9,0.6,0.6,6.5,0.0
-Beef steak loin,116,488,73.0,23.7,0.0,0.0,2.3,0.0
-Beef tenderloin,126,528,72.1,21.5,0.0,0.0,4.4,0.0
-Beer no alcohol,15,64,95.2,0.3,3.5,3.5,0.0,0.0
-Beer pilsener 5 % v/v,42,175,93.0,0.5,3.0,3.0,0.0,0.0
-Beer strong more than 7 % v/v,52,220,88.0,0.7,3.8,3.8,0.0,0.0
-Beer white 5 % v/v,45,189,89.7,0.5,3.8,3.8,0.0,0.0
-Beet juice red,38,158,88.7,1.1,8.2,8.2,0.0,0.0
-Beetroot red cooked,34,143,89.2,1.4,5.8,5.8,0.0,2.6
-Beetroot red raw,43,183,86.9,2.0,7.0,7.0,0.2,2.9
-Bell pepper mixed varieties,26,109,91.5,1.0,4.5,4.5,0.0,2.0
-Beverage carbonated mixed varieties,42,178,88.5,0.0,10.5,10.5,0.0,0.0
-Beverage carbonated mixed varieties light,0,0,99.0,0.0,0.0,0.0,0.0,0.0
-Biscuit savoury average,521,2178,0.0,8.0,65.0,65.0,25.0,2.0
-Black beans raw,154,647,57.0,9.0,24.0,24.0,0.5,8.5
-Black currant,47,200,85.6,1.2,8.5,8.5,0.2,3.5
-Black pudding,374,1563,46.8,15.2,3.0,3.0,34.0,0.0
-Blackberries raw,58,243,83.1,1.2,8.5,8.5,1.0,5.2
-Bloater fried,234,983,60.0,23.0,0.0,0.0,16.0,0.0
-Bloater smoked,270,1128,55.3,22.5,0.0,0.0,20.2,0.0
-Bloater steamed,227,954,61.9,20.9,0.0,0.0,16.2,0.0
-Blueberries,75,316,77.1,0.6,14.5,14.5,0.2,6.6
-Bok choi raw,9,38,96.2,1.0,0.8,0.8,0.0,1.0
-Bonbon mixed varieties,461,1927,5.5,3.5,70.0,70.0,18.0,2.0
-Boursin cheese,410,1714,46.8,8.4,1.5,1.5,41.8,0.5
-Brains pork raw,122,513,79.4,10.6,0.0,0.0,9.0,0.0
-Brandy  45 % v/v,218,913,68.5,0.0,0.0,0.0,0.0,0.0
-Bratwurst,313,1308,50.6,22.4,1.5,1.5,24.5,0.0
-Brazil nuts,679,2838,6.8,14.0,4.5,4.5,67.0,6.7
-Bread Multi-Grain,262,1095,35.2,9.5,45.0,45.0,3.4,5.9
-Bread baguette white,283,1182,24.0,8.4,58.0,58.0,1.9,3.5
-Bread brown,256,1070,37.0,7.0,45.6,45.6,3.7,5.7
-Bread crumbs plain,383,1601,6.0,13.0,73.0,73.0,3.0,4.0
-Bread mix wheat and rye,220,922,43.7,6.7,41.5,41.5,1.6,5.5
-Bread pita white,267,1116,32.8,8.8,52.0,52.0,1.5,3.9
-Bread raisin,289,1208,35.0,6.3,46.0,46.0,8.0,3.7
-Bread raisin enriched,273,1141,35.4,6.8,49.0,49.0,4.6,3.2
-Bread rolls mixed varieties,299,1249,27.5,9.5,55.0,55.0,3.5,3.5
-Bread rolls regular,282,1178,33.2,8.5,50.0,50.0,4.5,2.8
-Bread rye dark,198,833,47.0,5.5,36.0,36.0,1.5,9.0
-Bread rye mixed varieties,242,1011,39.8,6.2,44.5,44.5,3.0,5.5
-Bread seven grain,266,1111,34.6,9.7,46.0,46.0,3.4,5.3
-Bread sourdough whole-wheat,206,864,46.4,7.5,35.4,35.4,2.0,7.7
-Bread sugarloaf,310,1295,25.0,7.0,54.4,54.4,7.2,2.4
-Bread toasted regular,370,1547,11.0,13.5,68.0,68.0,4.0,2.5
-Bread wheat,266,1111,34.3,8.2,48.8,48.8,3.0,4.7
-Bread white made with low fat milk,255,1065,38.8,9.2,45.0,45.0,3.5,2.5
-Bread white made with water,236,991,41.7,8.3,44.5,44.5,2.0,2.5
-Bread whole-wheat,246,1446,37.6,8.4,43.5,43.5,2.6,6.9
-Bream fish,115,484,77.0,16.5,0.0,0.0,5.5,0.0
-Broadbeans cooked,42,177,86.0,4.5,3.7,3.7,0.0,4.8
-Broadbeans raw,31,133,87.7,0.3,4.5,4.5,0.0,6.5
-Broccoli cooked,29,124,89.6,3.2,2.0,2.0,0.1,4.1
-Broccoli raw,29,125,90.0,3.3,2.0,2.0,0.2,3.5
-Brown beans cooked,110,462,63.7,7.6,18.1,18.1,0.7,8.9
-Brownie,484,2028,9.5,5.2,57.5,57.5,25.8,1.0
-Brussels sprouts cooked,25,108,87.8,3.0,3.4,3.4,0.0,4.8
-Brussels sprouts raw,37,155,85.5,3.8,4.2,4.2,0.5,4.0
-Buckwheat,358,1496,10.6,10.4,72.6,72.6,1.7,3.7
-Buckwheat flour,362,1513,10.0,10.8,69.9,69.9,2.7,5.6
-Bulgur,375,1574,6.5,9.5,80.0,80.0,1.0,2.0
-Burger vegetables Vegetarian,139,586,70.0,9.0,11.0,11.0,6.0,3.0
-Butter Cake Dutch ,516,2157,8.0,4.5,55.0,55.0,31.0,0.5
-Butter light,343,1434,58.0,2.8,1.2,1.2,37.0,0.0
-Butter unsalted,735,3072,14.1,0.7,0.7,0.7,82.5,0.0
-Butterfish,287,1200,56.5,18.5,0.0,0.0,24.0,0.0
-Buttermilk porridge groats,49,209,87.0,3.5,7.5,7.5,0.5,0.5
-Buttermilk sweetened,53,223,86.2,2.3,10.2,10.2,0.3,0.0
-Buttermilk unsweetened,32,133,91.0,2.5,4.5,4.5,0.4,0.0
-Cabbage Chinese pak choi raw,20,84,92.9,1.2,1.8,1.8,0.3,2.8
-Cabbage green savoy raw,46,194,86.4,4.3,3.2,3.2,0.9,4.2
-Cabbage oxheart raw,33,141,89.2,3.0,4.0,4.0,0.6,2.2
-Cabbage red canned,46,194,86.5,1.0,9.5,9.5,0.0,2.0
-Cabbage red cooked,18,78,93.2,1.2,2.4,2.4,0.0,2.2
-Cabbage red raw,26,112,91.3,1.5,3.5,3.5,0.2,2.5
-Cabbage savoy cooked boiled,30,127,91.2,1.2,2.8,2.8,1.0,2.8
-Cabbage white raw,27,117,91.0,1.5,3.8,3.8,0.2,2.5
-Cake fresh fruit topping,251,1049,51.2,3.5,30.7,30.7,12.5,1.1
-Cake gingerbread ready-to-eat,308,1287,23.4,3.3,67.7,67.7,1.7,2.9
-Cake pound,444,1856,18.5,7.5,47.0,47.0,25.0,1.0
-Cake pound prepared with butter,443,1852,17.8,6.5,50.0,50.0,24.1,0.6
-Cake sponge whipped cream topping,321,1341,43.4,5.0,30.0,30.0,20.2,0.4
-Campari bitter 25 % v/v,203,855,63.0,0.0,20.0,20.0,0.0,0.0
-Candied peel mixed varieties,307,1283,19.7,0.5,75.0,75.0,0.0,2.8
-Candy hard mixed varieties,385,1609,5.0,0.1,95.0,95.0,0.0,0.0
-Candy mixed varieties,398,1664,15.0,3.5,68.5,68.5,12.0,0.0
-Candy toffee mixed varieties,464,1940,7.2,3.1,69.5,69.5,19.2,0.0
-Candy tutti frutti,259,1082,29.0,2.0,56.5,56.5,0.0,11.5
-Capuchins shocker pea canned,104,438,70.9,6.5,14.0,14.0,1.0,6.6
-Caramel custard pudding,147,617,67.0,3.5,23.0,23.0,4.5,0.0
-Carbonated beverage mixed varieties,41,170,88.0,0.0,10.0,10.0,0.0,0.0
-Carbonated beverages mixed varieties diet,7,30,97.2,0.0,1.8,1.8,0.0,0.0
-Carp raw,115,482,76.0,18.0,0.0,0.0,4.8,0.0
-Carrot juice canned,30,127,91.5,0.0,7.5,7.5,0.0,0.0
-Carrots baby raw,33,140,89.2,1.0,5.2,5.2,0.2,3.4
-Carrots cooked,27,116,90.6,0.8,4.7,4.7,0.0,2.9
-Cashew nuts raw,591,2470,4.0,18.5,22.5,22.5,46.5,7.5
-Cassava flour,350,1463,11.9,2.8,82.0,82.0,0.3,2.0
-Cassava raw,141,591,62.9,1.0,32.0,32.0,0.2,2.9
-Catfish cooked,132,554,70.5,25.0,0.0,0.0,3.5,0.0
-Cauliflower cooked,20,86,92.8,1.9,2.2,2.2,0.0,2.1
-Cauliflower raw,24,102,91.8,2.0,3.0,3.0,0.0,2.2
-Caviar black,273,1141,53.9,26.1,0.0,0.0,19.0,0.0
-Caviar-like imitation,120,504,77.0,15.5,0.0,0.0,6.5,0.0
-Cayenne pepper,371,1551,13.5,11.5,30.5,30.5,17.0,26.5
-Celeriac raw,31,133,86.6,2.0,5.0,5.0,0.4,5.0
-Celery leaves,12,51,94.2,1.0,2.0,2.0,0.0,1.8
-Celery raw,17,75,93.1,0.7,3.5,3.5,0.1,1.6
-Ceps porcini mushroom,20,84,93.4,2.5,0.0,0.0,0.6,2.5
-Champagne,76,318,97.0,0.3,1.3,1.3,0.0,0.0
-Chanterelle raw,19,81,92.4,2.1,1.1,1.1,0.0,3.4
-Chard swiss raw,23,98,90.5,1.8,3.5,3.5,0.2,2.0
-Cheddar cheese 50+,389,1626,40.9,25.4,0.5,0.5,32.2,0.0
-Cheese 10+ ,193,810,59.0,33.5,0.0,0.0,6.5,0.0
-Cheese 20+,235,988,55.0,32.0,0.0,0.0,12.0,0.0
-Cheese 30+,253,1057,56.0,26.5,0.0,0.0,16.5,0.0
-Cheese 40+,317,1325,48.5,26.9,0.0,0.0,23.6,0.0
-Cheese 45+,364,1522,44.0,25.5,0.0,0.0,29.5,0.0
-Cheese 48+,382,1597,41.5,24.5,0.0,0.0,32.0,0.0
-Cheese Brie 50+,338,1413,48.5,22.5,0.0,0.0,28.0,0.0
-Cheese Camenbert 30+,215,899,61.0,23.5,0.0,0.0,13.5,0.0
-Cheese Camenbert 45+,282,1178,54.7,21.0,0.0,0.0,22.3,0.0
-Cheese Danish blue,377,1576,46.0,19.0,0.0,0.0,34.0,0.0
-Cheese Edam 30+,250,1045,52.4,26.4,0.0,0.0,16.2,0.0
-Cheese Edam 40+,313,1308,45.5,26.1,0.0,0.0,23.4,0.0
-Cheese Fèta,252,1053,62.1,14.2,1.2,1.2,21.5,0.0
-Cheese Gorgonzola,354,1479,48.4,19.4,0.0,0.0,31.2,0.0
-Cheese Gouda 48+,390,1630,41.0,25.5,0.0,0.0,32.5,0.0
-Cheese Gouda smoked,311,1299,51.0,22.0,1.5,1.5,24.5,0.0
-Cheese Gruyère,411,1718,35.0,29.5,1.0,1.0,32.5,0.0
-Cheese Kernhemmer,423,1768,40.5,19.5,0.0,0.0,39.0,0.0
-Cheese Leerdammer 45+,367,1534,42.5,27.5,0.0,0.0,29.0,0.0
-Cheese Limburger 40+,269,1124,55.5,22.5,1.5,1.5,19.5,0.0
-Cheese Maaslander 48+,374,1563,43.3,24.7,0.0,0.0,31.0,0.0
-Cheese Port du salut,310,1295,53.0,20.0,0.0,0.0,26.0,0.0
-Cheese Provolone,346,1446,45.1,25.0,2.1,2.1,26.8,0.0
-Cheese Roquefort,359,1501,48.0,19.0,0.0,0.0,32.0,0.0
-Cheese Saint Paulin,333,1392,47.2,25.0,1.0,1.0,25.8,0.0
-Cheese Stilton,413,1726,39.5,23.5,0.0,0.0,36.0,0.0
-Cheese Swiss Emmenthaler 45+,379,1584,37.6,28.7,0.0,0.0,29.7,0.0
-Cheese Swiss mixed varieties,377,1576,38.7,28.9,3.6,3.6,27.8,0.0
-Cheese cottage,100,422,79.1,12.8,2.9,2.9,4.2,0.0
-Cheese cottage Hüttenkase,98,411,78.9,12.3,2.5,2.5,4.3,0.0
-Cheese creamed with walnuts,321,1341,53.4,13.7,3.4,3.4,28.5,0.0
-Cheese grated,217,909,55.5,35.0,0.0,0.0,8.5,0.0
-Cheese mascarpone,408,1705,47.8,5.0,4.2,4.2,42.0,0.0
-Cheese monterey,374,1563,43.0,24.6,0.7,0.7,30.7,0.0
-Cheese mozzarella,246,1446,56.9,20.0,4.6,4.6,16.5,0.0
-Cheese parmesan,422,1764,28.5,40.0,2.0,2.0,28.5,0.0
-Cheese puffs,565,2367,1.5,6.4,55.0,55.0,35.7,0.4
-Cheese ricotta whole milk,171,719,74.3,9.5,0.2,0.2,15.0,0.0
-Cheese sheep mixed varieties,301,1258,52.2,15.3,6.5,6.5,24.0,0.0
-Cheese spread Gouda 20 +,176,741,66.0,17.0,7.0,7.0,9.0,0.0
-Cheese spread Gouda 48 +,267,1116,58.5,17.0,2.0,2.0,21.5,0.0
-Cheese spread Gouda based,315,1316,48.3,18.2,9.5,9.5,23.0,0.0
-Cheese with cumin seeds,271,1132,57.3,20.0,0.1,0.1,21.5,0.1
-Cheeseburger,283,1189,44.8,14.0,26.5,26.5,13.5,0.2
-Cheeseburger vegetarian,258,1078,50.6,15.2,15.8,15.8,14.4,3.0
-Cheesecake,308,1292,45.3,5.4,28.6,28.6,19.2,0.5
-Cheesecake mixed varieties,241,1007,54.5,5.0,26.0,26.0,13.0,0.5
-Cherries red sour fresh,52,220,84.9,1.0,11.0,11.0,0.0,2.1
-Cherries red sweet fresh,54,228,84.9,0.5,12.0,12.0,0.1,1.5
-Chestnuts raw,188,789,51.5,4.0,35.0,35.0,2.0,6.5
-Chewing gum,284,1187,4.0,0.0,70.0,70.0,0.0,0.0
-Chewing gum sugarless,0,0,3.0,0.0,0.0,0.0,0.0,0.0
-Chiabatta,238,997,40.0,8.5,45.0,45.0,1.5,4.0
-Chicken breast meat only cooked,157,658,65.0,30.0,0.0,0.0,4.0,0.0
-Chicken breast meat only raw,100,420,75.3,22.8,0.0,0.0,0.9,0.0
-Chicken chops with peanut sauce,229,962,58.0,15.0,12.0,12.0,13.5,0.5
-Chicken leg meat and skin raw,103,435,76.1,20.6,0.0,0.0,2.3,0.0
-Chicken liver,132,554,71.3,22.5,1.0,1.0,4.2,0.0
-Chicken meat and skin raw,165,694,69.8,19.3,0.0,0.0,9.9,0.0
-Chicken meat only raw,138,581,72.2,20.5,0.0,0.0,6.3,0.0
-Chicken roulade,176,738,68.5,18.0,1.5,1.5,11.0,0.0
-Chickpeas cooked boiled,119,502,70.1,7.5,13.0,13.0,3.0,5.4
-Chickpeas dried raw,325,1358,18.0,20.0,48.0,48.0,3.5,9.5
-Chickpeas seeds green,155,652,61.5,7.5,22.0,22.0,3.0,5.0
-Chicory raw,13,58,95.1,1.3,1.1,1.1,0.2,1.3
-Chicory witloof cooked,14,61,94.8,1.2,1.9,1.9,0.0,1.1
-Chili peppers dried,366,1530,16.5,12.5,33.0,33.0,16.0,21.0
-Chili peppers pimento raw,31,132,91.2,0.9,5.8,5.8,0.5,0.6
-Chili powder,380,1588,12.5,12.0,32.0,32.0,17.5,25.0
-Chillies red fried,59,248,87.0,4.5,2.5,2.5,3.5,1.5
-Chinese cabbage cooked,19,81,92.7,1.0,2.5,2.5,0.0,2.8
-Chipolatapudding,228,958,57.3,5.2,24.0,24.0,12.5,0.0
-Chive fresh,58,246,84.4,3.6,8.5,8.5,0.7,1.8
-Chocolate dark 45-59% cacao solids,513,2144,10.6,5.3,49.0,49.0,33.0,1.1
-Chocolate milk,541,2261,2.1,9.2,55.0,55.0,31.5,1.2
-Chocolate milk beverage non-fat,68,285,82.9,3.5,12.0,12.0,0.6,0.0
-Chocolate milk beverage reduced fat,79,328,82.0,3.2,12.9,12.9,1.6,0.0
-Chocolate milk beverage whole,100,421,78.7,3.6,12.9,12.9,3.8,0.0
-Chocolate pudding ready-to-eat,105,441,76.3,3.2,16.0,16.0,3.0,0.5
-Chocolate spread dark,617,2579,0.0,4.5,65.0,65.0,37.0,4.5
-Chocolate spread milk,563,2353,0.2,4.0,57.8,57.8,35.0,2.0
-Chocolate spread with hazelnut,567,2370,0.0,4.5,55.0,55.0,36.0,4.0
-Chocolate white,560,2341,0.1,7.6,58.0,58.0,33.3,0.0
-Chocolate with hazelnuts,577,2412,2.0,9.5,44.0,44.0,40.0,3.5
-Chorizo sausage,360,1505,45.4,23.0,0.6,0.6,30.0,0.0
-Cider apple,10,42,96.5,0.0,2.5,2.5,0.0,0.0
-Cinnamon ground,314,1312,12.0,3.8,55.0,55.0,3.2,25.0
-Cloves,427,1785,12.3,6.2,51.0,51.0,20.0,9.5
-Cockle shellfish,64,267,82.4,15.5,0.0,0.0,0.1,0.0
-Cocoa powder,405,1693,9.9,19.8,10.8,10.8,24.5,34.0
-Coconut meat grated,742,3102,0.0,7.0,19.0,19.0,69.0,14.0
-Coconut meat raw,410,1714,37.0,4.0,3.0,3.0,40.0,15.0
-Coconut milk canned,208,872,73.0,1.5,3.0,3.0,21.5,0.0
-Coconut milk fresh,21,91,93.3,0.7,3.7,3.7,0.2,1.1
-Coconut oil,878,3670,0.2,0.8,0.0,0.0,99.0,0.0
-Cod Atlantic fillet cooked,118,495,73.4,22.0,0.6,0.6,3.0,0.0
-Cod Atlantic raw,72,304,81.9,16.4,0.0,0.0,0.7,0.0
-Cod chopped battered and fried,221,927,60.7,24.5,0.0,0.0,13.8,0.0
-Cod-liver oil,881,3683,0.0,0.0,0.0,0.0,99.8,0.0
-Coffee black ready-to-drink,0,1,98.8,0.0,0.0,0.0,0.0,0.2
-Coffee cream powder,550,2299,3.8,4.2,55.0,55.0,35.0,0.0
-Coffee with cream and sugar ready-to-drink,22,93,93.6,0.7,4.6,4.6,0.1,0.0
-Coffee with cream ready-to-drink,10,44,96.4,0.7,1.9,1.9,0.1,0.0
-Cognac 40 % v/v,220,924,66.0,0.0,1.0,1.0,0.0,0.0
-Cola,44,187,88.0,0.0,11.0,11.0,0.0,0.0
-Cola diet,1,5,98.7,0.0,0.3,0.3,0.0,0.0
-Condensed milk canned unsweetened,131,550,74.5,6.5,9.5,9.5,7.5,0.0
-Cookie coconut macaroons,550,2299,3.5,5.5,53.0,53.0,35.0,2.0
-Cookie shortbread plain,518,2165,3.7,5.4,58.0,58.0,28.9,3.0
-Cookie soft-type mixed varieties,399,1668,26.5,7.9,37.0,37.0,23.7,3.9
-Cookies shortbread mixed varieties,421,1760,3.0,8.5,78.0,78.0,7.5,2.0
-Cooking oil mixed varieties,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
-Cordon bleu vegetarian,249,1040,52.5,17.5,9.0,9.0,15.0,5.0
-Coriander leaf raw ,37,157,84.9,4.0,1.0,1.0,0.0,9.1
-Corn flour whole grain yellow,365,1526,12.1,8.9,75.0,75.0,2.8,0.2
-Corn oil (maize oil),868,3632,25.0,0.0,0.0,0.0,96.5,0.0
-Corn on the cob cooked,127,532,69.9,3.4,23.1,23.1,2.1,0.5
-Corn yellow canned,121,507,68.5,3.5,22.5,22.5,1.0,3.5
-Corn yellow raw,354,1480,11.3,9.2,65.5,65.5,3.8,9.2
-Corned beef,225,943,64.7,12.8,3.5,3.5,18.0,0.0
-Cornflakes,376,1577,5.3,7.9,81.5,81.5,0.8,3.5
-Cornstarch,370,1547,7.6,0.3,90.5,90.5,0.1,0.5
-Couscous prepared,147,618,69.5,7.5,14.0,14.0,6.5,1.5
-Couscous raw,368,1538,7.0,12.5,74.0,74.0,1.0,4.5
-Crab mixed species raw,85,354,77.0,17.0,1.0,1.0,1.4,0.0
-Cracker light,358,1500,5.5,12.0,63.5,63.5,2.5,15.5
-Crackers crispbread Sandwich plain,481,2011,8.1,11.5,48.0,48.0,26.0,5.4
-Crackers crispbread extra fiber,352,1471,9.0,13.0,45.0,45.0,8.0,24.0
-Crackers crispbread plain ,388,1622,9.5,12.0,65.0,65.0,7.5,5.0
-Crackers crispbread poppy seed,401,1676,6.5,11.0,66.0,66.0,8.5,7.0
-Crackers crispbread reduced fat,341,1425,7.8,10.0,64.0,64.0,1.2,16.0
-Dab flatfish Atlantic cooked,112,470,75.1,20.7,0.0,0.0,3.2,0.0
-Dab flatfish Atlantic raw,95,400,79.0,17.0,0.0,0.0,3.0,0.0
-Dagoe leaves,35,150,89.5,3.5,4.8,4.8,0.0,1.2
-Dandelion green raw,56,236,85.4,2.7,9.2,9.2,0.7,1.0
-Danish pastry apricots,278,1162,41.3,5.2,35.3,35.3,11.8,5.4
-Danish pastry chocolate filling,382,1597,20.0,7.1,30.1,30.1,25.9,
-Danish pastry raisins,283,1182,37.6,5.8,36.1,36.1,11.0,8.5
-Date candied,286,1195,24.2,1.8,65.0,65.0,0.0,8.0
-Date fresh,152,638,58.8,2.2,33.0,33.0,0.0,5.0
-Dear game meat raw,121,509,72.8,23.0,0.0,0.0,3.2,0.0
-Donuts plain,440,1839,18.5,4.5,50.0,50.0,24.5,1.5
-Donuts plain sugared or glazed,416,1739,21.5,5.5,48.5,48.5,22.0,1.5
-Donuts with creme filling,372,1555,35.5,7.0,31.0,31.0,24.5,1.0
-Duck wild meat and skin raw,225,944,63.7,18.1,0.0,0.0,17.2,0.0
-Eel mixed species raw,200,838,68.5,14.5,0.0,0.0,16.0,0.0
-Eel river raw,213,893,66.2,16.0,0.0,0.0,16.8,0.0
-Eel smoked,244,1019,61.7,17.8,0.0,0.0,19.5,0.0
-Egg salad,239,999,63.0,8.0,7.0,7.0,20.0,1.0
-Egg white raw,49,208,87.0,11.1,0.7,0.7,0.2,0.0
-Egg whole dried powder,570,2383,8.0,46.0,3.0,3.0,42.0,0.0
-Egg whole fried,235,986,64.5,13.5,1.0,1.0,20.0,0.0
-Egg whole hard-boiled,154,645,74.2,12.9,0.7,0.7,11.2,0.0
-Egg whole omelet,144,607,76.3,9.4,2.2,2.2,11.1,0.0
-Egg whole raw,139,582,76.5,12.5,0.0,0.0,10.0,0.0
-Egg yolk raw,348,1455,50.8,16.2,0.0,0.0,32.0,0.0
-Eggplant raw,25,107,91.6,1.2,3.5,3.5,0.2,2.5
-Endive green raw,16,70,93.0,1.5,1.0,1.0,0.0,3.5
-Energy bar mixed variaties,419,1751,7.8,4.9,72.0,72.0,11.5,2.8
-Energy drink mixed variaties,81,340,79.0,0.0,20.0,20.0,0.0,0.0
-Escargots land snails cooked,80,336,80.4,16.0,1.6,1.6,1.0,0.0
-Falafel prepared,275,1149,40.9,9.1,27.0,27.0,12.5,9.5
-Fat animal solid for deep-frying,884,3695,0.0,0.0,0.0,0.0,100.0,0.0
-Fennel bulb raw,40,171,90.0,2.0,7.0,7.0,0.0,2.3
-Figs dried uncooked,270,1128,26.7,3.5,54.0,54.0,1.3,13.5
-Figs fresh,64,269,82.3,1.4,13.0,13.0,0.2,2.1
-Fish sticks breaded fried,247,1032,51.7,15.1,18.3,18.3,12.4,1.5
-Fish sticks breaded mixed varieties raw,159,669,67.0,12.5,12.5,12.5,6.5,0.5
-Flatfish flounder prepared,102,431,76.0,21.0,0.0,0.0,2.0,0.0
-Flatfish flounder raw,80,335,79.5,17.5,0.0,0.0,1.0,0.0
-Flatfish sole cooked,119,500,72.5,24.0,0.0,0.0,2.5,0.0
-Flatfish sole raw,79,332,81.9,15.0,0.0,0.0,2.1,0.0
-French fries deep fried,327,1366,35.4,4.5,40.0,40.0,16.0,3.1
-French fries oven-heated,307,1283,34.0,5.5,46.0,46.0,10.5,3.0
-French fries sticks,515,2153,5.0,6.5,48.5,48.5,31.5,7.5
-French fries unsalted,287,1200,43.3,4.2,33.5,33.5,14.5,3.5
-Frog legs raw,69,289,82.3,16.4,0.0,0.0,0.3,0.0
-Gamba shellfish,97,407,75.8,20.5,0.2,0.2,1.5,0.0
-Gammon pork,142,598,71.2,20.5,1.0,1.0,6.3,0.0
-Gammon steak pork,150,632,69.7,22.6,0.0,0.0,6.7,0.0
-Gammon steak pork cooked,212,889,59.6,28.0,0.4,0.4,11.0,0.0
-Garlic raw,140,589,63.9,6.0,28.0,28.0,0.1,1.0
-Garter green beans raw,42,180,87.7,3.0,7.0,7.0,0.0,1.3
-Gelatin dried,366,1530,8.9,90.0,0.0,0.0,0.1,0.0
-Gin 37 % v/v,210,882,69.0,0.0,0.0,0.0,0.0,0.0
-Gin Dutch berry flavored16 % v/v,184,770,65.0,0.0,18.0,18.0,0.0,0.0
-Gin Dutch blended 28 % v/v,196,820,72.0,0.0,0.0,0.0,0.0,0.0
-Gin Dutch lemon flavored 30 % v/v,160,668,74.0,0.0,3.0,3.0,0.0,0.0
-Gin Dutch old-style 28 % v/v,200,837,71.0,0.0,1.0,1.0,0.0,0.0
-Ginger ale,15,64,96.2,0.0,3.8,3.8,0.0,0.0
-Ginger canned heavy syrup,289,1208,26.2,0.0,70.0,70.0,0.0,2.8
-Ginger root raw,62,262,84.1,1.2,11.5,11.5,1.0,1.2
-Goat cheese semisoft type,264,1103,58.3,14.2,4.0,4.0,21.5,0.0
-Goat cheese soft type,205,862,68.6,12.0,1.1,1.1,17.3,0.0
-Goat meat domesticated raw,150,631,71.4,19.5,0.0,0.0,8.1,0.0
-Goose meat and skin cooked roasted,278,1162,51.2,30.0,0.0,0.0,17.8,0.0
-Goose meat and skin raw,340,1421,50.8,15.7,0.5,0.5,31.0,0.0
-Gooseberries fresh,36,153,90.0,1.0,8.0,8.0,0.0,0.0
-Goulash Hungarian soup,118,497,78.8,9.8,1.7,1.7,8.0,0.7
-Grape juice,69,290,81.9,0.2,16.9,16.9,0.0,0.0
-Grape seed oil ,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
-Grapefruit fresh,45,191,87.2,0.6,9.5,9.5,0.2,1.5
-Grapefruit juice fresh,37,158,89.7,0.5,8.5,8.5,0.1,0.2
-Grapefruit juice sweetened bottled,48,205,86.9,0.5,11.3,11.3,0.1,0.2
-Grapes blue fresh,53,224,85.2,0.9,11.5,11.5,0.1,1.3
-Grapes green/white fresh,57,242,84.5,0.5,13.5,13.5,0.0,0.5
-Green beans flat pods cooked,21,91,90.2,1.8,3.6,3.6,0.0,3.4
-Green beans flat pods raw,18,75,89.8,2.0,2.0,2.0,0.2,4.0
-Green salad mixed varieties,19,82,93.1,1.0,2.9,2.9,0.0,2.0
-Grouse game meat cooked,183,767,61.5,31.0,0.0,0.0,6.5,0.0
-Guava fresh,46,195,85.8,0.9,7.5,7.5,0.5,4.3
-Gurnard fish cooked,169,709,66.0,25.5,0.1,0.1,7.4,0.0
-Hake fish raw,78,327,80.8,17.3,0.0,0.0,0.9,0.0
-Halibut Atlantic and Pacific white raw,105,441,76.0,20.5,0.0,0.0,2.5,0.0
-Ham cooked sliced regular,136,572,73.3,17.4,1.5,1.5,6.8,0.0
-Ham dried Prociutto,198,831,64.2,22.8,0.0,0.0,12.0,0.0
-Ham leg whole lean,162,679,70.3,17.7,1.4,1.4,9.6,0.0
-Ham pork cured dried raw,201,845,64.0,21.5,1.0,1.0,12.5,0.0
-Hamburger plain cooked,272,1137,55.5,21.0,2.5,2.5,20.0,0.0
-Hamburger plain raw,229,962,61.2,18.0,3.8,3.8,16.0,0.0
-Hamburger vegetarian,168,707,65.5,16.0,7.0,7.0,8.0,2.5
-Hare game,114,481,74.2,21.8,0.0,0.0,3.0,0.0
-Haricots verts string beans raw,44,186,86.4,2.4,6.1,6.1,0.3,3.8
-Hazelnut oil,883,3691,0.0,0.0,0.0,0.0,100.0,0.0
-Hazelnuts raw,667,2788,4.2,14.2,10.6,10.6,62.5,7.5
-Heart pork raw,100,419,77.5,17.0,0.0,0.0,3.5,0.0
-Herring Atlantic pickled glas,208,872,66.5,16.0,0.5,0.5,16.0,0.0
-Herring Atlantic raw,216,906,64.0,18.0,0.5,0.5,16.0,0.0
-Herring Atlantic salted,183,767,68.0,18.0,1.0,1.0,12.0,0.0
-Herring Atlantic smoked,236,989,60.3,22.1,0.0,0.0,16.6,0.0
-Herring canned tomato sauce,164,687,70.9,14.8,2.8,2.8,10.5,0.0
-Herring slightly salted raw,165,695,69.5,19.0,0.8,0.8,9.7,0.0
-Hollandaise sauce,98,411,84.0,1.8,5.4,5.4,7.8,0.0
-Honey,308,1287,23.1,0.4,75.5,75.5,0.0,0.0
-Horse meat raw,108,454,74.6,22.4,0.0,0.0,2.0,0.0
-Horseradish,72,302,77.3,3.1,10.3,10.3,0.3,8.0
-Hotdog,251,1055,50.3,10.2,27.0,27.0,11.4,0.1
-Hummus organic,242,1011,55.9,6.1,10.5,10.5,18.0,8.5
-Ice cream frozen novelties juice type,96,405,75.2,0.1,23.5,23.5,0.1,0.1
-Ice cream mixed varieties,196,822,63.3,3.9,21.0,21.0,10.8,0.0
-Ice cream vanilla rich,257,1074,55.0,3.9,23.5,23.5,16.5,0.1
-Jams reduced sugar mixed varieties,135,569,65.0,0.0,33.0,33.0,0.0,1.0
-Jams strawberry,247,1032,37.1,0.4,60.0,60.0,0.0,1.5
-Jerusalem artichoke,81,343,80.0,2.5,17.5,17.5,0.1,
-Kale raw ,51,215,86.3,4.3,5.5,5.5,0.9,2.0
-Kefir,63,262,86.7,3.3,4.5,4.5,3.5,0.0
-Kelp seaweed raw,86,362,78.3,7.5,10.5,10.5,1.2,1.5
-Khaki-fruit fresh,78,327,79.5,0.5,18.5,18.5,0.0,0.5
-Kidney beans raw,126,528,67.7,7.8,21.5,21.5,0.5,1.5
-Kidneys beef raw,86,363,80.0,17.0,0.0,0.0,2.0,0.0
-Kidneys pork raw,116,486,76.5,16.5,0.8,0.8,5.2,0.0
-Kiwi fresh,48,205,86.8,1.0,10.3,10.3,0.2,0.7
-Kohlrabi raw,29,122,90.5,2.0,4.0,4.0,0.0,2.5
-Krupuk Indonesian snack prawn based,502,2098,4.5,4.0,65.0,65.0,25.0,0.5
-Kumkwat,71,301,80.5,1.0,16.0,16.0,0.0,1.5
-Köfte meatloaf beef,252,1053,52.0,26.0,8.0,8.0,13.0,0.0
-Köfte meatloaf sheep,208,872,60.9,22.0,4.0,4.0,11.5,0.6
-Lamb leg sirloin raw,173,726,69.0,19.2,0.0,0.0,10.8,0.0
-Lamb rib,243,1015,61.1,19.2,0.0,0.0,18.7,0.0
-Lamb saddle of,253,1057,60.2,18.6,0.0,0.0,20.2,0.0
-Lamb shoulder domestic,206,865,62.1,25.0,0.0,0.0,11.9,0.0
-Lamb trimmed retail cuts fat,281,1174,59.0,15.0,0.0,0.0,25.0,0.0
-Lamb trimmed retail cuts lean,190,797,66.2,20.8,0.0,0.0,12.0,0.0
-Lambs lettuce green,20,85,94.0,2.0,3.0,3.0,0.0,0.0
-Lapwing beans dried,265,1107,0.0,20.0,43.0,43.0,1.5,0.0
-Lard pork,882,3687,0.2,0.0,0.0,0.0,99.8,0.0
-Lasagne ready-to-eat,146,614,70.2,6.8,13.6,13.6,6.9,1.5
-Leek cooked,27,117,90.3,1.5,3.8,3.8,0.0,3.4
-Leek raw,30,129,90.4,1.8,4.0,4.0,0.3,2.5
-Lemon juice fresh,32,136,91.0,0.0,8.0,8.0,0.0,0.0
-Lemon pealed fresh,36,151,89.4,0.5,6.5,6.5,0.4,2.2
-Lentils seeds cooked boiled,117,490,68.3,10.0,15.0,15.0,0.7,5.0
-Lentils seeds raw,309,1291,16.2,21.0,44.5,44.5,1.5,15.8
-Lettuce green leaf raw,11,47,94.2,1.3,1.0,1.0,0.2,1.3
-Lettuce iceberg,11,48,95.7,1.2,0.9,0.9,0.1,1.1
-Lima beans cooked boiled,137,574,61.8,8.2,21.0,21.0,0.5,7.5
-Lima beans raw,351,1467,12.3,21.5,63.5,63.5,0.7,
-Limes fresh,32,135,93.0,0.5,2.0,2.0,2.5,
-Ling fish raw,75,313,80.0,18.4,0.0,0.0,0.2,0.0
-Linseed,486,2031,0.0,20.0,13.5,13.5,32.5,33.0
-Linseed oil,882,3687,0.2,0.0,0.0,0.0,99.8,0.0
-Liquor 15 % v/v mixed varieties,205,858,58.0,0.0,30.0,30.0,0.0,0.0
-Liquor 15 - 25 % v/v mixed varieties,246,1446,52.0,0.0,30.0,30.0,0.0,0.0
-Liquor 25 % v/v mixed varieties,355,1483,45.0,0.0,30.0,30.0,0.0,0.0
-Liquor Jägermeister 34 % v/v,299,1249,50.0,0.0,15.0,15.0,0.0,0.0
-Liver beef raw,123,519,72.7,20.7,2.0,2.0,3.6,0.0
-Liver haddock canned ,397,1659,50.5,6.5,0.0,0.0,42.0,0.0
-Liver haddock raw,79,334,79.7,19.0,0.0,0.0,0.3,0.0
-Liver lamb raw,131,550,71.2,21.0,2.9,2.9,3.9,0.0
-Liver pate pork canned,314,1312,54.8,14.2,1.7,1.7,28.3,0.0
-Liver pork raw,132,555,70.9,22.2,2.0,2.0,3.9,0.0
-Liver sausage Hausmacher,267,1116,57.6,15.4,5.2,5.2,20.8,0.0
-Liver sausage pork cooked,322,1345,54.4,13.3,1.7,1.7,29.6,0.0
-Liver veal raw,109,457,76.0,17.7,2.0,2.0,3.3,0.0
-Liverwurst pork cooked,306,1279,53.2,18.8,1.8,1.8,25.2,0.0
-Liverwurst spread,306,1279,56.8,12.2,1.6,1.6,28.4,0.0
-Lobster mixed species cooked,82,345,0.0,16.0,0.0,0.0,2.0,0.0
-Luncheon meat pork canned,334,1396,52.0,13.0,4.0,4.0,30.0,0.0
-Luncheon meat pork sliced,308,1287,56.0,12.1,2.9,2.9,28.0,0.0
-Lychee fresh,81,342,78.6,0.9,18.0,18.0,0.3,1.2
-Macadamia nuts raw,733,3064,2.5,9.0,6.5,6.5,74.5,6.5
-Mackerel Atlantic cooked,244,1019,58.3,24.0,0.0,0.0,16.7,0.0
-Mackerel Atlantic raw,344,1438,50.3,18.0,0.0,0.0,30.7,0.0
-Madeira 18 - 20 % v/v,156,656,71.0,0.0,10.0,10.0,0.0,0.0
-Madeira 20 % v/v,165,692,72.0,0.0,10.0,10.0,0.0,0.0
-Mango juice,41,173,88.9,0.1,9.5,9.5,0.2,0.3
-Mangos fresh,61,259,83.3,1.1,12.8,12.8,0.3,1.5
-Maple syrup,365,1526,9.0,0.0,90.0,90.0,0.0,0.0
-Margarine liquid 80 % fat,725,3031,16.8,0.0,0.2,0.2,82.0,0.0
-Margarine regular 80% fat,711,2972,18.0,0.0,1.0,1.0,80.0,0.0
-Margarine-like spread 25 % fat,255,1065,65.5,2.5,6.0,6.0,25.0,0.0
-Margarine-like spread 40 % fat,361,1509,57.0,1.5,0.5,0.5,40.0,0.0
-Marjoram dried,331,1383,16.3,12.5,45.0,45.0,7.2,18.0
-Marmalade orange,292,1220,27.2,0.8,70.0,70.0,0.5,0.5
-Marshmellows,332,1394,17.0,2.0,80.0,80.0,0.0,0.0
-Marzipan,456,1906,15.0,8.0,50.0,50.0,25.0,0.0
-Mayonnaise classic,741,3097,12.8,1.7,2.5,2.5,82.0,0.0
-Mayonnaise light 35 % oil,370,1547,50.0,1.0,12.0,12.0,36.0,0.0
-Mayonnaisse extra light 25 % oil,282,1178,60.0,1.0,12.0,12.0,26.0,0.0
-Meat sheep raw,217,908,64.0,17.5,0.0,0.0,16.5,0.0
-Meat substitute breaded mixed varieties,212,890,58.0,12.8,12.6,12.6,11.5,4.1
-Meat substitute milkproteïne based,134,565,69.5,15.5,5.0,5.0,5.0,4.0
-Meat substitute raw mixed varieties,169,710,63.8,18.4,6.1,6.1,7.2,3.5
-Meatballs ready-to-eat,372,1555,42.5,15.0,11.5,11.5,30.0,0.0
-Meatballs small cooked,195,818,61.5,17.0,5.0,5.0,12.0,3.5
-Melons cantaloupe fresh,47,197,84.3,0.9,7.0,7.0,0.3,6.5
-Milk beverage reduced fat mixed varieties,50,211,88.9,3.1,5.0,5.0,2.0,0.0
-Milk dried nonfat,349,1459,4.0,35.0,50.0,50.0,1.0,0.0
-Milk dried whole,503,2103,8.5,27.0,35.0,35.0,28.5,0.0
-Milk goat,64,269,88.0,3.8,4.5,4.5,3.8,0.0
-Milk human mature fluid,69,289,85.7,1.3,7.0,7.0,4.0,0.0
-Milk nonfat,37,156,89.9,3.9,5.1,5.1,0.1,0.0
-Milk reduced fat,46,194,89.3,3.4,4.8,4.8,1.5,0.0
-Milk reduced fat calcium enriched,74,196,90.0,3.3,4.9,4.9,1.6,0.0
-Milk reindeer raw,233,978,64.5,10.8,4.1,4.1,19.6,0.0
-Milk whole 340% milkfat,62,261,87.6,3.7,4.3,4.3,3.4,0.0
-Milkshakes mixed varieties,128,539,72.9,3.2,16.8,16.8,5.2,0.9
-Millet cooked,102,428,74.7,3.5,18.6,18.6,1.2,1.0
-Millet raw,327,1366,21.3,10.6,60.0,60.0,3.9,3.2
-Minced ground meat beef,209,878,64.5,19.1,0.8,0.8,14.6,0.0
-Minced ground meat beef and pork,252,1053,60.9,17.5,0.0,0.0,20.6,0.0
-Minced ground meat lamb,192,805,66.8,19.3,0.0,0.0,12.9,0.0
-Minced ground meat pork,208,872,65.2,18.8,2.0,2.0,14.0,0.0
-Minced ground meat veal,148,620,72.0,19.0,0.0,0.0,8.0,0.0
-Minced meat tartar beef,127,533,72.8,21.8,0.0,0.0,4.4,0.0
-Minced soyburger vegetarian,233,977,50.6,28.0,10.2,10.2,8.5,1.7
-Mini pizza mixed varieties,232,975,52.0,11.5,24.5,24.5,9.5,1.5
-Miso,139,586,66.9,13.0,6.5,6.5,5.3,7.3
-Moessaka Greek dish,208,871,63.0,6.5,10.0,10.0,15.0,4.5
-Monkfish raw,74,311,81.5,15.0,0.0,0.0,1.5,0.0
-Mortadella beef pork,304,1270,53.8,16.5,3.4,3.4,25.3,0.0
-Muesli candybar,499,2086,0.4,7.5,57.8,57.8,24.7,8.6
-Muesli crispy sweetened mixed varieties,478,1998,4.6,7.4,60.0,60.0,22.2,4.8
-Muesli dried fruit and nuts mixed varieties,379,1584,8.0,10.0,66.5,66.5,6.0,8.5
-Muffins English plain,327,1366,31.4,8.0,48.0,48.0,11.3,0.3
-Muscatel 15 % v/v,139,581,75.0,0.0,12.0,12.0,0.0,0.0
-Mushrooms canned glas,31,132,89.7,2.3,2.5,2.5,0.5,4.0
-Mushrooms oyster raw,22,96,90.5,1.5,1.0,1.0,0.2,5.8
-Mushrooms shiitake dried,192,805,12.1,16.5,23.5,23.5,3.4,43.5
-Mushrooms stir-fried,61,256,86.4,3.5,0.9,0.9,4.0,4.2
-Mushrooms white raw,16,71,93.5,2.7,0.3,0.3,0.0,2.5
-Mussels blue fried ,323,1350,44.0,32.0,2.0,2.0,21.0,0.0
-Mussels blue raw,74,311,84.2,9.8,2.0,2.0,3.0,0.0
-Mussels canned sour ,111,466,73.9,23.1,0.0,0.0,2.0,0.0
-Mustard prepared yellow,85,358,82.6,5.0,7.4,7.4,4.0,0.0
-Mustard spinach raw  ,31,132,90.6,2.0,5.3,5.3,0.0,1.1
-Nectarines fresh,36,154,89.2,1.0,7.5,7.5,0.0,1.3
-Noodles Japanese soba,368,1538,9.5,14.5,74.0,74.0,1.0,0.0
-Noodles rice raw,361,1509,9.9,5.0,82.0,82.0,0.6,1.5
-Norway lobster Langoestine,85,355,78.4,17.2,1.3,1.3,1.1,0.0
-Nougats soft,395,1651,12.0,1.0,76.5,76.5,9.0,0.5
-Nutmeg ground,545,2278,7.0,5.5,44.0,44.0,38.0,4.5
-Oat bran raw,381,1593,9.8,13.5,62.0,62.0,7.0,6.7
-Oat cookie,353,1476,22.4,8.3,55.0,55.0,10.2,3.1
-Oat flour,390,1630,7.4,14.9,62.0,62.0,7.2,7.5
-Oat malt,380,1588,9.4,13.1,62.0,62.0,7.0,7.5
-Oat malt porridge,76,322,82.4,3.5,9.5,9.5,2.5,1.1
-Oats raw,374,1563,12.2,12.6,61.5,61.5,7.1,5.6
-Oil light reduced fat,883,3691,0.0,0.0,0.0,0.0,100.0,0.0
-Oil vegetable for deep frying,884,3695,0.0,0.0,0.0,0.0,100.0,0.0
-Okra Chinese raw,45,192,86.2,2.2,7.2,7.2,0.2,3.2
-Okra cooked,34,144,90.3,1.5,6.2,6.2,0.2,0.8
-Okra raw,42,180,83.8,2.2,8.0,8.0,0.2,4.8
-Olive oil,883,3691,0.0,0.0,0.2,0.2,99.8,0.0
-Olives ripe canned,136,571,79.4,1.4,0.2,0.2,13.8,4.2
-Onions deep fried,628,2625,0.0,6.0,44.5,44.5,46.5,6.5
-Onions dried,274,1145,21.0,10.5,44.5,44.5,1.0,22.0
-Onions raw,36,151,89.0,1.2,6.1,6.1,0.2,2.5
-Onions stir fried,57,239,88.5,1.0,5.0,5.0,3.5,1.0
-Onions young  white canned sweet/sauer,37,156,89.0,0.0,8.5,8.5,0.0,1.5
-Orange juice,45,189,88.1,0.7,10.0,10.0,0.2,0.0
-Oranges fresh,44,186,85.2,1.0,9.5,9.5,0.2,2.1
-Oregano dried,371,1551,11.2,11.4,50.0,50.0,10.4,16.0
-Ostrich tenderloin raw,104,438,75.0,21.5,1.0,1.0,1.5,0.0
-Oxtail,183,767,66.4,20.1,0.0,0.0,11.5,0.0
-Oyster Pacific raw,70,294,83.8,10.0,3.4,3.4,1.8,0.0
-Palm oil,874,3653,0.0,0.0,0.0,0.0,98.9,0.0
-Pancakes Puffs,294,1228,43.8,7.0,33.2,33.2,14.9,0.1
-Papayas fresh,45,191,87.2,0.6,9.9,9.9,0.1,1.2
-Paprika,353,1479,16.3,15.0,35.0,35.0,12.7,20.0
-Parsley dried,315,1316,20.5,22.0,42.0,42.0,4.0,10.5
-Parsley raw,34,143,88.4,4.4,1.5,1.5,0.2,4.5
-Parsnips raw,89,373,75.0,1.5,17.0,17.0,0.5,5.0
-Partidge game meat raw,210,881,56.0,35.0,0.5,0.5,7.5,0.0
-Passion fruit juice purple,47,200,87.5,0.8,10.0,10.0,0.4,0.3
-Passion fruit purple fresh,120,504,66.2,2.3,22.3,22.3,0.7,7.5
-Pasta Macaroni raw,359,1501,12.1,13.5,67.0,67.0,3.0,3.4
-Pasta Macaroni whole wheat raw,336,1404,12.8,11.0,62.0,62.0,2.2,11.0
-Pasta plain cooked,99,417,75.2,4.5,17.5,17.5,1.0,0.8
-Pasta plain mixed varieties raw,359,1501,12.1,13.5,67.0,67.0,3.0,3.4
-Pasta whole wheat mixed varieties raw,352,1471,10.0,12.0,65.0,65.0,2.5,9.5
-Paté,374,1568,48.5,11.0,4.0,4.0,35.5,0.0
-Peaches fresh,39,162,87.5,0.8,8.7,8.7,0.1,0.0
-Peanut butter smooth mixed varieties,625,2613,3.0,26.0,12.0,12.0,52.0,6.0
-Peanuts raw salted,625,2613,3.5,25.5,10.0,10.0,53.0,7.0
-Peanuts raw unsalted,623,2604,2.8,26.0,11.2,11.2,52.0,7.0
-Pears canned heavy syrup,76,322,79.1,0.3,17.5,17.5,0.1,2.0
-Pears fresh,54,229,84.4,0.5,11.0,11.0,0.3,2.8
-Peas canned,88,372,75.5,6.5,10.8,10.8,1.0,5.2
-Peas cooked,86,363,75.0,5.0,14.0,14.0,0.0,5.0
-Peas green cooked,106,445,71.1,6.6,16.5,16.5,0.5,4.3
-Peas green dried split,326,1362,9.9,22.5,45.0,45.0,1.6,20.0
-Peas raw,64,269,80.4,4.5,8.9,8.9,0.0,5.2
-Pecan nuts,717,2997,4.5,8.5,9.5,9.5,72.0,4.5
-Pepper black white,309,1291,15.6,11.3,50.0,50.0,2.6,19.5
-Peppermint candy,402,1680,1.0,0.0,99.0,99.0,0.0,0.0
-Pepperoni,448,1876,35.7,20.0,3.3,3.3,40.0,0.0
-Pepperoni savaloy,382,1597,45.5,18.3,0.5,0.5,34.7,0.0
-Perch raw,82,344,79.7,18.5,0.0,0.0,0.8,0.0
-Perch river mixed species raw,81,338,80.0,18.4,0.0,0.0,0.8,0.0
-Pheasant raw meat and skin,229,962,56.5,30.5,0.0,0.0,12.0,0.0
-Phyllo dough,299,1249,32.0,7.5,53.0,53.0,6.0,0.0
-Piccalilli pickles veggies and spices,42,180,88.5,1.0,6.5,6.5,1.0,2.0
-Pickles Gherkin sweet sour,14,62,94.7,1.1,2.0,2.0,0.0,1.2
-Pie fruit mixed varieties,270,1128,41.1,3.5,43.0,43.0,8.7,2.7
-Pie rice commercially prepared,250,1045,47.7,6.0,34.4,34.4,9.5,1.4
-Pie/cake mixed varieties,384,1605,30.1,4.0,41.0,41.0,22.5,1.4
-Pine nuts raw,635,2654,2.4,27.0,13.5,13.5,52.5,3.6
-Pineapple fresh,61,256,83.4,0.5,13.5,13.5,0.2,1.4
-Pineapple juice,50,211,86.4,0.8,11.5,11.5,0.0,0.3
-Pistachios roasted salted,606,2533,11.6,17.5,8.4,8.4,55.5,6.0
-Pistachios unsalted,649,2713,0.0,19.5,24.0,24.0,51.5,9.4
-Pizza mixed varieties ready-to-eat,203,852,56.1,9.0,25.7,25.7,6.8,1.4
-Pizza vegetarian mixed variet,171,719,59.5,7.5,26.0,26.0,3.5,2.5
-Plaice flatfish cooked,179,752,66.5,21.0,1.5,1.5,10.0,0.0
-Plaice flatfish raw,94,393,73.0,19.0,0.0,0.0,2.0,0.0
-PlantaIns fresh,137,575,64.4,1.0,31.5,31.5,0.2,1.9
-Plum juice,58,245,84.5,0.6,13.5,13.5,0.1,0.3
-Plums dried uncooked,221,927,36.0,2.0,45.0,45.0,0.0,16.0
-Plums fresh,60,255,83.6,0.8,12.0,12.0,0.6,2.0
-Plums mixed varieties fresh,56,235,84.5,0.6,12.0,12.0,0.2,1.7
-Pollock Atlantic frozen,76,320,80.6,18.0,0.0,0.0,0.4,0.0
-Pollock Atlantic raw,80,333,80.0,17.2,0.0,0.0,1.2,0.0
-Pomegranate fresh,85,360,77.3,1.0,17.5,17.5,0.7,2.5
-Pomegranate juice bottled,45,189,87.7,0.2,10.5,10.5,0.1,0.5
-Popcorn,376,1575,7.9,12.5,70.0,70.0,3.6,5.0
-Poppy seed,503,2103,12.8,20.0,4.2,4.2,41.5,20.5
-Pork belly raw,384,1605,46.4,15.0,0.1,0.1,36.5,0.0
-Pork cheeks raw,533,2228,33.2,10.0,0.1,0.1,55.8,0.0
-Pork chops bone-in raw,196,824,66.4,19.0,0.1,0.1,13.5,0.0
-Pork chops in peanut sauce,215,904,61.2,13.5,10.5,10.5,13.3,0.5
-Pork chops neck cooked,275,1149,53.0,27.5,0.0,0.0,18.5,0.0
-Pork chops neck raw,195,818,66.4,19.4,0.0,0.0,13.2,0.0
-Pork cured legham pan-broil ,129,542,72.6,18.2,1.7,1.7,5.5,0.0
-Pork cured legham roasted,116,488,75.1,19.2,0.6,0.6,4.1,0.0
-Pork kidneys raw,113,474,77.2,16.5,0.1,0.1,5.2,0.0
-Pork liver cooked,198,830,59.0,28.5,4.0,4.0,7.5,0.0
-Pork loin filets,144,604,70.4,22.7,0.0,0.0,5.9,0.0
-Pork loin raw,116,488,73.1,23.5,0.0,0.0,2.4,0.0
-Pork ribeye entrecote,144,604,70.0,22.7,1.0,1.0,5.9,0.0
-Pork roast fricandeau,124,522,72.4,23.0,0.1,0.1,3.5,0.0
-Pork sausage canned cooked,320,1337,54.2,13.2,2.5,2.5,29.1,0.0
-Pork shoulder chops,195,818,66.4,19.4,0.0,0.0,13.2,0.0
-Pork shoulder raw,217,909,63.4,20.4,0.0,0.0,15.2,0.0
-Pork spareribs raw,280,1170,58.1,16.8,0.1,0.1,24.0,0.0
-Pork tenderloin raw,119,502,73.1,22.8,0.0,0.0,3.1,0.0
-Pork variety meat raw,111,468,75.0,21.0,0.0,0.0,3.0,0.0
-Port 19 % v/v,150,627,73.0,0.0,13.0,13.0,0.0,0.0
-Potato baked,126,529,73.0,2.0,16.0,16.0,5.5,2.5
-Potato chips plain average,557,2328,5.0,5.5,43.0,43.0,39.5,6.0
-Potato chips plain light ,479,2002,3.7,6.5,61.0,61.0,22.0,5.8
-Potato flour,329,1375,17.9,0.1,81.0,81.0,0.0,0.0
-Potato sticks mashed breaded,223,936,55.8,3.2,27.0,27.0,11.0,2.0
-Potatoes cooked no skin,82,346,77.4,2.0,17.0,17.0,0.1,2.5
-Potatoes mashed instant prepared,99,418,79.3,3.5,12.0,12.0,4.2,0.0
-Potatoes raw,85,357,76.7,2.0,17.6,17.6,0.1,2.6
-Potatoes sliced prebaked,141,591,68.5,2.0,20.5,20.5,5.0,3.0
-Poultry meat ground mixed variaties,136,568,70.0,20.2,0.0,0.0,6.1,0.0
-Pretzel,395,1654,5.7,9.3,80.0,80.0,3.6,0.4
-Puddings dry mix chocolate,356,1488,13.2,3.2,80.0,80.0,2.0,0.6
-Puddings dry mix mixed varieties,358,1496,10.4,0.0,88.0,88.0,0.0,0.6
-Puddings mixed varieties home prepared,135,569,67.7,3.8,21.3,21.3,3.2,3.0
-Puddings rice ready-to-eat,81,342,82.2,3.5,10.0,10.0,3.0,0.3
-Puff pastry light frozen,380,1588,31.8,5.5,37.5,37.5,23.0,1.2
-Pumpkin cooked,17,73,94.4,0.6,2.5,2.5,0.3,1.2
-Pumpkin raw,36,153,89.7,1.1,7.0,7.0,0.2,1.0
-Pumpkin seeds,345,1442,38.6,24.5,7.0,7.0,23.5,5.4
-Purslane cooked,21,88,92.5,2.0,2.0,2.0,0.0,2.5
-Purslane raw,17,73,93.6,1.2,1.5,1.5,0.2,2.5
-Quail meat and skin raw,190,796,65.9,19.5,0.1,0.1,12.5,0.0
-Quark cottage cheese half and half,100,421,79.5,12.0,3.0,3.0,4.5,0.0
-Quark cottage cheese non-fat,71,299,82.0,13.0,3.5,3.5,0.5,0.0
-Quiche vegetable type,321,1341,,,,,26.0,
-Quinces fresh,69,291,80.9,0.5,15.5,15.5,0.1,2.0
-Quinoa uncooked,392,1639,8.5,16.2,63.9,63.9,6.9,3.5
-Quorn meat substitute,141,594,64.2,14.0,12.7,12.7,2.6,5.5
-Rabbit game meat domesticated,173,727,68.0,21.0,0.0,0.0,10.0,0.0
-Rabbit game meat wild raw,133,559,72.0,22.0,0.0,0.0,5.0,0.0
-Radishes black fresh,32,136,90.6,2.0,5.0,5.0,0.2,1.2
-Radishes fresh,18,76,94.1,1.0,2.5,2.5,0.2,1.2
-Raisins mixed varieties,329,1375,13.0,2.0,75.0,75.0,0.0,9.0
-Raisins seedles,291,1216,24.5,2.5,66.5,66.5,0.1,5.4
-Rapeseed oil,875,3658,1.0,0.0,0.0,0.0,99.0,0.0
-Raspberries fresh,68,286,76.0,1.2,14.3,14.3,0.5,7.0
-Ratatouille cooked,51,215,88.2,1.4,4.9,4.9,2.5,2.0
-Ravioli cooked,101,427,77.9,4.0,13.5,13.5,3.5,0.1
-Ray fish raw,85,355,79.0,20.7,0.0,0.0,0.2,0.0
-Real chervil dried,305,1274,22.0,23.5,39.0,39.0,3.5,11.0
-Real chervil fresh,75,316,81.1,4.0,12.0,12.0,1.0,0.9
-Red berries fresh,51,213,82.9,1.1,7.9,7.9,0.1,7.9
-Red berry juice,38,160,88.6,0.0,9.4,9.4,0.0,0.0
-Redfish raw,105,442,77.2,18.2,0.0,0.0,3.6,0.0
-Rhubarb cooked with sugar,87,368,76.4,0.5,20.0,20.0,0.1,2.0
-Rhubarb raw,14,62,94.4,0.5,2.0,2.0,0.1,2.0
-Rice basmati raw,354,1480,11.6,7.0,78.5,78.5,0.6,1.3
-Rice brown regular cooked,137,575,65.3,3.2,26.0,26.0,1.5,3.0
-Rice brown regular raw,361,1509,10.3,7.5,75.0,75.0,2.2,4.0
-Rice cake brown rice milled corn,350,1464,79.0,9.9,77.7,77.7,0.0,3.5
-Rice cake brown rice multigrain,380,1588,6.5,10.0,75.0,75.0,3.0,4.5
-Rice cake brown rice plain,374,1563,8.5,8.0,74.5,74.5,3.5,4.5
-Rice flour white,359,1501,11.1,7.5,79.5,79.5,0.7,0.2
-Rice white regular cooked,96,403,75.3,2.5,20.0,20.0,0.4,0.8
-Rice white regular raw,355,1484,11.5,7.0,78.5,78.5,0.7,1.3
-Roast beef lean,168,705,64.2,28.3,0.8,0.8,5.7,0.0
-Roast fricandeau pork cooked,152,637,64.9,31.2,0.0,0.0,2.9,0.0
-Roast fricandeau pork fried,128,538,71.8,21.0,2.4,2.4,3.8,0.0
-Roast fricandeau veal,104,439,74.7,23.0,0.0,0.0,1.3,0.0
-Roe fish eggs mixed species raw,150,630,67.9,26.0,0.0,0.0,5.1,0.0
-Rose hip fresh,95,395,50.5,3.5,19.5,19.5,0.1,
-Rose hip heavy syrup,223,935,44.0,0.0,55.0,55.0,0.0,0.0
-Rose hip jam,256,1070,35.4,0.1,62.5,62.5,0.0,1.0
-Rosemary dried,380,1588,13.5,4.5,45.0,45.0,16.0,20.0
-Rum 43 % v/v,229,957,67.0,0.0,0.0,0.0,0.0,0.0
-Rusk Dutch,392,1639,6.9,12.3,70.8,70.8,5.5,3.5
-Rusk Dutch whole weat,389,1626,6.9,16.0,62.0,62.0,6.6,7.5
-Russian salad diced potatoes beef,170,715,68.5,6.0,12.5,12.5,10.5,1.5
-Rutabagas raw,24,102,90.3,1.0,5.0,5.0,0.2,2.5
-Rye flour,305,1274,16.8,7.6,56.6,56.6,1.5,16.5
-Rösti ready-to-eat,134,563,68.2,2.5,21.5,21.5,3.5,3.3
-Safflower oil,883,3691,0.0,0.0,0.0,0.0,100.0,0.0
-Salad dressing mayonnaise type light,372,1555,51.2,0.7,9.6,9.6,37.4,0.1
-Salad dressing mayonnaise-type 25 % oil,269,1124,62.5,1.0,10.0,10.0,25.5,0.0
-Salad dressing mayonnaise-type 40 % oil,382,1597,51.9,1.1,6.0,6.0,40.0,0.0
-Salad dressing non-fat,49,207,86.7,0.1,12.0,12.0,0.0,0.2
-Salmon Atlantic raw,220,924,63.1,20.2,0.0,0.0,15.7,0.0
-Salmon canned,164,688,67.7,23.5,0.0,0.0,7.8,0.0
-Salmon mixed varieties raw,200,839,65.5,20.0,0.0,0.0,13.5,0.0
-Salmon smoked,200,839,62.8,25.0,0.0,0.0,11.2,0.0
-Salsify root raw,90,378,73.8,3.3,18.5,18.5,0.2,3.2
-Salt table,0,0,0.0,0.0,0.0,0.0,0.0,0.0
-Sambal Ulek red chillies mixed varieties,25,110,93.0,2.0,3.5,3.5,0.5,0.0
-Samphire fresh raw,45,188,87.0,3.1,9.1,9.1,0.7,0.5
-Sardines in oil canned,220,922,61.9,22.5,0.0,0.0,14.6,0.0
-Sardines or pilchards raw,115,485,75.4,19.4,0.0,0.0,4.2,0.0
-Satay sauce,275,1149,53.5,8.5,18.0,18.0,19.0,0.0
-Sauce white roux,87,365,83.9,2.5,7.0,7.0,5.5,0.1
-Sauerkraut canned,12,51,96.0,2.0,1.0,1.0,0.0,0.0
-Sausage Frankfurters,305,1274,57.8,11.5,0.7,0.7,29.0,0.0
-Sausage pork pre-cooked,293,1224,58.5,10.9,2.5,2.5,27.1,0.0
-Sausage salami pork,375,1568,46.5,19.5,0.1,0.1,33.0,0.0
-Sausage smoked lean pork,245,1024,60.1,15.0,5.0,5.0,18.5,0.4
-Sausage smoked pork,322,1345,54.3,14.3,0.9,0.9,29.5,0.0
-Scallop mixed species raw,72,304,81.2,15.5,2.2,2.2,0.1,0.0
-Scampi or Langoustine,86,360,78.1,17.5,1.3,1.3,1.1,0.0
-Schnitzel not breaded,120,503,73.0,22.9,0.0,0.0,3.1,0.0
-Schnitzel vegetarian breaded,188,787,58.0,16.0,8.5,8.5,10.0,5.0
-Sea bass mixed species raw,120,503,72.7,23.5,0.0,0.0,2.8,0.0
-Seaweed mixed varieties dried,280,1170,12.0,11.5,55.0,55.0,1.2,
-Seitan,106,447,71.9,22.1,3.8,3.8,0.2,1.0
-Seitan cooked,135,568,64.3,24.0,9.0,9.0,0.2,1.5
-Semolina cooked with milk,103,434,77.0,4.0,15.0,15.0,3.0,0.0
-Semolina corn flour,343,1434,12.6,10.3,70.0,70.0,0.8,5.3
-Sesame oil,883,3691,0.0,0.0,0.0,0.0,100.0,0.0
-Sesame paste tahin,568,2374,7.0,21.5,6.5,6.5,51.5,12.5
-Sesame seeds,581,2429,11.1,20.9,6.0,6.0,53.5,7.5
-Shallots raw,32,134,89.9,1.8,7.3,7.3,0.2,2.6
-Shark oil,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
-Sherry dry 15 % v/v,90,278,83.5,0.2,1.4,1.4,0.0,0.0
-Sherry medium 15 % v/v,110,460,83.0,0.0,3.0,3.0,0.0,0.0
-Sherry sweet 15 % v/v,115,483,77.5,0.3,7.0,7.0,0.0,0.0
-Shrimp North Sea raw,91,384,78.6,18.5,0.0,0.0,1.9,0.0
-Shrimp gray or brown,90,380,79.0,18.0,0.0,0.0,2.0,0.0
-Shrimp paste Asian trassi,200,839,55.5,35.0,3.5,3.5,5.0,0.0
-Snail Vineyard raw,82,343,79.0,16.0,2.0,2.0,1.0,0.0
-Snow peas raw,47,197,86.3,2.5,7.5,7.5,0.2,2.5
-Sorrel raw,35,147,89.7,2.0,6.0,6.0,0.3,
-Souo cream of mushroom,66,278,87.7,1.7,4.9,4.9,4.5,0.2
-Soup brown beans,61,258,84.2,3.2,6.8,6.8,2.4,2.4
-Soup chicken noodle,26,112,93.1,2.4,2.5,2.5,0.8,0.2
-Soup cream of onion,39,167,91.6,1.7,3.6,3.6,2.1,0.0
-Soup cream of vegetables,41,175,91.6,1.0,3.0,3.0,2.9,0.5
-Soup fish mixed varieties,32,136,92.5,2.0,3.0,3.0,1.4,0.1
-Soup goulash Hungarian style,51,216,89.8,1.2,5.0,5.0,3.0,0.0
-Soup minestrone,46,196,89.1,3.2,4.0,4.0,2.0,0.7
-Soup oxtail,30,127,92.3,1.5,4.5,4.5,0.7,0.0
-Soup pea green,64,268,84.2,2.8,6.8,6.8,2.2,3.0
-Soup vegetarian vegetable ,16,70,95.2,0.8,1.8,1.8,0.7,0.5
-Sour cream full fat,185,773,73.7,2.8,3.5,3.5,18.0,0.0
-Soy flour full-fat raw,427,1785,5.0,37.5,23.0,23.0,20.5,12.0
-Soy oil,882,3687,0.0,0.0,0.0,0.0,99.9,0.0
-Soy sauce salted tamari,128,539,67.4,11.5,20.0,20.0,0.1,0.0
-Soy sauce sweet tamari,266,1111,33.4,3.5,62.0,62.0,0.1,0.0
-Soy yogurt plain,91,383,79.2,4.7,12.0,12.0,2.7,0.4
-Soybean sprouts raw,75,316,81.5,7.0,4.5,4.5,2.5,3.5
-Soybeans dried,428,1789,9.5,37.0,29.5,29.5,18.0,5.0
-Soydrink,34,143,92.5,3.6,0.5,0.5,2.0,0.4
-Soymilk plain,38,163,91.6,3.8,1.0,1.0,2.2,0.4
-Spaghetti/macaroni with tomatosauce,117,492,76.5,4.2,11.9,11.9,5.9,0.5
-Spelt,354,1481,5.4,12.2,69.3,69.3,2.6,10.5
-Spelt flour,361,1509,10.8,13.3,69.6,69.6,2.8,2.5
-Spinach cooked,16,71,92.1,3.6,0.6,0.6,0.0,2.7
-Spinach raw,15,63,93.6,2.5,0.6,0.6,0.3,2.0
-Sprat Atlantic fish fillet,222,932,63.0,20.0,0.0,0.0,16.0,0.0
-Spring rolls Chinese,207,870,58.5,8.5,20.0,20.0,10.0,2.0
-Squab pigeon raw,287,1200,56.5,18.5,0.0,0.0,24.0,0.0
-Squid mixed species cooked fried,147,618,68.5,24.5,1.0,1.0,5.0,0.0
-Squid mixed species raw,80,338,81.1,16.2,0.0,0.0,1.7,0.0
-Squid rings fried,429,1793,29.7,25.0,13.2,13.2,31.1,0.0
-Stock dry cubes unprepared meat,237,996,54.0,16.0,16.0,16.0,12.0,1.0
-Stock dry herbs and spices unprepared,180,756,59.7,18.0,15.0,15.0,5.0,1.3
-Stock prepared,6,28,97.9,0.5,0.1,0.1,0.5,0.0
-Stockfish hydrated,138,581,66.0,32.0,0.0,0.0,1.0,0.0
-Stockfishfresh dried not salted,342,1430,17.0,80.0,0.0,0.0,2.0,0.0
-Strawberries fresh,36,154,89.3,0.8,6.5,6.5,0.4,2.0
-Sugar brown powdered,387,1618,3.5,0.0,95.5,95.5,0.0,0.0
-Sugar cain,390,1630,4.0,0.0,96.0,96.0,0.0,0.0
-Sugar granulated,406,1697,0.0,0.0,100.0,100.0,0.0,0.0
-Sugar powdered,406,1697,0.0,0.0,100.0,100.0,0.0,0.0
-Sugar white,402,1680,1.0,0.0,99.0,99.0,0.0,0.0
-Sunflower oil,881,3683,0.0,0.0,0.0,0.0,99.8,0.0
-Sunflower seed kernels,629,2629,4.0,27.0,10.5,10.5,53.0,4.5
-Surimi fish paste,105,443,74.1,15.5,8.4,8.4,1.0,0.0
-Sweet potato raw,96,402,74.1,1.3,21.0,21.0,0.1,2.5
-Sweeteners tabletop mixed varieties,0,0,0.1,0.0,0.0,0.0,0.0,0.0
-Swordfish raw,119,498,74.0,19.5,0.0,0.0,4.5,0.0
-Syrup heavy mixed varieties,292,1220,26.0,0.0,72.0,72.0,0.0,0.0
-Syrup table blend beetsugar,304,1270,24.0,0.0,75.0,75.0,0.0,0.0
-Syrups grenadine mixed varieties,223,935,44.0,0.0,55.0,55.0,0.0,0.0
-Taco shells dried,506,2115,2.5,7.5,62.0,62.0,25.0,2.0
-Tangerines mandarin oranges fresh,49,209,86.0,0.7,10.1,10.1,0.3,1.9
-Tapioca flour,349,1459,13.2,0.6,85.0,85.0,0.2,0.0
-Tea black brewed,0,0,100.0,0.0,0.0,0.0,0.0,0.0
-Tea black brewed with sugar,10,45,96.3,0.0,2.7,2.7,0.0,0.0
-Tea black unprepared,353,1476,16.0,22.5,59.0,59.0,2.5,0.0
-Tea green brewed,0,0,100.0,0.0,0.0,0.0,0.0,0.0
-Teff seeds,358,1496,11.4,9.6,73.0,73.0,2.0,3.0
-Tempeh,151,636,69.2,12.0,5.5,5.5,8.3,4.0
-Teriyaki sauce,90,379,76.7,6.1,16.2,16.2,0.0,0.0
-Thymus veal raw,89,375,78.9,18.4,0.0,0.0,1.7,0.0
-Tilapia freshwater fish raw,114,481,76.3,17.9,0.0,0.0,4.8,0.0
-Tofu extra firm raw,121,510,74.0,12.0,1.5,1.5,6.5,5.0
-Tomato juice canned,18,78,94.0,0.8,3.1,3.1,0.1,1.0
-Tomato ketchup,119,500,69.4,0.5,28.5,28.5,0.1,0.5
-Tomato paste canned conc. 30 %,76,320,78.6,3.5,14.0,14.0,0.0,2.9
-Tomato sauce canned,51,216,85.9,1.4,9.2,9.2,1.9,0.6
-Tomatoes red raw,19,81,93.9,1.0,2.9,2.9,0.2,1.0
-Tongue beef,188,782,68.5,17.3,0.0,0.0,13.2,0.0
-Tongue veal,167,702,70.5,17.6,0.0,0.0,10.9,0.0
-Tonic water carbonated,38,161,89.5,0.0,9.5,9.5,0.0,0.0
-Tortilla chips,509,2133,0.7,7.1,66.5,66.5,23.6,1.1
-Trout mixed species cooked,132,553,72.1,22.1,0.0,0.0,4.8,0.0
-Trout mixed species raw,126,526,76.0,18.4,0.0,0.0,5.8,0.0
-Trout rainbow char cooked,162,681,68.3,22.7,0.0,0.0,8.0,0.0
-Truffles black,34,145,90.0,5.5,1.0,1.0,0.5,2.0
-Tuna canned in oil,190,797,64.2,24.5,0.0,0.0,10.3,0.0
-Tuna canned in water,114,480,72.0,25.9,0.0,0.0,1.1,0.0
-Tuna raw,96,402,76.5,21.5,0.0,0.0,1.0,0.0
-Turbot european raw,84,355,80.2,17.0,0.0,0.0,1.8,0.0
-Turkey all classes meat and skin raw,141,592,71.2,21.8,0.0,0.0,6.0,0.0
-Turkey breast meat only raw,106,446,74.4,22.6,0.6,0.6,1.4,0.0
-Turkey leg meat and skin raw,115,479,70.0,20.5,0.0,0.0,3.6,0.0
-Turnips raw,25,106,91.9,1.5,3.4,3.4,0.2,2.0
-Veal retail cuts lean,104,439,75.0,22.4,0.0,0.0,1.6,0.0
-Veal retail cuts lean and fat,170,713,68.9,20.0,0.0,0.0,10.1,0.0
-Veal ribeye entrecôte,180,757,66.8,21.5,0.2,0.2,10.5,0.0
-Veal ribeye entrecôte cooked,199,837,61.5,26.5,1.0,1.0,10.0,0.0
-Veal shank meat,112,469,74.8,21.3,0.0,0.0,2.9,0.0
-Vegetable spread cucumber,160,674,72.4,1.4,13.8,13.8,11.2,0.2
-Vegetable spread regular,205,862,63.3,2.6,13.8,13.8,14.8,4.5
-Vermicelli pasta raw,361,1509,10.8,10.0,75.0,75.0,1.5,1.7
-Vermouth 12 % v/v,150,630,71.0,0.0,16.5,16.5,0.0,0.0
-Vieux 35 % v/v,248,1040,63.5,0.0,1.5,1.5,0.0,0.0
-Vinegar balsamico,77,326,79.8,0.2,19.0,19.0,0.0,0.0
-Vinegar distilled,1,5,98.5,0.0,0.5,0.5,0.0,0.0
-Waffles Belgian style,459,1919,13.4,6.0,56.0,56.0,23.5,0.1
-Walnut oil,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
-Walnuts raw,675,2822,2.0,14.4,12.1,12.1,62.5,8.0
-Water bottled carbonated,0,0,100.0,0.0,0.0,0.0,0.0,0.0
-Water bottled mixed varieites,0,0,100.0,0.0,0.0,0.0,0.0,0.0
-Water bottled non-carbonated,0,0,100.0,0.0,0.0,0.0,0.0,0.0
-Watercress raw,20,84,93.6,1.6,2.0,2.0,0.3,1.5
-Watermelon fresh,37,159,89.3,0.6,7.8,7.8,0.2,1.1
-Wheat bran crude,317,1325,9.0,17.0,25.0,25.0,8.0,40.0
-Wheat flour self-rising,343,1434,14.3,10.5,71.0,71.0,1.0,2.2
-Wheat flour white,332,1388,12.9,11.4,62.2,62.2,1.5,11.0
-Wheat flour whole-grain,346,1446,14.5,11.4,69.8,69.8,1.5,1.8
-Wheat germ oil,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
-Wheat germs,391,1634,9.5,27.0,45.0,45.0,9.5,8.0
-Wheat whole grain raw,329,1375,14.5,12.4,59.5,59.5,2.0,10.6
-Whipped cream sweetened,355,1484,48.0,2.0,18.0,18.0,31.0,0.0
-Whipping cream,337,1409,58.2,2.0,2.8,2.8,36.0,0.0
-Whiskey 40 % v/v,277,1160,60.0,0.0,0.0,0.0,0.0,0.0
-Whiting mixed species raw,85,358,79.3,18.5,0.0,0.0,1.2,0.0
-Wine red 13 % v/v,86,360,86.4,0.2,3.0,3.0,0.0,0.0
-Wine rosé 11 % v/v,63,264,87.0,0.1,2.5,2.5,0.0,0.0
-Wine sekt  12-14 % v/v,64,268,88.8,0.2,0.0,0.0,0.0,0.0
-Wine white 115 % v/v,80,336,88.3,0.2,0.0,0.0,0.0,0.0
-Wine white sweet 11 % v/v,89,370,92.3,0.2,6.5,6.5,0.0,0.0
-Winegums,233,976,41.8,1.5,55.5,55.5,0.2,0.0
-Worcestershire sauce,67,284,85.1,2.0,9.5,9.5,2.4,0.0
-Yam,107,450,71.0,2.0,22.5,22.5,0.2,3.3
-Yeast bakers fresh,88,372,74.0,16.5,1.0,1.0,0.5,7.0
-Yeast dried,406,1697,0.0,47.9,34.5,34.5,4.2,18.0
-Yeast extract,236,989,39.8,42.0,14.0,14.0,0.4,2.8
-Yeast extract spread Marmite,240,1003,38.5,43.0,15.0,15.0,0.0,2.5
-Yogurt Bulgarian full fat,84,353,83.5,4.5,6.5,6.5,4.5,0.0
-Yogurt Bulgarian no-fat,59,246,84.7,4.8,7.5,7.5,1.0,0.0
-Yogurt Greek plain,58,243,84.9,10.2,3.5,3.5,0.4,0.0
-Yogurt drink mixed fruit varieties,37,155,89.5,4.0,4.0,4.0,0.5,0.0
-Yogurt drink plain,69,292,81.9,3.0,14.0,14.0,0.1,0.0
-Yogurt mixed fruit varieties full fat,96,406,77.9,3.9,14.5,14.5,2.5,0.2
-Yogurt plain full fat,65,271,86.2,3.8,4.5,4.5,3.5,0.0
-Yogurt plain no-fat,33,138,90.0,3.4,4.5,4.5,0.1,0.0
-Yogurt plain reduced fat,49,207,88.7,3.5,5.2,5.2,1.6,0.0
-Yogurt vanilla flavor reduced fat ,80,335,80.9,3.2,13.5,13.5,1.4,0.0
-Zucchini raw,27,115,91.6,1.8,4.5,4.5,0.0,1.1
-wodka 80% proof,64,268,99.0,0.0,0.0,0.0,0.0,0.0
+ime,kalorije,kjoule,voda,proteini,ogljikovi hidrati,sladkor,mascobe,vlaknine
+
+Adzuki beans cooked,131,548,65.9,7.2,24.8,24.8,0.1,
+
+Agar-agar seaweed dried,365,1526,4.6,6.0,80.0,80.0,0.0,8.4
+
+Alaska pollak raw,75,314,81.5,16.7,0.0,0.0,0.8,0.0
+
+Alfalfa sprouted seeds raw ,43,181,87.9,4.1,3.9,3.9,0.7,2.4
+
+Almond oil,882,3687,0.2,0.0,0.0,0.0,99.8,0.0
+
+Almond paste,445,1860,15.0,10.0,43.5,43.5,24.5,6.0
+
+Almonds,583,2437,10.7,19.5,6.2,6.2,52.0,10.6
+
+Anchovy european raw,102,427,76.6,20.1,0.0,0.0,2.3,0.0
+
+Anise seed,425,1777,4.0,10.0,55.0,55.0,15.0,15.0
+
+Apple cider 5 % v/v,10,42,96.5,0.0,2.5,2.5,0.0,0.0
+
+Apple fresh,54,229,84.3,0.4,12.0,12.0,0.0,2.3
+
+Apple juice bottled unsweetened,42,180,88.4,0.1,10.5,10.5,0.0,0.0
+
+Apple pie Dutch,248,1036,48.5,4.2,35.0,35.0,9.8,1.5
+
+Applesauce canned sweetened,81,341,78.5,0.2,19.2,19.2,0.1,1.0
+
+Apricot canned no skin,74,310,80.3,0.5,17.0,17.0,0.1,1.1
+
+Apricot dried,274,1145,26.9,5.0,58.5,58.5,0.1,8.5
+
+Apricot fresh,60,252,83.4,1.4,11.5,11.5,0.4,2.3
+
+Arachide oil peanut,879,3674,0.5,0.0,0.0,0.0,99.5,0.0
+
+Artichokes harts,46,195,87.3,2.7,7.6,7.6,0.3,1.1
+
+Artichokes raw,52,218,85.5,2.4,9.5,9.5,0.1,1.5
+
+Arugula raw,13,58,95.0,1.3,1.0,1.0,0.2,1.5
+
+Asparagus white canned,22,94,93.3,1.9,3.2,3.2,0.1,0.5
+
+Asparagus white raw,17,73,94.1,1.9,1.3,1.3,0.2,1.5
+
+Avocados raw,188,790,70.4,2.6,1.5,1.5,18.1,6.4
+
+Bacon cured european-style raw,373,1559,47.0,18.0,0.0,0.0,34.0,0.0
+
+Bacon cured grilled,262,1095,60.7,15.8,0.2,0.2,22.3,0.0
+
+Bacon cured raw,399,1668,45.0,15.2,0.4,0.4,37.9,0.5
+
+Bacon pork,882,3687,0.1,0.2,0.0,0.0,99.7,0.0
+
+Bacon raw without skin,329,1375,53.2,16.7,0.0,0.0,29.1,0.0
+
+Bagels plain,313,1308,26.4,10.0,55.0,55.0,5.1,2.5
+
+Baklava Turkish pastry,464,1940,13.4,4.0,55.6,55.6,25.0,1.0
+
+Bamboo shoots raw,28,119,91.6,2.5,3.5,3.5,0.2,1.2
+
+Bananas fresh,86,363,76.8,1.2,18.8,18.8,0.2,2.0
+
+Barley flakes,386,1613,0.9,9.1,77.0,77.0,2.0,10.0
+
+Barley flour,301,1258,26.0,11.0,58.0,58.0,2.0,2.0
+
+Barley raw,333,1392,11.4,11.0,59.5,59.5,2.1,15.0
+
+Basil dried,308,1287,18.1,14.4,44.5,44.5,4.0,18.0
+
+Basil fresh,47,197,86.2,3.0,5.0,5.0,0.8,4.0
+
+Bass freshwater mixed species raw,87,366,80.0,15.0,0.0,0.0,3.0,0.0
+
+Beans butter/green cooked,24,103,89.5,2.5,3.6,3.6,0.0,3.4
+
+Beans butter/green raw,36,152,85.9,2.4,6.0,6.0,0.3,3.5
+
+Beans white cooked,114,480,65.9,7.5,14.5,14.5,0.6,10.5
+
+Beef chuck shoulder tender lean raw,110,461,74.3,22.6,0.0,0.0,2.1,0.0
+
+Beef chunks cooked,198,833,60.0,30.0,0.5,0.5,8.5,0.0
+
+Beef chunks raw,115,483,74.0,22.1,0.0,0.0,2.9,0.0
+
+Beef loin tip flaps raw,171,713,68.0,20.8,0.0,0.0,9.7,0.0
+
+Beef ribeye,146,613,70.0,22.8,0.2,0.2,6.0,0.0
+
+Beef ribeye prepared,199,836,61.8,26.0,1.0,1.0,10.2,0.0
+
+Beef roulade lean,154,648,69.7,21.0,0.8,0.8,7.5,0.0
+
+Beef shank meat,114,480,73.8,22.6,0.0,0.0,2.6,0.0
+
+Beef sirloin roulade,126,530,72.5,22.5,0.0,0.0,4.0,0.0
+
+Beef smoked lean,152,640,69.0,22.9,0.6,0.6,6.5,0.0
+
+Beef steak loin,116,488,73.0,23.7,0.0,0.0,2.3,0.0
+
+Beef tenderloin,126,528,72.1,21.5,0.0,0.0,4.4,0.0
+
+Beer no alcohol,15,64,95.2,0.3,3.5,3.5,0.0,0.0
+
+Beer pilsener 5 % v/v,42,175,93.0,0.5,3.0,3.0,0.0,0.0
+
+Beer strong more than 7 % v/v,52,220,88.0,0.7,3.8,3.8,0.0,0.0
+
+Beer white 5 % v/v,45,189,89.7,0.5,3.8,3.8,0.0,0.0
+
+Beet juice red,38,158,88.7,1.1,8.2,8.2,0.0,0.0
+
+Beetroot red cooked,34,143,89.2,1.4,5.8,5.8,0.0,2.6
+
+Beetroot red raw,43,183,86.9,2.0,7.0,7.0,0.2,2.9
+
+Bell pepper mixed varieties,26,109,91.5,1.0,4.5,4.5,0.0,2.0
+
+Beverage carbonated mixed varieties,42,178,88.5,0.0,10.5,10.5,0.0,0.0
+
+Beverage carbonated mixed varieties light,0,0,99.0,0.0,0.0,0.0,0.0,0.0
+
+Biscuit savoury average,521,2178,0.0,8.0,65.0,65.0,25.0,2.0
+
+Black beans raw,154,647,57.0,9.0,24.0,24.0,0.5,8.5
+
+Black currant,47,200,85.6,1.2,8.5,8.5,0.2,3.5
+
+Black pudding,374,1563,46.8,15.2,3.0,3.0,34.0,0.0
+
+Blackberries raw,58,243,83.1,1.2,8.5,8.5,1.0,5.2
+
+Bloater fried,234,983,60.0,23.0,0.0,0.0,16.0,0.0
+
+Bloater smoked,270,1128,55.3,22.5,0.0,0.0,20.2,0.0
+
+Bloater steamed,227,954,61.9,20.9,0.0,0.0,16.2,0.0
+
+Blueberries,75,316,77.1,0.6,14.5,14.5,0.2,6.6
+
+Bok choi raw,9,38,96.2,1.0,0.8,0.8,0.0,1.0
+
+Bonbon mixed varieties,461,1927,5.5,3.5,70.0,70.0,18.0,2.0
+
+Boursin cheese,410,1714,46.8,8.4,1.5,1.5,41.8,0.5
+
+Brains pork raw,122,513,79.4,10.6,0.0,0.0,9.0,0.0
+
+Brandy  45 % v/v,218,913,68.5,0.0,0.0,0.0,0.0,0.0
+
+Bratwurst,313,1308,50.6,22.4,1.5,1.5,24.5,0.0
+
+Brazil nuts,679,2838,6.8,14.0,4.5,4.5,67.0,6.7
+
+Bread Multi-Grain,262,1095,35.2,9.5,45.0,45.0,3.4,5.9
+
+Bread baguette white,283,1182,24.0,8.4,58.0,58.0,1.9,3.5
+
+Bread brown,256,1070,37.0,7.0,45.6,45.6,3.7,5.7
+
+Bread crumbs plain,383,1601,6.0,13.0,73.0,73.0,3.0,4.0
+
+Bread mix wheat and rye,220,922,43.7,6.7,41.5,41.5,1.6,5.5
+
+Bread pita white,267,1116,32.8,8.8,52.0,52.0,1.5,3.9
+
+Bread raisin,289,1208,35.0,6.3,46.0,46.0,8.0,3.7
+
+Bread raisin enriched,273,1141,35.4,6.8,49.0,49.0,4.6,3.2
+
+Bread rolls mixed varieties,299,1249,27.5,9.5,55.0,55.0,3.5,3.5
+
+Bread rolls regular,282,1178,33.2,8.5,50.0,50.0,4.5,2.8
+
+Bread rye dark,198,833,47.0,5.5,36.0,36.0,1.5,9.0
+
+Bread rye mixed varieties,242,1011,39.8,6.2,44.5,44.5,3.0,5.5
+
+Bread seven grain,266,1111,34.6,9.7,46.0,46.0,3.4,5.3
+
+Bread sourdough whole-wheat,206,864,46.4,7.5,35.4,35.4,2.0,7.7
+
+Bread sugarloaf,310,1295,25.0,7.0,54.4,54.4,7.2,2.4
+
+Bread toasted regular,370,1547,11.0,13.5,68.0,68.0,4.0,2.5
+
+Bread wheat,266,1111,34.3,8.2,48.8,48.8,3.0,4.7
+
+Bread white made with low fat milk,255,1065,38.8,9.2,45.0,45.0,3.5,2.5
+
+Bread white made with water,236,991,41.7,8.3,44.5,44.5,2.0,2.5
+
+Bread whole-wheat,246,1446,37.6,8.4,43.5,43.5,2.6,6.9
+
+Bream fish,115,484,77.0,16.5,0.0,0.0,5.5,0.0
+
+Broadbeans cooked,42,177,86.0,4.5,3.7,3.7,0.0,4.8
+
+Broadbeans raw,31,133,87.7,0.3,4.5,4.5,0.0,6.5
+
+Broccoli cooked,29,124,89.6,3.2,2.0,2.0,0.1,4.1
+
+Broccoli raw,29,125,90.0,3.3,2.0,2.0,0.2,3.5
+
+Brown beans cooked,110,462,63.7,7.6,18.1,18.1,0.7,8.9
+
+Brownie,484,2028,9.5,5.2,57.5,57.5,25.8,1.0
+
+Brussels sprouts cooked,25,108,87.8,3.0,3.4,3.4,0.0,4.8
+
+Brussels sprouts raw,37,155,85.5,3.8,4.2,4.2,0.5,4.0
+
+Buckwheat,358,1496,10.6,10.4,72.6,72.6,1.7,3.7
+
+Buckwheat flour,362,1513,10.0,10.8,69.9,69.9,2.7,5.6
+
+Bulgur,375,1574,6.5,9.5,80.0,80.0,1.0,2.0
+
+Burger vegetables Vegetarian,139,586,70.0,9.0,11.0,11.0,6.0,3.0
+
+Butter Cake Dutch ,516,2157,8.0,4.5,55.0,55.0,31.0,0.5
+
+Butter light,343,1434,58.0,2.8,1.2,1.2,37.0,0.0
+
+Butter unsalted,735,3072,14.1,0.7,0.7,0.7,82.5,0.0
+
+Butterfish,287,1200,56.5,18.5,0.0,0.0,24.0,0.0
+
+Buttermilk porridge groats,49,209,87.0,3.5,7.5,7.5,0.5,0.5
+
+Buttermilk sweetened,53,223,86.2,2.3,10.2,10.2,0.3,0.0
+
+Buttermilk unsweetened,32,133,91.0,2.5,4.5,4.5,0.4,0.0
+
+Cabbage Chinese pak choi raw,20,84,92.9,1.2,1.8,1.8,0.3,2.8
+
+Cabbage green savoy raw,46,194,86.4,4.3,3.2,3.2,0.9,4.2
+
+Cabbage oxheart raw,33,141,89.2,3.0,4.0,4.0,0.6,2.2
+
+Cabbage red canned,46,194,86.5,1.0,9.5,9.5,0.0,2.0
+
+Cabbage red cooked,18,78,93.2,1.2,2.4,2.4,0.0,2.2
+
+Cabbage red raw,26,112,91.3,1.5,3.5,3.5,0.2,2.5
+
+Cabbage savoy cooked boiled,30,127,91.2,1.2,2.8,2.8,1.0,2.8
+
+Cabbage white raw,27,117,91.0,1.5,3.8,3.8,0.2,2.5
+
+Cake fresh fruit topping,251,1049,51.2,3.5,30.7,30.7,12.5,1.1
+
+Cake gingerbread ready-to-eat,308,1287,23.4,3.3,67.7,67.7,1.7,2.9
+
+Cake pound,444,1856,18.5,7.5,47.0,47.0,25.0,1.0
+
+Cake pound prepared with butter,443,1852,17.8,6.5,50.0,50.0,24.1,0.6
+
+Cake sponge whipped cream topping,321,1341,43.4,5.0,30.0,30.0,20.2,0.4
+
+Campari bitter 25 % v/v,203,855,63.0,0.0,20.0,20.0,0.0,0.0
+
+Candied peel mixed varieties,307,1283,19.7,0.5,75.0,75.0,0.0,2.8
+
+Candy hard mixed varieties,385,1609,5.0,0.1,95.0,95.0,0.0,0.0
+
+Candy mixed varieties,398,1664,15.0,3.5,68.5,68.5,12.0,0.0
+
+Candy toffee mixed varieties,464,1940,7.2,3.1,69.5,69.5,19.2,0.0
+
+Candy tutti frutti,259,1082,29.0,2.0,56.5,56.5,0.0,11.5
+
+Capuchins shocker pea canned,104,438,70.9,6.5,14.0,14.0,1.0,6.6
+
+Caramel custard pudding,147,617,67.0,3.5,23.0,23.0,4.5,0.0
+
+Carbonated beverage mixed varieties,41,170,88.0,0.0,10.0,10.0,0.0,0.0
+
+Carbonated beverages mixed varieties diet,7,30,97.2,0.0,1.8,1.8,0.0,0.0
+
+Carp raw,115,482,76.0,18.0,0.0,0.0,4.8,0.0
+
+Carrot juice canned,30,127,91.5,0.0,7.5,7.5,0.0,0.0
+
+Carrots baby raw,33,140,89.2,1.0,5.2,5.2,0.2,3.4
+
+Carrots cooked,27,116,90.6,0.8,4.7,4.7,0.0,2.9
+
+Cashew nuts raw,591,2470,4.0,18.5,22.5,22.5,46.5,7.5
+
+Cassava flour,350,1463,11.9,2.8,82.0,82.0,0.3,2.0
+
+Cassava raw,141,591,62.9,1.0,32.0,32.0,0.2,2.9
+
+Catfish cooked,132,554,70.5,25.0,0.0,0.0,3.5,0.0
+
+Cauliflower cooked,20,86,92.8,1.9,2.2,2.2,0.0,2.1
+
+Cauliflower raw,24,102,91.8,2.0,3.0,3.0,0.0,2.2
+
+Caviar black,273,1141,53.9,26.1,0.0,0.0,19.0,0.0
+
+Caviar-like imitation,120,504,77.0,15.5,0.0,0.0,6.5,0.0
+
+Cayenne pepper,371,1551,13.5,11.5,30.5,30.5,17.0,26.5
+
+Celeriac raw,31,133,86.6,2.0,5.0,5.0,0.4,5.0
+
+Celery leaves,12,51,94.2,1.0,2.0,2.0,0.0,1.8
+
+Celery raw,17,75,93.1,0.7,3.5,3.5,0.1,1.6
+
+Ceps porcini mushroom,20,84,93.4,2.5,0.0,0.0,0.6,2.5
+
+Champagne,76,318,97.0,0.3,1.3,1.3,0.0,0.0
+
+Chanterelle raw,19,81,92.4,2.1,1.1,1.1,0.0,3.4
+
+Chard swiss raw,23,98,90.5,1.8,3.5,3.5,0.2,2.0
+
+Cheddar cheese 50+,389,1626,40.9,25.4,0.5,0.5,32.2,0.0
+
+Cheese 10+ ,193,810,59.0,33.5,0.0,0.0,6.5,0.0
+
+Cheese 20+,235,988,55.0,32.0,0.0,0.0,12.0,0.0
+
+Cheese 30+,253,1057,56.0,26.5,0.0,0.0,16.5,0.0
+
+Cheese 40+,317,1325,48.5,26.9,0.0,0.0,23.6,0.0
+
+Cheese 45+,364,1522,44.0,25.5,0.0,0.0,29.5,0.0
+
+Cheese 48+,382,1597,41.5,24.5,0.0,0.0,32.0,0.0
+
+Cheese Brie 50+,338,1413,48.5,22.5,0.0,0.0,28.0,0.0
+
+Cheese Camenbert 30+,215,899,61.0,23.5,0.0,0.0,13.5,0.0
+
+Cheese Camenbert 45+,282,1178,54.7,21.0,0.0,0.0,22.3,0.0
+
+Cheese Danish blue,377,1576,46.0,19.0,0.0,0.0,34.0,0.0
+
+Cheese Edam 30+,250,1045,52.4,26.4,0.0,0.0,16.2,0.0
+
+Cheese Edam 40+,313,1308,45.5,26.1,0.0,0.0,23.4,0.0
+
+Cheese Fèta,252,1053,62.1,14.2,1.2,1.2,21.5,0.0
+
+Cheese Gorgonzola,354,1479,48.4,19.4,0.0,0.0,31.2,0.0
+
+Cheese Gouda 48+,390,1630,41.0,25.5,0.0,0.0,32.5,0.0
+
+Cheese Gouda smoked,311,1299,51.0,22.0,1.5,1.5,24.5,0.0
+
+Cheese Gruyère,411,1718,35.0,29.5,1.0,1.0,32.5,0.0
+
+Cheese Kernhemmer,423,1768,40.5,19.5,0.0,0.0,39.0,0.0
+
+Cheese Leerdammer 45+,367,1534,42.5,27.5,0.0,0.0,29.0,0.0
+
+Cheese Limburger 40+,269,1124,55.5,22.5,1.5,1.5,19.5,0.0
+
+Cheese Maaslander 48+,374,1563,43.3,24.7,0.0,0.0,31.0,0.0
+
+Cheese Port du salut,310,1295,53.0,20.0,0.0,0.0,26.0,0.0
+
+Cheese Provolone,346,1446,45.1,25.0,2.1,2.1,26.8,0.0
+
+Cheese Roquefort,359,1501,48.0,19.0,0.0,0.0,32.0,0.0
+
+Cheese Saint Paulin,333,1392,47.2,25.0,1.0,1.0,25.8,0.0
+
+Cheese Stilton,413,1726,39.5,23.5,0.0,0.0,36.0,0.0
+
+Cheese Swiss Emmenthaler 45+,379,1584,37.6,28.7,0.0,0.0,29.7,0.0
+
+Cheese Swiss mixed varieties,377,1576,38.7,28.9,3.6,3.6,27.8,0.0
+
+Cheese cottage,100,422,79.1,12.8,2.9,2.9,4.2,0.0
+
+Cheese cottage Hüttenkase,98,411,78.9,12.3,2.5,2.5,4.3,0.0
+
+Cheese creamed with walnuts,321,1341,53.4,13.7,3.4,3.4,28.5,0.0
+
+Cheese grated,217,909,55.5,35.0,0.0,0.0,8.5,0.0
+
+Cheese mascarpone,408,1705,47.8,5.0,4.2,4.2,42.0,0.0
+
+Cheese monterey,374,1563,43.0,24.6,0.7,0.7,30.7,0.0
+
+Cheese mozzarella,246,1446,56.9,20.0,4.6,4.6,16.5,0.0
+
+Cheese parmesan,422,1764,28.5,40.0,2.0,2.0,28.5,0.0
+
+Cheese puffs,565,2367,1.5,6.4,55.0,55.0,35.7,0.4
+
+Cheese ricotta whole milk,171,719,74.3,9.5,0.2,0.2,15.0,0.0
+
+Cheese sheep mixed varieties,301,1258,52.2,15.3,6.5,6.5,24.0,0.0
+
+Cheese spread Gouda 20 +,176,741,66.0,17.0,7.0,7.0,9.0,0.0
+
+Cheese spread Gouda 48 +,267,1116,58.5,17.0,2.0,2.0,21.5,0.0
+
+Cheese spread Gouda based,315,1316,48.3,18.2,9.5,9.5,23.0,0.0
+
+Cheese with cumin seeds,271,1132,57.3,20.0,0.1,0.1,21.5,0.1
+
+Cheeseburger,283,1189,44.8,14.0,26.5,26.5,13.5,0.2
+
+Cheeseburger vegetarian,258,1078,50.6,15.2,15.8,15.8,14.4,3.0
+
+Cheesecake,308,1292,45.3,5.4,28.6,28.6,19.2,0.5
+
+Cheesecake mixed varieties,241,1007,54.5,5.0,26.0,26.0,13.0,0.5
+
+Cherries red sour fresh,52,220,84.9,1.0,11.0,11.0,0.0,2.1
+
+Cherries red sweet fresh,54,228,84.9,0.5,12.0,12.0,0.1,1.5
+
+Chestnuts raw,188,789,51.5,4.0,35.0,35.0,2.0,6.5
+
+Chewing gum,284,1187,4.0,0.0,70.0,70.0,0.0,0.0
+
+Chewing gum sugarless,0,0,3.0,0.0,0.0,0.0,0.0,0.0
+
+Chiabatta,238,997,40.0,8.5,45.0,45.0,1.5,4.0
+
+Chicken breast meat only cooked,157,658,65.0,30.0,0.0,0.0,4.0,0.0
+
+Chicken breast meat only raw,100,420,75.3,22.8,0.0,0.0,0.9,0.0
+
+Chicken chops with peanut sauce,229,962,58.0,15.0,12.0,12.0,13.5,0.5
+
+Chicken leg meat and skin raw,103,435,76.1,20.6,0.0,0.0,2.3,0.0
+
+Chicken liver,132,554,71.3,22.5,1.0,1.0,4.2,0.0
+
+Chicken meat and skin raw,165,694,69.8,19.3,0.0,0.0,9.9,0.0
+
+Chicken meat only raw,138,581,72.2,20.5,0.0,0.0,6.3,0.0
+
+Chicken roulade,176,738,68.5,18.0,1.5,1.5,11.0,0.0
+
+Chickpeas cooked boiled,119,502,70.1,7.5,13.0,13.0,3.0,5.4
+
+Chickpeas dried raw,325,1358,18.0,20.0,48.0,48.0,3.5,9.5
+
+Chickpeas seeds green,155,652,61.5,7.5,22.0,22.0,3.0,5.0
+
+Chicory raw,13,58,95.1,1.3,1.1,1.1,0.2,1.3
+
+Chicory witloof cooked,14,61,94.8,1.2,1.9,1.9,0.0,1.1
+
+Chili peppers dried,366,1530,16.5,12.5,33.0,33.0,16.0,21.0
+
+Chili peppers pimento raw,31,132,91.2,0.9,5.8,5.8,0.5,0.6
+
+Chili powder,380,1588,12.5,12.0,32.0,32.0,17.5,25.0
+
+Chillies red fried,59,248,87.0,4.5,2.5,2.5,3.5,1.5
+
+Chinese cabbage cooked,19,81,92.7,1.0,2.5,2.5,0.0,2.8
+
+Chipolatapudding,228,958,57.3,5.2,24.0,24.0,12.5,0.0
+
+Chive fresh,58,246,84.4,3.6,8.5,8.5,0.7,1.8
+
+Chocolate dark 45-59% cacao solids,513,2144,10.6,5.3,49.0,49.0,33.0,1.1
+
+Chocolate milk,541,2261,2.1,9.2,55.0,55.0,31.5,1.2
+
+Chocolate milk beverage non-fat,68,285,82.9,3.5,12.0,12.0,0.6,0.0
+
+Chocolate milk beverage reduced fat,79,328,82.0,3.2,12.9,12.9,1.6,0.0
+
+Chocolate milk beverage whole,100,421,78.7,3.6,12.9,12.9,3.8,0.0
+
+Chocolate pudding ready-to-eat,105,441,76.3,3.2,16.0,16.0,3.0,0.5
+
+Chocolate spread dark,617,2579,0.0,4.5,65.0,65.0,37.0,4.5
+
+Chocolate spread milk,563,2353,0.2,4.0,57.8,57.8,35.0,2.0
+
+Chocolate spread with hazelnut,567,2370,0.0,4.5,55.0,55.0,36.0,4.0
+
+Chocolate white,560,2341,0.1,7.6,58.0,58.0,33.3,0.0
+
+Chocolate with hazelnuts,577,2412,2.0,9.5,44.0,44.0,40.0,3.5
+
+Chorizo sausage,360,1505,45.4,23.0,0.6,0.6,30.0,0.0
+
+Cider apple,10,42,96.5,0.0,2.5,2.5,0.0,0.0
+
+Cinnamon ground,314,1312,12.0,3.8,55.0,55.0,3.2,25.0
+
+Cloves,427,1785,12.3,6.2,51.0,51.0,20.0,9.5
+
+Cockle shellfish,64,267,82.4,15.5,0.0,0.0,0.1,0.0
+
+Cocoa powder,405,1693,9.9,19.8,10.8,10.8,24.5,34.0
+
+Coconut meat grated,742,3102,0.0,7.0,19.0,19.0,69.0,14.0
+
+Coconut meat raw,410,1714,37.0,4.0,3.0,3.0,40.0,15.0
+
+Coconut milk canned,208,872,73.0,1.5,3.0,3.0,21.5,0.0
+
+Coconut milk fresh,21,91,93.3,0.7,3.7,3.7,0.2,1.1
+
+Coconut oil,878,3670,0.2,0.8,0.0,0.0,99.0,0.0
+
+Cod Atlantic fillet cooked,118,495,73.4,22.0,0.6,0.6,3.0,0.0
+
+Cod Atlantic raw,72,304,81.9,16.4,0.0,0.0,0.7,0.0
+
+Cod chopped battered and fried,221,927,60.7,24.5,0.0,0.0,13.8,0.0
+
+Cod-liver oil,881,3683,0.0,0.0,0.0,0.0,99.8,0.0
+
+Coffee black ready-to-drink,0,1,98.8,0.0,0.0,0.0,0.0,0.2
+
+Coffee cream powder,550,2299,3.8,4.2,55.0,55.0,35.0,0.0
+
+Coffee with cream and sugar ready-to-drink,22,93,93.6,0.7,4.6,4.6,0.1,0.0
+
+Coffee with cream ready-to-drink,10,44,96.4,0.7,1.9,1.9,0.1,0.0
+
+Cognac 40 % v/v,220,924,66.0,0.0,1.0,1.0,0.0,0.0
+
+Cola,44,187,88.0,0.0,11.0,11.0,0.0,0.0
+
+Cola diet,1,5,98.7,0.0,0.3,0.3,0.0,0.0
+
+Condensed milk canned unsweetened,131,550,74.5,6.5,9.5,9.5,7.5,0.0
+
+Cookie coconut macaroons,550,2299,3.5,5.5,53.0,53.0,35.0,2.0
+
+Cookie shortbread plain,518,2165,3.7,5.4,58.0,58.0,28.9,3.0
+
+Cookie soft-type mixed varieties,399,1668,26.5,7.9,37.0,37.0,23.7,3.9
+
+Cookies shortbread mixed varieties,421,1760,3.0,8.5,78.0,78.0,7.5,2.0
+
+Cooking oil mixed varieties,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
+
+Cordon bleu vegetarian,249,1040,52.5,17.5,9.0,9.0,15.0,5.0
+
+Coriander leaf raw ,37,157,84.9,4.0,1.0,1.0,0.0,9.1
+
+Corn flour whole grain yellow,365,1526,12.1,8.9,75.0,75.0,2.8,0.2
+
+Corn oil (maize oil),868,3632,25.0,0.0,0.0,0.0,96.5,0.0
+
+Corn on the cob cooked,127,532,69.9,3.4,23.1,23.1,2.1,0.5
+
+Corn yellow canned,121,507,68.5,3.5,22.5,22.5,1.0,3.5
+
+Corn yellow raw,354,1480,11.3,9.2,65.5,65.5,3.8,9.2
+
+Corned beef,225,943,64.7,12.8,3.5,3.5,18.0,0.0
+
+Cornflakes,376,1577,5.3,7.9,81.5,81.5,0.8,3.5
+
+Cornstarch,370,1547,7.6,0.3,90.5,90.5,0.1,0.5
+
+Couscous prepared,147,618,69.5,7.5,14.0,14.0,6.5,1.5
+
+Couscous raw,368,1538,7.0,12.5,74.0,74.0,1.0,4.5
+
+Crab mixed species raw,85,354,77.0,17.0,1.0,1.0,1.4,0.0
+
+Cracker light,358,1500,5.5,12.0,63.5,63.5,2.5,15.5
+
+Crackers crispbread Sandwich plain,481,2011,8.1,11.5,48.0,48.0,26.0,5.4
+
+Crackers crispbread extra fiber,352,1471,9.0,13.0,45.0,45.0,8.0,24.0
+
+Crackers crispbread plain ,388,1622,9.5,12.0,65.0,65.0,7.5,5.0
+
+Crackers crispbread poppy seed,401,1676,6.5,11.0,66.0,66.0,8.5,7.0
+
+Crackers crispbread reduced fat,341,1425,7.8,10.0,64.0,64.0,1.2,16.0
+
+Dab flatfish Atlantic cooked,112,470,75.1,20.7,0.0,0.0,3.2,0.0
+
+Dab flatfish Atlantic raw,95,400,79.0,17.0,0.0,0.0,3.0,0.0
+
+Dagoe leaves,35,150,89.5,3.5,4.8,4.8,0.0,1.2
+
+Dandelion green raw,56,236,85.4,2.7,9.2,9.2,0.7,1.0
+
+Danish pastry apricots,278,1162,41.3,5.2,35.3,35.3,11.8,5.4
+
+Danish pastry chocolate filling,382,1597,20.0,7.1,30.1,30.1,25.9,
+
+Danish pastry raisins,283,1182,37.6,5.8,36.1,36.1,11.0,8.5
+
+Date candied,286,1195,24.2,1.8,65.0,65.0,0.0,8.0
+
+Date fresh,152,638,58.8,2.2,33.0,33.0,0.0,5.0
+
+Dear game meat raw,121,509,72.8,23.0,0.0,0.0,3.2,0.0
+
+Donuts plain,440,1839,18.5,4.5,50.0,50.0,24.5,1.5
+
+Donuts plain sugared or glazed,416,1739,21.5,5.5,48.5,48.5,22.0,1.5
+
+Donuts with creme filling,372,1555,35.5,7.0,31.0,31.0,24.5,1.0
+
+Duck wild meat and skin raw,225,944,63.7,18.1,0.0,0.0,17.2,0.0
+
+Eel mixed species raw,200,838,68.5,14.5,0.0,0.0,16.0,0.0
+
+Eel river raw,213,893,66.2,16.0,0.0,0.0,16.8,0.0
+
+Eel smoked,244,1019,61.7,17.8,0.0,0.0,19.5,0.0
+
+Egg salad,239,999,63.0,8.0,7.0,7.0,20.0,1.0
+
+Egg white raw,49,208,87.0,11.1,0.7,0.7,0.2,0.0
+
+Egg whole dried powder,570,2383,8.0,46.0,3.0,3.0,42.0,0.0
+
+Egg whole fried,235,986,64.5,13.5,1.0,1.0,20.0,0.0
+
+Egg whole hard-boiled,154,645,74.2,12.9,0.7,0.7,11.2,0.0
+
+Egg whole omelet,144,607,76.3,9.4,2.2,2.2,11.1,0.0
+
+Egg whole raw,139,582,76.5,12.5,0.0,0.0,10.0,0.0
+
+Egg yolk raw,348,1455,50.8,16.2,0.0,0.0,32.0,0.0
+
+Eggplant raw,25,107,91.6,1.2,3.5,3.5,0.2,2.5
+
+Endive green raw,16,70,93.0,1.5,1.0,1.0,0.0,3.5
+
+Energy bar mixed variaties,419,1751,7.8,4.9,72.0,72.0,11.5,2.8
+
+Energy drink mixed variaties,81,340,79.0,0.0,20.0,20.0,0.0,0.0
+
+Escargots land snails cooked,80,336,80.4,16.0,1.6,1.6,1.0,0.0
+
+Falafel prepared,275,1149,40.9,9.1,27.0,27.0,12.5,9.5
+
+Fat animal solid for deep-frying,884,3695,0.0,0.0,0.0,0.0,100.0,0.0
+
+Fennel bulb raw,40,171,90.0,2.0,7.0,7.0,0.0,2.3
+
+Figs dried uncooked,270,1128,26.7,3.5,54.0,54.0,1.3,13.5
+
+Figs fresh,64,269,82.3,1.4,13.0,13.0,0.2,2.1
+
+Fish sticks breaded fried,247,1032,51.7,15.1,18.3,18.3,12.4,1.5
+
+Fish sticks breaded mixed varieties raw,159,669,67.0,12.5,12.5,12.5,6.5,0.5
+
+Flatfish flounder prepared,102,431,76.0,21.0,0.0,0.0,2.0,0.0
+
+Flatfish flounder raw,80,335,79.5,17.5,0.0,0.0,1.0,0.0
+
+Flatfish sole cooked,119,500,72.5,24.0,0.0,0.0,2.5,0.0
+
+Flatfish sole raw,79,332,81.9,15.0,0.0,0.0,2.1,0.0
+
+French fries deep fried,327,1366,35.4,4.5,40.0,40.0,16.0,3.1
+
+French fries oven-heated,307,1283,34.0,5.5,46.0,46.0,10.5,3.0
+
+French fries sticks,515,2153,5.0,6.5,48.5,48.5,31.5,7.5
+
+French fries unsalted,287,1200,43.3,4.2,33.5,33.5,14.5,3.5
+
+Frog legs raw,69,289,82.3,16.4,0.0,0.0,0.3,0.0
+
+Gamba shellfish,97,407,75.8,20.5,0.2,0.2,1.5,0.0
+
+Gammon pork,142,598,71.2,20.5,1.0,1.0,6.3,0.0
+
+Gammon steak pork,150,632,69.7,22.6,0.0,0.0,6.7,0.0
+
+Gammon steak pork cooked,212,889,59.6,28.0,0.4,0.4,11.0,0.0
+
+Garlic raw,140,589,63.9,6.0,28.0,28.0,0.1,1.0
+
+Garter green beans raw,42,180,87.7,3.0,7.0,7.0,0.0,1.3
+
+Gelatin dried,366,1530,8.9,90.0,0.0,0.0,0.1,0.0
+
+Gin 37 % v/v,210,882,69.0,0.0,0.0,0.0,0.0,0.0
+
+Gin Dutch berry flavored16 % v/v,184,770,65.0,0.0,18.0,18.0,0.0,0.0
+
+Gin Dutch blended 28 % v/v,196,820,72.0,0.0,0.0,0.0,0.0,0.0
+
+Gin Dutch lemon flavored 30 % v/v,160,668,74.0,0.0,3.0,3.0,0.0,0.0
+
+Gin Dutch old-style 28 % v/v,200,837,71.0,0.0,1.0,1.0,0.0,0.0
+
+Ginger ale,15,64,96.2,0.0,3.8,3.8,0.0,0.0
+
+Ginger canned heavy syrup,289,1208,26.2,0.0,70.0,70.0,0.0,2.8
+
+Ginger root raw,62,262,84.1,1.2,11.5,11.5,1.0,1.2
+
+Goat cheese semisoft type,264,1103,58.3,14.2,4.0,4.0,21.5,0.0
+
+Goat cheese soft type,205,862,68.6,12.0,1.1,1.1,17.3,0.0
+
+Goat meat domesticated raw,150,631,71.4,19.5,0.0,0.0,8.1,0.0
+
+Goose meat and skin cooked roasted,278,1162,51.2,30.0,0.0,0.0,17.8,0.0
+
+Goose meat and skin raw,340,1421,50.8,15.7,0.5,0.5,31.0,0.0
+
+Gooseberries fresh,36,153,90.0,1.0,8.0,8.0,0.0,0.0
+
+Goulash Hungarian soup,118,497,78.8,9.8,1.7,1.7,8.0,0.7
+
+Grape juice,69,290,81.9,0.2,16.9,16.9,0.0,0.0
+
+Grape seed oil ,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
+
+Grapefruit fresh,45,191,87.2,0.6,9.5,9.5,0.2,1.5
+
+Grapefruit juice fresh,37,158,89.7,0.5,8.5,8.5,0.1,0.2
+
+Grapefruit juice sweetened bottled,48,205,86.9,0.5,11.3,11.3,0.1,0.2
+
+Grapes blue fresh,53,224,85.2,0.9,11.5,11.5,0.1,1.3
+
+Grapes green/white fresh,57,242,84.5,0.5,13.5,13.5,0.0,0.5
+
+Green beans flat pods cooked,21,91,90.2,1.8,3.6,3.6,0.0,3.4
+
+Green beans flat pods raw,18,75,89.8,2.0,2.0,2.0,0.2,4.0
+
+Green salad mixed varieties,19,82,93.1,1.0,2.9,2.9,0.0,2.0
+
+Grouse game meat cooked,183,767,61.5,31.0,0.0,0.0,6.5,0.0
+
+Guava fresh,46,195,85.8,0.9,7.5,7.5,0.5,4.3
+
+Gurnard fish cooked,169,709,66.0,25.5,0.1,0.1,7.4,0.0
+
+Hake fish raw,78,327,80.8,17.3,0.0,0.0,0.9,0.0
+
+Halibut Atlantic and Pacific white raw,105,441,76.0,20.5,0.0,0.0,2.5,0.0
+
+Ham cooked sliced regular,136,572,73.3,17.4,1.5,1.5,6.8,0.0
+
+Ham dried Prociutto,198,831,64.2,22.8,0.0,0.0,12.0,0.0
+
+Ham leg whole lean,162,679,70.3,17.7,1.4,1.4,9.6,0.0
+
+Ham pork cured dried raw,201,845,64.0,21.5,1.0,1.0,12.5,0.0
+
+Hamburger plain cooked,272,1137,55.5,21.0,2.5,2.5,20.0,0.0
+
+Hamburger plain raw,229,962,61.2,18.0,3.8,3.8,16.0,0.0
+
+Hamburger vegetarian,168,707,65.5,16.0,7.0,7.0,8.0,2.5
+
+Hare game,114,481,74.2,21.8,0.0,0.0,3.0,0.0
+
+Haricots verts string beans raw,44,186,86.4,2.4,6.1,6.1,0.3,3.8
+
+Hazelnut oil,883,3691,0.0,0.0,0.0,0.0,100.0,0.0
+
+Hazelnuts raw,667,2788,4.2,14.2,10.6,10.6,62.5,7.5
+
+Heart pork raw,100,419,77.5,17.0,0.0,0.0,3.5,0.0
+
+Herring Atlantic pickled glas,208,872,66.5,16.0,0.5,0.5,16.0,0.0
+
+Herring Atlantic raw,216,906,64.0,18.0,0.5,0.5,16.0,0.0
+
+Herring Atlantic salted,183,767,68.0,18.0,1.0,1.0,12.0,0.0
+
+Herring Atlantic smoked,236,989,60.3,22.1,0.0,0.0,16.6,0.0
+
+Herring canned tomato sauce,164,687,70.9,14.8,2.8,2.8,10.5,0.0
+
+Herring slightly salted raw,165,695,69.5,19.0,0.8,0.8,9.7,0.0
+
+Hollandaise sauce,98,411,84.0,1.8,5.4,5.4,7.8,0.0
+
+Honey,308,1287,23.1,0.4,75.5,75.5,0.0,0.0
+
+Horse meat raw,108,454,74.6,22.4,0.0,0.0,2.0,0.0
+
+Horseradish,72,302,77.3,3.1,10.3,10.3,0.3,8.0
+
+Hotdog,251,1055,50.3,10.2,27.0,27.0,11.4,0.1
+
+Hummus organic,242,1011,55.9,6.1,10.5,10.5,18.0,8.5
+
+Ice cream frozen novelties juice type,96,405,75.2,0.1,23.5,23.5,0.1,0.1
+
+Ice cream mixed varieties,196,822,63.3,3.9,21.0,21.0,10.8,0.0
+
+Ice cream vanilla rich,257,1074,55.0,3.9,23.5,23.5,16.5,0.1
+
+Jams reduced sugar mixed varieties,135,569,65.0,0.0,33.0,33.0,0.0,1.0
+
+Jams strawberry,247,1032,37.1,0.4,60.0,60.0,0.0,1.5
+
+Jerusalem artichoke,81,343,80.0,2.5,17.5,17.5,0.1,
+
+Kale raw ,51,215,86.3,4.3,5.5,5.5,0.9,2.0
+
+Kefir,63,262,86.7,3.3,4.5,4.5,3.5,0.0
+
+Kelp seaweed raw,86,362,78.3,7.5,10.5,10.5,1.2,1.5
+
+Khaki-fruit fresh,78,327,79.5,0.5,18.5,18.5,0.0,0.5
+
+Kidney beans raw,126,528,67.7,7.8,21.5,21.5,0.5,1.5
+
+Kidneys beef raw,86,363,80.0,17.0,0.0,0.0,2.0,0.0
+
+Kidneys pork raw,116,486,76.5,16.5,0.8,0.8,5.2,0.0
+
+Kiwi fresh,48,205,86.8,1.0,10.3,10.3,0.2,0.7
+
+Kohlrabi raw,29,122,90.5,2.0,4.0,4.0,0.0,2.5
+
+Krupuk Indonesian snack prawn based,502,2098,4.5,4.0,65.0,65.0,25.0,0.5
+
+Kumkwat,71,301,80.5,1.0,16.0,16.0,0.0,1.5
+
+Köfte meatloaf beef,252,1053,52.0,26.0,8.0,8.0,13.0,0.0
+
+Köfte meatloaf sheep,208,872,60.9,22.0,4.0,4.0,11.5,0.6
+
+Lamb leg sirloin raw,173,726,69.0,19.2,0.0,0.0,10.8,0.0
+
+Lamb rib,243,1015,61.1,19.2,0.0,0.0,18.7,0.0
+
+Lamb saddle of,253,1057,60.2,18.6,0.0,0.0,20.2,0.0
+
+Lamb shoulder domestic,206,865,62.1,25.0,0.0,0.0,11.9,0.0
+
+Lamb trimmed retail cuts fat,281,1174,59.0,15.0,0.0,0.0,25.0,0.0
+
+Lamb trimmed retail cuts lean,190,797,66.2,20.8,0.0,0.0,12.0,0.0
+
+Lambs lettuce green,20,85,94.0,2.0,3.0,3.0,0.0,0.0
+
+Lapwing beans dried,265,1107,0.0,20.0,43.0,43.0,1.5,0.0
+
+Lard pork,882,3687,0.2,0.0,0.0,0.0,99.8,0.0
+
+Lasagne ready-to-eat,146,614,70.2,6.8,13.6,13.6,6.9,1.5
+
+Leek cooked,27,117,90.3,1.5,3.8,3.8,0.0,3.4
+
+Leek raw,30,129,90.4,1.8,4.0,4.0,0.3,2.5
+
+Lemon juice fresh,32,136,91.0,0.0,8.0,8.0,0.0,0.0
+
+Lemon pealed fresh,36,151,89.4,0.5,6.5,6.5,0.4,2.2
+
+Lentils seeds cooked boiled,117,490,68.3,10.0,15.0,15.0,0.7,5.0
+
+Lentils seeds raw,309,1291,16.2,21.0,44.5,44.5,1.5,15.8
+
+Lettuce green leaf raw,11,47,94.2,1.3,1.0,1.0,0.2,1.3
+
+Lettuce iceberg,11,48,95.7,1.2,0.9,0.9,0.1,1.1
+
+Lima beans cooked boiled,137,574,61.8,8.2,21.0,21.0,0.5,7.5
+
+Lima beans raw,351,1467,12.3,21.5,63.5,63.5,0.7,
+
+Limes fresh,32,135,93.0,0.5,2.0,2.0,2.5,
+
+Ling fish raw,75,313,80.0,18.4,0.0,0.0,0.2,0.0
+
+Linseed,486,2031,0.0,20.0,13.5,13.5,32.5,33.0
+
+Linseed oil,882,3687,0.2,0.0,0.0,0.0,99.8,0.0
+
+Liquor 15 % v/v mixed varieties,205,858,58.0,0.0,30.0,30.0,0.0,0.0
+
+Liquor 15 - 25 % v/v mixed varieties,246,1446,52.0,0.0,30.0,30.0,0.0,0.0
+
+Liquor 25 % v/v mixed varieties,355,1483,45.0,0.0,30.0,30.0,0.0,0.0
+
+Liquor Jägermeister 34 % v/v,299,1249,50.0,0.0,15.0,15.0,0.0,0.0
+
+Liver beef raw,123,519,72.7,20.7,2.0,2.0,3.6,0.0
+
+Liver haddock canned ,397,1659,50.5,6.5,0.0,0.0,42.0,0.0
+
+Liver haddock raw,79,334,79.7,19.0,0.0,0.0,0.3,0.0
+
+Liver lamb raw,131,550,71.2,21.0,2.9,2.9,3.9,0.0
+
+Liver pate pork canned,314,1312,54.8,14.2,1.7,1.7,28.3,0.0
+
+Liver pork raw,132,555,70.9,22.2,2.0,2.0,3.9,0.0
+
+Liver sausage Hausmacher,267,1116,57.6,15.4,5.2,5.2,20.8,0.0
+
+Liver sausage pork cooked,322,1345,54.4,13.3,1.7,1.7,29.6,0.0
+
+Liver veal raw,109,457,76.0,17.7,2.0,2.0,3.3,0.0
+
+Liverwurst pork cooked,306,1279,53.2,18.8,1.8,1.8,25.2,0.0
+
+Liverwurst spread,306,1279,56.8,12.2,1.6,1.6,28.4,0.0
+
+Lobster mixed species cooked,82,345,0.0,16.0,0.0,0.0,2.0,0.0
+
+Luncheon meat pork canned,334,1396,52.0,13.0,4.0,4.0,30.0,0.0
+
+Luncheon meat pork sliced,308,1287,56.0,12.1,2.9,2.9,28.0,0.0
+
+Lychee fresh,81,342,78.6,0.9,18.0,18.0,0.3,1.2
+
+Macadamia nuts raw,733,3064,2.5,9.0,6.5,6.5,74.5,6.5
+
+Mackerel Atlantic cooked,244,1019,58.3,24.0,0.0,0.0,16.7,0.0
+
+Mackerel Atlantic raw,344,1438,50.3,18.0,0.0,0.0,30.7,0.0
+
+Madeira 18 - 20 % v/v,156,656,71.0,0.0,10.0,10.0,0.0,0.0
+
+Madeira 20 % v/v,165,692,72.0,0.0,10.0,10.0,0.0,0.0
+
+Mango juice,41,173,88.9,0.1,9.5,9.5,0.2,0.3
+
+Mangos fresh,61,259,83.3,1.1,12.8,12.8,0.3,1.5
+
+Maple syrup,365,1526,9.0,0.0,90.0,90.0,0.0,0.0
+
+Margarine liquid 80 % fat,725,3031,16.8,0.0,0.2,0.2,82.0,0.0
+
+Margarine regular 80% fat,711,2972,18.0,0.0,1.0,1.0,80.0,0.0
+
+Margarine-like spread 25 % fat,255,1065,65.5,2.5,6.0,6.0,25.0,0.0
+
+Margarine-like spread 40 % fat,361,1509,57.0,1.5,0.5,0.5,40.0,0.0
+
+Marjoram dried,331,1383,16.3,12.5,45.0,45.0,7.2,18.0
+
+Marmalade orange,292,1220,27.2,0.8,70.0,70.0,0.5,0.5
+
+Marshmellows,332,1394,17.0,2.0,80.0,80.0,0.0,0.0
+
+Marzipan,456,1906,15.0,8.0,50.0,50.0,25.0,0.0
+
+Mayonnaise classic,741,3097,12.8,1.7,2.5,2.5,82.0,0.0
+
+Mayonnaise light 35 % oil,370,1547,50.0,1.0,12.0,12.0,36.0,0.0
+
+Mayonnaisse extra light 25 % oil,282,1178,60.0,1.0,12.0,12.0,26.0,0.0
+
+Meat sheep raw,217,908,64.0,17.5,0.0,0.0,16.5,0.0
+
+Meat substitute breaded mixed varieties,212,890,58.0,12.8,12.6,12.6,11.5,4.1
+
+Meat substitute milkproteïne based,134,565,69.5,15.5,5.0,5.0,5.0,4.0
+
+Meat substitute raw mixed varieties,169,710,63.8,18.4,6.1,6.1,7.2,3.5
+
+Meatballs ready-to-eat,372,1555,42.5,15.0,11.5,11.5,30.0,0.0
+
+Meatballs small cooked,195,818,61.5,17.0,5.0,5.0,12.0,3.5
+
+Melons cantaloupe fresh,47,197,84.3,0.9,7.0,7.0,0.3,6.5
+
+Milk beverage reduced fat mixed varieties,50,211,88.9,3.1,5.0,5.0,2.0,0.0
+
+Milk dried nonfat,349,1459,4.0,35.0,50.0,50.0,1.0,0.0
+
+Milk dried whole,503,2103,8.5,27.0,35.0,35.0,28.5,0.0
+
+Milk goat,64,269,88.0,3.8,4.5,4.5,3.8,0.0
+
+Milk human mature fluid,69,289,85.7,1.3,7.0,7.0,4.0,0.0
+
+Milk nonfat,37,156,89.9,3.9,5.1,5.1,0.1,0.0
+
+Milk reduced fat,46,194,89.3,3.4,4.8,4.8,1.5,0.0
+
+Milk reduced fat calcium enriched,74,196,90.0,3.3,4.9,4.9,1.6,0.0
+
+Milk reindeer raw,233,978,64.5,10.8,4.1,4.1,19.6,0.0
+
+Milk whole 340% milkfat,62,261,87.6,3.7,4.3,4.3,3.4,0.0
+
+Milkshakes mixed varieties,128,539,72.9,3.2,16.8,16.8,5.2,0.9
+
+Millet cooked,102,428,74.7,3.5,18.6,18.6,1.2,1.0
+
+Millet raw,327,1366,21.3,10.6,60.0,60.0,3.9,3.2
+
+Minced ground meat beef,209,878,64.5,19.1,0.8,0.8,14.6,0.0
+
+Minced ground meat beef and pork,252,1053,60.9,17.5,0.0,0.0,20.6,0.0
+
+Minced ground meat lamb,192,805,66.8,19.3,0.0,0.0,12.9,0.0
+
+Minced ground meat pork,208,872,65.2,18.8,2.0,2.0,14.0,0.0
+
+Minced ground meat veal,148,620,72.0,19.0,0.0,0.0,8.0,0.0
+
+Minced meat tartar beef,127,533,72.8,21.8,0.0,0.0,4.4,0.0
+
+Minced soyburger vegetarian,233,977,50.6,28.0,10.2,10.2,8.5,1.7
+
+Mini pizza mixed varieties,232,975,52.0,11.5,24.5,24.5,9.5,1.5
+
+Miso,139,586,66.9,13.0,6.5,6.5,5.3,7.3
+
+Moessaka Greek dish,208,871,63.0,6.5,10.0,10.0,15.0,4.5
+
+Monkfish raw,74,311,81.5,15.0,0.0,0.0,1.5,0.0
+
+Mortadella beef pork,304,1270,53.8,16.5,3.4,3.4,25.3,0.0
+
+Muesli candybar,499,2086,0.4,7.5,57.8,57.8,24.7,8.6
+
+Muesli crispy sweetened mixed varieties,478,1998,4.6,7.4,60.0,60.0,22.2,4.8
+
+Muesli dried fruit and nuts mixed varieties,379,1584,8.0,10.0,66.5,66.5,6.0,8.5
+
+Muffins English plain,327,1366,31.4,8.0,48.0,48.0,11.3,0.3
+
+Muscatel 15 % v/v,139,581,75.0,0.0,12.0,12.0,0.0,0.0
+
+Mushrooms canned glas,31,132,89.7,2.3,2.5,2.5,0.5,4.0
+
+Mushrooms oyster raw,22,96,90.5,1.5,1.0,1.0,0.2,5.8
+
+Mushrooms shiitake dried,192,805,12.1,16.5,23.5,23.5,3.4,43.5
+
+Mushrooms stir-fried,61,256,86.4,3.5,0.9,0.9,4.0,4.2
+
+Mushrooms white raw,16,71,93.5,2.7,0.3,0.3,0.0,2.5
+
+Mussels blue fried ,323,1350,44.0,32.0,2.0,2.0,21.0,0.0
+
+Mussels blue raw,74,311,84.2,9.8,2.0,2.0,3.0,0.0
+
+Mussels canned sour ,111,466,73.9,23.1,0.0,0.0,2.0,0.0
+
+Mustard prepared yellow,85,358,82.6,5.0,7.4,7.4,4.0,0.0
+
+Mustard spinach raw  ,31,132,90.6,2.0,5.3,5.3,0.0,1.1
+
+Nectarines fresh,36,154,89.2,1.0,7.5,7.5,0.0,1.3
+
+Noodles Japanese soba,368,1538,9.5,14.5,74.0,74.0,1.0,0.0
+
+Noodles rice raw,361,1509,9.9,5.0,82.0,82.0,0.6,1.5
+
+Norway lobster Langoestine,85,355,78.4,17.2,1.3,1.3,1.1,0.0
+
+Nougats soft,395,1651,12.0,1.0,76.5,76.5,9.0,0.5
+
+Nutmeg ground,545,2278,7.0,5.5,44.0,44.0,38.0,4.5
+
+Oat bran raw,381,1593,9.8,13.5,62.0,62.0,7.0,6.7
+
+Oat cookie,353,1476,22.4,8.3,55.0,55.0,10.2,3.1
+
+Oat flour,390,1630,7.4,14.9,62.0,62.0,7.2,7.5
+
+Oat malt,380,1588,9.4,13.1,62.0,62.0,7.0,7.5
+
+Oat malt porridge,76,322,82.4,3.5,9.5,9.5,2.5,1.1
+
+Oats raw,374,1563,12.2,12.6,61.5,61.5,7.1,5.6
+
+Oil light reduced fat,883,3691,0.0,0.0,0.0,0.0,100.0,0.0
+
+Oil vegetable for deep frying,884,3695,0.0,0.0,0.0,0.0,100.0,0.0
+
+Okra Chinese raw,45,192,86.2,2.2,7.2,7.2,0.2,3.2
+
+Okra cooked,34,144,90.3,1.5,6.2,6.2,0.2,0.8
+
+Okra raw,42,180,83.8,2.2,8.0,8.0,0.2,4.8
+
+Olive oil,883,3691,0.0,0.0,0.2,0.2,99.8,0.0
+
+Olives ripe canned,136,571,79.4,1.4,0.2,0.2,13.8,4.2
+
+Onions deep fried,628,2625,0.0,6.0,44.5,44.5,46.5,6.5
+
+Onions dried,274,1145,21.0,10.5,44.5,44.5,1.0,22.0
+
+Onions raw,36,151,89.0,1.2,6.1,6.1,0.2,2.5
+
+Onions stir fried,57,239,88.5,1.0,5.0,5.0,3.5,1.0
+
+Onions young  white canned sweet/sauer,37,156,89.0,0.0,8.5,8.5,0.0,1.5
+
+Orange juice,45,189,88.1,0.7,10.0,10.0,0.2,0.0
+
+Oranges fresh,44,186,85.2,1.0,9.5,9.5,0.2,2.1
+
+Oregano dried,371,1551,11.2,11.4,50.0,50.0,10.4,16.0
+
+Ostrich tenderloin raw,104,438,75.0,21.5,1.0,1.0,1.5,0.0
+
+Oxtail,183,767,66.4,20.1,0.0,0.0,11.5,0.0
+
+Oyster Pacific raw,70,294,83.8,10.0,3.4,3.4,1.8,0.0
+
+Palm oil,874,3653,0.0,0.0,0.0,0.0,98.9,0.0
+
+Pancakes Puffs,294,1228,43.8,7.0,33.2,33.2,14.9,0.1
+
+Papayas fresh,45,191,87.2,0.6,9.9,9.9,0.1,1.2
+
+Paprika,353,1479,16.3,15.0,35.0,35.0,12.7,20.0
+
+Parsley dried,315,1316,20.5,22.0,42.0,42.0,4.0,10.5
+
+Parsley raw,34,143,88.4,4.4,1.5,1.5,0.2,4.5
+
+Parsnips raw,89,373,75.0,1.5,17.0,17.0,0.5,5.0
+
+Partidge game meat raw,210,881,56.0,35.0,0.5,0.5,7.5,0.0
+
+Passion fruit juice purple,47,200,87.5,0.8,10.0,10.0,0.4,0.3
+
+Passion fruit purple fresh,120,504,66.2,2.3,22.3,22.3,0.7,7.5
+
+Pasta Macaroni raw,359,1501,12.1,13.5,67.0,67.0,3.0,3.4
+
+Pasta Macaroni whole wheat raw,336,1404,12.8,11.0,62.0,62.0,2.2,11.0
+
+Pasta plain cooked,99,417,75.2,4.5,17.5,17.5,1.0,0.8
+
+Pasta plain mixed varieties raw,359,1501,12.1,13.5,67.0,67.0,3.0,3.4
+
+Pasta whole wheat mixed varieties raw,352,1471,10.0,12.0,65.0,65.0,2.5,9.5
+
+Paté,374,1568,48.5,11.0,4.0,4.0,35.5,0.0
+
+Peaches fresh,39,162,87.5,0.8,8.7,8.7,0.1,0.0
+
+Peanut butter smooth mixed varieties,625,2613,3.0,26.0,12.0,12.0,52.0,6.0
+
+Peanuts raw salted,625,2613,3.5,25.5,10.0,10.0,53.0,7.0
+
+Peanuts raw unsalted,623,2604,2.8,26.0,11.2,11.2,52.0,7.0
+
+Pears canned heavy syrup,76,322,79.1,0.3,17.5,17.5,0.1,2.0
+
+Pears fresh,54,229,84.4,0.5,11.0,11.0,0.3,2.8
+
+Peas canned,88,372,75.5,6.5,10.8,10.8,1.0,5.2
+
+Peas cooked,86,363,75.0,5.0,14.0,14.0,0.0,5.0
+
+Peas green cooked,106,445,71.1,6.6,16.5,16.5,0.5,4.3
+
+Peas green dried split,326,1362,9.9,22.5,45.0,45.0,1.6,20.0
+
+Peas raw,64,269,80.4,4.5,8.9,8.9,0.0,5.2
+
+Pecan nuts,717,2997,4.5,8.5,9.5,9.5,72.0,4.5
+
+Pepper black white,309,1291,15.6,11.3,50.0,50.0,2.6,19.5
+
+Peppermint candy,402,1680,1.0,0.0,99.0,99.0,0.0,0.0
+
+Pepperoni,448,1876,35.7,20.0,3.3,3.3,40.0,0.0
+
+Pepperoni savaloy,382,1597,45.5,18.3,0.5,0.5,34.7,0.0
+
+Perch raw,82,344,79.7,18.5,0.0,0.0,0.8,0.0
+
+Perch river mixed species raw,81,338,80.0,18.4,0.0,0.0,0.8,0.0
+
+Pheasant raw meat and skin,229,962,56.5,30.5,0.0,0.0,12.0,0.0
+
+Phyllo dough,299,1249,32.0,7.5,53.0,53.0,6.0,0.0
+
+Piccalilli pickles veggies and spices,42,180,88.5,1.0,6.5,6.5,1.0,2.0
+
+Pickles Gherkin sweet sour,14,62,94.7,1.1,2.0,2.0,0.0,1.2
+
+Pie fruit mixed varieties,270,1128,41.1,3.5,43.0,43.0,8.7,2.7
+
+Pie rice commercially prepared,250,1045,47.7,6.0,34.4,34.4,9.5,1.4
+
+Pie/cake mixed varieties,384,1605,30.1,4.0,41.0,41.0,22.5,1.4
+
+Pine nuts raw,635,2654,2.4,27.0,13.5,13.5,52.5,3.6
+
+Pineapple fresh,61,256,83.4,0.5,13.5,13.5,0.2,1.4
+
+Pineapple juice,50,211,86.4,0.8,11.5,11.5,0.0,0.3
+
+Pistachios roasted salted,606,2533,11.6,17.5,8.4,8.4,55.5,6.0
+
+Pistachios unsalted,649,2713,0.0,19.5,24.0,24.0,51.5,9.4
+
+Pizza mixed varieties ready-to-eat,203,852,56.1,9.0,25.7,25.7,6.8,1.4
+
+Pizza vegetarian mixed variet,171,719,59.5,7.5,26.0,26.0,3.5,2.5
+
+Plaice flatfish cooked,179,752,66.5,21.0,1.5,1.5,10.0,0.0
+
+Plaice flatfish raw,94,393,73.0,19.0,0.0,0.0,2.0,0.0
+
+PlantaIns fresh,137,575,64.4,1.0,31.5,31.5,0.2,1.9
+
+Plum juice,58,245,84.5,0.6,13.5,13.5,0.1,0.3
+
+Plums dried uncooked,221,927,36.0,2.0,45.0,45.0,0.0,16.0
+
+Plums fresh,60,255,83.6,0.8,12.0,12.0,0.6,2.0
+
+Plums mixed varieties fresh,56,235,84.5,0.6,12.0,12.0,0.2,1.7
+
+Pollock Atlantic frozen,76,320,80.6,18.0,0.0,0.0,0.4,0.0
+
+Pollock Atlantic raw,80,333,80.0,17.2,0.0,0.0,1.2,0.0
+
+Pomegranate fresh,85,360,77.3,1.0,17.5,17.5,0.7,2.5
+
+Pomegranate juice bottled,45,189,87.7,0.2,10.5,10.5,0.1,0.5
+
+Popcorn,376,1575,7.9,12.5,70.0,70.0,3.6,5.0
+
+Poppy seed,503,2103,12.8,20.0,4.2,4.2,41.5,20.5
+
+Pork belly raw,384,1605,46.4,15.0,0.1,0.1,36.5,0.0
+
+Pork cheeks raw,533,2228,33.2,10.0,0.1,0.1,55.8,0.0
+
+Pork chops bone-in raw,196,824,66.4,19.0,0.1,0.1,13.5,0.0
+
+Pork chops in peanut sauce,215,904,61.2,13.5,10.5,10.5,13.3,0.5
+
+Pork chops neck cooked,275,1149,53.0,27.5,0.0,0.0,18.5,0.0
+
+Pork chops neck raw,195,818,66.4,19.4,0.0,0.0,13.2,0.0
+
+Pork cured legham pan-broil ,129,542,72.6,18.2,1.7,1.7,5.5,0.0
+
+Pork cured legham roasted,116,488,75.1,19.2,0.6,0.6,4.1,0.0
+
+Pork kidneys raw,113,474,77.2,16.5,0.1,0.1,5.2,0.0
+
+Pork liver cooked,198,830,59.0,28.5,4.0,4.0,7.5,0.0
+
+Pork loin filets,144,604,70.4,22.7,0.0,0.0,5.9,0.0
+
+Pork loin raw,116,488,73.1,23.5,0.0,0.0,2.4,0.0
+
+Pork ribeye entrecote,144,604,70.0,22.7,1.0,1.0,5.9,0.0
+
+Pork roast fricandeau,124,522,72.4,23.0,0.1,0.1,3.5,0.0
+
+Pork sausage canned cooked,320,1337,54.2,13.2,2.5,2.5,29.1,0.0
+
+Pork shoulder chops,195,818,66.4,19.4,0.0,0.0,13.2,0.0
+
+Pork shoulder raw,217,909,63.4,20.4,0.0,0.0,15.2,0.0
+
+Pork spareribs raw,280,1170,58.1,16.8,0.1,0.1,24.0,0.0
+
+Pork tenderloin raw,119,502,73.1,22.8,0.0,0.0,3.1,0.0
+
+Pork variety meat raw,111,468,75.0,21.0,0.0,0.0,3.0,0.0
+
+Port 19 % v/v,150,627,73.0,0.0,13.0,13.0,0.0,0.0
+
+Potato baked,126,529,73.0,2.0,16.0,16.0,5.5,2.5
+
+Potato chips plain average,557,2328,5.0,5.5,43.0,43.0,39.5,6.0
+
+Potato chips plain light ,479,2002,3.7,6.5,61.0,61.0,22.0,5.8
+
+Potato flour,329,1375,17.9,0.1,81.0,81.0,0.0,0.0
+
+Potato sticks mashed breaded,223,936,55.8,3.2,27.0,27.0,11.0,2.0
+
+Potatoes cooked no skin,82,346,77.4,2.0,17.0,17.0,0.1,2.5
+
+Potatoes mashed instant prepared,99,418,79.3,3.5,12.0,12.0,4.2,0.0
+
+Potatoes raw,85,357,76.7,2.0,17.6,17.6,0.1,2.6
+
+Potatoes sliced prebaked,141,591,68.5,2.0,20.5,20.5,5.0,3.0
+
+Poultry meat ground mixed variaties,136,568,70.0,20.2,0.0,0.0,6.1,0.0
+
+Pretzel,395,1654,5.7,9.3,80.0,80.0,3.6,0.4
+
+Puddings dry mix chocolate,356,1488,13.2,3.2,80.0,80.0,2.0,0.6
+
+Puddings dry mix mixed varieties,358,1496,10.4,0.0,88.0,88.0,0.0,0.6
+
+Puddings mixed varieties home prepared,135,569,67.7,3.8,21.3,21.3,3.2,3.0
+
+Puddings rice ready-to-eat,81,342,82.2,3.5,10.0,10.0,3.0,0.3
+
+Puff pastry light frozen,380,1588,31.8,5.5,37.5,37.5,23.0,1.2
+
+Pumpkin cooked,17,73,94.4,0.6,2.5,2.5,0.3,1.2
+
+Pumpkin raw,36,153,89.7,1.1,7.0,7.0,0.2,1.0
+
+Pumpkin seeds,345,1442,38.6,24.5,7.0,7.0,23.5,5.4
+
+Purslane cooked,21,88,92.5,2.0,2.0,2.0,0.0,2.5
+
+Purslane raw,17,73,93.6,1.2,1.5,1.5,0.2,2.5
+
+Quail meat and skin raw,190,796,65.9,19.5,0.1,0.1,12.5,0.0
+
+Quark cottage cheese half and half,100,421,79.5,12.0,3.0,3.0,4.5,0.0
+
+Quark cottage cheese non-fat,71,299,82.0,13.0,3.5,3.5,0.5,0.0
+
+Quiche vegetable type,321,1341,,,,,26.0,
+
+Quinces fresh,69,291,80.9,0.5,15.5,15.5,0.1,2.0
+
+Quinoa uncooked,392,1639,8.5,16.2,63.9,63.9,6.9,3.5
+
+Quorn meat substitute,141,594,64.2,14.0,12.7,12.7,2.6,5.5
+
+Rabbit game meat domesticated,173,727,68.0,21.0,0.0,0.0,10.0,0.0
+
+Rabbit game meat wild raw,133,559,72.0,22.0,0.0,0.0,5.0,0.0
+
+Radishes black fresh,32,136,90.6,2.0,5.0,5.0,0.2,1.2
+
+Radishes fresh,18,76,94.1,1.0,2.5,2.5,0.2,1.2
+
+Raisins mixed varieties,329,1375,13.0,2.0,75.0,75.0,0.0,9.0
+
+Raisins seedles,291,1216,24.5,2.5,66.5,66.5,0.1,5.4
+
+Rapeseed oil,875,3658,1.0,0.0,0.0,0.0,99.0,0.0
+
+Raspberries fresh,68,286,76.0,1.2,14.3,14.3,0.5,7.0
+
+Ratatouille cooked,51,215,88.2,1.4,4.9,4.9,2.5,2.0
+
+Ravioli cooked,101,427,77.9,4.0,13.5,13.5,3.5,0.1
+
+Ray fish raw,85,355,79.0,20.7,0.0,0.0,0.2,0.0
+
+Real chervil dried,305,1274,22.0,23.5,39.0,39.0,3.5,11.0
+
+Real chervil fresh,75,316,81.1,4.0,12.0,12.0,1.0,0.9
+
+Red berries fresh,51,213,82.9,1.1,7.9,7.9,0.1,7.9
+
+Red berry juice,38,160,88.6,0.0,9.4,9.4,0.0,0.0
+
+Redfish raw,105,442,77.2,18.2,0.0,0.0,3.6,0.0
+
+Rhubarb cooked with sugar,87,368,76.4,0.5,20.0,20.0,0.1,2.0
+
+Rhubarb raw,14,62,94.4,0.5,2.0,2.0,0.1,2.0
+
+Rice basmati raw,354,1480,11.6,7.0,78.5,78.5,0.6,1.3
+
+Rice brown regular cooked,137,575,65.3,3.2,26.0,26.0,1.5,3.0
+
+Rice brown regular raw,361,1509,10.3,7.5,75.0,75.0,2.2,4.0
+
+Rice cake brown rice milled corn,350,1464,79.0,9.9,77.7,77.7,0.0,3.5
+
+Rice cake brown rice multigrain,380,1588,6.5,10.0,75.0,75.0,3.0,4.5
+
+Rice cake brown rice plain,374,1563,8.5,8.0,74.5,74.5,3.5,4.5
+
+Rice flour white,359,1501,11.1,7.5,79.5,79.5,0.7,0.2
+
+Rice white regular cooked,96,403,75.3,2.5,20.0,20.0,0.4,0.8
+
+Rice white regular raw,355,1484,11.5,7.0,78.5,78.5,0.7,1.3
+
+Roast beef lean,168,705,64.2,28.3,0.8,0.8,5.7,0.0
+
+Roast fricandeau pork cooked,152,637,64.9,31.2,0.0,0.0,2.9,0.0
+
+Roast fricandeau pork fried,128,538,71.8,21.0,2.4,2.4,3.8,0.0
+
+Roast fricandeau veal,104,439,74.7,23.0,0.0,0.0,1.3,0.0
+
+Roe fish eggs mixed species raw,150,630,67.9,26.0,0.0,0.0,5.1,0.0
+
+Rose hip fresh,95,395,50.5,3.5,19.5,19.5,0.1,
+
+Rose hip heavy syrup,223,935,44.0,0.0,55.0,55.0,0.0,0.0
+
+Rose hip jam,256,1070,35.4,0.1,62.5,62.5,0.0,1.0
+
+Rosemary dried,380,1588,13.5,4.5,45.0,45.0,16.0,20.0
+
+Rum 43 % v/v,229,957,67.0,0.0,0.0,0.0,0.0,0.0
+
+Rusk Dutch,392,1639,6.9,12.3,70.8,70.8,5.5,3.5
+
+Rusk Dutch whole weat,389,1626,6.9,16.0,62.0,62.0,6.6,7.5
+
+Russian salad diced potatoes beef,170,715,68.5,6.0,12.5,12.5,10.5,1.5
+
+Rutabagas raw,24,102,90.3,1.0,5.0,5.0,0.2,2.5
+
+Rye flour,305,1274,16.8,7.6,56.6,56.6,1.5,16.5
+
+Rösti ready-to-eat,134,563,68.2,2.5,21.5,21.5,3.5,3.3
+
+Safflower oil,883,3691,0.0,0.0,0.0,0.0,100.0,0.0
+
+Salad dressing mayonnaise type light,372,1555,51.2,0.7,9.6,9.6,37.4,0.1
+
+Salad dressing mayonnaise-type 25 % oil,269,1124,62.5,1.0,10.0,10.0,25.5,0.0
+
+Salad dressing mayonnaise-type 40 % oil,382,1597,51.9,1.1,6.0,6.0,40.0,0.0
+
+Salad dressing non-fat,49,207,86.7,0.1,12.0,12.0,0.0,0.2
+
+Salmon Atlantic raw,220,924,63.1,20.2,0.0,0.0,15.7,0.0
+
+Salmon canned,164,688,67.7,23.5,0.0,0.0,7.8,0.0
+
+Salmon mixed varieties raw,200,839,65.5,20.0,0.0,0.0,13.5,0.0
+
+Salmon smoked,200,839,62.8,25.0,0.0,0.0,11.2,0.0
+
+Salsify root raw,90,378,73.8,3.3,18.5,18.5,0.2,3.2
+
+Salt table,0,0,0.0,0.0,0.0,0.0,0.0,0.0
+
+Sambal Ulek red chillies mixed varieties,25,110,93.0,2.0,3.5,3.5,0.5,0.0
+
+Samphire fresh raw,45,188,87.0,3.1,9.1,9.1,0.7,0.5
+
+Sardines in oil canned,220,922,61.9,22.5,0.0,0.0,14.6,0.0
+
+Sardines or pilchards raw,115,485,75.4,19.4,0.0,0.0,4.2,0.0
+
+Satay sauce,275,1149,53.5,8.5,18.0,18.0,19.0,0.0
+
+Sauce white roux,87,365,83.9,2.5,7.0,7.0,5.5,0.1
+
+Sauerkraut canned,12,51,96.0,2.0,1.0,1.0,0.0,0.0
+
+Sausage Frankfurters,305,1274,57.8,11.5,0.7,0.7,29.0,0.0
+
+Sausage pork pre-cooked,293,1224,58.5,10.9,2.5,2.5,27.1,0.0
+
+Sausage salami pork,375,1568,46.5,19.5,0.1,0.1,33.0,0.0
+
+Sausage smoked lean pork,245,1024,60.1,15.0,5.0,5.0,18.5,0.4
+
+Sausage smoked pork,322,1345,54.3,14.3,0.9,0.9,29.5,0.0
+
+Scallop mixed species raw,72,304,81.2,15.5,2.2,2.2,0.1,0.0
+
+Scampi or Langoustine,86,360,78.1,17.5,1.3,1.3,1.1,0.0
+
+Schnitzel not breaded,120,503,73.0,22.9,0.0,0.0,3.1,0.0
+
+Schnitzel vegetarian breaded,188,787,58.0,16.0,8.5,8.5,10.0,5.0
+
+Sea bass mixed species raw,120,503,72.7,23.5,0.0,0.0,2.8,0.0
+
+Seaweed mixed varieties dried,280,1170,12.0,11.5,55.0,55.0,1.2,
+
+Seitan,106,447,71.9,22.1,3.8,3.8,0.2,1.0
+
+Seitan cooked,135,568,64.3,24.0,9.0,9.0,0.2,1.5
+
+Semolina cooked with milk,103,434,77.0,4.0,15.0,15.0,3.0,0.0
+
+Semolina corn flour,343,1434,12.6,10.3,70.0,70.0,0.8,5.3
+
+Sesame oil,883,3691,0.0,0.0,0.0,0.0,100.0,0.0
+
+Sesame paste tahin,568,2374,7.0,21.5,6.5,6.5,51.5,12.5
+
+Sesame seeds,581,2429,11.1,20.9,6.0,6.0,53.5,7.5
+
+Shallots raw,32,134,89.9,1.8,7.3,7.3,0.2,2.6
+
+Shark oil,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
+
+Sherry dry 15 % v/v,90,278,83.5,0.2,1.4,1.4,0.0,0.0
+
+Sherry medium 15 % v/v,110,460,83.0,0.0,3.0,3.0,0.0,0.0
+
+Sherry sweet 15 % v/v,115,483,77.5,0.3,7.0,7.0,0.0,0.0
+
+Shrimp North Sea raw,91,384,78.6,18.5,0.0,0.0,1.9,0.0
+
+Shrimp gray or brown,90,380,79.0,18.0,0.0,0.0,2.0,0.0
+
+Shrimp paste Asian trassi,200,839,55.5,35.0,3.5,3.5,5.0,0.0
+
+Snail Vineyard raw,82,343,79.0,16.0,2.0,2.0,1.0,0.0
+
+Snow peas raw,47,197,86.3,2.5,7.5,7.5,0.2,2.5
+
+Sorrel raw,35,147,89.7,2.0,6.0,6.0,0.3,
+
+Souo cream of mushroom,66,278,87.7,1.7,4.9,4.9,4.5,0.2
+
+Soup brown beans,61,258,84.2,3.2,6.8,6.8,2.4,2.4
+
+Soup chicken noodle,26,112,93.1,2.4,2.5,2.5,0.8,0.2
+
+Soup cream of onion,39,167,91.6,1.7,3.6,3.6,2.1,0.0
+
+Soup cream of vegetables,41,175,91.6,1.0,3.0,3.0,2.9,0.5
+
+Soup fish mixed varieties,32,136,92.5,2.0,3.0,3.0,1.4,0.1
+
+Soup goulash Hungarian style,51,216,89.8,1.2,5.0,5.0,3.0,0.0
+
+Soup minestrone,46,196,89.1,3.2,4.0,4.0,2.0,0.7
+
+Soup oxtail,30,127,92.3,1.5,4.5,4.5,0.7,0.0
+
+Soup pea green,64,268,84.2,2.8,6.8,6.8,2.2,3.0
+
+Soup vegetarian vegetable ,16,70,95.2,0.8,1.8,1.8,0.7,0.5
+
+Sour cream full fat,185,773,73.7,2.8,3.5,3.5,18.0,0.0
+
+Soy flour full-fat raw,427,1785,5.0,37.5,23.0,23.0,20.5,12.0
+
+Soy oil,882,3687,0.0,0.0,0.0,0.0,99.9,0.0
+
+Soy sauce salted tamari,128,539,67.4,11.5,20.0,20.0,0.1,0.0
+
+Soy sauce sweet tamari,266,1111,33.4,3.5,62.0,62.0,0.1,0.0
+
+Soy yogurt plain,91,383,79.2,4.7,12.0,12.0,2.7,0.4
+
+Soybean sprouts raw,75,316,81.5,7.0,4.5,4.5,2.5,3.5
+
+Soybeans dried,428,1789,9.5,37.0,29.5,29.5,18.0,5.0
+
+Soydrink,34,143,92.5,3.6,0.5,0.5,2.0,0.4
+
+Soymilk plain,38,163,91.6,3.8,1.0,1.0,2.2,0.4
+
+Spaghetti/macaroni with tomatosauce,117,492,76.5,4.2,11.9,11.9,5.9,0.5
+
+Spelt,354,1481,5.4,12.2,69.3,69.3,2.6,10.5
+
+Spelt flour,361,1509,10.8,13.3,69.6,69.6,2.8,2.5
+
+Spinach cooked,16,71,92.1,3.6,0.6,0.6,0.0,2.7
+
+Spinach raw,15,63,93.6,2.5,0.6,0.6,0.3,2.0
+
+Sprat Atlantic fish fillet,222,932,63.0,20.0,0.0,0.0,16.0,0.0
+
+Spring rolls Chinese,207,870,58.5,8.5,20.0,20.0,10.0,2.0
+
+Squab pigeon raw,287,1200,56.5,18.5,0.0,0.0,24.0,0.0
+
+Squid mixed species cooked fried,147,618,68.5,24.5,1.0,1.0,5.0,0.0
+
+Squid mixed species raw,80,338,81.1,16.2,0.0,0.0,1.7,0.0
+
+Squid rings fried,429,1793,29.7,25.0,13.2,13.2,31.1,0.0
+
+Stock dry cubes unprepared meat,237,996,54.0,16.0,16.0,16.0,12.0,1.0
+
+Stock dry herbs and spices unprepared,180,756,59.7,18.0,15.0,15.0,5.0,1.3
+
+Stock prepared,6,28,97.9,0.5,0.1,0.1,0.5,0.0
+
+Stockfish hydrated,138,581,66.0,32.0,0.0,0.0,1.0,0.0
+
+Stockfishfresh dried not salted,342,1430,17.0,80.0,0.0,0.0,2.0,0.0
+
+Strawberries fresh,36,154,89.3,0.8,6.5,6.5,0.4,2.0
+
+Sugar brown powdered,387,1618,3.5,0.0,95.5,95.5,0.0,0.0
+
+Sugar cain,390,1630,4.0,0.0,96.0,96.0,0.0,0.0
+
+Sugar granulated,406,1697,0.0,0.0,100.0,100.0,0.0,0.0
+
+Sugar powdered,406,1697,0.0,0.0,100.0,100.0,0.0,0.0
+
+Sugar white,402,1680,1.0,0.0,99.0,99.0,0.0,0.0
+
+Sunflower oil,881,3683,0.0,0.0,0.0,0.0,99.8,0.0
+
+Sunflower seed kernels,629,2629,4.0,27.0,10.5,10.5,53.0,4.5
+
+Surimi fish paste,105,443,74.1,15.5,8.4,8.4,1.0,0.0
+
+Sweet potato raw,96,402,74.1,1.3,21.0,21.0,0.1,2.5
+
+Sweeteners tabletop mixed varieties,0,0,0.1,0.0,0.0,0.0,0.0,0.0
+
+Swordfish raw,119,498,74.0,19.5,0.0,0.0,4.5,0.0
+
+Syrup heavy mixed varieties,292,1220,26.0,0.0,72.0,72.0,0.0,0.0
+
+Syrup table blend beetsugar,304,1270,24.0,0.0,75.0,75.0,0.0,0.0
+
+Syrups grenadine mixed varieties,223,935,44.0,0.0,55.0,55.0,0.0,0.0
+
+Taco shells dried,506,2115,2.5,7.5,62.0,62.0,25.0,2.0
+
+Tangerines mandarin oranges fresh,49,209,86.0,0.7,10.1,10.1,0.3,1.9
+
+Tapioca flour,349,1459,13.2,0.6,85.0,85.0,0.2,0.0
+
+Tea black brewed,0,0,100.0,0.0,0.0,0.0,0.0,0.0
+
+Tea black brewed with sugar,10,45,96.3,0.0,2.7,2.7,0.0,0.0
+
+Tea black unprepared,353,1476,16.0,22.5,59.0,59.0,2.5,0.0
+
+Tea green brewed,0,0,100.0,0.0,0.0,0.0,0.0,0.0
+
+Teff seeds,358,1496,11.4,9.6,73.0,73.0,2.0,3.0
+
+Tempeh,151,636,69.2,12.0,5.5,5.5,8.3,4.0
+
+Teriyaki sauce,90,379,76.7,6.1,16.2,16.2,0.0,0.0
+
+Thymus veal raw,89,375,78.9,18.4,0.0,0.0,1.7,0.0
+
+Tilapia freshwater fish raw,114,481,76.3,17.9,0.0,0.0,4.8,0.0
+
+Tofu extra firm raw,121,510,74.0,12.0,1.5,1.5,6.5,5.0
+
+Tomato juice canned,18,78,94.0,0.8,3.1,3.1,0.1,1.0
+
+Tomato ketchup,119,500,69.4,0.5,28.5,28.5,0.1,0.5
+
+Tomato paste canned conc. 30 %,76,320,78.6,3.5,14.0,14.0,0.0,2.9
+
+Tomato sauce canned,51,216,85.9,1.4,9.2,9.2,1.9,0.6
+
+Tomatoes red raw,19,81,93.9,1.0,2.9,2.9,0.2,1.0
+
+Tongue beef,188,782,68.5,17.3,0.0,0.0,13.2,0.0
+
+Tongue veal,167,702,70.5,17.6,0.0,0.0,10.9,0.0
+
+Tonic water carbonated,38,161,89.5,0.0,9.5,9.5,0.0,0.0
+
+Tortilla chips,509,2133,0.7,7.1,66.5,66.5,23.6,1.1
+
+Trout mixed species cooked,132,553,72.1,22.1,0.0,0.0,4.8,0.0
+
+Trout mixed species raw,126,526,76.0,18.4,0.0,0.0,5.8,0.0
+
+Trout rainbow char cooked,162,681,68.3,22.7,0.0,0.0,8.0,0.0
+
+Truffles black,34,145,90.0,5.5,1.0,1.0,0.5,2.0
+
+Tuna canned in oil,190,797,64.2,24.5,0.0,0.0,10.3,0.0
+
+Tuna canned in water,114,480,72.0,25.9,0.0,0.0,1.1,0.0
+
+Tuna raw,96,402,76.5,21.5,0.0,0.0,1.0,0.0
+
+Turbot european raw,84,355,80.2,17.0,0.0,0.0,1.8,0.0
+
+Turkey all classes meat and skin raw,141,592,71.2,21.8,0.0,0.0,6.0,0.0
+
+Turkey breast meat only raw,106,446,74.4,22.6,0.6,0.6,1.4,0.0
+
+Turkey leg meat and skin raw,115,479,70.0,20.5,0.0,0.0,3.6,0.0
+
+Turnips raw,25,106,91.9,1.5,3.4,3.4,0.2,2.0
+
+Veal retail cuts lean,104,439,75.0,22.4,0.0,0.0,1.6,0.0
+
+Veal retail cuts lean and fat,170,713,68.9,20.0,0.0,0.0,10.1,0.0
+
+Veal ribeye entrecôte,180,757,66.8,21.5,0.2,0.2,10.5,0.0
+
+Veal ribeye entrecôte cooked,199,837,61.5,26.5,1.0,1.0,10.0,0.0
+
+Veal shank meat,112,469,74.8,21.3,0.0,0.0,2.9,0.0
+
+Vegetable spread cucumber,160,674,72.4,1.4,13.8,13.8,11.2,0.2
+
+Vegetable spread regular,205,862,63.3,2.6,13.8,13.8,14.8,4.5
+
+Vermicelli pasta raw,361,1509,10.8,10.0,75.0,75.0,1.5,1.7
+
+Vermouth 12 % v/v,150,630,71.0,0.0,16.5,16.5,0.0,0.0
+
+Vieux 35 % v/v,248,1040,63.5,0.0,1.5,1.5,0.0,0.0
+
+Vinegar balsamico,77,326,79.8,0.2,19.0,19.0,0.0,0.0
+
+Vinegar distilled,1,5,98.5,0.0,0.5,0.5,0.0,0.0
+
+Waffles Belgian style,459,1919,13.4,6.0,56.0,56.0,23.5,0.1
+
+Walnut oil,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
+
+Walnuts raw,675,2822,2.0,14.4,12.1,12.1,62.5,8.0
+
+Water bottled carbonated,0,0,100.0,0.0,0.0,0.0,0.0,0.0
+
+Water bottled mixed varieites,0,0,100.0,0.0,0.0,0.0,0.0,0.0
+
+Water bottled non-carbonated,0,0,100.0,0.0,0.0,0.0,0.0,0.0
+
+Watercress raw,20,84,93.6,1.6,2.0,2.0,0.3,1.5
+
+Watermelon fresh,37,159,89.3,0.6,7.8,7.8,0.2,1.1
+
+Wheat bran crude,317,1325,9.0,17.0,25.0,25.0,8.0,40.0
+
+Wheat flour self-rising,343,1434,14.3,10.5,71.0,71.0,1.0,2.2
+
+Wheat flour white,332,1388,12.9,11.4,62.2,62.2,1.5,11.0
+
+Wheat flour whole-grain,346,1446,14.5,11.4,69.8,69.8,1.5,1.8
+
+Wheat germ oil,879,3674,0.0,0.0,0.0,0.0,99.5,0.0
+
+Wheat germs,391,1634,9.5,27.0,45.0,45.0,9.5,8.0
+
+Wheat whole grain raw,329,1375,14.5,12.4,59.5,59.5,2.0,10.6
+
+Whipped cream sweetened,355,1484,48.0,2.0,18.0,18.0,31.0,0.0
+
+Whipping cream,337,1409,58.2,2.0,2.8,2.8,36.0,0.0
+
+Whiskey 40 % v/v,277,1160,60.0,0.0,0.0,0.0,0.0,0.0
+
+Whiting mixed species raw,85,358,79.3,18.5,0.0,0.0,1.2,0.0
+
+Wine red 13 % v/v,86,360,86.4,0.2,3.0,3.0,0.0,0.0
+
+Wine rosé 11 % v/v,63,264,87.0,0.1,2.5,2.5,0.0,0.0
+
+Wine sekt  12-14 % v/v,64,268,88.8,0.2,0.0,0.0,0.0,0.0
+
+Wine white 115 % v/v,80,336,88.3,0.2,0.0,0.0,0.0,0.0
+
+Wine white sweet 11 % v/v,89,370,92.3,0.2,6.5,6.5,0.0,0.0
+
+Winegums,233,976,41.8,1.5,55.5,55.5,0.2,0.0
+
+Worcestershire sauce,67,284,85.1,2.0,9.5,9.5,2.4,0.0
+
+Yam,107,450,71.0,2.0,22.5,22.5,0.2,3.3
+
+Yeast bakers fresh,88,372,74.0,16.5,1.0,1.0,0.5,7.0
+
+Yeast dried,406,1697,0.0,47.9,34.5,34.5,4.2,18.0
+
+Yeast extract,236,989,39.8,42.0,14.0,14.0,0.4,2.8
+
+Yeast extract spread Marmite,240,1003,38.5,43.0,15.0,15.0,0.0,2.5
+
+Yogurt Bulgarian full fat,84,353,83.5,4.5,6.5,6.5,4.5,0.0
+
+Yogurt Bulgarian no-fat,59,246,84.7,4.8,7.5,7.5,1.0,0.0
+
+Yogurt Greek plain,58,243,84.9,10.2,3.5,3.5,0.4,0.0
+
+Yogurt drink mixed fruit varieties,37,155,89.5,4.0,4.0,4.0,0.5,0.0
+
+Yogurt drink plain,69,292,81.9,3.0,14.0,14.0,0.1,0.0
+
+Yogurt mixed fruit varieties full fat,96,406,77.9,3.9,14.5,14.5,2.5,0.2
+
+Yogurt plain full fat,65,271,86.2,3.8,4.5,4.5,3.5,0.0
+
+Yogurt plain no-fat,33,138,90.0,3.4,4.5,4.5,0.1,0.0
+
+Yogurt plain reduced fat,49,207,88.7,3.5,5.2,5.2,1.6,0.0
+
+Yogurt vanilla flavor reduced fat ,80,335,80.9,3.2,13.5,13.5,1.4,0.0
+
+Zucchini raw,27,115,91.6,1.8,4.5,4.5,0.0,1.1
+
+wodka 80% proof,64,268,99.0,0.0,0.0,0.0,0.0,0.0
+

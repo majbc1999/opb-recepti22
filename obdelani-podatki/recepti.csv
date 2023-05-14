@@ -1,183 +1,364 @@
-id_recepta,ime_recepta,cas_priprave,enota_priprave,cas_kuhanja,enota_kuhanja,st_porcij,kalorije,ogljikovi_hidrati,mascobe,beljakovine
-1,Air Fryer Salmon Patties,5,mins,10,mins,3,314.0,9.5,14.5,33.5
-2,Flounder Piccata,5,mins,15,mins,4,280.0,14.0,8.0,36.0
-3,Mexican Shrimp Cobb Salad,15,mins,0,mins,6,267.5,24.0,9.0,28.0
-4,Roasted Strawberry Almond Flour Muffins,30,mins,20,mins,12,164.0,15.5,8.5,6.0
-5,Fiesta Bean Salad Recipe,10,mins,0,mins,4,335.0,47.0,11.5,14.0
-6,Ground Beef and Broccoli Stir Fry,5,mins,8,mins,4,327.0,26.0,11.0,29.0
-7,Roasted Mushrooms with Parmesan,10,mins,20,mins,4,120.0,6.0,9.0,7.0
-8,Huevos Pericos,2,mins,5,mins,2,155.0,8.5,7.7,13.9
-9,Grilled Chicken Satay with Spicy Peanut Sauce,20,mins,10,mins,4,265.0,8.0,9.0,34.5
-10,Open Faced Tuna Sandwich with Avocado,5,mins,2,mins,3,247.0,28.0,8.0,18.0
-11,Ropa Vieja (Instant Pot or Dutch Oven),20,mins,1,hr,6,350.0,11.5,15.5,35.0
-12,Green Smoothie Bowl,5,mins,0,mins,1,404.0,74.0,10.5,9.0
-14,Super Moist Carrot Cake with Cream Cheese Frosting,20,mins,45,mins,16,216.0,32.0,8.0,4.0
-16,Super Moist Carrot Cake with Cream Cheese Frosting,20,mins,45,mins,16,216.0,32.0,8.0,4.0
-18,Artichoke Pie,10,mins,55,mins,8,229.0,17.0,13.0,12.5
-20,Italian Sub Broccoli Salad,15,mins,0,mins,6,373.0,20.0,23.5,21.0
-21,Classic Deviled Eggs,10,mins,15,mins,4,96.8,1.0,7.5,6.3
-22,Salmon Salad,2,mins,3,mins,3,139.0,2.5,7.0,17.5
-23,"Shrimp Parmesan Hero, Lightened Up",5,mins,25,mins,4,433.0,57.5,8.0,29.6
-24,How To Make Parmesan Asparagus Fries,15,mins,15,mins,4,110.0,15.0,4.0,7.5
-25,Broiled Tilapia Oreganata ,2,mins,8,mins,4,219.0,3.0,7.5,35.0
-26,Hash Brown Egg White Nests,15,mins,55,mins,3,134.0,15.0,2.0,13.0
-27,Tofu Poke Bowl,10,mins,10,mins,2,520.0,47.0,24.0,29.0
-29,Broccoli Cheddar Soup,15,mins,45,mins,6,242.0,24.0,12.5,12.5
-30,Baked Salmon Cakes,5,mins,25,mins,15,87.0,8.0,3.0,7.0
-31,Chicken Salad Recipe,5,mins,5,mins,6,131.0,2.0,5.0,18.0
-32,Turkey Shepherd&#8217;s Pie Loaded Sweet Potato,10,mins,50,mins,4,401.0,50.0,11.0,27.5
-33,Filipino Adobo Chicken,10,mins,1,hr,4,175.0,5.0,4.5,27.0
-34,Linguini and Shrimp Fra Diavolo,10,mins,20,mins,6,385.0,56.0,5.0,29.5
-36,Honey-Mustard Air Fryer Pork Chops ,10,mins,15,mins,4,241.0,12.0,4.5,35.0
-37,Tropical Chia Pudding Breakfast Bowl,10,mins,0,mins,2,305.0,35.0,13.0,18.0
-38,Short Rib Soup,15,mins,1,hr,5,206.0,10.0,9.5,21.0
-39,"Shrimp, Peas and Rice",5,mins,25,mins,4,346.0,36.0,8.0,28.5
-40,Honey Sriracha Roasted Salmon Rice Bowls,20,mins,10,mins,4,506.0,48.0,17.5,38.5
-41,Wild Mushroom and Farro Soup,15,mins,1,hr,6,331.0,39.0,13.0,14.0
-42,Cabbage Soup with Chicken and Pork,10,mins,1,hr,8,217.0,13.0,5.0,26.5
-43,"Spicy Gochujang Tofu Bowls (Vegan, Gluten-Free)",10,mins,15,mins,2,473.0,50.0,19.0,26.0
-44,Air Fryer Salmon with Maple Soy Glaze,5,mins,8,mins,4,292.0,12.0,11.0,35.0
-45,"Chicken Divan, Lightened Up",30,mins,45,mins,6,387.0,22.0,14.5,42.0
-46,Air Fryer Breaded Cubed Steak (bistec empanizado),5,mins,20,mins,4,328.0,15.5,14.0,33.0
-47,Chicken Tenders Parmesan,5,mins,30,mins,4,376.0,19.0,12.5,45.0
-49,"Egg White Muffins with Turkey Bacon, Cottage Cheese, and Veggies",15,mins,35,mins,6,144.0,4.5,4.5,20.0
-50,Buffalo Chicken Dip,10,mins,30,mins,9,121.0,4.5,6.5,15.0
-51,Chocolate Brownie Date Balls,15,mins,0,mins,8,153.0,26.0,6.5,2.5
-52,Baked Buffalo Chicken Jalapeño Poppers,20,mins,25,mins,10,92.0,5.0,5.0,7.0
-53,"Buffalo Chicken Lettuce Wraps (Slow Cooker, Instant Pot)",5,mins,4,hrs,6,147.5,5.2,0.1,25.0
-54,"Loaded Nachos with Turkey, Beans and Cheese",10,mins,15,mins,4,386.0,45.0,17.5,28.0
-55,Air Fryer Egg Salad,5,mins,15,mins,4,237.0,1.0,20.0,12.5
-56,Stuffed Buffalo Chicken Breasts,15,mins,30,mins,5,172.0,5.0,5.0,22.0
-57,5-Minute Microwave Salmon Rice Bowl,1,min,5,mins,1,533.0,51.0,18.0,48.5
-58,Pasta Fagioli (Pasta and Beans),10,mins,25,mins,5,262.5,46.0,4.0,10.0
-59,Buffalo Chicken Meatballs,15,mins,20,mins,26,37.0,1.0,2.0,4.0
-60,Raw Beet Salad with Apples and Carrots,10,mins,0,mins,4,112.0,13.0,7.0,1.0
-61,Teriyaki Shrimp Quinoa Bowls with Mango-Cucumber Salsa,10,mins,30,mins,4,352.0,44.5,10.0,24.0
-62,Black Beans and Rice,15,mins,30,mins,8,236.0,46.5,2.0,6.5
-64,Air Fryer Breakfast Banana Split,2,mins,5,mins,1,286.0,41.0,9.0,15.0
-65,Red Thai Coconut Curry Shrimp,5,mins,10,mins,4,136.0,5.0,5.0,16.0
-66,Ground Turkey Skillet with Sweet Potatoes and Black Bean ,5,mins,25,mins,4,394.0,41.0,14.5,28.0
-67,Avgolemono Chicken and Rice Soup ,10,mins,45,mins,6,265.0,21.5,6.5,27.5
-68,Broccoli Salad,5,mins,10,mins,8,171.0,11.0,11.5,6.5
-69,Braised Kale with Pancetta ,5,mins,35,mins,4,115.0,12.0,5.5,6.5
-70,White Bean Scampi with Linguine,5,mins,20,mins,4,571.0,93.0,9.5,26.5
-71,Borscht,15,mins,30,mins,6,167.0,28.0,5.0,4.5
-72,Zoats or Zucchini Oats,5,mins,5,mins,1,441.0,63.0,12.5,24.0
-73,Chicken and White Bean Stuffed Peppers,5,mins,40,mins,5,304.0,35.0,6.0,30.0
-74,Perfect Air Fryer Shrimp,4,mins,6,mins,4,163.0,2.0,8.0,19.5
-75,French Onion Chicken,10,mins,45,mins,4,335.0,16.5,14.5,33.5
-76,Salmon Caesar Salad,15,mins,15,mins,4,364.0,6.5,20.0,42.0
-77,Spicy Hearts of Palm Noodles with Chicken,5,mins,15,mins,2,275.0,16.5,12.0,26.0
-78,Buffalo Chicken Rice Bowls,15,mins,15,mins,4,485.0,47.5,9.5,49.5
-79,Whipped Feta Dip  ,15,mins,0,mins,6,155.0,2.5,13.0,7.5
-80,Spinach Dip Stuffed Mushrooms,15,mins,25,mins,12,105.0,5.0,7.0,7.0
-81,Breakfast Strata with Sausage and Mushrooms,10,mins,50,mins,8,289.0,18.2,12.4,24.3
-82,Slow Cooker Steel Cut Oats,5,mins,2,hrs,4,302.0,50.5,8.0,9.0
-83,"One-Pot Orzo with Sausage, Spinach and Corn",5,mins,25,mins,4,381.0,44.0,12.0,26.0
-84,Healthy Chocolate Chip Oat Cookies,10,mins,10,mins,12,174.0,20.0,10.0,4.0
-85,Veggie Stromboli,20,mins,35,mins,8,217.5,31.5,6.0,11.0
-86,Spinach Prosciutto and Mozzarella Stuffed Pork Tenderloin,15,mins,30,mins,4,208.0,3.0,8.5,29.0
-87,Butternut Squash Galette,30,mins,1,hr,6,274.0,32.0,15.5,5.5
-88,Buttermilk-Marinated Air Fryer Whole Roasted Chicken,5,mins,50,mins,4,329.0,1.0,12.5,50.0
-89,Bacon Spinach Breakfast Casserole with Gruyère,10,mins,45,mins,8,276.0,4.0,19.0,22.0
-90,Rainbow Quinoa Salad with Lemon Dressing,15,mins,15,mins,4,394.0,51.0,17.0,10.5
-92,Caesar Dip,10,mins,0,mins,6,68.0,3.5,4.0,4.5
-93,Spicy Vodka Chicken Parmesan,15,mins,15,mins,4,386.0,25.5,14.0,39.0
-94,Oysters Rockefeller ,20,mins,10,mins,12,116.0,7.5,4.5,11.0
-95,Fennel Gratin,10,mins,1,hr,6,191.0,24.5,8.5,8.0
-96,Savory Steel Cut Oats,5,mins,12,mins,1,290.0,26.0,12.0,21.0
-97,Asian Chicken Lettuce Wraps,10,mins,40,mins,6,102.0,9.5,3.0,8.5
-98,Herb Roasted Carrots,15,mins,35,mins,6,106.0,15.0,5.0,2.0
-99,Air Fryer Chicken Thighs,5,mins,24,mins,6,213.0,1.5,15.5,16.0
-100,High-Protein Zucchini Omelet,5,mins,12,mins,1,283.0,10.5,13.0,31.0
-101,Tortilla Soup,15,mins,25,mins,6,246.0,16.0,10.0,17.0
-102,Stuffed Butternut Squash with Wild Rice and Sausage,15,mins,1,hr,4,314.0,51.0,7.5,16.5
-103,Kale and Brussels Sprout Salad,20,mins,0,mins,8,165.0,7.0,14.0,4.0
-104,Sheet Pan Thanksgiving,20,mins,50,mins,4,608.0,38.0,26.5,59.0
-105,Cornbread Sausage Stuffing,1,hr,1,hr,16,182.0,21.0,7.5,8.5
-106,Vanilla Sweet Potato Casserole with Praline Topping,15,mins,1,hr,10,218.0,35.0,8.5,4.5
-107,"Roasted Butternut Squash with Onions, Bacon, and Parmesan",15,mins,40,mins,4,158.0,19.0,8.0,5.0
-108,Garlic Mashed Potatoes,10,mins,20,mins,5,165.0,31.0,3.0,5.0
-109,High-Protein Enchilada Scrambled Eggs,2,mins,5,mins,1,270.0,12.0,14.0,25.5
-110,Roasted Acorn Squash Soup,15,mins,1,hr,6,180.0,33.5,5.0,4.5
-111,Chicken Parmesan Rolls,25,mins,20,mins,4,259.0,28.0,4.5,27.5
-112,Lightened Up Green Bean Casserole with Shallot Crumb Topping,30,mins,30,mins,8,160.0,22.0,6.0,7.0
-113,Dairy-Free Heavy Cream,5,mins,0,mins,12,86.0,4.5,7.0,3.0
-114,Garlic-Ginger Chicken Stir-Fry,10,mins,10,mins,4,450.0,19.5,21.0,45.5
-115,Sweet Potato Soup with Sausage and Kale,10,mins,6,hrs,6,265.0,23.0,8.5,23.5
-116,Everything Bagel Pigs in a Blanket,20,mins,25,mins,8,160.0,14.0,5.0,12.0
-117,Garlic Butter Mushrooms,5,mins,10,mins,4,111.0,5.0,10.0,4.0
-118,Turmeric Chicken Noodle Soup,20,mins,1,hr,6,386.0,56.0,3.5,27.5
-119,Apple Pie Overnight Oats,10,mins,15,mins,2,361.0,59.0,11.0,8.0
-120,Avocado Toast with Egg (4 Ways),5,mins,5,mins,1,229.0,23.0,10.0,12.0
-121,Black Bean Soup Recipe (From Scratch),10,mins,1,hr,8,256.0,45.0,3.0,13.5
-122,Blackened Air Fryer Salmon Bites,3,mins,7,mins,4,251.0,2.0,11.0,34.0
-123,Tofu Tacos with Potatoes and Jalapeños,15,mins,35,mins,4,444.0,44.0,24.0,16.0
-124,Sweet Potato Turkey Meatloaf,15,mins,55,mins,4,264.0,19.0,10.5,24.0
-125,Lemony Hearts of Palm and Avocado Salad,10,mins,0,mins,4,145.0,8.0,12.5,2.5
-126,Pizza Sausage Rolls,20,mins,30,mins,4,302.0,30.0,10.0,22.0
-127,Korean-Inspired Salmon Tacos with Spicy Slaw,10,mins,10,mins,4,404.0,33.0,18.0,27.0
-128,Hot Mexican Layer Dip,10,mins,50,mins,12,173.0,11.5,8.5,15.5
-129,Creamy Pumpkin Polenta,5,mins,25,mins,6,133.0,14.0,6.0,3.0
-130,Quick Black Beans,2,mins,20,mins,4,135.0,20.0,4.0,6.0
-131,Air Fryer Butternut Squash,15,mins,25,mins,4,113.0,21.5,3.5,2.0
-132,Slow Cooker Beef Ragu,15,mins,4,hrs,6,176.0,15.0,7.0,16.0
-133,Pumpkin Banana Bread,25,mins,1,hr,12,146.5,33.3,2.7,2.7
-134,Lox and Eggs with Onions,5,mins,15,mins,2,279.0,9.0,17.0,21.5
-135,"Fall Brussels Sprout Salad with Apple, Pecans, and Blue Cheese",20,mins,0,mins,4,202.0,17.0,13.5,5.0
-136,Turmeric Roasted Sweet Potato and Macadamia Soup,10,mins,1,hr,9,199.0,30.5,8.0,2.5
-137,Air Fryer Salmon Fish Sandwich,5,mins,10,mins,4,493.0,31.5,24.0,33.0
-138,Whole Wheat Pumpkin Pecan Pancakes,10,mins,10,mins,4,234.0,31.0,8.0,10.0
-139,Chicken Taco Poblano Rice Bowls,10,mins,15,mins,4,475.0,52.0,12.0,40.5
-140,Peanut Butter Banana Muffins,15,mins,25,mins,12,192.0,24.5,9.0,5.5
-142,"Sheet Pan Baked Feta with Broccolini, Tomatoes and Chickpeas",15,mins,30,mins,4,372.0,33.0,21.5,17.5
-143,Maple Roasted Butternut Squash,5,mins,40,mins,4,104.0,23.0,2.0,1.0
-144,Pumpkin Cream Cheese Muffins,15,mins,25,mins,12,170.0,25.0,6.0,3.5
-145,Sausage and Potato Soup,10,mins,45,mins,4,402.0,60.0,7.5,25.0
-146,Parmesan-Herb Baked Salmon,5,mins,20,mins,6,256.0,2.0,13.0,31.0
-147,Avocado Toast with Halloumi and Soft-Boiled Egg,5,mins,15,mins,1,295.0,19.0,17.0,16.0
-148,Chicken Enchilada Stuffed Zucchini Boats,15,mins,45,mins,4,232.0,22.0,7.0,24.0
-149,Protein Chia Seed Cereal,2,mins,0,mins,1,318.0,30.0,10.0,29.0
-150,Fish Taco Bowl,5,mins,10,mins,4,264.0,9.0,12.5,31.5
-151,Spaghetti and Meatball Soup,10,mins,20,mins,6,213.0,27.5,3.0,22.0
-152,Heirloom Tomato Galette,10,mins,35,mins,8,153.0,15.5,10.0,2.0
-153,"Grilled Chicken Panini with Zucchini, Tomato, and Mozzarella  ",10,mins,10,mins,2,433.0,33.5,17.5,36.0
-154,Air Fryer Sweet Plantains,5,mins,20,mins,4,109.0,28.5,0.5,1.0
-155,Zucchini Quiche,15,mins,1,hr,6,307.0,21.0,19.0,15.0
-156,Zucchini Bread,20,mins,55,mins,16,144.0,21.0,5.5,3.5
-157,Creamy Corn Soup with Queso Fresco,10,mins,25,mins,6,206.0,28.5,6.5,11.5
-158,Tuna Tartare with Cucumber and Avocado,10,mins,0,mins,4,114.0,2.5,6.5,11.0
-159,Tortellini Salad,10,mins,20,mins,14,192.0,24.0,8.0,6.0
-160,Baked Wonton Chips,5,mins,8,mins,4,70.0,14.0,0.5,2.5
-161,Lentil salad,15,mins,20,mins,5,181.0,29.5,3.5,10.0
-162,Air Fryer Popcorn Chicken,30,mins,10,mins,4,283.0,21.0,8.0,30.0
-163,Zucchini Casserole,10,mins,45,mins,12,83.0,11.0,3.0,4.0
-164,Pineapple Chia with Cottage Cheese,5,mins,0,mins,2,295.0,38.0,8.5,16.5
-165,"Seared Scallops with Creamy Corn, Tomatoes and Chives",5,mins,20,mins,4,269.0,27.5,11.0,19.0
-166,Giant Zucchini Parmesan,10,mins,45,mins,4,242.0,24.0,10.0,16.5
-167,Turkey Meatloaf with Zucchini   ,10,mins,55,mins,4,275.0,18.0,11.5,25.5
-168,Peach Pie Cottage Cheese Bowls,5,mins,10,mins,2,272.0,25.0,9.0,31.0
-169,Gandules Guisados,5,mins,20,mins,4,131.0,17.5,4.5,5.0
-170,Puerto Rican Sofrito Recipe,25,mins,0,mins,14,27.0,4.0,1.0,0.5
-171,Broiled or Grilled Pollo Sabroso,5,mins,20,mins,6,181.0,0.5,6.0,29.5
-172,"Summer Cavatelli with Corn, Tomatoes and Zucchini",5,mins,15,mins,6,297.5,59.5,5.0,10.5
-174,"Black Bean, Avocado, Cucumber and Tomato Salad",10,mins,0,mins,10,127.0,16.0,5.5,5.0
-175,Greek 7 Layer Dip,20,mins,0,mins,9,93.0,7.0,5.0,5.0
-176,Air Fryer Baked Potato ,5,mins,38,mins,4,157.0,36.0,0.5,4.0
-177,Grilled Corn Salad with Cotija,15,mins,15,mins,8,117.0,13.0,6.5,4.0
-178,Chickpea Milanese,15,mins,10,mins,4,320.0,41.0,13.5,10.0
-179,Peruvian Grilled Chicken Skewers with Avocado Aji Verde Sauce,10,mins,10,mins,6,289.0,2.5,16.0,30.0
-180,Broiled Fish with Tomato Caper Sauce,5,mins,15,mins,4,257.0,2.0,10.5,37.5
-181,Mango Coconut Chia Pudding,5,mins,0,mins,2,227.0,22.0,13.0,7.0
-182,Grilled Chicken Feta Chickpea Salad,5,mins,0,mins,2,462.0,41.0,19.5,34.0
-183,Grilled Tuna over Arugula with Lemon Vinaigrette,5,mins,5,mins,1,298.0,4.0,15.5,35.5
-184,Watermelon Arugula and Feta Salad,10,mins,0,mins,4,157.5,11.0,11.5,4.0
-185,Berry Cottage Cheese Breakfast Bowl,5,mins,0,mins,1,232.0,20.5,9.5,19.0
-186,"Grilled Chicken Salad with Strawberries, Avocado and Citrus Dressing",10,mins,15,mins,2,399.0,14.0,26.0,30.0
-187,Chili-Lime Air Fryer Salmon,5,mins,10,mins,4,262.0,0.5,12.5,37.5
-188,Tuna Poke Salad,15,mins,0,mins,2,404.0,16.0,23.0,36.0
-189,Avocado and Mango Salsa,5,mins,0,mins,5,119.0,12.0,6.0,1.5
-190,Arugula Pasta Salad with Chickpeas and Sun Dried Tomatoes,5,mins,10,mins,4,280.0,43.5,9.0,11.0
-191,Honey Sriracha Chicken and Broccoli Meal Prep Bowls,10,mins,20,mins,4,428.0,41.0,9.5,44.0
-192,Sous Vide Chicken Breast and Cilantro Lime Chicken Avocado Salad,30,mins,2,hrs,4,329.0,7.5,22.5,25.0
-193,Instant Pot Oatmeal Banana Bars,10,mins,50,mins,4,266.0,45.0,6.5,9.0
+id_recepta,ime_recepta,cas_priprave,enota_priprave,cas_kuhanja,enota_kuhanja,st_porcij,kalorije,ogljikovi_hidrati,mascobe,beljakovine
+
+1,Air Fryer Salmon Patties,5,mins,10,mins,3,314.0,9.5,14.5,33.5
+
+2,Flounder Piccata,5,mins,15,mins,4,280.0,14.0,8.0,36.0
+
+3,Mexican Shrimp Cobb Salad,15,mins,0,mins,6,267.5,24.0,9.0,28.0
+
+4,Roasted Strawberry Almond Flour Muffins,30,mins,20,mins,12,164.0,15.5,8.5,6.0
+
+5,Fiesta Bean Salad Recipe,10,mins,0,mins,4,335.0,47.0,11.5,14.0
+
+6,Ground Beef and Broccoli Stir Fry,5,mins,8,mins,4,327.0,26.0,11.0,29.0
+
+7,Roasted Mushrooms with Parmesan,10,mins,20,mins,4,120.0,6.0,9.0,7.0
+
+8,Huevos Pericos,2,mins,5,mins,2,155.0,8.5,7.7,13.9
+
+9,Grilled Chicken Satay with Spicy Peanut Sauce,20,mins,10,mins,4,265.0,8.0,9.0,34.5
+
+10,Open Faced Tuna Sandwich with Avocado,5,mins,2,mins,3,247.0,28.0,8.0,18.0
+
+11,Ropa Vieja (Instant Pot or Dutch Oven),20,mins,1,hr,6,350.0,11.5,15.5,35.0
+
+12,Green Smoothie Bowl,5,mins,0,mins,1,404.0,74.0,10.5,9.0
+
+13,Super Moist Carrot Cake with Cream Cheese Frosting,20,mins,45,mins,16,216.0,32.0,8.0,4.0
+
+14,Artichoke Pie,10,mins,55,mins,8,229.0,17.0,13.0,12.5
+
+15,Italian Sub Broccoli Salad,15,mins,0,mins,6,373.0,20.0,23.5,21.0
+
+16,Classic Deviled Eggs,10,mins,15,mins,4,96.8,1.0,7.5,6.3
+
+17,Salmon Salad,2,mins,3,mins,3,139.0,2.5,7.0,17.5
+
+18,"Shrimp Parmesan Hero, Lightened Up",5,mins,25,mins,4,433.0,57.5,8.0,29.6
+
+19,How To Make Parmesan Asparagus Fries,15,mins,15,mins,4,110.0,15.0,4.0,7.5
+
+20,Broiled Tilapia Oreganata ,2,mins,8,mins,4,219.0,3.0,7.5,35.0
+
+21,Hash Brown Egg White Nests,15,mins,55,mins,3,134.0,15.0,2.0,13.0
+
+22,Tofu Poke Bowl,10,mins,10,mins,2,520.0,47.0,24.0,29.0
+
+23,Broccoli Cheddar Soup,15,mins,45,mins,6,242.0,24.0,12.5,12.5
+
+24,Baked Salmon Cakes,5,mins,25,mins,15,87.0,8.0,3.0,7.0
+
+25,Chicken Salad Recipe,5,mins,5,mins,6,131.0,2.0,5.0,18.0
+
+26,Turkey Shepherd&#8217;s Pie Loaded Sweet Potato,10,mins,50,mins,4,401.0,50.0,11.0,27.5
+
+27,Filipino Adobo Chicken,10,mins,1,hr,4,175.0,5.0,4.5,27.0
+
+28,Linguini and Shrimp Fra Diavolo,10,mins,20,mins,6,385.0,56.0,5.0,29.5
+
+29,Honey-Mustard Air Fryer Pork Chops ,10,mins,15,mins,4,241.0,12.0,4.5,35.0
+
+30,Tropical Chia Pudding Breakfast Bowl,10,mins,0,mins,2,305.0,35.0,13.0,18.0
+
+31,Short Rib Soup,15,mins,1,hr,5,206.0,10.0,9.5,21.0
+
+32,"Shrimp, Peas and Rice",5,mins,25,mins,4,346.0,36.0,8.0,28.5
+
+33,Honey Sriracha Roasted Salmon Rice Bowls,20,mins,10,mins,4,506.0,48.0,17.5,38.5
+
+34,Wild Mushroom and Farro Soup,15,mins,1,hr,6,331.0,39.0,13.0,14.0
+
+35,Cabbage Soup with Chicken and Pork,10,mins,1,hr,8,217.0,13.0,5.0,26.5
+
+36,"Spicy Gochujang Tofu Bowls (Vegan, Gluten-Free)",10,mins,15,mins,2,473.0,50.0,19.0,26.0
+
+37,Air Fryer Salmon with Maple Soy Glaze,5,mins,8,mins,4,292.0,12.0,11.0,35.0
+
+38,"Chicken Divan, Lightened Up",30,mins,45,mins,6,387.0,22.0,14.5,42.0
+
+39,Air Fryer Breaded Cubed Steak (bistec empanizado),5,mins,20,mins,4,328.0,15.5,14.0,33.0
+
+40,Chicken Tenders Parmesan,5,mins,30,mins,4,376.0,19.0,12.5,45.0
+
+41,"Egg White Muffins with Turkey Bacon, Cottage Cheese, and Veggies",15,mins,35,mins,6,144.0,4.5,4.5,20.0
+
+42,Buffalo Chicken Dip,10,mins,30,mins,9,121.0,4.5,6.5,15.0
+
+43,Chocolate Brownie Date Balls,15,mins,0,mins,8,153.0,26.0,6.5,2.5
+
+44,Baked Buffalo Chicken Jalapeño Poppers,20,mins,25,mins,10,92.0,5.0,5.0,7.0
+
+45,"Buffalo Chicken Lettuce Wraps (Slow Cooker, Instant Pot)",5,mins,4,hrs,6,147.5,5.2,0.1,25.0
+
+46,"Loaded Nachos with Turkey, Beans and Cheese",10,mins,15,mins,4,386.0,45.0,17.5,28.0
+
+47,Air Fryer Egg Salad,5,mins,15,mins,4,237.0,1.0,20.0,12.5
+
+48,Stuffed Buffalo Chicken Breasts,15,mins,30,mins,5,172.0,5.0,5.0,22.0
+
+49,5-Minute Microwave Salmon Rice Bowl,1,min,5,mins,1,533.0,51.0,18.0,48.5
+
+50,Pasta Fagioli (Pasta and Beans),10,mins,25,mins,5,262.5,46.0,4.0,10.0
+
+51,Buffalo Chicken Meatballs,15,mins,20,mins,26,37.0,1.0,2.0,4.0
+
+52,Raw Beet Salad with Apples and Carrots,10,mins,0,mins,4,112.0,13.0,7.0,1.0
+
+53,Teriyaki Shrimp Quinoa Bowls with Mango-Cucumber Salsa,10,mins,30,mins,4,352.0,44.5,10.0,24.0
+
+54,Black Beans and Rice,15,mins,30,mins,8,236.0,46.5,2.0,6.5
+
+55,Air Fryer Breakfast Banana Split,2,mins,5,mins,1,286.0,41.0,9.0,15.0
+
+56,Red Thai Coconut Curry Shrimp,5,mins,10,mins,4,136.0,5.0,5.0,16.0
+
+57,Ground Turkey Skillet with Sweet Potatoes and Black Bean ,5,mins,25,mins,4,394.0,41.0,14.5,28.0
+
+58,Avgolemono Chicken and Rice Soup ,10,mins,45,mins,6,265.0,21.5,6.5,27.5
+
+59,Broccoli Salad,5,mins,10,mins,8,171.0,11.0,11.5,6.5
+
+60,Braised Kale with Pancetta ,5,mins,35,mins,4,115.0,12.0,5.5,6.5
+
+61,White Bean Scampi with Linguine,5,mins,20,mins,4,571.0,93.0,9.5,26.5
+
+62,Borscht,15,mins,30,mins,6,167.0,28.0,5.0,4.5
+
+63,Zoats or Zucchini Oats,5,mins,5,mins,1,441.0,63.0,12.5,24.0
+
+64,Chicken and White Bean Stuffed Peppers,5,mins,40,mins,5,304.0,35.0,6.0,30.0
+
+65,Perfect Air Fryer Shrimp,4,mins,6,mins,4,163.0,2.0,8.0,19.5
+
+66,French Onion Chicken,10,mins,45,mins,4,335.0,16.5,14.5,33.5
+
+67,Salmon Caesar Salad,15,mins,15,mins,4,364.0,6.5,20.0,42.0
+
+68,Spicy Hearts of Palm Noodles with Chicken,5,mins,15,mins,2,275.0,16.5,12.0,26.0
+
+69,Buffalo Chicken Rice Bowls,15,mins,15,mins,4,485.0,47.5,9.5,49.5
+
+70,Whipped Feta Dip  ,15,mins,0,mins,6,155.0,2.5,13.0,7.5
+
+71,Spinach Dip Stuffed Mushrooms,15,mins,25,mins,12,105.0,5.0,7.0,7.0
+
+72,Breakfast Strata with Sausage and Mushrooms,10,mins,50,mins,8,289.0,18.2,12.4,24.3
+
+73,Slow Cooker Steel Cut Oats,5,mins,2,hrs,4,302.0,50.5,8.0,9.0
+
+74,"One-Pot Orzo with Sausage, Spinach and Corn",5,mins,25,mins,4,381.0,44.0,12.0,26.0
+
+75,Healthy Chocolate Chip Oat Cookies,10,mins,10,mins,12,174.0,20.0,10.0,4.0
+
+76,Veggie Stromboli,20,mins,35,mins,8,217.5,31.5,6.0,11.0
+
+77,Spinach Prosciutto and Mozzarella Stuffed Pork Tenderloin,15,mins,30,mins,4,208.0,3.0,8.5,29.0
+
+78,Butternut Squash Galette,30,mins,1,hr,6,274.0,32.0,15.5,5.5
+
+79,Buttermilk-Marinated Air Fryer Whole Roasted Chicken,5,mins,50,mins,4,329.0,1.0,12.5,50.0
+
+80,Bacon Spinach Breakfast Casserole with Gruyère,10,mins,45,mins,8,276.0,4.0,19.0,22.0
+
+81,Rainbow Quinoa Salad with Lemon Dressing,15,mins,15,mins,4,394.0,51.0,17.0,10.5
+
+82,Caesar Dip,10,mins,0,mins,6,68.0,3.5,4.0,4.5
+
+83,Spicy Vodka Chicken Parmesan,15,mins,15,mins,4,386.0,25.5,14.0,39.0
+
+84,Oysters Rockefeller ,20,mins,10,mins,12,116.0,7.5,4.5,11.0
+
+85,Fennel Gratin,10,mins,1,hr,6,191.0,24.5,8.5,8.0
+
+86,Savory Steel Cut Oats,5,mins,12,mins,1,290.0,26.0,12.0,21.0
+
+87,Asian Chicken Lettuce Wraps,10,mins,40,mins,6,102.0,9.5,3.0,8.5
+
+88,Herb Roasted Carrots,15,mins,35,mins,6,106.0,15.0,5.0,2.0
+
+89,Air Fryer Chicken Thighs,5,mins,24,mins,6,213.0,1.5,15.5,16.0
+
+90,High-Protein Zucchini Omelet,5,mins,12,mins,1,283.0,10.5,13.0,31.0
+
+91,Tortilla Soup,15,mins,25,mins,6,246.0,16.0,10.0,17.0
+
+92,Stuffed Butternut Squash with Wild Rice and Sausage,15,mins,1,hr,4,314.0,51.0,7.5,16.5
+
+93,Kale and Brussels Sprout Salad,20,mins,0,mins,8,165.0,7.0,14.0,4.0
+
+94,Sheet Pan Thanksgiving,20,mins,50,mins,4,608.0,38.0,26.5,59.0
+
+95,Cornbread Sausage Stuffing,1,hr,1,hr,16,182.0,21.0,7.5,8.5
+
+96,Vanilla Sweet Potato Casserole with Praline Topping,15,mins,1,hr,10,218.0,35.0,8.5,4.5
+
+97,"Roasted Butternut Squash with Onions, Bacon, and Parmesan",15,mins,40,mins,4,158.0,19.0,8.0,5.0
+
+98,Garlic Mashed Potatoes,10,mins,20,mins,5,165.0,31.0,3.0,5.0
+
+99,High-Protein Enchilada Scrambled Eggs,2,mins,5,mins,1,270.0,12.0,14.0,25.5
+
+100,Roasted Acorn Squash Soup,15,mins,1,hr,6,180.0,33.5,5.0,4.5
+
+101,Chicken Parmesan Rolls,25,mins,20,mins,4,259.0,28.0,4.5,27.5
+
+102,Lightened Up Green Bean Casserole with Shallot Crumb Topping,30,mins,30,mins,8,160.0,22.0,6.0,7.0
+
+103,Dairy-Free Heavy Cream,5,mins,0,mins,12,86.0,4.5,7.0,3.0
+
+104,Garlic-Ginger Chicken Stir-Fry,10,mins,10,mins,4,450.0,19.5,21.0,45.5
+
+105,Sweet Potato Soup with Sausage and Kale,10,mins,6,hrs,6,265.0,23.0,8.5,23.5
+
+106,Everything Bagel Pigs in a Blanket,20,mins,25,mins,8,160.0,14.0,5.0,12.0
+
+107,Garlic Butter Mushrooms,5,mins,10,mins,4,111.0,5.0,10.0,4.0
+
+108,Turmeric Chicken Noodle Soup,20,mins,1,hr,6,386.0,56.0,3.5,27.5
+
+109,Apple Pie Overnight Oats,10,mins,15,mins,2,361.0,59.0,11.0,8.0
+
+110,Avocado Toast with Egg (4 Ways),5,mins,5,mins,1,229.0,23.0,10.0,12.0
+
+111,Black Bean Soup Recipe (From Scratch),10,mins,1,hr,8,256.0,45.0,3.0,13.5
+
+112,Blackened Air Fryer Salmon Bites,3,mins,7,mins,4,251.0,2.0,11.0,34.0
+
+113,Tofu Tacos with Potatoes and Jalapeños,15,mins,35,mins,4,444.0,44.0,24.0,16.0
+
+114,Sweet Potato Turkey Meatloaf,15,mins,55,mins,4,264.0,19.0,10.5,24.0
+
+115,Lemony Hearts of Palm and Avocado Salad,10,mins,0,mins,4,145.0,8.0,12.5,2.5
+
+116,Pizza Sausage Rolls,20,mins,30,mins,4,302.0,30.0,10.0,22.0
+
+117,Korean-Inspired Salmon Tacos with Spicy Slaw,10,mins,10,mins,4,404.0,33.0,18.0,27.0
+
+118,Hot Mexican Layer Dip,10,mins,50,mins,12,173.0,11.5,8.5,15.5
+
+119,Creamy Pumpkin Polenta,5,mins,25,mins,6,133.0,14.0,6.0,3.0
+
+120,Quick Black Beans,2,mins,20,mins,4,135.0,20.0,4.0,6.0
+
+121,Air Fryer Butternut Squash,15,mins,25,mins,4,113.0,21.5,3.5,2.0
+
+122,Slow Cooker Beef Ragu,15,mins,4,hrs,6,176.0,15.0,7.0,16.0
+
+123,Pumpkin Banana Bread,25,mins,1,hr,12,146.5,33.3,2.7,2.7
+
+124,Lox and Eggs with Onions,5,mins,15,mins,2,279.0,9.0,17.0,21.5
+
+125,"Fall Brussels Sprout Salad with Apple, Pecans, and Blue Cheese",20,mins,0,mins,4,202.0,17.0,13.5,5.0
+
+126,Turmeric Roasted Sweet Potato and Macadamia Soup,10,mins,1,hr,9,199.0,30.5,8.0,2.5
+
+127,Air Fryer Salmon Fish Sandwich,5,mins,10,mins,4,493.0,31.5,24.0,33.0
+
+128,Whole Wheat Pumpkin Pecan Pancakes,10,mins,10,mins,4,234.0,31.0,8.0,10.0
+
+129,Chicken Taco Poblano Rice Bowls,10,mins,15,mins,4,475.0,52.0,12.0,40.5
+
+130,Peanut Butter Banana Muffins,15,mins,25,mins,12,192.0,24.5,9.0,5.5
+
+131,"Sheet Pan Baked Feta with Broccolini, Tomatoes and Chickpeas",15,mins,30,mins,4,372.0,33.0,21.5,17.5
+
+132,Maple Roasted Butternut Squash,5,mins,40,mins,4,104.0,23.0,2.0,1.0
+
+133,Pumpkin Cream Cheese Muffins,15,mins,25,mins,12,170.0,25.0,6.0,3.5
+
+134,Sausage and Potato Soup,10,mins,45,mins,4,402.0,60.0,7.5,25.0
+
+135,Parmesan-Herb Baked Salmon,5,mins,20,mins,6,256.0,2.0,13.0,31.0
+
+136,Avocado Toast with Halloumi and Soft-Boiled Egg,5,mins,15,mins,1,295.0,19.0,17.0,16.0
+
+137,Chicken Enchilada Stuffed Zucchini Boats,15,mins,45,mins,4,232.0,22.0,7.0,24.0
+
+138,Protein Chia Seed Cereal,2,mins,0,mins,1,318.0,30.0,10.0,29.0
+
+139,Fish Taco Bowl,5,mins,10,mins,4,264.0,9.0,12.5,31.5
+
+140,Spaghetti and Meatball Soup,10,mins,20,mins,6,213.0,27.5,3.0,22.0
+
+141,Heirloom Tomato Galette,10,mins,35,mins,8,153.0,15.5,10.0,2.0
+
+142,"Grilled Chicken Panini with Zucchini, Tomato, and Mozzarella  ",10,mins,10,mins,2,433.0,33.5,17.5,36.0
+
+143,Air Fryer Sweet Plantains,5,mins,20,mins,4,109.0,28.5,0.5,1.0
+
+144,Zucchini Quiche,15,mins,1,hr,6,307.0,21.0,19.0,15.0
+
+145,Zucchini Bread,20,mins,55,mins,16,144.0,21.0,5.5,3.5
+
+146,Creamy Corn Soup with Queso Fresco,10,mins,25,mins,6,206.0,28.5,6.5,11.5
+
+147,Tuna Tartare with Cucumber and Avocado,10,mins,0,mins,4,114.0,2.5,6.5,11.0
+
+148,Tortellini Salad,10,mins,20,mins,14,192.0,24.0,8.0,6.0
+
+149,Baked Wonton Chips,5,mins,8,mins,4,70.0,14.0,0.5,2.5
+
+150,Lentil salad,15,mins,20,mins,5,181.0,29.5,3.5,10.0
+
+151,Air Fryer Popcorn Chicken,30,mins,10,mins,4,283.0,21.0,8.0,30.0
+
+152,Zucchini Casserole,10,mins,45,mins,12,83.0,11.0,3.0,4.0
+
+153,Pineapple Chia with Cottage Cheese,5,mins,0,mins,2,295.0,38.0,8.5,16.5
+
+154,"Seared Scallops with Creamy Corn, Tomatoes and Chives",5,mins,20,mins,4,269.0,27.5,11.0,19.0
+
+155,Giant Zucchini Parmesan,10,mins,45,mins,4,242.0,24.0,10.0,16.5
+
+156,Turkey Meatloaf with Zucchini   ,10,mins,55,mins,4,275.0,18.0,11.5,25.5
+
+157,Peach Pie Cottage Cheese Bowls,5,mins,10,mins,2,272.0,25.0,9.0,31.0
+
+158,Gandules Guisados,5,mins,20,mins,4,131.0,17.5,4.5,5.0
+
+159,Puerto Rican Sofrito Recipe,25,mins,0,mins,14,27.0,4.0,1.0,0.5
+
+160,Broiled or Grilled Pollo Sabroso,5,mins,20,mins,6,181.0,0.5,6.0,29.5
+
+161,"Summer Cavatelli with Corn, Tomatoes and Zucchini",5,mins,15,mins,6,297.5,59.5,5.0,10.5
+
+162,"Black Bean, Avocado, Cucumber and Tomato Salad",10,mins,0,mins,10,127.0,16.0,5.5,5.0
+
+163,Greek 7 Layer Dip,20,mins,0,mins,9,93.0,7.0,5.0,5.0
+
+164,Air Fryer Baked Potato ,5,mins,38,mins,4,157.0,36.0,0.5,4.0
+
+165,Grilled Corn Salad with Cotija,15,mins,15,mins,8,117.0,13.0,6.5,4.0
+
+166,Chickpea Milanese,15,mins,10,mins,4,320.0,41.0,13.5,10.0
+
+167,Peruvian Grilled Chicken Skewers with Avocado Aji Verde Sauce,10,mins,10,mins,6,289.0,2.5,16.0,30.0
+
+168,Broiled Fish with Tomato Caper Sauce,5,mins,15,mins,4,257.0,2.0,10.5,37.5
+
+169,Mango Coconut Chia Pudding,5,mins,0,mins,2,227.0,22.0,13.0,7.0
+
+170,Grilled Chicken Feta Chickpea Salad,5,mins,0,mins,2,462.0,41.0,19.5,34.0
+
+171,Grilled Tuna over Arugula with Lemon Vinaigrette,5,mins,5,mins,1,298.0,4.0,15.5,35.5
+
+172,Watermelon Arugula and Feta Salad,10,mins,0,mins,4,157.5,11.0,11.5,4.0
+
+173,Berry Cottage Cheese Breakfast Bowl,5,mins,0,mins,1,232.0,20.5,9.5,19.0
+
+174,"Grilled Chicken Salad with Strawberries, Avocado and Citrus Dressing",10,mins,15,mins,2,399.0,14.0,26.0,30.0
+
+175,Chili-Lime Air Fryer Salmon,5,mins,10,mins,4,262.0,0.5,12.5,37.5
+
+176,Tuna Poke Salad,15,mins,0,mins,2,404.0,16.0,23.0,36.0
+
+177,Avocado and Mango Salsa,5,mins,0,mins,5,119.0,12.0,6.0,1.5
+
+178,Arugula Pasta Salad with Chickpeas and Sun Dried Tomatoes,5,mins,10,mins,4,280.0,43.5,9.0,11.0
+
+179,Honey Sriracha Chicken and Broccoli Meal Prep Bowls,10,mins,20,mins,4,428.0,41.0,9.5,44.0
+
+180,Sous Vide Chicken Breast and Cilantro Lime Chicken Avocado Salad,30,mins,2,hrs,4,329.0,7.5,22.5,25.0
+
+181,Instant Pot Oatmeal Banana Bars,10,mins,50,mins,4,266.0,45.0,6.5,9.0
+

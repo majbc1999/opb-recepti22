@@ -26,19 +26,27 @@ id_recepta,kulinarika
 
 12,American
 
+13,American
+
 14,American
+
+15,Italian-American
 
 16,American
 
-18,American
+17,American
 
-20,Italian-American
+18,Italian
+
+19,American
+
+20,American
 
 21,American
 
-22,American
+22,Hawaiian
 
-23,Italian
+23,American
 
 24,American
 
@@ -46,51 +54,57 @@ id_recepta,kulinarika
 
 26,American
 
-27,Hawaiian
+27,Filipino
+
+28,Italian-American
 
 29,American
 
 30,American
 
-31,American
+31,Asian
 
 32,American
 
-33,Filipino
+33,Asian
 
-34,Italian-American
+34,American
 
-36,American
+35,American
+
+36,Korean
 
 37,American
 
-38,Asian
+37, Asian
 
-39,American
+38,American
 
-40,Asian
+39,Latin
+
+39, Puerto Rican
+
+40,Italian
 
 41,American
 
 42,American
 
-43,Korean
+43,American
 
 44,American
 
-44, Asian
-
 45,American
 
-46,Latin
+46,Mexican
 
-46, Puerto Rican
+47,American
 
-47,Italian
+48,American
 
-49,American
+49,Asian
 
-50,American
+50,Italian
 
 51,American
 
@@ -98,15 +112,17 @@ id_recepta,kulinarika
 
 53,American
 
-54,Mexican
+53, Asian
+
+54,Latin
 
 55,American
 
-56,American
+56,Thai
 
-57,Asian
+57,American
 
-58,Italian
+58,Greek
 
 59,American
 
@@ -114,41 +130,43 @@ id_recepta,kulinarika
 
 61,American
 
-61, Asian
+61, Italian
 
-62,Latin
+62,Russian
+
+62, Ukranian
+
+63,American
 
 64,American
 
-65,Thai
+65,American
 
 66,American
 
-67,Greek
+67,American
 
-68,American
+68,Asian
 
 69,American
 
 70,American
 
-70, Italian
-
-71,Russian
-
-71, Ukranian
+71,American
 
 72,American
 
 73,American
 
-74,American
+74,Italian
 
 75,American
 
 76,American
 
-77,Asian
+76, American-Italian
+
+77,American
 
 78,American
 
@@ -166,11 +184,11 @@ id_recepta,kulinarika
 
 85,American
 
-85, American-Italian
-
 86,American
 
-87,American
+87,Asian
+
+87, Chinese
 
 88,American
 
@@ -178,9 +196,11 @@ id_recepta,kulinarika
 
 90,American
 
+91,mexican inspired
+
 92,American
 
-93,Italian
+93,American
 
 94,American
 
@@ -188,9 +208,7 @@ id_recepta,kulinarika
 
 96,American
 
-97,Asian
-
-97, Chinese
+97,American
 
 98,American
 
@@ -198,13 +216,13 @@ id_recepta,kulinarika
 
 100,American
 
-101,mexican inspired
+101,Italian
 
 102,American
 
 103,American
 
-104,American
+104,Asian
 
 105,American
 
@@ -218,29 +236,31 @@ id_recepta,kulinarika
 
 110,American
 
-111,Italian
+111,American
 
 112,American
 
 113,American
 
-114,Asian
+114,American
 
 115,American
 
 116,American
 
-117,American
+117,Korean
 
-118,American
+118,Mexican
 
 119,American
 
-120,American
+120,Latin
 
 121,American
 
 122,American
+
+122, Italian
 
 123,American
 
@@ -250,19 +270,19 @@ id_recepta,kulinarika
 
 126,American
 
-127,Korean
+127,American
 
-128,Mexican
+128,American
 
 129,American
 
-130,Latin
+129, Mexican
+
+130,American
 
 131,American
 
 132,American
-
-132, Italian
 
 133,American
 
@@ -274,31 +294,33 @@ id_recepta,kulinarika
 
 137,American
 
+137, Mexican
+
 138,American
 
 139,American
 
-139, Mexican
-
 140,American
+
+141,American
 
 142,American
 
-143,American
+143,Latin
 
 144,American
 
 145,American
 
-146,American
+146,Colombian
 
-147,American
+146, Latin
+
+147,Asian
 
 148,American
 
-148, Mexican
-
-149,American
+149,Asian
 
 150,American
 
@@ -308,83 +330,59 @@ id_recepta,kulinarika
 
 153,American
 
-154,Latin
+154,American
 
-155,American
+155,Italian
 
 156,American
 
-157,Colombian
+157,American
 
-157, Latin
+158,Latin
 
-158,Asian
+159,Latin
 
-159,American
+160,American
 
-160,Asian
-
-161,American
+161,Italian
 
 162,American
 
-163,American
+163,Mediterranean
 
 164,American
 
-165,American
+165,Mexican
 
-166,Italian
+166,American
 
-167,American
+167,Latin
 
 168,American
 
-169,Latin
+169,American
 
-170,Latin
+170,American
 
 171,American
 
-172,Italian
+172,American
 
-174,American
+173,American
 
-175,Mediterranean
+175,American
 
-176,American
+176,Hawaiian
 
 177,Mexican
 
 178,American
 
-179,Latin
+179,Chinese
+
+179, Japanese
 
 180,American
 
 181,American
-
-182,American
-
-183,American
-
-184,American
-
-185,American
-
-187,American
-
-188,Hawaiian
-
-189,Mexican
-
-190,American
-
-191,Chinese
-
-191, Japanese
-
-192,American
-
-193,American
 

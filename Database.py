@@ -44,6 +44,7 @@ class Repo:
         sql_cmd = f'''SELECT * FROM {tbl_name} LIMIT {take} OFFSET {skip};'''
         self.cur.execute(sql_cmd)
         return [typ.from_dict(d) for d in self.cur.fetchall()]
+
     
     def dobi_gen_id(self, typ: Type[T], id: int, id_col = "id") -> T:
         """
@@ -325,8 +326,34 @@ class Repo:
         return recept
 
 
-    def dodaj_kategorijo(self, kategorija: Kategorija) -> Kategorija:
+    def dodaj_nutrientsko_vrednost(self, nutrientska_vrednost: NutrienstkaVrednost) -> NutrienstkaVrednost:
 
+        # Preverimo, če nutrientska vrednost že obstaja
+        self.cur.execute("""
+            SELECT id_recepta, kalorije, proteini, ogljikovi_hidrati, mascobe from nutrientske_vrednosti
+            WHERE id_recepta = %s
+          """, (nutrientska_vrednost.id_recepta,))
+        
+        row = self.cur.fetchone()
+        if row:
+            nutrientska_vrednost.id_recepta = row[0]
+            return nutrientska_vrednost
+
+        # Sedaj dodamo nutrientsko vrednost
+        self.cur.execute("""
+            INSERT INTO nutrientske_vrednosti (id_recepta, kalorije, proteini, ogljikovi_hidrati, mascobe)
+              VALUES (%s, %s, %s, %s, %s) """, 
+              (nutrientska_vrednost.id_recepta,
+              nutrientska_vrednost.kalorije, 
+              nutrientska_vrednost.proteini, 
+              nutrientska_vrednost.ogljikovi_hidrati, 
+              nutrientska_vrednost.mascobe))
+              
+        self.conn.commit()
+        return nutrientska_vrednost
+
+
+    def dodaj_kategorijo(self, kategorija: Kategorija) -> Kategorija:
 
         # Preverimo, če določena kategorija že obstaja
         self.cur.execute("""
@@ -340,7 +367,6 @@ class Repo:
             kategorija.id_recepta = row[0]
             return kategorija
 
-
         # Če še ne obstaja jo vnesemo in vrnemo njen id
         self.cur.execute("""
             INSERT INTO kategorije (id_recepta, kategorija)
@@ -348,6 +374,52 @@ class Repo:
         self.conn.commit()
 
         return kategorija
+
+
+    def dodaj_kulinariko(self, kulinarika: Kulinarika) -> Kulinarika:
+
+        # Preverimo, če določena kategorija že obstaja
+        self.cur.execute("""
+            SELECT id_recepta, kulinarika from kulinarike
+            WHERE id_recepta = %s AND kulinarika = %s 
+          """, (kulinarika.id_recepta, kulinarika.kulinarika,))
+
+        row = self.cur.fetchone()
+
+        if row:
+            kulinarika.id_recepta = row[0]
+            return kulinarika
+
+        # Če še ne obstaja jo vnesemo in vrnemo njen id
+        self.cur.execute("""
+            INSERT INTO kulinarike (id_recepta, kulinarika)
+            VALUES (%s, %s) """, (kulinarika.id_recepta, kulinarika.kulinarika,))
+        self.conn.commit()
+
+        return kulinarika
+
+
+    def dodaj_oznako(self, oznaka: Oznaka) -> Oznaka:
+
+        # Preverimo, če določena kategorija že obstaja
+        self.cur.execute("""
+            SELECT id_recepta, oznaka from oznake
+            WHERE id_recepta = %s AND oznaka = %s 
+          """, (oznaka.id_recepta, oznaka.oznaka,))
+
+        row = self.cur.fetchone()
+
+        if row:
+            oznaka.id_recepta = row[0]
+            return oznaka
+
+        # Če še ne obstaja jo vnesemo in vrnemo njen id
+        self.cur.execute("""
+            INSERT INTO oznake (id_recepta, oznaka)
+            VALUES (%s, %s) """, (oznaka.id_recepta, oznaka.oznaka,))
+        self.conn.commit()
+
+        return oznaka
     
 
     def dodaj_postopek(self, postopek : Postopek) -> Postopek:
@@ -355,9 +427,9 @@ class Repo:
         #ta pogoj mora preveriti ce obstaja postopek z dolocenim id in postopkom, saj bo vec postopkov 
         #shranjenih pod isti id in vec istih pod razlicnega
         self.cur.execute("""
-            SELECT id from Postopek
-            WHERE id = %s, ime = %s
-          """, (postopek.id, postopek.postopek))
+            SELECT id_recepta, st_koraka, postopek FROM postopki
+            WHERE id_recepta = %s AND st_koraka = %s
+             """, (postopek.id_recepta, postopek.st_koraka))
         
         row = self.cur.fetchone()
         
@@ -365,11 +437,10 @@ class Repo:
             postopek.id = row[0]
             return postopek
 
-
         # Če še ne obstaja jo vnesemo in vrnemo njen id
         self.cur.execute("""
-            INSERT INTO Postopek (id, st_koraka, postopek)
-              VALUES (%s,, %s, %s) RETURNING id; """, (postopek.id, postopek.st_koraka, postopek.postopek))
+            INSERT INTO postopki (id_recepta, st_koraka, postopek)
+              VALUES (%s, %s, %s) """, (postopek.id_recepta, postopek.st_koraka, postopek.postopek))
         self.conn.commit()
 
 
@@ -378,23 +449,48 @@ class Repo:
         #ta pogoj mora preveriti ce obstaja sestavina z dolocenim id in imenom, saj bo vec sestavin 
         #shranjenih pod isti id in vec istih pod razlicnega
         self.cur.execute("""
-            SELECT id from SestavineReceptov
-            WHERE id = %s, ime = %s
-          """, (sestavina.id, sestavina.ime,))
+            SELECT id_recepta, sestavina from sestavine_receptov
+            WHERE id_recepta = %s AND sestavina = %s
+          """, (sestavina.id_recepta, sestavina.sestavina,))
         
         row = self.cur.fetchone()
         
         if row:
-            sestavina.id = row[0]
+            sestavina.id_recepta = row[0]
             return sestavina
-
 
         # Če še ne obstaja jo vnesemo in vrnemo njen id
         self.cur.execute("""
-            INSERT INTO SestavineReceptov (id, ime)
-              VALUES (%s, %s) RETURNING id; """, (sestavina.id, sestavina.ime))
+            INSERT INTO sestavine_receptov (id_recepta, kolicina, enota, sestavina)
+              VALUES (%s, %s, %s, %s) """, (sestavina.id_recepta, sestavina.kolicina, sestavina.enota, sestavina.sestavina))
         self.conn.commit()
-    
+
+
+    def dodaj_na_seznam_sestavin(self, sestavina : Sestavine) -> Sestavine:
+
+        # Preverimo, če sestavina že obstaja
+        self.cur.execute("""
+            SELECT id, ime, kalorije, proteini, ogljikovi_hidrati, mascobe from sestavine
+            WHERE ime = %s
+          """, (sestavina.ime,))
+        
+        row = self.cur.fetchone()
+        if row:
+            sestavina.id = row[0]
+            return sestavina
+
+        # Sedaj dodamo izdelek
+        self.cur.execute("""
+            INSERT INTO sestavine (ime, kalorije, proteini, ogljikovi_hidrati, mascobe)
+              VALUES (%s, %s, %s, %s, %s) RETURNING id """, 
+              (sestavina.ime,
+              sestavina.kalorije, 
+              sestavina.proteini, 
+              sestavina.ogljikovi_hidrati, 
+              sestavina.mascobe))
+              
+        self.conn.commit()
+        return sestavina
   
   #Vprasanje:
 
