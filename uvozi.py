@@ -120,15 +120,15 @@ def uvozi_csv(pot, ime):
     
 
 ##pot = "obdelani-podatki/recepti.csv"
-pot = "obdelani-podatki/kategorije.csv"
-##pot = "obelani_podatki/sestavine_receptov.csv"
+##pot = "obdelani-podatki/kategorije.csv"
+##pot = "obelani-podatki/sestavine-receptov.csv"
 ##pot = "obelani_podatki/postopki.csv"
 
 # Uvozi csv s cenami izdelkov v ločene (in povezane) entitete
 # Tabele morajo biti prej ustvarjene, da zadeva deluje
 
 ##uvozi_recepte(pot)
-uvozi_kategorije(pot)
+##uvozi_kategorije(pot)
 ##uvozi_sestavine_receptov(pot)
 ##uvozi_postopke(pot)
 
