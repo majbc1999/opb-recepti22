@@ -53,48 +53,94 @@ def uvozi_recepte(pot):
 def uvozi_kategorije(pot):
     df = pd.read_csv(pot)
 
-
     for row in df.itertuples():
 
         repo.dodaj_kategorijo(
-
             Kategorija(
             id_recepta = row[1],
             kategorija = row[2]
             )
         )
 
-def uvozi_sestavine_receptov(pot):
-    df = pd.read_csv(pot, sep=";",skiprows=[0], encoding="Windows-1250")
-
+def uvozi_kulinarike(pot):
+    df = pd.read_csv(pot)
 
     for row in df.itertuples():
-        locena_vrstica = row.split(',')
+
+        repo.dodaj_kulinariko(
+            Kulinarika(
+            id_recepta = row[1],
+            kulinarika = row[2]
+            )
+        )
+
+def uvozi_oznake(pot):
+    df = pd.read_csv(pot)
+
+    for row in df.itertuples():
+
+        repo.dodaj_oznako(
+            Oznaka(
+            id_recepta = row[1],
+            oznaka = row[2]
+            )
+        )
+
+def uvozi_sestavine_receptov(pot):
+    df = pd.read_csv(pot, error_bad_lines=False)
+
+    for row in df.itertuples():
 
         repo.dodaj_sestavino(
 
             SestavineReceptov(
-            id = locena_vrstica[0],
-            ime = locena_vrstica[1],
+            id_recepta = row[1],
+            kolicina = row[2],
+            enota = row[3],
+            sestavina = row[4],
             )
         )
-
 
 def uvozi_postopke(pot):
-    df = pd.read_csv(pot, sep=";",skiprows=[0], encoding="Windows-1250")
+    df = pd.read_csv(pot, error_bad_lines=False)
 
-    #ne smemo lociti na vejice, saj se pojavijo tudi v povedih!
     for row in df.itertuples():
-        locena_vrstica = row.split(',', 2)
-
         repo.dodaj_postopek(
-
             Postopek(
-            id = locena_vrstica[0],
-            st_koraka = locena_vrstica[1],
-            postopek = locena_vrstica[2],
+            id_recepta = row[1],
+            st_koraka = row[2],
+            postopek = row[3],
             )
         )
+
+def uvozi_nutrientske_vrednosti(pot):
+    df = pd.read_csv(pot, error_bad_lines=False)
+
+    for row in df.itertuples():
+        repo.dodaj_nutrientsko_vrednost(
+            NutrienstkaVrednost(
+            id_recepta = row[1],
+            kalorije = row[8],
+            proteini = row[11],
+            ogljikovi_hidrati = row[9],
+            mascobe = row[10]
+            )
+        )
+
+def uvozi_sestavine(pot):
+    df = pd.read_csv(pot, error_bad_lines=False)
+
+    for row in df.itertuples():
+        repo.dodaj_na_seznam_sestavin(
+            Sestavine(
+            ime = row[1],
+            kalorije = row[2],
+            proteini = row[5],
+            ogljikovi_hidrati = row[6],
+            mascobe = row[8]
+            )
+        )
+
 
 def uvozi_csv(pot, ime):
     """
@@ -120,17 +166,25 @@ def uvozi_csv(pot, ime):
     
 
 ##pot = "obdelani-podatki/recepti.csv"
-pot = "obdelani-podatki/kategorije.csv"
-##pot = "obelani_podatki/sestavine_receptov.csv"
-##pot = "obelani_podatki/postopki.csv"
+##pot = "obdelani-podatki/kategorije.csv"
+##pot = "obdelani-podatki/sestavine-receptov.csv"
+##pot = "obdelani-podatki/postopki.csv"
+##pot = "obdelani-podatki/kulinarike.csv"
+##pot = "obdelani-podatki/oznake.csv"
+pot = "obdelani-podatki/sestavine.csv"
 
 # Uvozi csv s cenami izdelkov v ločene (in povezane) entitete
 # Tabele morajo biti prej ustvarjene, da zadeva deluje
 
 ##uvozi_recepte(pot)
-uvozi_kategorije(pot)
+##uvozi_kategorije(pot)
 ##uvozi_sestavine_receptov(pot)
 ##uvozi_postopke(pot)
+##uvozi_kulinarike(pot)
+##uvozi_oznake(pot)
+##uvozi_nutrientske_vrednosti(pot)
+uvozi_sestavine(pot)
+
 
 # Uvozi csv s cenami, le da tokar uvozi le eno tabelo, ki jo
 # predhodno še ustvari, če ne obstaja.
