@@ -4,7 +4,7 @@ from dataclasses_json import dataclass_json
 @dataclass_json
 @dataclass
 
-class Recept:
+class Recepti:
     id: int = field(default=0)
     ime: str = field(default='')
     st_porcij: int = field(default=0)
@@ -71,7 +71,7 @@ class Komentarji:
 @dataclass_json
 @dataclass
 
-class Kategorija:
+class Kategorije:
     id_recepta: int = field(default=0)
     kategorija: str = field(default="")
 
@@ -82,13 +82,13 @@ class VseKategorije:
 
 @dataclass_json
 @dataclass
-class Kulinarika:
+class Kulinarike:
     id_recepta: int = field(default=0)
     kulinarika: str = field(default="")
 
 @dataclass_json
 @dataclass
-class Oznaka:
+class Oznake:
     id_recepta: int = field(default=0)
     oznaka: str = field(default="")
 
