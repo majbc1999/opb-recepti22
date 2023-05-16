@@ -23,5 +23,5 @@
                 <td>{{recept.cas_kuhanja}}</td>
             </tr>
         %end
-    </table>
+    </table>            
 </body>

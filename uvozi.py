@@ -42,7 +42,7 @@ def uvozi_recepte(pot):
             continue
         
         repo.dodaj_recept(
-            Recept(
+            Recepti(
                 ime=row[2],
                 st_porcij=row[7],
                 cas_priprave=row[3],
@@ -56,7 +56,7 @@ def uvozi_kategorije(pot):
     for row in df.itertuples():
 
         repo.dodaj_kategorijo(
-            Kategorija(
+            Kategorije(
             id_recepta = row[1],
             kategorija = row[2]
             )
@@ -68,7 +68,7 @@ def uvozi_kulinarike(pot):
     for row in df.itertuples():
 
         repo.dodaj_kulinariko(
-            Kulinarika(
+            Kulinarike(
             id_recepta = row[1],
             kulinarika = row[2]
             )
@@ -80,7 +80,7 @@ def uvozi_oznake(pot):
     for row in df.itertuples():
 
         repo.dodaj_oznako(
-            Oznaka(
+            Oznake(
             id_recepta = row[1],
             oznaka = row[2]
             )
@@ -171,7 +171,7 @@ def uvozi_csv(pot, ime):
 ##pot = "obdelani-podatki/postopki.csv"
 ##pot = "obdelani-podatki/kulinarike.csv"
 ##pot = "obdelani-podatki/oznake.csv"
-pot = "obdelani-podatki/sestavine.csv"
+#pot = "obdelani-podatki/sestavine.csv"
 
 # Uvozi csv s cenami izdelkov v ločene (in povezane) entitete
 # Tabele morajo biti prej ustvarjene, da zadeva deluje
@@ -183,7 +183,7 @@ pot = "obdelani-podatki/sestavine.csv"
 ##uvozi_kulinarike(pot)
 ##uvozi_oznake(pot)
 ##uvozi_nutrientske_vrednosti(pot)
-uvozi_sestavine(pot)
+##uvozi_sestavine(pot)
 
 
 # Uvozi csv s cenami, le da tokar uvozi le eno tabelo, ki jo
@@ -193,50 +193,50 @@ uvozi_sestavine(pot)
 
 
 
-## A TO SPLOH RABVA? NE RAZUMM CIST KAJ DELA SPODNJA STVAR? USTVARJA NOVE KATEGORIJE?
-# S pomočjo generične metode dobimo seznam izdelkov in kategorij
-# Privzete nastavi
+## S pomočjo generične metode dobimo seznam izdelkov in kategorij
+## Privzete nastavi
+#
+## Dobimo prvih 100 izdelkov
+#recepti = repo.dobi_gen(Recept, skip=0, take=100)
+#
+#t = repo.dobi_gen(ReceptPosSes)
+#
+## Dobimo prvih 10 kategorij
+#kategorije = repo.dobi_gen(Kategorija)
+#
+## Dodamo novo kategorijo
 
-# Dobimo prvih 100 izdelkov
-recepti = repo.dobi_gen(Recept, skip=0, take=100)
-
-t = repo.dobi_gen(ReceptPosSes)
-
-# Dobimo prvih 10 kategorij
-kategorije = repo.dobi_gen(Kategorija)
-
-# Dodamo novo kategorijo
-
-nova_kategorija = Kategorija(
-    oznaka="Nova kategorija"
-)
+nova_kategorija = Kategorije(
+    kategorija="Nova kategorija"
+    )
 
 repo.dodaj_gen(nova_kategorija)
-
-# vrednost nova_kategorija.id je sedaj določen na podlagi
-# serial vrednosti iz baze in jo lahko uporabimo naprej.
-
-
-# Dodamo nov recept v to kategorijo
-novi_recept = Recept(
-    ime = 'Novi recept',
-    kategorija=nova_kategorija.id
-)
-repo.dodaj_gen(novi_recept)
-
-
-# Dobimo recept z idjem 832
-recept = repo.dobi_gen_id(Recept, 832)
-
-# izdelku spremenimo ime in ga posodobimo v bazi
-recept.ime += " spremenjeno ime"
-repo.posodobi_gen(recept)
-
-
-
-# spremenimo seznam receptov in ga shranimo v bazo
-
-for i in recepti:
-    i.ime = f'({i.ime})'
-
-repo.posodobi_list_gen(recepti)
+#
+## vrednost nova_kategorija.id je sedaj določen na podlagi
+## serial vrednosti iz baze in jo lahko uporabimo naprej.
+#
+#
+## Dodamo nov recept v to kategorijo
+#novi_recept = Recept(
+#    ime = 'Novi recept',
+#    kategorija=nova_kategorija.id
+#)
+#repo.dodaj_gen(novi_recept)
+#
+#
+## Dobimo recept z idjem 832
+#recept = repo.dobi_gen_id(Recept, 832)
+#
+## izdelku spremenimo ime in ga posodobimo v bazi
+#recept.ime += " spremenjeno ime"
+#repo.posodobi_gen(recept)
+#
+#
+#
+## spremenimo seznam receptov in ga shranimo v bazo
+#
+#for i in recepti:
+#    i.ime = f'({i.ime})'
+#
+#repo.posodobi_list_gen(recepti)
+#

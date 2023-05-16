@@ -60,6 +60,58 @@ def recept(id):
                                                kategorije=kategorije,
                                                kulinarike=kulinarike,
                                                oznake=oznake)
+@bottle.get('/dodaj-recept')
+def dodaj_recept_get():
+    return bottle.template('views/dodaj_recept.tpl', recept = model.ReceptPosSes(), kategorija=kategorije)
 
+@bottle.post('/dodaj-recept')
+def dodaj_recept_post():
+    ime = str(bottle.request.forms.getunicode('ime'))
+    st_porcij = int(bottle.request.forms.getunicode('st_porcij'))
+    cas_priprave = int(bottle.request.forms.getunicode('cas_priprave'))
+    cas_kuhanja = int(bottle.request.forms.getunicode('cas_kuhanja'))
+    kategorija = str(bottle.request.forms.getunicode('ime_kategorije'))
+    kulinarika = str(bottle.request.forms.getunicode('kulinarika'))
+    oznaka = str(bottle.request.forms.getunicode('oznaka'))
+
+    recept = r.dodaj_recept(model.Recepti(
+        ime = ime,
+        st_porcij=st_porcij,
+        cas_priprave=cas_priprave,
+        cas_kuhanja=cas_kuhanja
+    ))
+
+    r.dodaj_kategorijo(model.Kategorije(
+        id_recepta=recept.id,
+        kategorija=kategorija
+    ))
+
+    r.dodaj_kulinariko(model.Kulinarike(
+        id_recepta=recept.id,
+        kulinarika=kulinarika
+    ))
+
+    r.dodaj_oznako(model.Oznake(
+        id_recepta=recept.id,
+        oznaka = oznaka
+    ))
+
+    bottle.redirect('/recept/{}'.format(recept.id))
+
+
+#@bottle.get('/izbrisi-recept/<id>')
+#def izbrisi_recept_get(id):
+#    return bottle.template('views/recept/{}'.format(id))
+
+@bottle.post('/izbrisi-recept/<id>')
+def izbrisi_recept_post(id):
+    recept = r.dobi_gen_id(model.Recepti, id, 'id')
+    r.brisi_recept(model.Recepti(
+        ime = recept.ime,
+        st_porcij=recept.st_porcij,
+        cas_priprave=recept.cas_priprave,
+        cas_kuhanja=recept.cas_kuhanja
+    ))
+    bottle.redirect('/')
 
 bottle.run(reloader=True, debug=True)
