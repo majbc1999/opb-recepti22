@@ -4,6 +4,7 @@ psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo prob
 
 from typing import List, TypeVar, Type
 from model import *
+import model
 from pandas import DataFrame
 from re import sub
 import avtor as auth
@@ -16,13 +17,16 @@ import dataclasses
 
 T = TypeVar(
     "T",
-    Recept,
+    Recepti,
     ReceptPosSes,
     Postopek,
     Sestavine,
+    Sestavine_receptov,
     NutrienstkaVrednost,
     Uporabnik,
-    Kategorija,
+    Kategorije,
+    Kulinarike,
+    Oznake
     )
 
 class Repo:
@@ -37,8 +41,6 @@ class Repo:
         Generična metoda, ki za podan vhodni dataclass vrne seznam teh objektov iz baze.
         Predpostavljamo, da je tabeli ime natanko tako kot je ime posameznemu dataclassu.
         """
-
-
         # ustvarimo sql select stavek, kjer je ime tabele typ.__name__ oz. ime razreda
         tbl_name = typ.__name__
         sql_cmd = f'''SELECT * FROM {tbl_name} LIMIT {take} OFFSET {skip};'''
@@ -60,6 +62,51 @@ class Repo:
             raise Exception(f'Vrstica z id-jem {id} ne obstaja v {tbl_name}');
     
         return typ.from_dict(d)
+
+    
+    def dobi_vse_gen_id(self, typ: Type[T], id: int, id_col = "id") -> T:
+        """
+        Generična metoda, ki vrne dataclass objekt pridobljen iz baze na podlagi njegovega idja.
+        """
+        tbl_name = typ.__name__
+        sql_cmd = f'SELECT * FROM {tbl_name} WHERE {id_col} = %s';
+        self.cur.execute(sql_cmd, (id))
+
+        d = self.cur.fetchone()
+
+        if d is None:
+            raise Exception(f'Vrstica z id-jem {id} ne obstaja v {tbl_name}');
+    
+        return [typ.from_dict(s) for s in self.cur.fetchall()]
+
+    
+    def dobi_gen_ime(self, typ: Type[T], izbrana_kategorija: str, ime_stolpca = "kategorija", id = "id") -> T:
+        """
+        Generična metoda, ki vrne seznam id-jev pridobljen iz baze na podlagi imena izbrane kategorije/kulinarike/oznake.
+        """
+        tbl_name = typ.__name__
+        sql_cmd = f'SELECT {id} FROM {tbl_name} WHERE {ime_stolpca} = %s';
+        self.cur.execute(sql_cmd, (izbrana_kategorija,))
+
+        d = self.cur.fetchone()
+
+        if d is None:
+            raise Exception(f'Vrstica z imenom {izbrana_kategorija} ne obstaja v {tbl_name}');
+    
+        return [typ.from_dict(s) for s in self.cur.fetchall()]
+
+
+    def dobi_razlicne_gen(self, typ: Type[T], ime_stolpca, take=10, skip=0) -> List[T]:
+        """ 
+        Generična metoda, ki za podan vhodni dataclass vrne seznam teh objektov iz baze.
+        Predpostavljamo, da je tabeli ime natanko tako kot je ime posameznemu dataclassu.
+        """
+        # ustvarimo sql select stavek, kjer je ime tabele typ.__name__ oz. ime razreda
+        tbl_name = typ.__name__
+        sql_cmd = f'''SELECT DISTINCT {ime_stolpca} FROM {tbl_name} LIMIT {take} OFFSET {skip};'''
+        self.cur.execute(sql_cmd)
+        return [typ.from_dict(d) for d in self.cur.fetchall()]
+
     
     def dodaj_gen(self, typ: T, serial_col="id", auto_commit=True):
         """
@@ -272,7 +319,7 @@ class Repo:
             """
             SELECT i.id, i.ime, i.st_porcij, i.cas_priprave, i.cas_kuhanja, 
             i.postopek, j.sestavine FROM Recepti i left join Postopek k on i.postopek = k.id
-            FROM Recepti j left join SestavineReceptov s on j.sestavine = s.id
+            FROM Recepti j left join Sestavine_receptov s on j.sestavine = s.id
             """)
 
             # """ 
@@ -295,10 +342,10 @@ class Repo:
             offset{skip};
             """
         )
-        return [Kategorija(id_recepta, kategorija) for (id_recepta, kategorija) in self.cur.fetchall()]
+        return [Kategorije(id_recepta, kategorija) for (id_recepta, kategorija) in self.cur.fetchall()]
     
     
-    def dobi_recept(self, ime_recepta: str) -> Recept:
+    def dobi_recept(self, ime_recepta: str) -> Recepti:
         # Preverimo, če recept že obstaja
         self.cur.execute("""
             SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja from Recept
@@ -314,7 +361,7 @@ class Repo:
         raise Exception("Recept z imenom " + ime_recepta + " ne obstaja")
 
     
-    def dodaj_recept(self, recept: Recept) -> Recept:
+    def dodaj_recept(self, recept: Recepti) -> Recepti:
 
         # Preverimo, če izdelek že obstaja
         self.cur.execute("""
@@ -363,7 +410,7 @@ class Repo:
         return nutrientska_vrednost
 
 
-    def dodaj_kategorijo(self, kategorija: Kategorija) -> Kategorija:
+    def dodaj_kategorijo(self, kategorija: Kategorije) -> Kategorije:
 
         # Preverimo, če določena kategorija že obstaja
         self.cur.execute("""
@@ -386,7 +433,7 @@ class Repo:
         return kategorija
 
 
-    def dodaj_kulinariko(self, kulinarika: Kulinarika) -> Kulinarika:
+    def dodaj_kulinariko(self, kulinarika: Kulinarike) -> Kulinarike:
 
         # Preverimo, če določena kategorija že obstaja
         self.cur.execute("""
@@ -409,7 +456,7 @@ class Repo:
         return kulinarika
 
 
-    def dodaj_oznako(self, oznaka: Oznaka) -> Oznaka:
+    def dodaj_oznako(self, oznaka: Oznake) -> Oznake:
 
         # Preverimo, če določena kategorija že obstaja
         self.cur.execute("""
@@ -454,7 +501,7 @@ class Repo:
         self.conn.commit()
 
 
-    def dodaj_sestavino(self, sestavina : SestavineReceptov) -> SestavineReceptov:
+    def dodaj_sestavino(self, sestavina : Sestavine_receptov) -> Sestavine_receptov:
 
         #ta pogoj mora preveriti ce obstaja sestavina z dolocenim id in imenom, saj bo vec sestavin 
         #shranjenih pod isti id in vec istih pod razlicnega
@@ -508,7 +555,7 @@ class Repo:
 
   #dodat moram se moznost spreminjanja receptov in brisanja
 
-    def brisi_recept(self, recept : Recept) -> List[Recept]:
+    def brisi_recept(self, recept : Recepti) -> List[Recepti]:
         # Preverimo, če recept obstaja. Če obstaja, izbrišemo vrstice z id-jem
         # recepta, ki ga želimo zbrisati v vseh tabelah
         self.cur.execute("""
