@@ -37,7 +37,7 @@ class SestavineReceptov:
     id_recepta: int = field(default=0)
     kolicina: str = field(default='')
     enota: str = field(default='')
-    sestavina: list = field(default='')
+    sestavina: str = field(default='')
 
 @dataclass_json
 @dataclass

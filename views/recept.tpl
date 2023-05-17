@@ -13,11 +13,14 @@
             <a class="button is-link is-light" href="/">Izhod</a>
         </div>
     </div>
-    <form method="POST">
-        <form action="/izbrisi-recept/{{id}}" method="POST">
-        <div class="level-right">
-            <p><input type="submit" value="Izbrisi recept!" href="/"></p>
-        </div>
-        </form>
-    </form>
+    <div class="level-right">
+        <p>Kliknite <a class="button is-primary" href="/izbrisi-recept/{{id}}" method="POST">TU</a>, če želite izbrisati recept.<br>
+    </div>
+    <div class="level-right">
+        <p>Kliknite <a class="button is-primary" href="/dodaj-sestavino/{{id}}" method="POST">TU</a>, če želite dodati sestavino.<br>
+    </div>
+    <div class="level-right">
+        <p>Kliknite <a class="button is-primary" href="/dodaj-postopek/{{id}}" method="POST">TU</a>, če želite dodati postopek.<br>
+    </div>
+
 </body>
