@@ -56,7 +56,7 @@ def uvozi_kategorije(pot):
     for row in df.itertuples():
 
         repo.dodaj_kategorijo(
-            Kategorija(
+            Kategorije(
             id_recepta = row[1],
             kategorija = row[2]
             )
@@ -68,7 +68,7 @@ def uvozi_kulinarike(pot):
     for row in df.itertuples():
 
         repo.dodaj_kulinariko(
-            Kulinarika(
+            Kulinarike(
             id_recepta = row[1],
             kulinarika = row[2]
             )
@@ -80,7 +80,7 @@ def uvozi_oznake(pot):
     for row in df.itertuples():
 
         repo.dodaj_oznako(
-            Oznaka(
+            Oznake(
             id_recepta = row[1],
             oznaka = row[2]
             )
@@ -167,23 +167,23 @@ def uvozi_csv(pot, ime):
 
 ##pot = "obdelani-podatki/recepti.csv"
 ##pot = "obdelani-podatki/kategorije.csv"
-##pot = "obdelani-podatki/sestavine-receptov.csv"
+pot = "obdelani-podatki/sestavine-receptov.csv"
 ##pot = "obdelani-podatki/postopki.csv"
 ##pot = "obdelani-podatki/kulinarike.csv"
 ##pot = "obdelani-podatki/oznake.csv"
-pot = "obdelani-podatki/sestavine.csv"
+##pot = "obdelani-podatki/sestavine.csv"
 
 # Uvozi csv s cenami izdelkov v ločene (in povezane) entitete
 # Tabele morajo biti prej ustvarjene, da zadeva deluje
 
 ##uvozi_recepte(pot)
 ##uvozi_kategorije(pot)
-##uvozi_sestavine_receptov(pot)
+uvozi_sestavine_receptov(pot)
 ##uvozi_postopke(pot)
 ##uvozi_kulinarike(pot)
 ##uvozi_oznake(pot)
 ##uvozi_nutrientske_vrednosti(pot)
-uvozi_sestavine(pot)
+##uvozi_sestavine(pot)
 
 
 # Uvozi csv s cenami, le da tokar uvozi le eno tabelo, ki jo
