@@ -21,7 +21,7 @@ T = TypeVar(
     ReceptPosSes,
     Postopek,
     Sestavine,
-    Sestavine_receptov,
+    SestavineReceptov,
     NutrienstkaVrednost,
     Uporabnik,
     Kategorije,
@@ -319,7 +319,7 @@ class Repo:
             """
             SELECT i.id, i.ime, i.st_porcij, i.cas_priprave, i.cas_kuhanja, 
             i.postopek, j.sestavine FROM Recepti i left join Postopek k on i.postopek = k.id
-            FROM Recepti j left join Sestavine_receptov s on j.sestavine = s.id
+            FROM Recepti j left join SestavineReceptov s on j.sestavine = s.id
             """)
 
             # """ 
@@ -327,22 +327,11 @@ class Repo:
             # j.id_recepta, j.st_koraka, j.korak
             # k.id_recepta, k.kolicine, k.enota, k.sestavina FROM recepti i
             # LEFT JOIN postopki j ON i.id = j.id_recepta
-            # LEFT JOIN sestavine_receptov ON i.id = k.id_recepta
+            # LEFT JOIN SestavineReceptov ON i.id = k.id_recepta
             # """
 
         return [ReceptPosSes(id, ime, st_porcij, cas_priprave, cas_kuhanja, postopek, sestavine) for
                 (id, ime, st_porcij, cas_priprave, cas_kuhanja, postopek, sestavine) in recepti]
-    
-
-    def kategorije(self, skip: int = 0, take: int = 10) -> List[VseKategorije]:
-        self.cur.execute(
-            f"""
-            SELECT kategorija FROM Kategorija GROUP BY kategorija
-            limit {take}
-            offset{skip};
-            """
-        )
-        return [Kategorije(id_recepta, kategorija) for (id_recepta, kategorija) in self.cur.fetchall()]
     
     
     def dobi_recept(self, ime_recepta: str) -> Recepti:
@@ -356,7 +345,7 @@ class Repo:
 
         if row:
             id, ime, st_porcij, cas_priprave, cas_kuhanja = row
-            return Recept(id, ime, st_porcij, cas_priprave, cas_kuhanja)
+            return Recepti(id, ime, st_porcij, cas_priprave, cas_kuhanja)
         
         raise Exception("Recept z imenom " + ime_recepta + " ne obstaja")
 
@@ -501,12 +490,12 @@ class Repo:
         self.conn.commit()
 
 
-    def dodaj_sestavino(self, sestavina : Sestavine_receptov) -> Sestavine_receptov:
+    def dodaj_sestavino(self, sestavina : SestavineReceptov) -> SestavineReceptov:
 
         #ta pogoj mora preveriti ce obstaja sestavina z dolocenim id in imenom, saj bo vec sestavin 
         #shranjenih pod isti id in vec istih pod razlicnega
         self.cur.execute("""
-            SELECT id_recepta, sestavina from sestavine_receptov
+            SELECT id_recepta, sestavina from SestavineReceptov
             WHERE id_recepta = %s AND sestavina = %s
           """, (sestavina.id_recepta, sestavina.sestavina,))
         
@@ -518,7 +507,7 @@ class Repo:
 
         # Če še ne obstaja jo vnesemo in vrnemo njen id
         self.cur.execute("""
-            INSERT INTO sestavine_receptov (id_recepta, kolicina, enota, sestavina)
+            INSERT INTO SestavineReceptov (id_recepta, kolicina, enota, sestavina)
               VALUES (%s, %s, %s, %s) """, (sestavina.id_recepta, sestavina.kolicina, sestavina.enota, sestavina.sestavina))
         self.conn.commit()
 
@@ -574,7 +563,7 @@ class Repo:
             """, (recept.id))
 
             # Za vsako od ostalih tabel izbrišem vrstice z ukazom spodaj
-            tabele = ['sestavine_receptov', 'oznake', 'nutrientske_vrednosti',
+            tabele = ['sestavinereceptov', 'oznake', 'nutrientske_vrednosti',
                       'kategorije', 'kulinarike']
             
             for t in tabele:
@@ -587,9 +576,9 @@ class Repo:
 
 
             ## Če ne bo delalo s for zanko, je treba brisati iz vsake tabele posebej
-            ## Zbrišem v tabeli sestavine_receptov
+            ## Zbrišem v tabeli SestavineReceptov
             #self.cur.execute(("""
-            #DELETE FROM sestavine_receptov
+            #DELETE FROM SestavineReceptov
             #WHERE id_recepta = %s
             #""", (recept.id)))
 

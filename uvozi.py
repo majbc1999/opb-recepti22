@@ -42,7 +42,7 @@ def uvozi_recepte(pot):
             continue
         
         repo.dodaj_recept(
-            Recept(
+            Recepti(
                 ime=row[2],
                 st_porcij=row[7],
                 cas_priprave=row[3],
@@ -171,7 +171,11 @@ pot = "obdelani-podatki/sestavine-receptov.csv"
 ##pot = "obdelani-podatki/postopki.csv"
 ##pot = "obdelani-podatki/kulinarike.csv"
 ##pot = "obdelani-podatki/oznake.csv"
+<<<<<<< HEAD
 ##pot = "obdelani-podatki/sestavine.csv"
+=======
+#pot = "obdelani-podatki/sestavine.csv"
+>>>>>>> b4038180c3c03f615b8ea5611cf6501bb4618943
 
 # Uvozi csv s cenami izdelkov v ločene (in povezane) entitete
 # Tabele morajo biti prej ustvarjene, da zadeva deluje
@@ -193,50 +197,50 @@ uvozi_sestavine_receptov(pot)
 
 
 
-## A TO SPLOH RABVA? NE RAZUMM CIST KAJ DELA SPODNJA STVAR? USTVARJA NOVE KATEGORIJE?
-# S pomočjo generične metode dobimo seznam izdelkov in kategorij
-# Privzete nastavi
+## S pomočjo generične metode dobimo seznam izdelkov in kategorij
+## Privzete nastavi
+#
+## Dobimo prvih 100 izdelkov
+#recepti = repo.dobi_gen(Recept, skip=0, take=100)
+#
+#t = repo.dobi_gen(ReceptPosSes)
+#
+## Dobimo prvih 10 kategorij
+#kategorije = repo.dobi_gen(Kategorija)
+#
+## Dodamo novo kategorijo
 
-# Dobimo prvih 100 izdelkov
-recepti = repo.dobi_gen(Recept, skip=0, take=100)
-
-t = repo.dobi_gen(ReceptPosSes)
-
-# Dobimo prvih 10 kategorij
-kategorije = repo.dobi_gen(Kategorija)
-
-# Dodamo novo kategorijo
-
-nova_kategorija = Kategorija(
-    oznaka="Nova kategorija"
-)
+nova_kategorija = Kategorije(
+    kategorija="Nova kategorija"
+    )
 
 repo.dodaj_gen(nova_kategorija)
-
-# vrednost nova_kategorija.id je sedaj določen na podlagi
-# serial vrednosti iz baze in jo lahko uporabimo naprej.
-
-
-# Dodamo nov recept v to kategorijo
-novi_recept = Recept(
-    ime = 'Novi recept',
-    kategorija=nova_kategorija.id
-)
-repo.dodaj_gen(novi_recept)
-
-
-# Dobimo recept z idjem 832
-recept = repo.dobi_gen_id(Recept, 832)
-
-# izdelku spremenimo ime in ga posodobimo v bazi
-recept.ime += " spremenjeno ime"
-repo.posodobi_gen(recept)
-
-
-
-# spremenimo seznam receptov in ga shranimo v bazo
-
-for i in recepti:
-    i.ime = f'({i.ime})'
-
-repo.posodobi_list_gen(recepti)
+#
+## vrednost nova_kategorija.id je sedaj določen na podlagi
+## serial vrednosti iz baze in jo lahko uporabimo naprej.
+#
+#
+## Dodamo nov recept v to kategorijo
+#novi_recept = Recept(
+#    ime = 'Novi recept',
+#    kategorija=nova_kategorija.id
+#)
+#repo.dodaj_gen(novi_recept)
+#
+#
+## Dobimo recept z idjem 832
+#recept = repo.dobi_gen_id(Recept, 832)
+#
+## izdelku spremenimo ime in ga posodobimo v bazi
+#recept.ime += " spremenjeno ime"
+#repo.posodobi_gen(recept)
+#
+#
+#
+## spremenimo seznam receptov in ga shranimo v bazo
+#
+#for i in recepti:
+#    i.ime = f'({i.ime})'
+#
+#repo.posodobi_list_gen(recepti)
+#

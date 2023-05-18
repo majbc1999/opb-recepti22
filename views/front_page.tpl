@@ -67,6 +67,11 @@
                     </div>
                 </div>
             </th>
+            <th>
+                <div class="level-right">
+                    <p>Kliknite <a class="button is-primary" href="/dodaj-recept" method="POST">TU</a>, če želite dodati recept.<br>
+                </div>
+            </th>
         </tr>
     </table>
 </body>
