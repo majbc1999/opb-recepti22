@@ -35,12 +35,12 @@ class AuthService:
             # popravimo last login time
             user.last_login = date.today().isoformat()
             self.repo.posodobi_gen(user, id_col="username")
-            return UporabnikDto(username=user.username, role=user.role)
+            return UporabnikDto(username=user.username, id_uporabnika=user.id_uporabnika)
         
         return False
 
-    def dodaj_uporabnika(self, uporabnik: str, rola: str, geslo: str) -> UporabnikDto:
-
+    def dodaj_uporabnika(self, uporabnik: str, geslo: str) -> UporabnikDto:
+        
         # zgradimo hash za geslo od uporabnika
 
         # Najprej geslo zakodiramo kot seznam bajtov
@@ -56,11 +56,10 @@ class AuthService:
 
         uporabnik = Uporabnik(
             username=uporabnik,
-            role=rola,
             password_hash=password_hash.decode(),
             last_login= date.today().isoformat()
         )
 
-        self.repo.dodaj_gen(uporabnik, serial_col=None)
+        self.repo.uporabnik(uporabnik)
 
-        return UporabnikDto(username=uporabnik, role=rola)
+        return UporabnikDto(username=uporabnik, id_uporabnika=uporabnik.id_uporabnika)

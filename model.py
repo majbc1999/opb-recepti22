@@ -96,11 +96,11 @@ class Oznake:
 @dataclass
 class Uporabnik:
     username: str = field(default="")
-    role: str = field(default="")
+    id_uporabnika: int = field(default=0)
     password_hash: str = field(default="")
     last_login: str = field(default="")
 
 @dataclass
 class UporabnikDto:
     username: str = field(default="")
-    role: str = field(default="")
+    id_uporabnika: int = field(default=0)
