@@ -98,10 +98,14 @@ class Oznake:
 class Uporabnik:
     id: int = field(default=0)
     username: str = field(default="")
+<<<<<<< HEAD
+=======
+    id_uporabnika: int = field(default=0)
+>>>>>>> e1765e3364af9f6c220c433f526c42e41bfc8dd7
     password_hash: str = field(default="")
     last_login: str = field(default="")
 
 @dataclass
 class UporabnikDto:
     username: str = field(default="")
-    role: str = field(default="")
+    id_uporabnika: int = field(default=0)

@@ -18,8 +18,12 @@ import dataclasses
 T = TypeVar(
     "T",
     Recepti,
+<<<<<<< HEAD
     ReceptPosSes,
     Postopki,
+=======
+    Postopek,
+>>>>>>> e1765e3364af9f6c220c433f526c42e41bfc8dd7
     Sestavine,
     SestavineReceptov,
     NutrientskeVrednosti,
@@ -380,7 +384,7 @@ class Repo:
     
     def dodaj_recept(self, recept: Recepti) -> Recepti:
 
-        # Preverimo, če izdelek že obstaja
+        # Preverimo, če recept že obstaja
         self.cur.execute("""
             SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja from recepti
             WHERE ime = %s
@@ -391,7 +395,7 @@ class Repo:
             recept.id = row[0]
             return recept
 
-        # Sedaj dodamo izdelek
+        # Sedaj dodamo recept
         self.cur.execute("""
             INSERT INTO recepti (ime, st_porcij, cas_priprave, cas_kuhanja)
               VALUES (%s, %s, %s, %s) RETURNING id; """, (recept.ime, recept.st_porcij, recept.cas_priprave, recept.cas_kuhanja))
@@ -441,7 +445,7 @@ class Repo:
             kategorija.id_recepta = row[0]
             return kategorija
 
-        # Če še ne obstaja jo vnesemo in vrnemo njen id
+        # Če še ne obstaja jo vnesemo 
         self.cur.execute("""
             INSERT INTO kategorije (id_recepta, kategorija)
               VALUES (%s, %s) """, (kategorija.id_recepta, kategorija.kategorija,))
@@ -452,7 +456,7 @@ class Repo:
 
     def dodaj_kulinariko(self, kulinarika: Kulinarike) -> Kulinarike:
 
-        # Preverimo, če določena kategorija že obstaja
+        # Preverimo, če določena kulinarika že obstaja
         self.cur.execute("""
             SELECT id_recepta, kulinarika from kulinarike
             WHERE id_recepta = %s AND kulinarika = %s 
@@ -464,7 +468,7 @@ class Repo:
             kulinarika.id_recepta = row[0]
             return kulinarika
 
-        # Če še ne obstaja jo vnesemo in vrnemo njen id
+        # Če še ne obstaja jo vnesemo 
         self.cur.execute("""
             INSERT INTO kulinarike (id_recepta, kulinarika)
             VALUES (%s, %s) """, (kulinarika.id_recepta, kulinarika.kulinarika,))
@@ -475,7 +479,7 @@ class Repo:
 
     def dodaj_oznako(self, oznaka: Oznake) -> Oznake:
 
-        # Preverimo, če določena kategorija že obstaja
+        # Preverimo, če določena oznaka že obstaja
         self.cur.execute("""
             SELECT id_recepta, oznaka from oznake
             WHERE id_recepta = %s AND oznaka = %s 
@@ -487,7 +491,7 @@ class Repo:
             oznaka.id_recepta = row[0]
             return oznaka
 
-        # Če še ne obstaja jo vnesemo in vrnemo njen id
+        # Če še ne obstaja jo vnesemo 
         self.cur.execute("""
             INSERT INTO oznake (id_recepta, oznaka)
             VALUES (%s, %s) """, (oznaka.id_recepta, oznaka.oznaka,))
@@ -511,7 +515,7 @@ class Repo:
             postopek.id = row[0]
             return postopek
 
-        # Če še ne obstaja jo vnesemo in vrnemo njen id
+        
         self.cur.execute("""
             INSERT INTO postopki (id_recepta, st_koraka, postopek)
               VALUES (%s, %s, %s) """, (postopek.id_recepta, postopek.st_koraka, postopek.postopek))
@@ -533,7 +537,7 @@ class Repo:
             sestavina.id_recepta = row[0]
             return sestavina
 
-        # Če še ne obstaja jo vnesemo in vrnemo njen id
+        
         self.cur.execute("""
             INSERT INTO SestavineReceptov (id_recepta, kolicina, enota, sestavina)
               VALUES (%s, %s, %s, %s) """, (sestavina.id_recepta, sestavina.kolicina, sestavina.enota, sestavina.sestavina))
@@ -553,7 +557,7 @@ class Repo:
             sestavina.id = row[0]
             return sestavina
 
-        # Sedaj dodamo izdelek
+        # Sedaj dodamo 
         self.cur.execute("""
             INSERT INTO sestavine (ime, kalorije, proteini, ogljikovi_hidrati, mascobe)
               VALUES (%s, %s, %s, %s, %s) RETURNING id """, 
@@ -566,6 +570,10 @@ class Repo:
         self.conn.commit()
         return sestavina
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> e1765e3364af9f6c220c433f526c42e41bfc8dd7
 
     def brisi_recept(self, recept : Recepti) -> List[Recepti]:
         # Preverimo, če recept obstaja. Če obstaja, izbrišemo vrstice z id-jem
@@ -614,5 +622,79 @@ class Repo:
         self.cur.execute(sql_cmd, (kalorije, proteini, ogljikovi_hidrati, mascobe, id_recepta))
         self.conn.commit()
 
+<<<<<<< HEAD
 
         
+=======
+        if row:
+            recept.id = row[0]
+            # Zbrišem v tabeli recepti
+            self.cur.execute("""
+            DELETE FROM recepti
+            WHERE id = %s
+            """, (recept.id))
+
+            # Za vsako od ostalih tabel izbrišem vrstice z ukazom spodaj
+            tabele = ['sestavinereceptov', 'oznake', 'nutrientske_vrednosti',
+                      'kategorije', 'kulinarike']
+            
+            for t in tabele:
+                self.cur.execute(("""
+                DELETE FROM %s
+                WHERE id_recepta = %s
+                """, (t, recept.id)))
+            
+
+
+
+            ## Če ne bo delalo s for zanko, je treba brisati iz vsake tabele posebej
+            ## Zbrišem v tabeli SestavineReceptov
+            #self.cur.execute(("""
+            #DELETE FROM SestavineReceptov
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+
+            ## Zbrišem v tabeli oznake
+            #self.cur.execute(("""
+            #DELETE FROM oznake
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+
+            ## Zbrišem v tabeli nutrientske_vrednosti
+            #self.cur.execute(("""
+            #DELETE FROM nutrientske_vrednosti
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+
+            ## Zbrišem v tabeli kategorije
+            #self.cur.execute(("""
+            #DELETE FROM kategorije
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+
+            ## Zbrišem v tabeli kulinarike
+            #self.cur.execute(("""
+            #DELETE FROM kulinarike
+            #WHERE id_recepta = %s
+            #""", (recept.id)))
+            
+    def uporabnik(self, uporabnik : Uporabnik) -> Uporabnik:
+        # Preverimo, če uporabnik že obstaja
+        self.cur.execute("""
+            SELECT id_uporabnika, username, password_hash, last_login from uporabnik
+            WHERE username = %s
+          """, (uporabnik.username,))
+        
+        row = self.cur.fetchone()
+        if row:
+            uporabnik.id_uporabnika = row[0]
+            return uporabnik
+
+        # Sedaj dodamo uporabnika
+        self.cur.execute("""
+            INSERT INTO uporabnik (username, password_hash, last_login)
+              VALUES (%s, %s, %s) RETURNING id_uporabnika; """, (uporabnik.username, uporabnik.password_hash, uporabnik.last_login))
+        uporabnik.id_uporabnika = self.cur.fetchone()[0]
+        self.conn.commit()
+        return uporabnik
+>>>>>>> e1765e3364af9f6c220c433f526c42e41bfc8dd7
