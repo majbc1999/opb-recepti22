@@ -30,16 +30,16 @@ def cookie_required(f):
         cookie = request.get_cookie("uporabnik")
         if cookie:
             return f(*args, **kwargs)
-        return bottletext.template("views/prijava.tpl", napaka="Potrebna je prijava!")  
-        
+        return template("views/prijava.tpl", napaka="Potrebna je prijava!")
     return decorated
 
 
-@bottle.get('/')
-def prijava():
-    return bottle.template("views/prijava.tpl", napaka=None)
+@get('/static/<filename:path>')
+def static(filename):
+    return static_file(filename, root='static')
 
-@bottle.post('/prijava')
+
+@post('/prijava')
 def prijava():
     """
     Prijavi uporabnika v aplikacijo. Če je prijava uspešna, ustvari piškotke o uporabniku in njegovi roli.
@@ -49,20 +49,20 @@ def prijava():
     password = request.forms.get('password')
 
     if not auth.obstaja_uporabnik(username):
-        return bottletext.template("views/registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
+        return template("views/registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
 
     prijava = auth.prijavi_uporabnika(username, password)
     if prijava:
-        bottle.response.set_cookie("uporabnik", username)
-        bottle.response.set_cookie("id_uporabnika", prijava.id_uporabnika)
+        response.set_cookie("uporabnik", username)
+        response.set_cookie("id_uporabnika", prijava.id_uporabnika)
 
-        bottle.redirect('/recepti')
+        redirect(url('/'))
         
     else:
-        return bottletext.template("prijava.tpl", napaka="Neuspešna prijava. Napačno geslo ali uporabniško ime.")
+        return template("prijava.tpl", napaka="Neuspešna prijava. Napačno geslo ali uporabniško ime.")
     
 
-@bottle.post('/registracija')
+@post('/registracija')
 def registracija():
     uporabnik = request.forms.get('username')
     geslo = request.forms.get('password')
@@ -79,7 +79,7 @@ def registracija():
         bottle.redirect('/recepti')
 
     
-@bottle.get('/odjava')
+@get('/odjava')
 def odjava():
     """
     Odjavi uporabnika iz aplikacije. Pobriše piškotke o uporabniku in njegovi roli.
@@ -88,14 +88,14 @@ def odjava():
     bottle.response.delete_cookie("uporabnik")
     bottle.response.delete_cookie("id_uporabnika")
     
-    return bottletext.template('prijava.tpl', napaka=None)
+    return template('prijava.tpl', napaka=None)
 
 kategorije = [x.kategorija for x in r.dobi_razlicne_gen(model.Kategorije, 'kategorija', 181, 0)]
 kulinarike = [x.kulinarika for x in r.dobi_razlicne_gen(model.Kulinarike, 'kulinarika', 181, 0)]
 oznake = [x.oznaka for x in r.dobi_razlicne_gen(model.Oznake, 'oznaka', 181, 0)]
 vse_sestavine = r.dobi_vse_gen(model.Sestavine)
 
-@bottle.get('/recepti')
+@bottle.get('/')
 def vsi_recepti():
     recepti = r.dobi_vse_gen(model.Recepti)
     return bottle.template('views/front-page.tpl', kategorije=kategorije,
