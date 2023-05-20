@@ -661,7 +661,7 @@ class Repo:
         # Sedaj dodamo uporabnika
         self.cur.execute("""
             INSERT INTO uporabnik (uporabnisko_ime, geslo, zadnji_login)
-              VALUES (%s, %s, %s) RETURNING id; """, (uporabnik.uporabnisko_ime, uporabnik.geslo, uporabnik.zadnji_login))
+            VALUES (%s, %s, %s) RETURNING id; """, (uporabnik.uporabnisko_ime, uporabnik.geslo, uporabnik.zadnji_login))
         uporabnik.id = self.cur.fetchone()[0]
         self.conn.commit()
         return uporabnik

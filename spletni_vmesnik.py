@@ -42,11 +42,11 @@ def static(filename):
 @post('/prijava')
 def prijava():
     """
-    Prijavi uporabnika v aplikacijo. Če je prijava uspešna, ustvari piškotke o uporabniku in njegovi roli.
+    Prijavi uporabnika v aplikacijo. Če je prijava uspešna, ustvari piškotke o uporabniku in njegovem id.
     Drugače sporoči, da je prijava neuspešna.
     """
-    username = request.forms.get('uporabnisko_ime')
-    password = request.forms.get('geslo')
+    username = str(request.forms.get('uporabnisko_ime'))
+    password = str(request.forms.get('geslo'))
 
     if not auth.obstaja_uporabnik(username):
         return template("views/registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
@@ -64,8 +64,8 @@ def prijava():
 
 @post('/registracija')
 def registracija():
-    username = request.forms.get('uporabnisko_ime')
-    password = request.forms.get('geslo')
+    username = str(request.forms.get('uporabnisko_ime'))
+    password = str(request.forms.get('geslo'))
 
     if auth.dodaj_uporabnika(username,password):
         prijava = auth.prijavi_uporabnika(username, password)
