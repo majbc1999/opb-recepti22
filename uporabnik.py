@@ -33,7 +33,7 @@ class AuthService:
 
         if succ:
             # popravimo last login time
-            user.zadnji_login = date.today().isoformat()
+            user.last_login = date.today().isoformat()
             self.repo.posodobi_gen(user, id_col="upoabnisko_ime")
             return UporabnikDto(uporabnisko_ime=user.uporabnisko_ime, id=user.id)
         

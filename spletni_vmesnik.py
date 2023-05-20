@@ -30,16 +30,16 @@ def cookie_required(f):
         cookie = request.get_cookie("uporabnik")
         if cookie:
             return f(*args, **kwargs)
-        return bottletext.template("views/prijava.tpl", napaka="Potrebna je prijava!")  
-        
+        return template("views/prijava.tpl", napaka="Potrebna je prijava!")
     return decorated
 
 
-@bottle.get('/')
-def prijava():
-    return bottle.template("views/prijava.tpl", napaka=None)
+@get('/static/<filename:path>')
+def static(filename):
+    return static_file(filename, root='static')
 
-@bottle.post('/prijava')
+
+@post('/prijava')
 def prijava():
     """
     Prijavi uporabnika v aplikacijo. Če je prijava uspešna, ustvari piškotke o uporabniku in njegovi roli.
@@ -49,20 +49,20 @@ def prijava():
     password = request.forms.get('geslo')
 
     if not auth.obstaja_uporabnik(username):
-        return bottletext.template("views/registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
+        return template("views/registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
 
     prijava = auth.prijavi_uporabnika(username, password)
     if prijava:
         bottle.response.set_cookie("uporabnisko_ime", username)
         bottle.response.set_cookie("id", prijava.id)
 
-        bottle.redirect('/recepti')
+        redirect(url('/'))
         
     else:
-        return bottletext.template("prijava.tpl", napaka="Neuspešna prijava. Napačno geslo ali uporabniško ime.")
+        return template("prijava.tpl", napaka="Neuspešna prijava. Napačno geslo ali uporabniško ime.")
     
 
-@bottle.post('/registracija')
+@post('/registracija')
 def registracija():
     username = request.forms.get('uporabnisko_ime')
     password = request.forms.get('geslo')
@@ -79,7 +79,7 @@ def registracija():
         bottle.redirect('/recepti')
 
     
-@bottle.get('/odjava')
+@get('/odjava')
 def odjava():
     """
     Odjavi uporabnika iz aplikacije. Pobriše piškotke o uporabniku in njegovi roli.
@@ -88,17 +88,17 @@ def odjava():
     bottle.response.delete_cookie("uporabnisko_ime")
     bottle.response.delete_cookie("id")
     
-    return bottletext.template('prijava.tpl', napaka=None)
+    return template('prijava.tpl', napaka=None)
 
 kategorije = [x.kategorija for x in r.dobi_razlicne_gen(model.Kategorije, 'kategorija', 181, 0)]
 kulinarike = [x.kulinarika for x in r.dobi_razlicne_gen(model.Kulinarike, 'kulinarika', 181, 0)]
 oznake = [x.oznaka for x in r.dobi_razlicne_gen(model.Oznake, 'oznaka', 181, 0)]
 vse_sestavine = r.dobi_vse_gen(model.Sestavine)
 
-@bottle.get('/recepti')
+@bottle.get('/')
 def vsi_recepti():
     recepti = r.dobi_vse_gen(model.Recepti)
-    return bottle.template('views/front-page.tpl', kategorije=kategorije,
+    return template('views/front-page.tpl', kategorije=kategorije,
                                                     kulinarike=kulinarike,
                                                     oznake=oznake,
                                                     recepti=recepti)
@@ -156,7 +156,7 @@ def recept(id):
     kulinarike_recepta = r.dobi_vse_gen_id(model.Kulinarike, id,'id_recepta')
     oznake_recepta = r.dobi_vse_gen_id(model.Oznake, id,'id_recepta')
 
-    return bottle.template('views/recept.tpl', id=id,
+    return template('views/recept.tpl', id=id,
                                                kategorije=kategorije,
                                                kulinarike=kulinarike,
                                                oznake=oznake,
