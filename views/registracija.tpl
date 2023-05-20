@@ -2,12 +2,12 @@
 <html>
     <form action="{{url('registracija')}}" method="POST" style="width:60%">
     <div class="form-group">
-      <label for="username">Uporabniško ime</label>
-      <input type="input" class="form-control" name="username"  placeholder="Vnesi uporabniško ime">
+      <label for="uporabnisko_ime">Uporabniško ime</label>
+      <input type="input" class="form-control" name="uporabnisko_ime"  placeholder="Vnesi uporabniško ime">
     </div>
     <div class="form-group">
-      <label for="password">Geslo</label>
-      <input type="password" class="form-control" name="password" placeholder="Geslo">
+      <label for="geslo">Geslo</label>
+      <input type="password" class="form-control" name="geslo" placeholder="Geslo">
     </div>
    
     <button type="submit" class="btn btn-primary">Registracija</button>

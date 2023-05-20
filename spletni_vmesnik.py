@@ -54,7 +54,7 @@ def prijava():
     prijava = auth.prijavi_uporabnika(username, password)
     if prijava:
         bottle.response.set_cookie("uporabnisko_ime", username)
-        bottle.response.set_cookie("id", prijava.id)
+        bottle.response.set_cookie("id", str(prijava.id))
 
         redirect(url('/'))
         
@@ -70,11 +70,11 @@ def registracija():
     if auth.dodaj_uporabnika(username,password):
         prijava = auth.prijavi_uporabnika(username, password)
     else:
-        return bottletext.template("registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
+        return bottletext.template("registracija.tpl", napaka="Uporabnik s tem že obstaja")
     
     if prijava:
         response.set_cookie("uporabnisko_ime", username)
-        response.set_cookie("id", prijava.id)
+        response.set_cookie("id", str(prijava.id))
 
         bottle.redirect('/recepti')
 
