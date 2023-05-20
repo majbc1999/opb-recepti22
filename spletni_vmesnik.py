@@ -45,16 +45,16 @@ def prijava():
     Prijavi uporabnika v aplikacijo. Če je prijava uspešna, ustvari piškotke o uporabniku in njegovi roli.
     Drugače sporoči, da je prijava neuspešna.
     """
-    username = request.forms.get('username')
-    password = request.forms.get('password')
+    username = request.forms.get('uporabnisko_ime')
+    password = request.forms.get('geslo')
 
     if not auth.obstaja_uporabnik(username):
         return bottletext.template("views/registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
 
     prijava = auth.prijavi_uporabnika(username, password)
     if prijava:
-        bottle.response.set_cookie("uporabnik", username)
-        bottle.response.set_cookie("id_uporabnika", prijava.id_uporabnika)
+        bottle.response.set_cookie("uporabnisko_ime", username)
+        bottle.response.set_cookie("id", prijava.id)
 
         bottle.redirect('/recepti')
         
@@ -64,17 +64,17 @@ def prijava():
 
 @bottle.post('/registracija')
 def registracija():
-    uporabnik = request.forms.get('username')
-    geslo = request.forms.get('password')
+    username = request.forms.get('uporabnisko_ime')
+    password = request.forms.get('geslo')
 
-    if auth.dodaj_uporabnika(uporabnik,geslo):
-        prijava = auth.prijavi_uporabnika(uporabnik, geslo)
+    if auth.dodaj_uporabnika(username,password):
+        prijava = auth.prijavi_uporabnika(username, password)
     else:
         return bottletext.template("registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
     
     if prijava:
-        response.set_cookie("uporabnik", uporabnik)
-        response.set_cookie("id_uporabnika", prijava.id_uporabnika)
+        response.set_cookie("uporabnisko_ime", username)
+        response.set_cookie("id", prijava.id)
 
         bottle.redirect('/recepti')
 
@@ -85,8 +85,8 @@ def odjava():
     Odjavi uporabnika iz aplikacije. Pobriše piškotke o uporabniku in njegovi roli.
     """
     
-    bottle.response.delete_cookie("uporabnik")
-    bottle.response.delete_cookie("id_uporabnika")
+    bottle.response.delete_cookie("uporabnisko_ime")
+    bottle.response.delete_cookie("id")
     
     return bottletext.template('prijava.tpl', napaka=None)
 

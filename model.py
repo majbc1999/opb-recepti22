@@ -96,12 +96,12 @@ class Oznake:
 @dataclass_json
 @dataclass
 class Uporabnik:
-    username: str = field(default="")
-    id_uporabnika: int = field(default=0)
-    password_hash: str = field(default="")
-    last_login: str = field(default="")
+    uporabnisko_ime: str = field(default="")
+    id: int = field(default=0)
+    geslo: str = field(default="")
+    zadnji_login: str = field(default="")
 
 @dataclass
 class UporabnikDto:
-    username: str = field(default="")
-    id_uporabnika: int = field(default=0)
+    uporabnisko_ime: str = field(default="")
+    id: int = field(default=0)

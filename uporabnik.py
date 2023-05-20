@@ -16,10 +16,10 @@ class AuthService:
         self.repo = repo
 
     def obstaja_uporabnik(self, uporabnik: str) -> bool:
-        user = self.repo.dobi_gen_id(Uporabnik, uporabnik, id_col="uporabnisko_ime")
-        if user:
+        try:
+            user = self.repo.dobi_gen_id(Uporabnik, uporabnik, id_col="uporabnisko_ime")
             return True
-        else:
+        except:
             return False
 
     def prijavi_uporabnika(self, uporabnik : str, geslo: str) -> Union[UporabnikDto, bool] :
@@ -29,13 +29,13 @@ class AuthService:
 
         geslo_bytes = geslo.encode('utf-8')
         # Ustvarimo hash iz gesla, ki ga je vnesel uporabnik
-        succ = bcrypt.checkpw(geslo_bytes, user.password_hash.encode('utf-8'))
+        succ = bcrypt.checkpw(geslo_bytes, user.geslo.encode('utf-8'))
 
         if succ:
             # popravimo last login time
-            user.last_login = date.today().isoformat()
+            user.zadnji_login = date.today().isoformat()
             self.repo.posodobi_gen(user, id_col="upoabnisko_ime")
-            return UporabnikDto(username=user.username, id_uporabnika=user.id_uporabnika)
+            return UporabnikDto(uporabnisko_ime=user.uporabnisko_ime, id=user.id)
         
         return False
 
@@ -55,11 +55,11 @@ class AuthService:
         # Sedaj ustvarimo objekt Uporabnik in ga zapišemo bazo
 
         uporabnik = Uporabnik(
-            username=uporabnik,
-            password_hash=password_hash.decode(),
-            last_login= date.today().isoformat()
+            uporabnisko_ime=uporabnik,
+            geslo=password_hash.decode(),
+            zadnji_login= date.today().isoformat()
         )
 
         self.repo.uporabnik(uporabnik)
 
-        return UporabnikDto(username=uporabnik, id_uporabnika=uporabnik.id_uporabnika)
+        return UporabnikDto(uporabnisko_ime=uporabnik, id=uporabnik.id)

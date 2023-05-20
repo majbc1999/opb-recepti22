@@ -649,19 +649,19 @@ class Repo:
     def uporabnik(self, uporabnik : Uporabnik) -> Uporabnik:
         # Preverimo, če uporabnik že obstaja
         self.cur.execute("""
-            SELECT id_uporabnika, username, password_hash, last_login from uporabnik
-            WHERE username = %s
-          """, (uporabnik.username,))
+            SELECT id, uporabnisko_ime, geslo, zadnji_login from uporabnik
+            WHERE uporabnisko_ime = %s
+          """, (uporabnik.uporabnisko_ime,))
         
         row = self.cur.fetchone()
         if row:
-            uporabnik.id_uporabnika = row[0]
+            uporabnik.id = row[0]
             return uporabnik
 
         # Sedaj dodamo uporabnika
         self.cur.execute("""
-            INSERT INTO uporabnik (username, password_hash, last_login)
-              VALUES (%s, %s, %s) RETURNING id_uporabnika; """, (uporabnik.username, uporabnik.password_hash, uporabnik.last_login))
-        uporabnik.id_uporabnika = self.cur.fetchone()[0]
+            INSERT INTO uporabnik (uporabnisko_ime, geslo, zadnji_login)
+              VALUES (%s, %s, %s) RETURNING id; """, (uporabnik.uporabnisko_ime, uporabnik.geslo, uporabnik.zadnji_login))
+        uporabnik.id = self.cur.fetchone()[0]
         self.conn.commit()
         return uporabnik
