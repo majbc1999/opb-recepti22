@@ -1,5 +1,6 @@
 from bottletext import get, post, run, request, template, redirect, static_file, url, response, template_user
 
+import bottletext
 from operator import mod
 import bottle 
 import model
@@ -29,19 +30,16 @@ def cookie_required(f):
         cookie = request.get_cookie("uporabnik")
         if cookie:
             return f(*args, **kwargs)
-        return template("views/prijava.tpl", napaka="Potrebna je prijava!")
-
-     
-        
+        return bottletext.template("views/prijava.tpl", napaka="Potrebna je prijava!")  
         
     return decorated
 
 
-@get('/static/<filename:path>')
-def static(filename):
-    return static_file(filename, root='static')
+@bottle.get('/')
+def prijava():
+    return bottle.template("views/prijava.tpl", napaka=None)
 
-@post('/prijava')
+@bottle.post('/prijava')
 def prijava():
     """
     Prijavi uporabnika v aplikacijo. Če je prijava uspešna, ustvari piškotke o uporabniku in njegovi roli.
@@ -51,20 +49,20 @@ def prijava():
     password = request.forms.get('password')
 
     if not auth.obstaja_uporabnik(username):
-        return template("views/registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
+        return bottletext.template("views/registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
 
     prijava = auth.prijavi_uporabnika(username, password)
     if prijava:
-        response.set_cookie("uporabnik", username)
-        response.set_cookie("id_uporabnika", prijava.id_uporabnika)
+        bottle.response.set_cookie("uporabnik", username)
+        bottle.response.set_cookie("id_uporabnika", prijava.id_uporabnika)
 
-        redirect(url('/'))
+        bottle.redirect('/recepti')
         
     else:
-        return template("prijava.tpl", napaka="Neuspešna prijava. Napačno geslo ali uporabniško ime.")
+        return bottletext.template("prijava.tpl", napaka="Neuspešna prijava. Napačno geslo ali uporabniško ime.")
     
 
-@post('/registracija')
+@bottle.post('/registracija')
 def registracija():
     uporabnik = request.forms.get('username')
     geslo = request.forms.get('password')
@@ -72,43 +70,44 @@ def registracija():
     if auth.dodaj_uporabnika(uporabnik,geslo):
         prijava = auth.prijavi_uporabnika(uporabnik, geslo)
     else:
-        return template("registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
+        return bottletext.template("registracija.tpl", napaka="Uporabnik s tem imenom ne obstaja")
     
     if prijava:
         response.set_cookie("uporabnik", uporabnik)
         response.set_cookie("id_uporabnika", prijava.id_uporabnika)
 
-        redirect(url('/'))
+        bottle.redirect('/recepti')
 
     
-@get('/odjava')
+@bottle.get('/odjava')
 def odjava():
     """
     Odjavi uporabnika iz aplikacije. Pobriše piškotke o uporabniku in njegovi roli.
     """
     
-    response.delete_cookie("uporabnik")
-    response.delete_cookie("id_uporabnika")
+    bottle.response.delete_cookie("uporabnik")
+    bottle.response.delete_cookie("id_uporabnika")
     
-    return template('prijava.tpl', napaka=None)
+    return bottletext.template('prijava.tpl', napaka=None)
 
 kategorije = [x.kategorija for x in r.dobi_razlicne_gen(model.Kategorije, 'kategorija', 181, 0)]
 kulinarike = [x.kulinarika for x in r.dobi_razlicne_gen(model.Kulinarike, 'kulinarika', 181, 0)]
 oznake = [x.oznaka for x in r.dobi_razlicne_gen(model.Oznake, 'oznaka', 181, 0)]
+vse_sestavine = r.dobi_vse_gen(model.Sestavine)
 
-
-@bottle.get('/')
-@cookie_required
-def front_page():
-    return template_user('views/front_page.tpl', kategorije=kategorije,
-                                                   kulinarike=kulinarike,
-                                                   oznake=oznake)
+@bottle.get('/recepti')
+def vsi_recepti():
+    recepti = r.dobi_vse_gen(model.Recepti)
+    return bottle.template('views/front-page.tpl', kategorije=kategorije,
+                                                    kulinarike=kulinarike,
+                                                    oznake=oznake,
+                                                    recepti=recepti)
 
 
 @bottle.get('/recepti-kategorije/<kategorija>')
 @cookie_required
 def doloceni_recepti(kategorija):
-    seznam_idjev = r.dobi_gen_ime(model.Kategorije, kategorija, 'kategorija', 'id_recepta')
+    seznam_idjev = r.dobi_gen_ime(model.Kategorije, kategorija, 'kategorija')
     recepti_izbrane_kategorije = [r.dobi_gen_id(model.Recepti, x.id_recepta,'id') for x in seznam_idjev]
 
     return template_user('views/doloceni_recepti_kategorije.tpl', kategorija=kategorija,
@@ -120,7 +119,7 @@ def doloceni_recepti(kategorija):
 @bottle.get('/recepti-kulinarike/<kulinarika>')
 @cookie_required
 def doloceni_recepti(kulinarika):
-    seznam_idjev = r.dobi_gen_ime(model.Kulinarike, kulinarika, 'kulinarika', 'id_recepta')
+    seznam_idjev = r.dobi_gen_ime(model.Kulinarike, kulinarika, 'kulinarika')
     recepti_izbrane_kulinarike = [r.dobi_gen_id(model.Recepti, x.id_recepta,'id') for x in seznam_idjev]
 
     return template_user('views/doloceni_recepti_kulinarike.tpl', kulinarika=kulinarika,
@@ -132,7 +131,7 @@ def doloceni_recepti(kulinarika):
 @bottle.get('/recepti-oznake/<oznaka>')
 @cookie_required
 def doloceni_recepti(oznaka):
-    seznam_idjev = r.dobi_gen_ime(model.Oznake, oznaka, 'oznaka', 'id_recepta')
+    seznam_idjev = r.dobi_gen_ime(model.Oznake, oznaka, 'oznaka')
     recepti_izbrane_oznake = [r.dobi_gen_id(model.Recepti, x.id_recepta,'id') for x in seznam_idjev]
 
     return template_user('views/doloceni_recepti_oznake.tpl', oznaka=oznaka,
@@ -149,10 +148,27 @@ def pojdi_na_recept(id):
 @bottle.get('/recept/<id>')
 @cookie_required
 def recept(id):
-    return template_user('views/recept.tpl', id=id,
+    recept = r.dobi_gen_id(model.Recepti, id,'id')
+    sestavine = r.dobi_vse_gen_id(model.SestavineReceptov, id,'id_recepta')
+    postopek = r.dobi_vse_gen_id(model.Postopki, id,'id_recepta')
+    nutrientske_vrednosti = r.dobi_nutrientske_vrednosti(id)
+    kategorije_recepta = r.dobi_vse_gen_id(model.Kategorije, id,'id_recepta')
+    kulinarike_recepta = r.dobi_vse_gen_id(model.Kulinarike, id,'id_recepta')
+    oznake_recepta = r.dobi_vse_gen_id(model.Oznake, id,'id_recepta')
+
+    return bottle.template('views/recept.tpl', id=id,
                                                kategorije=kategorije,
                                                kulinarike=kulinarike,
-                                               oznake=oznake)
+                                               oznake=oznake,
+                                               recept=recept,
+                                               sestavine_recepta=sestavine,
+                                               postopek=postopek,
+                                               nutrientske_vrednosti=nutrientske_vrednosti,
+                                               kategorije_recepta=kategorije_recepta,
+                                               kulinarike_recepta=kulinarike_recepta,
+                                               oznake_recepta=oznake_recepta,
+                                               vse_sestavine=vse_sestavine)
+
 @bottle.get('/dodaj-recept')
 @cookie_required
 def dodaj_recept_get():
@@ -194,75 +210,53 @@ def dodaj_recept_post():
     bottle.redirect('/recept/{}'.format(recept.id))
 
 
-@bottle.get('/izbrisi-recept/<id>')
-@cookie_required
-def izbrisi_recept_get(id):
-    return template_user('views/izbrisi_recept', id=id,
-                                               kategorije=kategorije,
-                                               kulinarike=kulinarike,
-                                               oznake=oznake)
+@bottle.post('/izbrisi-recept')
+def izbrisi_recept():
+    id = bottle.request.forms.getunicode('recept')
+    recept = r.dobi_gen_id(model.Recepti, id, 'id')
+    r.brisi_recept(recept)
+    bottle.redirect('/')
 
 @bottle.post('/izbrisi-recept/<id>')
-@cookie_required
-def izbrisi_recept_post(id):
+def izbrisi_recept_id(id):
     recept = r.dobi_gen_id(model.Recepti, id, 'id')
-    r.brisi_recept(model.Recepti(
-        id=id,
-        ime= recept.ime,
-        st_porcij=recept.st_porcij,
-        cas_priprave=recept.cas_priprave,
-        cas_kuhanja=recept.cas_kuhanja
-    ))
+    r.brisi_recept(recept)
     bottle.redirect('/')
 
 
-
-@bottle.get('/dodaj-sestavino/<id>')
-@cookie_required
-def dodaj_sestavino_get(id):
-    return template_user('views/dodaj_sestavino.tpl', id=id,
-                                               kategorije=kategorije,
-                                               kulinarike=kulinarike,
-                                               oznake=oznake)
-
 @bottle.post('/dodaj-sestavino/<id>')
-@cookie_required
-def dodaj_sestavino_post(id):
-    kolicina =  str(bottle.request.forms.getunicode('kolicina'))
-    enota =  str(bottle.request.forms.getunicode('enota'))
-    sestavina = str(bottle.request.forms.getunicode('sestavine'))
-    recept = r.dobi_gen_id(model.Recepti, id, 'id')
+def dodaj_sestavino(id):
+    sestavina = str(bottle.request.forms.getunicode('dodana-sestavina'))
+    enota =  str(bottle.request.forms.getunicode('dodana-enota'))
+    kolicina =  str(bottle.request.forms.getunicode('dodana-kolicina'))
+
     r.dodaj_sestavino(model.SestavineReceptov(
-        id_recepta=recept.id,
-        kolicina=kolicina,
-        enota=enota,
-        sestavina=sestavina
-    ))
-    bottle.redirect('/recept/{}'.format(recept.id))
+            id_recepta=id,
+            sestavina=sestavina,
+            kolicina=kolicina,
+            enota=enota
+        ))
 
+    nutrienti = r.dobi_nutrientske_vrednosti(id)
+    s = model.SestavineReceptov(int(id), kolicina, enota, sestavina)
+    r.pristej_nutriente(nutrienti, s)
 
-
-@bottle.get('/dodaj-postopek/<id>')
-@cookie_required
-def dodaj_postopek_get(id):
-    return template_user('views/dodaj_postopek.tpl', id=id,
-                                               kategorije=kategorije,
-                                               kulinarike=kulinarike,
-                                               oznake=oznake)
+    bottle.redirect('/recept/{}'.format(id))
 
 
 @bottle.post('/dodaj-postopek/<id>')
 @cookie_required
 def dodaj_postopek_post(id):
-    postopek =  str(bottle.request.forms.getunicode('postopek'))
-    st_koraka =  int(bottle.request.forms.getunicode('st_koraka'))
-    recept = r.dobi_gen_id(model.Recepti, id, 'id')
-    r.dodaj_postopek(model.Postopek(
-        id_recepta=recept.id,
+    postopek =  str(bottle.request.forms.getunicode('dodan-postopek'))
+    vsi_koraki = r.dobi_vse_gen_id(model.Postopki, id, "id_recepta")
+    zadnji_korak = max([x.st_koraka for x in vsi_koraki])
+
+    r.dodaj_postopek(model.Postopki(
+        id_recepta=id,
         postopek=postopek,
-        st_koraka=st_koraka
+        st_koraka=zadnji_korak + 1
     ))
-    bottle.redirect('/recept/{}'.format(recept.id))
+    bottle.redirect('/recept/{}'.format(id))
 
 
 
