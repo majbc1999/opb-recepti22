@@ -18,12 +18,7 @@ import dataclasses
 T = TypeVar(
     "T",
     Recepti,
-<<<<<<< HEAD
-    ReceptPosSes,
     Postopki,
-=======
-    Postopek,
->>>>>>> e1765e3364af9f6c220c433f526c42e41bfc8dd7
     Sestavine,
     SestavineReceptov,
     NutrientskeVrednosti,
@@ -570,10 +565,6 @@ class Repo:
         self.conn.commit()
         return sestavina
   
-<<<<<<< HEAD
-=======
-
->>>>>>> e1765e3364af9f6c220c433f526c42e41bfc8dd7
 
     def brisi_recept(self, recept : Recepti) -> List[Recepti]:
         # Preverimo, če recept obstaja. Če obstaja, izbrišemo vrstice z id-jem
@@ -621,30 +612,7 @@ class Repo:
                       WHERE id_recepta = %s''';
         self.cur.execute(sql_cmd, (kalorije, proteini, ogljikovi_hidrati, mascobe, id_recepta))
         self.conn.commit()
-
-<<<<<<< HEAD
-
-        
-=======
-        if row:
-            recept.id = row[0]
-            # Zbrišem v tabeli recepti
-            self.cur.execute("""
-            DELETE FROM recepti
-            WHERE id = %s
-            """, (recept.id))
-
-            # Za vsako od ostalih tabel izbrišem vrstice z ukazom spodaj
-            tabele = ['sestavinereceptov', 'oznake', 'nutrientske_vrednosti',
-                      'kategorije', 'kulinarike']
             
-            for t in tabele:
-                self.cur.execute(("""
-                DELETE FROM %s
-                WHERE id_recepta = %s
-                """, (t, recept.id)))
-            
-
 
 
             ## Če ne bo delalo s for zanko, je treba brisati iz vsake tabele posebej
@@ -697,4 +665,3 @@ class Repo:
         uporabnik.id_uporabnika = self.cur.fetchone()[0]
         self.conn.commit()
         return uporabnik
->>>>>>> e1765e3364af9f6c220c433f526c42e41bfc8dd7

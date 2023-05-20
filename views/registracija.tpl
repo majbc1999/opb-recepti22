@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <form action="{{url('registracija')}}" method="POST" style="width:60%">
+    <form action="/registracija" method="POST" style="width:60%">
     <div class="form-group">
       <label for="username">Uporabniško ime</label>
       <input type="input" class="form-control" name="username"  placeholder="Vnesi uporabniško ime">
