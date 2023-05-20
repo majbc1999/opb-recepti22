@@ -16,16 +16,16 @@ class AuthService:
         self.repo = repo
 
     def obstaja_uporabnik(self, uporabnik: str) -> bool:
-        user = self.repo.dobi_gen_id(Uporabnik, uporabnik, id_col="uporabnisko_ime")
-        if user:
+        try:
+            user = self.repo.dobi_gen_id(Uporabnik, uporabnik, id_col="username")
             return True
-        else:
+        except:
             return False
 
     def prijavi_uporabnika(self, uporabnik : str, geslo: str) -> Union[UporabnikDto, bool] :
 
         # Najprej dobimo uporabnika iz baze
-        user = self.repo.dobi_gen_id(Uporabnik, uporabnik, id_col="uporabnisko_ime")
+        user = self.repo.dobi_gen_id(Uporabnik, uporabnik, id_col="username")
 
         geslo_bytes = geslo.encode('utf-8')
         # Ustvarimo hash iz gesla, ki ga je vnesel uporabnik
@@ -34,7 +34,7 @@ class AuthService:
         if succ:
             # popravimo last login time
             user.last_login = date.today().isoformat()
-            self.repo.posodobi_gen(user, id_col="upoabnisko_ime")
+            self.repo.posodobi_gen(user, id_col="username")
             return UporabnikDto(username=user.username, id_uporabnika=user.id_uporabnika)
         
         return False
