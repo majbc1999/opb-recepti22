@@ -19,10 +19,10 @@ T = TypeVar(
     "T",
     Recepti,
     ReceptPosSes,
-    Postopek,
+    Postopki,
     Sestavine,
     SestavineReceptov,
-    NutrienstkaVrednost,
+    NutrientskeVrednosti,
     Uporabnik,
     Kategorije,
     Kulinarike,
@@ -47,6 +47,17 @@ class Repo:
         self.cur.execute(sql_cmd)
         return [typ.from_dict(d) for d in self.cur.fetchall()]
 
+    def dobi_vse_gen(self, typ: Type[T]) -> List[T]:
+        """ 
+        Generična metoda, ki za podan vhodni dataclass vrne seznam teh objektov iz baze.
+        Predpostavljamo, da je tabeli ime natanko tako kot je ime posameznemu dataclassu.
+        """
+        # ustvarimo sql select stavek, kjer je ime tabele typ.__name__ oz. ime razreda
+        tbl_name = typ.__name__
+        sql_cmd = f'''SELECT * FROM {tbl_name};'''
+        self.cur.execute(sql_cmd)
+        return [typ.from_dict(d) for d in self.cur.fetchall()]
+
     
     def dobi_gen_id(self, typ: Type[T], id: int, id_col = "id") -> T:
         """
@@ -56,12 +67,12 @@ class Repo:
         sql_cmd = f'SELECT * FROM {tbl_name} WHERE {id_col} = %s';
         self.cur.execute(sql_cmd, (id,))
 
-        d = self.cur.fetchone()
-
-        if d is None:
-            raise Exception(f'Vrstica z id-jem {id} ne obstaja v {tbl_name}');
+        ## Zaradi zakomentirane kode nama ne izpiše vrstice, ki jo najde z ukazom fetchone()
+        #d = self.cur.fetchone()
+        #if d is None:
+        #    raise Exception(f'Vrstica z id-jem {id} ne obstaja v {tbl_name}');
     
-        return typ.from_dict(d)
+        return typ.from_dict(self.cur.fetchone())
 
     
     def dobi_vse_gen_id(self, typ: Type[T], id: int, id_col = "id") -> T:
@@ -70,28 +81,22 @@ class Repo:
         """
         tbl_name = typ.__name__
         sql_cmd = f'SELECT * FROM {tbl_name} WHERE {id_col} = %s';
-        self.cur.execute(sql_cmd, (id))
-
-        d = self.cur.fetchone()
-
-        if d is None:
-            raise Exception(f'Vrstica z id-jem {id} ne obstaja v {tbl_name}');
-    
+        self.cur.execute(sql_cmd, (id,))    
         return [typ.from_dict(s) for s in self.cur.fetchall()]
 
     
-    def dobi_gen_ime(self, typ: Type[T], izbrana_kategorija: str, ime_stolpca = "kategorija", id = "id") -> T:
+    def dobi_gen_ime(self, typ: Type[T], izbrana_kategorija: str, ime_stolpca = "kategorija") -> T:
         """
         Generična metoda, ki vrne seznam id-jev pridobljen iz baze na podlagi imena izbrane kategorije/kulinarike/oznake.
         """
         tbl_name = typ.__name__
-        sql_cmd = f'SELECT {id} FROM {tbl_name} WHERE {ime_stolpca} = %s';
+        sql_cmd = f'SELECT * FROM {tbl_name} WHERE {ime_stolpca} = %s';
         self.cur.execute(sql_cmd, (izbrana_kategorija,))
 
-        d = self.cur.fetchone()
+        #d = self.cur.fetchone()
 
-        if d is None:
-            raise Exception(f'Vrstica z imenom {izbrana_kategorija} ne obstaja v {tbl_name}');
+        #if d is None:
+        #    raise Exception(f'Vrstica z imenom {izbrana_kategorija} ne obstaja v {tbl_name}');
     
         return [typ.from_dict(s) for s in self.cur.fetchall()]
 
@@ -176,6 +181,15 @@ class Repo:
 
         self.conn.commit()
 
+
+    def izbrisi_gen(self,  typ: Type[T], id: int, id_col = "id"):
+        """
+        Generična metoda, ki vrne dataclass objekt pridobljen iz baze na podlagi njegovega idja.
+        """
+        tbl_name = typ.__name__
+        sql_cmd = f'Delete FROM {tbl_name} WHERE {id_col} = %s';
+        self.cur.execute(sql_cmd, (id,))
+        self.conn.commit()
 
 
     def posodobi_gen(self, typ: T, id_col = "id", auto_commit=True):
@@ -318,7 +332,7 @@ class Repo:
         recepti = self.cur.execute(
             """
             SELECT i.id, i.ime, i.st_porcij, i.cas_priprave, i.cas_kuhanja, 
-            i.postopek, j.sestavine FROM Recepti i left join Postopek k on i.postopek = k.id
+            i.postopek, j.sestavine FROM Recepti i left join postopki k on i.postopek = k.id
             FROM Recepti j left join SestavineReceptov s on j.sestavine = s.id
             """)
 
@@ -349,6 +363,20 @@ class Repo:
         
         raise Exception("Recept z imenom " + ime_recepta + " ne obstaja")
 
+    def dobi_nutrientske_vrednosti(self, id: int) -> NutrientskeVrednosti:
+        self.cur.execute("""
+            SELECT * from nutrientskevrednosti
+            WHERE id_recepta = %s
+          """, (id,))
+        
+        row = self.cur.fetchone()
+
+        if row:
+            id_recepta, kalorije, proteini, ogljikovi_hidrati, mascobe = row
+            return NutrientskeVrednosti(id_recepta, kalorije, ogljikovi_hidrati, mascobe, proteini)
+        
+        raise Exception("Recept ne obstaja")
+
     
     def dodaj_recept(self, recept: Recepti) -> Recepti:
 
@@ -372,11 +400,11 @@ class Repo:
         return recept
 
 
-    def dodaj_nutrientsko_vrednost(self, nutrientska_vrednost: NutrienstkaVrednost) -> NutrienstkaVrednost:
+    def dodaj_nutrientsko_vrednost(self, nutrientska_vrednost: NutrientskeVrednosti) -> NutrientskeVrednosti:
 
         # Preverimo, če nutrientska vrednost že obstaja
         self.cur.execute("""
-            SELECT id_recepta, kalorije, proteini, ogljikovi_hidrati, mascobe from nutrientske_vrednosti
+            SELECT id_recepta, kalorije, proteini, ogljikovi_hidrati, mascobe from nutrientskevrednosti
             WHERE id_recepta = %s
           """, (nutrientska_vrednost.id_recepta,))
         
@@ -387,7 +415,7 @@ class Repo:
 
         # Sedaj dodamo nutrientsko vrednost
         self.cur.execute("""
-            INSERT INTO nutrientske_vrednosti (id_recepta, kalorije, proteini, ogljikovi_hidrati, mascobe)
+            INSERT INTO nutrientskevrednosti (id_recepta, kalorije, proteini, ogljikovi_hidrati, mascobe)
               VALUES (%s, %s, %s, %s, %s) """, 
               (nutrientska_vrednost.id_recepta,
               nutrientska_vrednost.kalorije, 
@@ -468,7 +496,7 @@ class Repo:
         return oznaka
     
 
-    def dodaj_postopek(self, postopek : Postopek) -> Postopek:
+    def dodaj_postopek(self, postopek : Postopki) -> Postopki:
 
         #ta pogoj mora preveriti ce obstaja postopek z dolocenim id in postopkom, saj bo vec postopkov 
         #shranjenih pod isti id in vec istih pod razlicnega
@@ -538,72 +566,53 @@ class Repo:
         self.conn.commit()
         return sestavina
   
-  #Vprasanje:
-
-  ##sej se da joinat vec 'vsrtic' ene tabele, ce jih ima vec isti id?
-
-  #dodat moram se moznost spreminjanja receptov in brisanja
 
     def brisi_recept(self, recept : Recepti) -> List[Recepti]:
         # Preverimo, če recept obstaja. Če obstaja, izbrišemo vrstice z id-jem
         # recepta, ki ga želimo zbrisati v vseh tabelah
-        self.cur.execute("""
-            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja from Recept
-            WHERE ime_recepta = %s
-          """, (recept.ime))
+        tabele = [model.SestavineReceptov, model.Oznake, model.NutrientskeVrednosti,
+                  model.Kategorije, model.Kulinarike, model.Postopki]
         
-        row = self.cur.fetchone()
-
-        if row:
-            recept.id = row[0]
-            # Zbrišem v tabeli recepti
-            self.cur.execute("""
-            DELETE FROM recepti
-            WHERE id = %s
-            """, (recept.id))
-
-            # Za vsako od ostalih tabel izbrišem vrstice z ukazom spodaj
-            tabele = ['sestavinereceptov', 'oznake', 'nutrientske_vrednosti',
-                      'kategorije', 'kulinarike']
-            
-            for t in tabele:
-                self.cur.execute(("""
-                DELETE FROM %s
-                WHERE id_recepta = %s
-                """, (t, recept.id)))
-            
+        for t in tabele:
+            self.izbrisi_gen(t, recept.id, id_col = "id_recepta")
+        
+        self.izbrisi_gen(model.Recepti, recept.id, "id")
 
 
+    def pristej_nutriente(self, nutrienti : NutrientskeVrednosti, sestavina : SestavineReceptov) -> NutrientskeVrednosti:
+        s = (self.dobi_gen_ime(model.Sestavine, sestavina.sestavina, "ime"))[0]
+        print(s)
+        kolicina = float(sestavina.kolicina)
+        enota = sestavina.enota
 
-            ## Če ne bo delalo s for zanko, je treba brisati iz vsake tabele posebej
-            ## Zbrišem v tabeli SestavineReceptov
-            #self.cur.execute(("""
-            #DELETE FROM SestavineReceptov
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
+        if enota == "g" or enota == "ml":
+            kolicina *= 0.01
+        if enota == "cup":
+            kolicina *= 1.28
+        if enota == "ounce":
+            kolicina *= 0.28
+        if enota == "pound":
+            kolicina *= 4.54
+        if enota == "tbsp":
+            kolicina *= 0.15
+        if enota == "tsp":
+            kolicina *= 0.03
+        if enota == "bunch":
+            kolicina *= 2
+        if enota == "scoop":
+            kolicina *= 0.3
 
-            ## Zbrišem v tabeli oznake
-            #self.cur.execute(("""
-            #DELETE FROM oznake
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
+        id_recepta = nutrienti.id_recepta
+        kalorije = float(kolicina * s.kalorije + nutrienti.kalorije)
+        proteini = float(kolicina * s.proteini + nutrienti.proteini)
+        mascobe = float(kolicina * s.mascobe + nutrienti.mascobe)
+        ogljikovi_hidrati = float(kolicina * s.ogljikovi_hidrati + nutrienti.ogljikovi_hidrati)
 
-            ## Zbrišem v tabeli nutrientske_vrednosti
-            #self.cur.execute(("""
-            #DELETE FROM nutrientske_vrednosti
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
+        sql_cmd = f'''UPDATE nutrientskevrednosti 
+                      SET kalorije = %s, proteini = %s, ogljikovi_hidrati = %s, mascobe = %s
+                      WHERE id_recepta = %s''';
+        self.cur.execute(sql_cmd, (kalorije, proteini, ogljikovi_hidrati, mascobe, id_recepta))
+        self.conn.commit()
 
-            ## Zbrišem v tabeli kategorije
-            #self.cur.execute(("""
-            #DELETE FROM kategorije
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
 
-            ## Zbrišem v tabeli kulinarike
-            #self.cur.execute(("""
-            #DELETE FROM kulinarike
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
-            
-    
+        
