@@ -38,6 +38,19 @@ def cookie_required(f):
 def static(filename):
     return static_file(filename, root='static')
 
+@bottle.get('/')
+def vsi_recepti():
+    recepti = r.dobi_vse_gen(model.Recepti)
+    return template('views/front-page.tpl', kategorije=kategorije,
+                                                    kulinarike=kulinarike,
+                                                    oznake=oznake,
+                                                    recepti=recepti)
+
+
+@bottle.get('/prijava')
+def prijava_get():
+    return template('prijava.tpl', napaka=None)
+
 
 @post('/prijava')
 def prijava():
@@ -56,7 +69,7 @@ def prijava():
         bottle.response.set_cookie("uporabnisko_ime", username)
         bottle.response.set_cookie("id", str(prijava.id))
 
-        redirect(url('/'))
+        redirect(url('/recepti'))
         
     else:
         return template("prijava.tpl", napaka="Neuspešna prijava. Napačno geslo ali uporabniško ime.")
@@ -90,15 +103,20 @@ def odjava():
     
     return template('prijava.tpl', napaka=None)
 
+
+
+
 kategorije = [x.kategorija for x in r.dobi_razlicne_gen(model.Kategorije, 'kategorija', 181, 0)]
 kulinarike = [x.kulinarika for x in r.dobi_razlicne_gen(model.Kulinarike, 'kulinarika', 181, 0)]
 oznake = [x.oznaka for x in r.dobi_razlicne_gen(model.Oznake, 'oznaka', 181, 0)]
 vse_sestavine = r.dobi_vse_gen(model.Sestavine)
 
-@bottle.get('/')
-def vsi_recepti():
+
+@bottle.get('/recepti')
+@cookie_required
+def vsi_recepti_prijava():
     recepti = r.dobi_vse_gen(model.Recepti)
-    return template('views/front-page.tpl', kategorije=kategorije,
+    return template('views/front_prijava.tpl', kategorije=kategorije,
                                                     kulinarike=kulinarike,
                                                     oznake=oznake,
                                                     recepti=recepti)

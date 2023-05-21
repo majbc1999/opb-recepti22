@@ -35,17 +35,16 @@
                 </div>
             </div>
         </th>
-        <th class="nav-stolpec-mid">
-            <div class="button">
-                <a class="button is-link is-light" href="/prijava" method="GET">prijava</a><br>
-            </div>
-        </th>
         <th></th>
     </tr>
 </table>
 
 <div class="naslov">
 <h1>RECEPTI</h1>
+
+<form action="/dodaj-recept" method="GET">
+    <button class="gumb gumb-dodaj" type="submit">Dodaj nov recept</button>
+</form>
 </div>
 
 <table class="tabela" id="recepti">
@@ -65,7 +64,11 @@
             <td>{{recept.st_porcij}}</td>
             <td>{{recept.cas_priprave}}</td>
             <td>{{recept.cas_kuhanja}}</td>
-
+            <td>
+                <form action="/izbrisi-recept" method="POST">
+                    <button class="gumb" name="recept" value="{{recept.id}}" type="submit">Izbriši</button>
+                </form>
+            </td>
         </tr>
     %end
 </table>  
