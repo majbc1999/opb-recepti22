@@ -27,7 +27,7 @@ def cookie_required(f):
     """
     @wraps(f)
     def decorated( *args, **kwargs):
-        cookie = request.get_cookie("uporabnik")
+        cookie = request.get_cookie("uporabnisko_ime")
         if cookie:
             return f(*args, **kwargs)
         return template("views/prijava.tpl", napaka="Potrebna je prijava!")
@@ -116,7 +116,7 @@ vse_sestavine = r.dobi_vse_gen(model.Sestavine)
 @cookie_required
 def vsi_recepti_prijava():
     recepti = r.dobi_vse_gen(model.Recepti)
-    return template('views/front_prijava.tpl', kategorije=kategorije,
+    return template_user('views/front_prijava.tpl', kategorije=kategorije,
                                                     kulinarike=kulinarike,
                                                     oznake=oznake,
                                                     recepti=recepti)

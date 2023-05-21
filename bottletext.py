@@ -22,7 +22,7 @@ def template(*largs, **kwargs):
     """
 
     
-    return bottle.template(*largs, **kwargs, uporabnik=None, id_uporabnika=None, url=bottle.url)
+    return bottle.template(*largs, **kwargs, uporabnik=None, id=None, url=bottle.url)
 
 def template_user(*largs, **kwargs):
     """
@@ -30,8 +30,8 @@ def template_user(*largs, **kwargs):
     """
     # Dodamo ime uporabnika, ki je prebran iz cookija direktno v vsak html, ki ga uporabimo kot template.
     usr_cookie = request.get_cookie("uporabnik")
-    usr_id = request.get_cookie("id_uporabnika")
-    return bottle.template(*largs, **kwargs, uporabnik=usr_cookie, id_uporabnika=usr_id, url=bottle.url)
+    usr_id = request.get_cookie("id")
+    return bottle.template(*largs, **kwargs, uporabnik=usr_cookie, id=usr_id, url=bottle.url)
 
 
 
