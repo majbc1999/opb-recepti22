@@ -1,4 +1,5 @@
 # uvozimo psycopg2
+from turtle import pos
 import psycopg2, psycopg2.extensions, psycopg2.extras
 psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo problemov s šumniki
 
@@ -146,7 +147,7 @@ class Repo:
       
     def dodaj_gen_list(self, typs: List[T], serial_col="id"):
         """
-        Generična metoda, ki v bazo zapiše seznam objekton/entitet. Uporabi funkcijo
+        Generična metoda, ki v bazo zapiše seznam objektov/entitet. Uporabi funkcijo
         dodaj_gen, le da ustvari samo en commit na koncu.
         """
 
@@ -449,6 +450,16 @@ class Repo:
         return kategorija
 
 
+    def izbrisi_dva_pogoja(self, typ: Type[T], ime: str, ime_stolpca_ime: str, id: int, ime_stolpca_id: str):
+        """
+        Iz baze izbriše dane kategorije/kulinarike/oznake pri določenem id-ju recepta.
+        """
+        tbl_name = typ.__name__
+        sql_cmd = f'Delete FROM {tbl_name} WHERE {ime_stolpca_ime} = %s AND {ime_stolpca_id} = %s';
+        self.cur.execute(sql_cmd, (ime, id,))
+        self.conn.commit()
+
+
     def dodaj_kulinariko(self, kulinarika: Kulinarike) -> Kulinarike:
 
         # Preverimo, če določena kulinarika že obstaja
@@ -565,6 +576,15 @@ class Repo:
         self.conn.commit()
         return sestavina
   
+    
+    def uredi_postopek(self, postopek: Postopki):
+        self.cur.execute("""
+            UPDATE postopki
+            SET postopek = %s
+            WHERE id_recepta = %s AND st_koraka = %s;
+          """, (postopek.postopek, postopek.id_recepta, postopek.st_koraka))
+        self.conn.commit()
+
 
     def brisi_recept(self, recept : Recepti) -> List[Recepti]:
         # Preverimo, če recept obstaja. Če obstaja, izbrišemo vrstice z id-jem
@@ -614,37 +634,6 @@ class Repo:
         self.conn.commit()
             
 
-
-            ## Če ne bo delalo s for zanko, je treba brisati iz vsake tabele posebej
-            ## Zbrišem v tabeli SestavineReceptov
-            #self.cur.execute(("""
-            #DELETE FROM SestavineReceptov
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
-
-            ## Zbrišem v tabeli oznake
-            #self.cur.execute(("""
-            #DELETE FROM oznake
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
-
-            ## Zbrišem v tabeli nutrientske_vrednosti
-            #self.cur.execute(("""
-            #DELETE FROM nutrientske_vrednosti
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
-
-            ## Zbrišem v tabeli kategorije
-            #self.cur.execute(("""
-            #DELETE FROM kategorije
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
-
-            ## Zbrišem v tabeli kulinarike
-            #self.cur.execute(("""
-            #DELETE FROM kulinarike
-            #WHERE id_recepta = %s
-            #""", (recept.id)))
             
     def uporabnik(self, uporabnik : Uporabnik) -> Uporabnik:
         # Preverimo, če uporabnik že obstaja
