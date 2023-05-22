@@ -287,7 +287,7 @@ def dodaj_postopek_post(id):
 @bottle.post('/izbrisi-postopek/<id>')
 def brisi_postopek(id):
     korak = bottle.request.forms.getunicode('korak')
-    r.izbrisi_gen(model.Postopki, korak, "koraka")
+    r.izbrisi_gen(model.Postopki, korak, "postopek")
     bottle.redirect('/recept/{}'.format(id))
 
 
