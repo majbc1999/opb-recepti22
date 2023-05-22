@@ -67,6 +67,11 @@
             <td>{{recept.cas_priprave}}</td>
             <td>{{recept.cas_kuhanja}}</td>
             <td>
+                <form action="/urejanje-recepta/{{recept.id}}" method="GET">
+                    <button class="gumb" type="submit">Uredi</button>
+                </form>
+            </td>
+            <td>
                 <form action="/izbrisi-recept" method="POST">
                     <button class="gumb" name="recept" value="{{recept.id}}" type="submit">Izbriši</button>
                 </form>

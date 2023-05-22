@@ -177,7 +177,7 @@ def recept(id):
     kategorije_recepta = [x.kategorija for x in r.dobi_vse_gen_id(model.Kategorije, id,'id_recepta')]
     kulinarike_recepta = [x.kulinarika for x in r.dobi_vse_gen_id(model.Kulinarike, id,'id_recepta')]
     oznake_recepta = [x.oznaka for x in r.dobi_vse_gen_id(model.Oznake, id,'id_recepta')]
-    return bottle.template('views/urejanje_recepta.tpl', id=recept.id,
+    return bottle.template('views/recept.tpl', id=recept.id,
                                                          kategorije=kategorije,
                                                          kulinarike=kulinarike,
                                                          oznake=oznake,
@@ -241,6 +241,29 @@ def izbrisi_recept_id(id):
     recept = r.dobi_gen_id(model.Recepti, id, 'id')
     r.brisi_recept(recept)
     bottle.redirect('/')
+
+@bottle.get('/urejanje-recepta/<id>')
+def urejanje_recepta(id):
+    recept = r.dobi_gen_id(model.Recepti, id,'id')
+    sestavine = r.dobi_vse_gen_id(model.SestavineReceptov, id,'id_recepta')
+    postopek = r.dobi_vse_gen_id(model.Postopki, id,'id_recepta')
+    nutrientske_vrednosti = r.dobi_nutrientske_vrednosti(id)
+    kategorije_recepta = [x.kategorija for x in r.dobi_vse_gen_id(model.Kategorije, id,'id_recepta')]
+    kulinarike_recepta = [x.kulinarika for x in r.dobi_vse_gen_id(model.Kulinarike, id,'id_recepta')]
+    oznake_recepta = [x.oznaka for x in r.dobi_vse_gen_id(model.Oznake, id,'id_recepta')]
+    return bottle.template('views/urejanje_recepta.tpl', id=recept.id,
+                                                         kategorije=kategorije,
+                                                         kulinarike=kulinarike,
+                                                         oznake=oznake,
+                                                         recept=recept,
+                                                         sestavine_recepta=sestavine,
+                                                         postopek=postopek,
+                                                         nutrientske_vrednosti=nutrientske_vrednosti,
+                                                         kategorije_recepta=kategorije_recepta,
+                                                         kulinarike_recepta=kulinarike_recepta,
+                                                         oznake_recepta=oznake_recepta,
+                                                         vse_sestavine=vse_sestavine)
+
 
 
 @bottle.post('/dodaj-sestavino/<id>')
