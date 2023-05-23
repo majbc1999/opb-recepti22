@@ -3,7 +3,9 @@
 <table class="navigacija">
     <tr>
         <th class="nav-stolpec-1">
-            Moji recepti
+            <form action="/moji-recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
+            </form>
         </th>
         <th class="nav-stolpec-mid">
             <div class="dropdown">

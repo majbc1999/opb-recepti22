@@ -31,6 +31,10 @@
               box-shadow: 2px 0px 7px 5px rgba(0,0,0,0.24),3px 0px 11px 7px rgba(0,0,0,0.19)
             }
 
+            .gumb-moji-recepti {
+              border: none;
+              background-color: none;
+            }
             .gumb-dodaj{
                 width: inherit;
                 margin-top: 80px;
@@ -50,6 +54,10 @@
               margin-top: 5px;
               margin-left: 25%;
               width: 50%;
+            }
+            .gumb-kategorije {
+              margin-top: 10px;
+              width: 2cm
             }
 
 
@@ -117,6 +125,7 @@
               border-radius: 3px;
               border-color: rgb(226, 223, 223);
               margin-top: 3px;
+              margin-bottom: 0;
               padding: 2px;
             }
             .sestavine {
@@ -203,6 +212,11 @@
             .izbira {
               width: fit-content; 
               background-color: white;
+            }
+
+            .v-vrsto {
+              display: flex;
+              justify-content: space-evenly;
             }
 
         

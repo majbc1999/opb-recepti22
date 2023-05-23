@@ -3,7 +3,9 @@
 <table class="navigacija">
     <tr>
         <th class="nav-stolpec-1">
-            Moji recepti
+            <form action="/moji-recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
+            </form>
         </th>
         <th class="nav-stolpec-mid">
             <div class="dropdown">
@@ -64,6 +66,11 @@
             <td>{{recept.st_porcij}}</td>
             <td>{{recept.cas_priprave}}</td>
             <td>{{recept.cas_kuhanja}}</td>
+            <td>
+                <form action="/urejanje-recepta/{{recept.id}}" method="GET">
+                    <button class="gumb" type="submit">Uredi</button>
+                </form>
+            </td>
             <td>
                 <form action="/izbrisi-recept" method="POST">
                     <button class="gumb" name="recept" value="{{recept.id}}" type="submit">Izbriši</button>

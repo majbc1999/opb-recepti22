@@ -41,12 +41,8 @@
 
 <div class="naslov postopek" style="color: darkred;">
     <h1>{{recept.ime}}</h1>
-    
-    <form action="/izbrisi-recept/{{recept.id}}" method="POST">
-        <button class="gumb gumb-izbrisi" type="submit">Izbriši</button>
-    </form>
 </div>
-	
+
 
 <div class="postopek">
     <h2 style="text-align: left;">POSTOPEK</h2>
@@ -58,14 +54,7 @@
         </tr>
         % end
     </table>
-
-    <p class="mali-tisk">Izpolni spodnjo predlogo, da dodaš korak postopka.</p>
-    <form action="/dodaj-postopek/{{recept.id}}" method="POST">
-        <textarea name="dodan-postopek" class="dodaj-postopek" rows="3" cols="90" placeholder="Postopek" required></textarea>
-        <button class="gumb gumb-postopek" type="submit" >Dodaj korak</button>
-    </form>
 </div>
-    
 
 <div class="sestavine">
     <h2>SESTAVINE</h2>
@@ -81,34 +70,6 @@
         </tr>
         % end
     </table>
-
-    <p class="mali-tisk">Izpolni spodnjo predlogo, da dodaš sestavino.</p>
-    <form action="/dodaj-sestavino/{{recept.id}}" method="POST">
-        <datalist id="vse_sestavine">
-            % for sestavina in vse_sestavine:
-            <option>{{sestavina.ime}}</option>
-            %end
-        </datalist>
-        <input name="dodana-sestavina" class="dodaj-sestavino" autocomplete="on" list="vse_sestavine" placeholder="Sestavina" required/>
-
-        <input name="dodana-kolicina" class="dodaj-sestavino" type="number" placeholder="Količina" step="0.01" required>
-
-        <label for="enota">Enota:</label>
-        <select class="dodaj-sestavino izbira" name="dodana-enota" id="enota">
-            <option value="g">g</option>
-            <option value="ml">ml</option>
-            <option value="cup">cup</option>
-            <option value="cup">ounce</option>
-            <option value="cup">pound</option>
-            <option value="cup">tbsp</option>
-            <option value="cup">tsp</option>
-            <option value="cup">bunch</option>
-            <option value="cup">scoop</option>
-            <option value="cup">egg</option>
-        </select>
-
-        <button class="gumb gumb-sestavina" type="submit" >Dodaj sestavino</button>
-    </form>
 </div>
 
 
@@ -121,18 +82,16 @@
     
     <h3>KATEGORIJE</h3>
     % for kategorija in kategorije_recepta:
-    <p class="podatki">{{kategorija.kategorija}}</p>
+    <p class="podatki">{{kategorija}}</p>
     % end
     
     <h3>KULINARIKE</h3> 
     % for kulinarika in kulinarike_recepta:
-    <p class="podatki">{{kulinarika.kulinarika}}</p>
+    <p class="podatki">{{kulinarika}}</p>
     % end
     
     <h3>OZNAKE</h3>
     % for oznaka in oznake_recepta:
-    <p class="podatki" style="margin-bottom: 0;">{{oznaka.oznaka}}</p>
+    <p class="podatki">{{oznaka}}</p>
     % end
 </div>
-    
-    
