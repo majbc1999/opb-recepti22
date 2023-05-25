@@ -65,6 +65,13 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            .dodaj_tabela{
+              margin-left: 10%;
+              margin-right: 10%;
+              margin-top: 10%;
+              margin-bottom: auto;
+              align: center;
+            }
             .prva-vrstica td {
                 background-color: gainsboro;
                 padding: 5px 10px;

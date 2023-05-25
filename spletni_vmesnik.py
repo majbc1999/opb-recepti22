@@ -190,43 +190,6 @@ def recept(id):
                                                          oznake_recepta=oznake_recepta,
                                                          vse_sestavine=vse_sestavine)
 
-@bottle.get('/dodaj-recept')
-def dodaj_recept_get():
-    return template_user('views/dodaj_recept.tpl', recept = model.ReceptPosSes(), kategorija=kategorije)
-
-@bottle.post('/dodaj-recept')
-def dodaj_recept_post():
-    ime = str(bottle.request.forms.getunicode('ime'))
-    st_porcij = int(bottle.request.forms.getunicode('st_porcij'))
-    cas_priprave = int(bottle.request.forms.getunicode('cas_priprave'))
-    cas_kuhanja = int(bottle.request.forms.getunicode('cas_kuhanja'))
-    kategorija = str(bottle.request.forms.getunicode('ime_kategorije'))
-    kulinarika = str(bottle.request.forms.getunicode('kulinarika'))
-    oznaka = str(bottle.request.forms.getunicode('oznaka'))
-
-    recept = r.dodaj_recept(model.Recepti(
-        ime = ime,
-        st_porcij=st_porcij,
-        cas_priprave=cas_priprave,
-        cas_kuhanja=cas_kuhanja
-    ))
-
-    r.dodaj_kategorijo(model.Kategorije(
-        id_recepta=recept.id,
-        kategorija=kategorija
-    ))
-
-    r.dodaj_kulinariko(model.Kulinarike(
-        id_recepta=recept.id,
-        kulinarika=kulinarika
-    ))
-
-    r.dodaj_oznako(model.Oznake(
-        id_recepta=recept.id,
-        oznaka = oznaka
-    ))
-
-    bottle.redirect('/recept/{}'.format(recept.id))
 
 
 @bottle.post('/izbrisi-recept')
@@ -346,7 +309,7 @@ def izbrisi_kategorijo(id):
 
 
 @bottle.post('/dodaj-kulinariko/<id>')
-def dodaj_kategorijo(id):
+def dodaj_kulinariko(id):
     kulinarike = bottle.request.forms.getall('izbrane-kulinarike')
     for k in kulinarike:
         r.dodaj_kulinariko(model.Kulinarike(
@@ -356,14 +319,14 @@ def dodaj_kategorijo(id):
     bottle.redirect('/recept/{}'.format(id))
 
 @bottle.post('/izbrisi-kulinariko/<id>')
-def izbrisi_kategorijo(id):
+def izbrisi_kulinariko(id):
     kulinarika = bottle.request.forms.getunicode('kulinarika')
     r.izbrisi_dva_pogoja(model.Kulinarike, kulinarika, "kulinarika", id, "id_recepta")
     bottle.redirect('/recept/{}'.format(id))
 
 
 @bottle.post('/dodaj-oznako/<id>')
-def dodaj_kategorijo(id):
+def dodaj_oznako(id):
     oznake = bottle.request.forms.getall('izbrane-oznake')
     for o in oznake:
         r.dodaj_oznako(model.Oznake(
@@ -373,10 +336,122 @@ def dodaj_kategorijo(id):
     bottle.redirect('/recept/{}'.format(id))
 
 @bottle.post('/izbrisi-oznako/<id>')
-def izbrisi_kategorijo(id):
+def izbrisi_oznako(id):
     oznaka = bottle.request.forms.getunicode('oznaka')
     r.izbrisi_dva_pogoja(model.Oznake, oznaka, "oznaka", id, "id_recepta")
     bottle.redirect('/recept/{}'.format(id))
+
+
+
+@bottle.get('/dodaj-recept')
+def dodaj_recept_get():
+    return template_user('views/dodaj_recept.tpl', recept = model.Recepti(),
+                                                         kategorije=kategorije,
+                                                         kulinarike=kulinarike,
+                                                         oznake=oznake)
+    
+
+@bottle.post('/dodaj-recept')
+def dodaj_recept_post():
+    ime = str(bottle.request.forms.getunicode('ime'))
+    st_porcij = int(bottle.request.forms.getunicode('st_porcij'))
+    cas_priprave = int(bottle.request.forms.getunicode('cas_priprave'))
+    cas_kuhanja = int(bottle.request.forms.getunicode('cas_kuhanja'))
+
+    recept = r.dodaj_recept(model.Recepti(
+        ime = ime,
+        st_porcij=st_porcij,
+        cas_priprave=cas_priprave,
+        cas_kuhanja=cas_kuhanja
+    ))
+
+    bottle.redirect('/dodaj-ostalo/{}'.format(recept.id))
+
+@bottle.post('/dodaj-prvi-postopek/<id>')
+def dodaj_prvi_postopek_post(id):
+    postopek =  str(bottle.request.forms.getunicode('dodan-postopek'))
+    vsi_koraki = r.dobi_vse_gen_id(model.Postopki, id, "id_recepta")
+    zadnji_korak = max([x.st_koraka for x in vsi_koraki], default=-1)
+
+    r.dodaj_postopek(model.Postopki(
+        id_recepta=id,
+        postopek=postopek,
+        st_koraka=zadnji_korak + 1
+    ))
+    bottle.redirect('/dodaj-ostalo/{}'.format(id))
+
+@bottle.post('/dodaj-prvo-kategorijo/<id>')
+def dodaj_prvo_kategorijo(id):
+    kategorije = bottle.request.forms.getall('izbrane-kategorije')
+    for k in kategorije:
+        r.dodaj_kategorijo(model.Kategorije(
+            id_recepta=id,
+            kategorija=k
+        ))
+    bottle.redirect('/dodaj-ostalo/{}'.format(id))
+
+@bottle.post('/dodaj-prvo-kulinariko/<id>')
+def dodaj_prvo_kulinariko(id):
+    kulinarike = bottle.request.forms.getall('izbrane-kulinarike')
+    for k in kulinarike:
+        r.dodaj_kulinariko(model.Kulinarike(
+            id_recepta=id,
+            kulinarika=k
+        ))
+    bottle.redirect('/dodaj-ostalo/{}'.format(id))
+
+@bottle.post('/dodaj-prvo-oznako/<id>')
+def dodaj_prvo_oznako(id):
+    oznake = bottle.request.forms.getall('izbrane-oznake')
+    for o in oznake:
+        r.dodaj_oznako(model.Oznake(
+            id_recepta=id,
+            oznaka=o
+        ))
+    bottle.redirect('/dodaj-ostalo/{}'.format(id))
+
+@bottle.post('/dodaj-prvo-sestavino/<id>')
+def dodaj_prvo_sestavino(id):
+    sestavina = str(bottle.request.forms.getunicode('dodana-sestavina'))
+    enota =  str(bottle.request.forms.getunicode('dodana-enota'))
+    kolicina =  str(bottle.request.forms.getunicode('dodana-kolicina'))
+
+    r.dodaj_sestavino(model.SestavineReceptov(
+            id_recepta=id,
+            sestavina=sestavina,
+            kolicina=kolicina,
+            enota=enota
+        ))
+    
+    r.dodaj_nutrientsko_vrednost(model.NutrientskeVrednosti(
+        id_recepta=id,
+        kalorije=0,
+        proteini=0,
+        ogljikovi_hidrati=0,
+        mascobe=0
+    ))
+
+    
+    r.dobi_nutrientske_vrednosti(id) 
+    nutrienti = r.dobi_nutrientske_vrednosti(id)
+    s = model.SestavineReceptov(int(id), kolicina, enota, sestavina)
+    r.pristej_nutriente(nutrienti, s)
+
+
+    bottle.redirect('/dodaj-ostalo/{}'.format(id))
+
+@bottle.get('/dodaj-ostalo/<id>')
+def dodaj_ostalo_get(id):
+    return template_user('views/dodaj_ostalo.tpl', recept = r.dobi_gen_id(model.Recepti, id,'id'),
+                                                         kategorije=kategorije,
+                                                         kulinarike=kulinarike,
+                                                         oznake=oznake,
+                                                         vse_sestavine=vse_sestavine,
+                                                         kategorije_recepta=[],
+                                                         kulinarike_recepta=[],
+                                                         oznake_recepta=[])
+
+
 
 
 #bottle.run(reloader=True, debug=True)

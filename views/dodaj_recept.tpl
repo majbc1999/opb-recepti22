@@ -1,35 +1,63 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- <link rel="stylesheet" href="C:\Lucija\1.letnik fmf\UVP\nutrient-tracker\views\style.css" type='text/css/'> -->
-        <title>Recepti</title>
-</head>
+% rebase('osnova.tpl')
 
-<body>
-    {{kategorija}}
-
-    <form method="POST">
-    <div style="margin: 10%;">
-        <p><h3>Dodaj recept:</h3></b>
-            <div style="border-style: ridge; background-color: lightgoldenrodyellow; padding: 10px; width: fit-content;" class="panel-block">
-                <form action="/dodaj-recept" method="POST">
-                    Ime recepta: <input type="text" name="ime">
-                    Stevilo porcij: <input type="int" name="st_porcij">
-                    Cas kuhanja: <input type="int" name="cas_kuhanja">
-                    Cas priprave: <input type="int" name="cas_priprave">
-                    Ime kategorije: <input type="text" name="ime_kategorije">
-                    Kulinarika: <input type="text" name="kulinarika">
-                    Oznaka: <input type="text" name="oznaka">
-                    <p><input type="submit" value="Dodaj recept!" href="/"></p>
-                </form>
+<table class="navigacija">
+    <tr>
+        <th class="nav-stolpec-1">
+            Moji recepti
+        </th>
+        <th class="nav-stolpec-mid">
+            <div class="dropdown">
+                Kategorije
+                <div class="dropdown-content">
+                    % for kategorija in kategorije:
+                        <a href="/recepti-kategorije/{{kategorija}}">{{kategorija}}</a><br>
+                    % end
+                </div>
             </div>
-    </div>
-    <div id="footer">
-        <div class="control">
-            <a class="button is-link is-light" href="/">Prekliči</a>
-        </div>
-    </div>
-    </form>
-</body>
+        </th>
+        <th class="nav-stolpec-mid">
+            <div class="dropdown">
+                Kulinarike
+                <div class="dropdown-content">
+                    % for kulinarika in kulinarike:
+                        <a href="/recepti-kulinarike/{{kulinarika}}">{{kulinarika}}</a><br>
+                    % end
+                </div>
+            </div>
+        </th>
+        <th class="nav-stolpec-mid">
+            <div class="dropdown">
+                Oznake
+                <div class="dropdown-content" style="height: 500px;">
+                    % for oznaka in oznake:
+                        <a href="/recepti-oznake/{{oznaka}}">{{oznaka}}</a><br>
+                    % end
+                </div>
+            </div>
+        </th>
+        <th></th>
+    </tr>
+</table>
+
+<div class='recept'>
+    <h2 style="text-align: center;" margin-top="10%">1. KORAK</h2>
+        <form action="/dodaj-recept" method="POST">
+            <table class"dodaj_tabela" style="width=70%"> 
+                <tr> <th>Ime recepta:</th> <td><input type="text" name="ime"></td></tr>
+                <tr> <th>Stevilo porcij:</th> <td><input type="int" name="st_porcij"><td></tr>
+                <tr> <th>Cas kuhanja:</th> <td><input type="int" name="cas_kuhanja"><td></tr>
+                <tr> <th>Cas priprave:</th> <td><input type="int" name="cas_priprave"><td></tr>
+            </table>
+        <button class="gumb gumb-recept" type="submit" >Dodaj</button>
+    </h2>
+</div>
+
+
+
+
+
+
+    
+
+
+
