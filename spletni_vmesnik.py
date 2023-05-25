@@ -75,6 +75,11 @@ def prijava():
         return template("prijava.tpl", napaka="Neuspešna prijava. Napačno geslo ali uporabniško ime.")
     
 
+@bottle.get('/registracija')
+def registracija_get():
+    return template('registracija.tpl', napaka=None)
+
+
 @post('/registracija')
 def registracija():
     username = str(request.forms.get('uporabnisko_ime'))

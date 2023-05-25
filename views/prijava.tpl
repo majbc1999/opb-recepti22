@@ -16,4 +16,9 @@
     %if napaka:
         <p class="opozorilo">{{napaka}}</p>
     %end
+
+    <p>Še niste registrirani?</p>
+    <form action="/registracija" method="GET">
+    <button type="submit" class="btn btn-primary">Registracija</button>
+    </form>
 </html>
