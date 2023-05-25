@@ -40,16 +40,18 @@
 </table>
 
 <div class='recept'>
-    <h2 style="text-align: center;" margin-top="10%">1. KORAK</h2>
+    <h1>1. KORAK</h1>
+    <div class="dodaj_tabela">
         <form action="/dodaj-recept" method="POST">
-            <table class"dodaj_tabela" style="width=70%"> 
+            <table> 
                 <tr> <th>Ime recepta:</th> <td><input type="text" name="ime"></td></tr>
                 <tr> <th>Stevilo porcij:</th> <td><input type="int" name="st_porcij"><td></tr>
                 <tr> <th>Cas kuhanja:</th> <td><input type="int" name="cas_kuhanja"><td></tr>
                 <tr> <th>Cas priprave:</th> <td><input type="int" name="cas_priprave"><td></tr>
             </table>
         <button class="gumb gumb-recept" type="submit" >Dodaj</button>
-    </h2>
+        </form>
+    </div>
 </div>
 
 

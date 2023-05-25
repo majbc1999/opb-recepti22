@@ -139,7 +139,7 @@
 </div>
 
 
-<div class="okvir" style="margin-right: 15px;">
+<div class="okvir" style="margin-right: 2%;">
     <h3>NUTRIENTSKE VREDNOSTI</h3>
     <p class="podatki" style="margin-bottom: 0;">Kalorije: {{nutrientske_vrednosti.kalorije}} Cal</p>
     <p class="podatki" style="margin-bottom: 0;">Ogljikovi hidrati: {{nutrientske_vrednosti.ogljikovi_hidrati}} g</p>
