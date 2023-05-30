@@ -37,6 +37,11 @@
                 </div>
             </div>
         </th>
+        <th class="nav-stolpec-mid">
+            <div class="button">
+                <a class="button is-link is-light" href="/odjava" method="POST">Odjava</a><br>
+            </div>
+        </th>
         <th></th>
     </tr>
 </table>
@@ -66,6 +71,7 @@
             <td>{{recept.st_porcij}}</td>
             <td>{{recept.cas_priprave}}</td>
             <td>{{recept.cas_kuhanja}}</td>
+            % if id_uporabnika == recept.id_uporabnika:
             <td>
                 <form action="/urejanje-recepta/{{recept.id}}" method="GET">
                     <button class="gumb" type="submit">Uredi</button>
@@ -76,6 +82,7 @@
                     <button class="gumb" name="recept" value="{{recept.id}}" type="submit">Izbriši</button>
                 </form>
             </td>
+            % end
         </tr>
     %end
 </table>  

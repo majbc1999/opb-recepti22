@@ -35,6 +35,11 @@
                 </div>
             </div>
         </th>
+        <th class="nav-stolpec-mid">
+            <div class="button">
+                <a class="button is-link is-light" href="/odjava" method="POST">Odjava</a><br>
+            </div>
+        </th>
         <th></th>
     </tr>
 </table>
@@ -202,4 +207,11 @@
 </form>
 </div>
 </div>
+
+<div id="footer">
+    <div class="control">
+        <a class="gumb gumb-kategorije" href='/recepti'>Končano</a>
+    </div>
+</div>
+
     

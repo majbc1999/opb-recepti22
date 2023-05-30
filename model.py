@@ -60,14 +60,6 @@ class NutrientskeVrednosti:
     ogljikovi_hidrati : int = field(default=0)
     mascobe : int = field(default=0)
 
-@dataclass_json
-@dataclass
-
-class Komentarji:
-    id: int = field(default=0)
-    avtor: str = field(default="")
-    vsebina: str = field(default="")
-    #datum
 
 @dataclass_json
 @dataclass
