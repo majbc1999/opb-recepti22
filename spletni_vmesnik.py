@@ -197,7 +197,10 @@ def recept(id):
 
 @bottle.get('/dodaj-recept')
 def dodaj_recept_get():
-    return template_user('views/dodaj_recept.tpl', recept = model.ReceptPosSes(), kategorija=kategorije)
+    return template_user('views/dodaj_recept.tpl', recept = model.ReceptPosSes(), 
+                                                   kategorije=kategorije,
+                                                   kulinarike=kulinarike,
+                                                   oznake=oznake)
 
 @bottle.post('/dodaj-recept')
 def dodaj_recept_post():
