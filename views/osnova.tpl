@@ -131,7 +131,7 @@
             .sestavine {
               width: 15%;
               position: absolute;
-              left: 250px;
+              left: 5%;
               top: 167px;
             }
             .postopek {
