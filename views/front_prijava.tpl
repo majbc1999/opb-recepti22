@@ -52,6 +52,9 @@
 <form action="/dodaj-recept" method="GET">
     <button class="gumb gumb-dodaj" type="submit">Dodaj nov recept</button>
 </form>
+<form action="/dodaj-novo-sestavino" method="GET">
+    <button class="gumb gumb-dodaj" type="submit">Dodaj novo sestavino</button>
+</form>
 </div>
 
 <table class="tabela" id="recepti">
