@@ -41,35 +41,24 @@
     </tr>
 </table>
 
-
-<div class="naslov postopek" style="color: darkred;">
-    <h1>{{kulinarika}}</h1>
+<div class='recept'>
+    <h1>DODAJ SESTAVINO</h1>
+    <div class="dodaj_tabela">
+        <form action="/dodaj-novo-sestavino" method="POST">
+            <table style="width:40%;align=center"> 
+                <tr> <th>Ime sestavine:</th> <td><input type="text" name="ime"></td></tr>
+                <tr> <th>Kolicina kalorij:</th> <td><input type="number" name="kalorije"><td></tr>
+                <tr> <th>Kolicina proteinov:</th> <td><input type="number" name="proteini"><td></tr>
+                <tr> <th>Kolicina ogljikovih hidratorv:</th> <td><input type="number" name="ogljikovi-hidrati"><td></tr>
+                <tr> <th>Kolicina mascob:</th> <td><input type="number" name="mascobe"><td></tr>
+            </table>
+        <button class="gumb gumb-recept" type="submit" >Dodaj</button>
+        </form>
+    </div>
 </div>
-
-
-<table class="tabela" id="recepti">
-    <tr class="prva-vrstica">
-        <td>ime recepta</td>
-        <td>število porcij</td>
-        <td>čas priprave</td>
-        <td>čas kuhanja</td>
-    </tr>
-     % for recept in recepti:
-        <tr class="vrstica">
-            <td>
-                <form action='/{{recept.id}}/' method="POST">
-                    <button class="gumb" style="text-align: left;" type="submit">{{recept.ime}}</button> 
-                </form>
-            </td>
-            <td>{{recept.st_porcij}}</td>
-            <td>{{recept.cas_priprave}}</td>
-            <td>{{recept.cas_kuhanja}}</td>
-        </tr>
-    %end
-</table>
 
 <div id="footer">
     <div class="control">
-        <a class="button is-link is-light" href='/'>Domov</a>
+        <a class="button is-link is-light" href='/recepti'>Prekliči</a>
     </div>
 </div>

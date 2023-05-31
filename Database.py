@@ -351,15 +351,15 @@ class Repo:
     def dobi_recept(self, ime_recepta: str) -> Recepti:
         # Preverimo, če recept že obstaja
         self.cur.execute("""
-            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja from Recept
+            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja, id_uporabnika from Recept
             WHERE ime = %s
           """, (ime_recepta,))
         
         row = self.cur.fetchone()
 
         if row:
-            id, ime, st_porcij, cas_priprave, cas_kuhanja = row
-            return Recepti(id, ime, st_porcij, cas_priprave, cas_kuhanja)
+            id, ime, st_porcij, cas_priprave, cas_kuhanja, id_uporabnika = row
+            return Recepti(id, ime, st_porcij, cas_priprave, cas_kuhanja, id_uporabnika)
         
         raise Exception("Recept z imenom " + ime_recepta + " ne obstaja")
 
@@ -382,7 +382,7 @@ class Repo:
 
         # Preverimo, če recept že obstaja
         self.cur.execute("""
-            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja from recepti
+            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja, id_uporabnika from recepti
             WHERE ime = %s
           """, (recept.ime,))
         
@@ -390,11 +390,11 @@ class Repo:
         if row:
             recept.id = row[0]
             return recept
-
+        
         # Sedaj dodamo recept
         self.cur.execute("""
-            INSERT INTO recepti (ime, st_porcij, cas_priprave, cas_kuhanja)
-              VALUES (%s, %s, %s, %s) RETURNING id; """, (recept.ime, recept.st_porcij, recept.cas_priprave, recept.cas_kuhanja))
+            INSERT INTO recepti (ime, st_porcij, cas_priprave, cas_kuhanja, id_uporabnika)
+              VALUES (%s, %s, %s, %s, %s) RETURNING id; """, (recept.ime, recept.st_porcij, recept.cas_priprave, recept.cas_kuhanja, recept.id_uporabnika,))
         recept.id = self.cur.fetchone()[0]
         self.conn.commit()
         return recept
@@ -518,13 +518,14 @@ class Repo:
         row = self.cur.fetchone()
         
         if row:
-            postopek.id = row[0]
+            postopek.id_recepta = row[0]
             return postopek
 
         
         self.cur.execute("""
             INSERT INTO postopki (id_recepta, st_koraka, postopek)
-              VALUES (%s, %s, %s) """, (postopek.id_recepta, postopek.st_koraka, postopek.postopek))
+              VALUES (%s, %s, %s) """, (postopek.id_recepta, postopek.st_koraka, postopek.postopek,))
+        print(postopek.st_koraka)
         self.conn.commit()
 
 

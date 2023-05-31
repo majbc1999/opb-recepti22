@@ -3,7 +3,9 @@
 <table class="navigacija">
     <tr>
         <th class="nav-stolpec-1">
-            Moji recepti
+            <form action="/moji-recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
+            </form>
         </th>
         <th class="nav-stolpec-mid">
             <div class="dropdown">
@@ -35,21 +37,40 @@
                 </div>
             </div>
         </th>
+        <th class="nav-stolpec-mid">
+            <div class="button">
+                <a class="button is-link is-light" href="/odjava" method="POST">Odjava</a><br>
+            </div>
+        </th>
         <th></th>
     </tr>
 </table>
 
 <div class='recept'>
     <h1>1. KORAK</h1>
-    <div>
-        <form class="dodaj_tabela" action="/dodaj-recept" method="POST">
-            <table> 
+    <div class="dodaj_tabela">
+        <form action="/dodaj-recept" method="POST">
+            <table style="width:40%;"> 
                 <tr> <th>Ime recepta:</th> <td><input type="text" name="ime"></td></tr>
-                <tr> <th>Stevilo porcij:</th> <td><input type="int" name="st_porcij"><td></tr>
-                <tr> <th>Cas kuhanja:</th> <td><input type="int" name="cas_kuhanja"><td></tr>
-                <tr> <th>Cas priprave:</th> <td><input type="int" name="cas_priprave"><td></tr>
+                <tr> <th>Stevilo porcij:</th> <td><input type="number" name="st_porcij"><td></tr>
+                <tr> <th>Cas kuhanja:</th> <td><input type="number" name="cas_kuhanja"><td></tr>
+                <tr> <th>Cas priprave:</th> <td><input type="number" name="cas_priprave"><td></tr>
             </table>
         <button class="gumb gumb-recept" type="submit" >Dodaj</button>
         </form>
     </div>
 </div>
+
+<div id="footer">
+    <div class="control">
+        <a class="button is-link is-light" href='/recepti'>Prekliči</a>
+    </div>
+</div>
+
+
+
+
+    
+
+
+

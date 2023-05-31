@@ -95,3 +95,9 @@
     <p class="podatki">{{oznaka}}</p>
     % end
 </div>
+
+<div id="footer">
+    <div class="control">
+        <a class="button is-link is-light" href='/'>Domov</a>
+    </div>
+</div>

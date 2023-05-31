@@ -44,12 +44,16 @@
     </tr>
 </table>
 
-<div class="naslov postopek" style="color: darkred;">
-    <h1>{{recept.ime}}</h1>
-    
-    <form action="/izbrisi-recept/{{recept.id}}" method="POST">
-        <button class="gumb gumb-izbrisi" type="submit">Izbriši</button>
-    </form>
+<div class='recept'>
+    <h1>DODAJ RECEPT</h1>
+        <table class"dodaj_tabela" style="width=70%"> 
+            <tr>
+                <td>Ime recepta:{{recept.ime}}</td>
+                <td>Stevilo porcij:{{recept.st_porcij}}</td>
+                <td>Cas kuhanja:{{recept.cas_kuhanja}}</td>
+                <td>Cas priprave:{{recept.cas_priprave}}</td>
+            </tr>
+        </table> 
 </div>
 
 
@@ -61,7 +65,7 @@
             <td style="padding: 3px 7px;">{{korak.st_koraka}}</td>
             <td style="text-align: left;padding: 3px 7px;">{{korak.postopek}}</td>
             <td>
-                <form action="/izbrisi-postopek/{{recept.id}}" method="POST">
+                <form action="/izbrisi-prvi-postopek/{{recept.id}}" method="POST">
                     <button class="gumb" name="korak" value="{{korak.postopek}}" type="submit">Izbriši</button>
                 </form>
             </td>
@@ -77,7 +81,7 @@
         <tr>
             <div id="welcomeDiv"  style="display:none; margin-bottom: 15px;" class="answer_list" >
                 <p class="mali-tisk">Uredi korak #{{korak.st_koraka}}</p>
-                <form action="/uredi-postopek/{{recept.id}}" method="POST">
+                <form action="/uredi-prvi-postopek/{{recept.id}}" method="POST">
                     <textarea name="spremenjen-postopek" class="dodaj-postopek" rows="2" cols="90" placeholder="{{korak.postopek}}" required>{{korak.postopek}}</textarea>
                     <button class="gumb gumb-postopek" name="nov_korak" value="{{korak.st_koraka}}" type="submit">Končaj urejanje</button>
                 </form>
@@ -87,7 +91,7 @@
     </table>
 
     <p class="mali-tisk">Izpolni spodnjo predlogo, da dodaš korak postopka.</p>
-    <form action="/dodaj-postopek/{{recept.id}}" method="POST">
+    <form action="/dodaj-prvi-postopek/{{recept.id}}" method="POST">
         <textarea name="dodan-postopek" class="dodaj-postopek" rows="3" cols="90" placeholder="Postopek" required></textarea>
         <button class="gumb gumb-postopek" type="submit" >Dodaj korak</button>
     </form>
@@ -106,7 +110,7 @@
             <td style="text-align: left; padding-left: 8px;">{{sestavina.sestavina}}</td>
             <td>{{sestavina.kolicina}} {{sestavina.enota}}</td>
             <td>
-                <form action="/izbrisi-sestavino/{{recept.id}}" method="POST">
+                <form action="/izbrisi-prvo-sestavino/{{recept.id}}" method="POST">
                     <button class="gumb" name="sestavina" value="{{sestavina.sestavina}}" type="submit">Izbriši</button>
                 </form>
             </td>
@@ -115,7 +119,7 @@
     </table>
 
     <p class="mali-tisk">Izpolni spodnjo predlogo, da dodaš sestavino.</p>
-    <form action="/dodaj-sestavino/{{recept.id}}" method="POST">
+    <form action="/dodaj-prvo-sestavino/{{recept.id}}" method="POST">
         <datalist id="vse_sestavine">
             % for sestavina in vse_sestavine:
             <option>{{sestavina.ime}}</option>
@@ -154,21 +158,21 @@
     <h3>KATEGORIJE</h3>
     % for kategorija in kategorije_recepta:
     <p class="podatki">{{kategorija}}
-        <a href="/izbrisi-kategorijo/{{recept.id}}" method="POST"
+        <a href="/izbrisi-prvo-kategorijo/{{recept.id}}" method="POST"
         name="kategorija" value="{{kategorija}}">Izbrisi</a></p>
     % end
     
     <h3>KULINARIKE</h3> 
     % for kulinarika in kulinarike_recepta:
     <p class="podatki">{{kulinarika}} 
-        <a href="/izbrisi-kulinariko/{{recept.id}}" method="POST"
+        <a href="/izbrisi-prvo-kulinariko/{{recept.id}}" method="POST"
         name="kulinarika" value="{{kulinarika}}">Izbrisi</a></p>
     % end
     
     <h3>OZNAKE</h3>
     % for oznaka in oznake_recepta:
     <p class="podatki">{{oznaka}}
-        <a href="/izbrisi-oznako/{{recept.id}}" method="POST"
+        <a href="/izbrisi-prvo-oznako/{{recept.id}}" method="POST"
         name="oznaka" value="{{oznaka}}">Izbrisi</a></p>
     % end
 </div>
@@ -177,7 +181,7 @@
 <h3>Izberite označbe, ki jih želite dodati.</h3>
 
 <div class="v-vrsto">
-<form action="/dodaj-kategorijo/{{recept.id}}" method="POST">
+<form action="/dodaj-prvo-kategorijo/{{recept.id}}" method="POST">
         % for kategorija in [k for k in kategorije if k not in kategorije_recepta]:
             <input type="checkbox" id="kategorija" name="kategorija" value="{{kategorija}}">
             <label for="kategorija">{{kategorija}}</label><br>
@@ -186,7 +190,7 @@
     <button class="gumb gumb-kategorije" type="submit" >Dodaj</button>
 </form>
 
-<form action="/dodaj-kulinariko/{{recept.id}}" method="POST">
+<form action="/dodaj-prvo-kulinariko/{{recept.id}}" method="POST">
         % for kulinarika in [k for k in kulinarike if k not in kulinarike_recepta]:
             <input type="checkbox" id="kulinarika" name="kulinarika" value="{{kulinarika}}">
             <label for="kulinarika">{{kulinarika}}</label><br>
@@ -195,7 +199,7 @@
     <button class="gumb gumb-kategorije" type="submit" >Dodaj</button>
 </form>
 
-<form action="/dodaj-oznako/{{recept.id}}" method="POST">
+<form action="/dodaj-prvo-oznako/{{recept.id}}" method="POST">
     <div style="overflow-y: scroll; height:595px;">
         % for oznaka in [k for k in oznake if k not in oznake_recepta]:
             <input type="checkbox" id="oznaka" name="oznaka" value="{{oznaka}}">

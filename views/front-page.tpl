@@ -39,7 +39,7 @@
         </th>
         <th class="nav-stolpec-mid">
             <div class="button">
-                <a class="button is-link is-light" href="/prijava" method="GET">prijava</a><br>
+                <a class="button is-link is-light" href="/prijava" method="GET">Prijava</a><br>
             </div>
         </th>
         <th></th>

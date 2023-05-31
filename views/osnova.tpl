@@ -65,6 +65,11 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            .dodaj_tabela{
+              width: 40%;
+              margin-left: auto;
+              margin-right: auto;
+            }
             .prva-vrstica td {
                 background-color: gainsboro;
                 padding: 5px 10px;
@@ -79,7 +84,7 @@
             .okvir {
               position: absolute;
               top: 180px;
-              right: 30px;
+              right: 2%;
               border: solid gainsboro;
               border-radius: 10px;
               padding: 0 10px;
@@ -89,7 +94,7 @@
             h1 {
                 text-align: center;
                 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                margin-bottom: 2px;
+                margin-bottom: 1%;
                 margin-top: 100px;
             }
             h2 {
