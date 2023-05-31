@@ -260,14 +260,14 @@ def dodaj_sestavino(id):
     s = model.SestavineReceptov(int(id), kolicina, enota, sestavina)
     r.pristej_nutriente(nutrienti, s)
 
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-re   cepta/{}'.format(id))
 
 
 @bottle.post('/izbrisi-sestavino/<id>')
 def brisi_sestavino(id):
     ime = bottle.request.forms.getunicode('sestavina')
     r.izbrisi_gen(model.SestavineReceptov, ime, id_col = "sestavina")
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 @bottle.post('/dodaj-postopek/<id>')
@@ -281,14 +281,14 @@ def dodaj_postopek_post(id):
         postopek=postopek,
         st_koraka=zadnji_korak + 1
     ))
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 @bottle.post('/izbrisi-postopek/<id>')
 def brisi_postopek(id):
     korak = bottle.request.forms.getunicode('korak')
     r.izbrisi_gen(model.Postopki, korak, "postopek")
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 @bottle.post('/uredi-postopek/<id>')
@@ -302,58 +302,59 @@ def uredi_postopek(id):
     )
     print(p)
     r.uredi_postopek(p)
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 @bottle.post('/dodaj-kategorijo/<id>')
 def dodaj_kategorijo(id):
-    kategorije = bottle.request.forms.getall('izbrane-kategorije')
+    kategorije = bottle.request.forms.getall('kategorija')
+    print(kategorije)
     for k in kategorije:
         r.dodaj_kategorijo(model.Kategorije(
             id_recepta=id,
             kategorija=k
         ))
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 @bottle.post('/izbrisi-kategorijo/<id>')
 def izbrisi_kategorijo(id):
     kategorija = bottle.request.forms.getunicode('kategorija')
     r.izbrisi_dva_pogoja(model.Kategorije, kategorija, "kategorija", id, "id_recepta")
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 @bottle.post('/dodaj-kulinariko/<id>')
 def dodaj_kulinariko(id):
-    kulinarike = bottle.request.forms.getall('izbrane-kulinarike')
+    kulinarike = bottle.request.forms.getall('kulinarika')
     for k in kulinarike:
         r.dodaj_kulinariko(model.Kulinarike(
             id_recepta=id,
             kulinarika=k
         ))
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 @bottle.post('/izbrisi-kulinariko/<id>')
 def izbrisi_kulinariko(id):
     kulinarika = bottle.request.forms.getunicode('kulinarika')
     r.izbrisi_dva_pogoja(model.Kulinarike, kulinarika, "kulinarika", id, "id_recepta")
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 @bottle.post('/dodaj-oznako/<id>')
 def dodaj_oznako(id):
-    oznake = bottle.request.forms.getall('izbrane-oznake')
+    oznake = bottle.request.forms.getall('oznaka')
     for o in oznake:
         r.dodaj_oznako(model.Oznake(
             id_recepta=id,
             oznaka=o
         ))
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 @bottle.post('/izbrisi-oznako/<id>')
 def izbrisi_oznako(id):
     oznaka = bottle.request.forms.getunicode('oznaka')
     r.izbrisi_dva_pogoja(model.Oznake, oznaka, "oznaka", id, "id_recepta")
-    bottle.redirect('/recept/{}'.format(id))
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 
@@ -374,7 +375,6 @@ def dodaj_recept_post():
     cas_kuhanja = int(bottle.request.forms.getunicode('cas_kuhanja'))
     id_uporabnika = int(bottle.request.get_cookie("id"))
 
-
     recept = r.dodaj_recept(model.Recepti(
         ime = ime,
         st_porcij=st_porcij,
@@ -382,6 +382,9 @@ def dodaj_recept_post():
         cas_kuhanja=cas_kuhanja,
         id_uporabnika=id_uporabnika
     ))
+    r.dodaj_nutrientsko_vrednost(model.NutrientskeVrednosti(
+        id_recepta=recept.id
+        ))
 
     bottle.redirect('/dodaj-ostalo/{}'.format(recept.id))
 
