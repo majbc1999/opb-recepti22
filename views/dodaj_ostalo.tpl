@@ -181,35 +181,39 @@
 <h3>Izberite označbe, ki jih želite dodati.</h3>
 
 <div class="v-vrsto">
-<form action="/dodaj-prvo-kategorijo/{{recept.id}}" method="POST">
-        % for kategorija in [k for k in kategorije if k not in kategorije_recepta]:
-            <input type="checkbox" id="kategorija" name="kategorija" value="{{kategorija}}">
-            <label for="kategorija">{{kategorija}}</label><br>
-        % end
-    </select>
-    <button class="gumb gumb-kategorije" type="submit" >Dodaj</button>
-</form>
 
-<form action="/dodaj-prvo-kulinariko/{{recept.id}}" method="POST">
-        % for kulinarika in [k for k in kulinarike if k not in kulinarike_recepta]:
-            <input type="checkbox" id="kulinarika" name="kulinarika" value="{{kulinarika}}">
-            <label for="kulinarika">{{kulinarika}}</label><br>
-        % end
-    </select>
-    <button class="gumb gumb-kategorije" type="submit" >Dodaj</button>
-</form>
-
-<form action="/dodaj-prvo-oznako/{{recept.id}}" method="POST">
-    <div style="overflow-y: scroll; height:595px;">
-        % for oznaka in [k for k in oznake if k not in oznake_recepta]:
-            <input type="checkbox" id="oznaka" name="oznaka" value="{{oznaka}}">
-            <label for="oznaka">{{oznaka}}</label><br>
-        % end
-    </select>
+<div class="v-vrsto">
+    <form action="/dodaj-kategorijo/{{recept.id}}" method="POST">
+        <h3>Kategorije</h3>
+            % for kategorija in [k for k in kategorije if k not in kategorije_recepta]:
+                <input type="checkbox" id="kategorija" name="kategorija" value="{{kategorija}}">
+                <label for="kategorija">{{kategorija}}</label><br>
+            % end
+        <button class="gumb gumb-kategorije" type="submit" >Dodaj</button>
+    </form>
+    
+    <form action="/dodaj-kulinariko/{{recept.id}}" method="POST">
+        <h3>Kulinarike</h3>
+            % for kulinarika in [k for k in kulinarike if k not in kulinarike_recepta]:
+                <input type="checkbox" id="kulinarika" name="kulinarika" value="{{kulinarika}}">
+                <label for="kulinarika">{{kulinarika}}</label><br>
+            % end
+        </select>
+        <button class="gumb gumb-kategorije" type="submit" >Dodaj</button>
+    </form>
+    
+    <form action="/dodaj-oznako/{{recept.id}}" method="POST">
+        <h3>Oznake</h3>
+        <div style="overflow-y: scroll; height:595px;">
+            % for oznaka in [k for k in oznake if k not in oznake_recepta]:
+                <input type="checkbox" id="oznaka" name="oznaka" value="{{oznaka}}">
+                <label for="oznaka">{{oznaka}}</label><br>
+            % end
+        </select>
+        </div>
+        <button class="gumb gumb-kategorije" type="submit">Dodaj</button>
+    </form>
     </div>
-    <button class="gumb gumb-kategorije" type="submit">Dodaj</button>
-</form>
-</div>
 </div>
 
 <div id="footer">

@@ -59,6 +59,19 @@
               margin-top: 10px;
               width: 2cm
             }
+            .gumb-link {
+              border: none;
+              outline: none;
+              background: none;
+              cursor: pointer;
+              color: #0000EE;
+              padding: 0;
+              text-decoration: underline;
+              font-family: inherit;
+              font-size: inherit;
+              flex: 1;
+              height: fit-content;
+            }
 
 
             .tabela{
@@ -66,7 +79,7 @@
                 margin-right: auto;
             }
             .dodaj_tabela{
-              width: 40%
+              width: 40%;
               margin-left: auto;
               margin-right: auto;
             }
@@ -132,6 +145,7 @@
               margin-top: 3px;
               margin-bottom: 0;
               padding: 2px;
+              height: fit-content;
             }
             .sestavine {
               width: 15%;

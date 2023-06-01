@@ -50,7 +50,7 @@
     <h1>1. KORAK</h1>
     <div class="dodaj_tabela">
         <form action="/dodaj-recept" method="POST">
-            <table style="width:40%;align=center"> 
+            <table style="width:40%;"> 
                 <tr> <th>Ime recepta:</th> <td><input type="text" name="ime"></td></tr>
                 <tr> <th>Stevilo porcij:</th> <td><input type="number" name="st_porcij"><td></tr>
                 <tr> <th>Cas kuhanja:</th> <td><input type="number" name="cas_kuhanja"><td></tr>
