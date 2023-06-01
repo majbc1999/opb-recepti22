@@ -21,8 +21,8 @@
             <div class="dropdown">
                 Kulinarike
                 <div class="dropdown-content">
-                    % for kulinarika in kulinarike:
-                        <a href="/recepti-kulinarike/{{kulinarika}}">{{kulinarika}}</a><br>
+                    % for kul in kulinarike:
+                        <a href="/recepti-kulinarike/{{kul}}">{{kul}}</a><br>
                     % end
                 </div>
             </div>

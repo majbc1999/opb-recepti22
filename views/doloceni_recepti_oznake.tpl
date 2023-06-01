@@ -31,8 +31,8 @@
             <div class="dropdown">
                 Oznake
                 <div class="dropdown-content" style="height: 500px;">
-                    % for oznaka in oznake:
-                        <a href="/recepti-oznake/{{oznaka}}">{{oznaka}}</a><br>
+                    % for ozn in oznake:
+                        <a href="/recepti-oznake/{{ozn}}">{{ozn}}</a><br>
                     % end
                 </div>
             </div>

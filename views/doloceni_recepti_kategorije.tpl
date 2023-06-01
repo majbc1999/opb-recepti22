@@ -11,8 +11,8 @@
             <div class="dropdown">
                 Kategorije
                 <div class="dropdown-content">
-                    % for kategorija in kategorije:
-                        <a href="/recepti-kategorije/{{kategorija}}">{{kategorija}}</a><br>
+                    % for kat in kategorije:
+                        <a href="/recepti-kategorije/{{kat}}">{{kat}}</a><br>
                     % end
                 </div>
             </div>

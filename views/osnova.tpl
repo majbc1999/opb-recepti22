@@ -37,7 +37,11 @@
             }
             .gumb-dodaj{
                 width: inherit;
+                height: inherit;
                 margin-top: 80px;
+                margin-left:5px;
+                margin-right: 5px;
+                margin-bottom: 5px;
                 background-color:rgb(172, 201, 204);
             }
             .gumb-izbrisi {

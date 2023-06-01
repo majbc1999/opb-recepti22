@@ -46,10 +46,10 @@ class SestavineReceptov:
 class Sestavine:
     id: int = field(default=0)
     ime: str = field(default="")
-    kalorije : int = field(default=0)
-    proteini : int = field(default=0)
-    ogljikovi_hidrati : int = field(default=0)
-    mascobe : int = field(default=0)
+    kalorije : float = field(default=0)
+    proteini : float = field(default=0)
+    ogljikovi_hidrati : float = field(default=0)
+    mascobe : float = field(default=0)
 
 @dataclass
 
