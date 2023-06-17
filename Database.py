@@ -26,7 +26,8 @@ T = TypeVar(
     Uporabnik,
     Kategorije,
     Kulinarike,
-    Oznake
+    Oznake,
+    Komentarji
     )
 
 class Repo:
@@ -351,7 +352,7 @@ class Repo:
     def dobi_recept(self, ime_recepta: str) -> Recepti:
         # Preverimo, če recept že obstaja
         self.cur.execute("""
-            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja, id_uporabnika from Recept
+            SELECT id, ime, st_porcij, cas_priprave, cas_kuhanja, id_uporabnika from recepti
             WHERE ime = %s
           """, (ime_recepta,))
         
@@ -398,6 +399,26 @@ class Repo:
         recept.id = self.cur.fetchone()[0]
         self.conn.commit()
         return recept
+
+    def dodaj_komentar(self, komentar: Komentarji) -> Komentarji:
+        # Preverimo, če komentar že obstaja
+        self.cur.execute("""
+            SELECT id, id_uporabnika, id_recepta, vsebina, datum_objave from komentarji
+            WHERE id_komentarja = %s
+          """, (komentar.id,))
+
+        row = self.cur.fetchone()
+        if row:
+            komentar.id = row[0]
+            return komentar
+        
+        # Sedaj dodamo komentar
+        self.cur.execute("""
+            INSERT INTO komentarji (id_uporabnika, id_recepta, vsebina, datum_objave)
+              VALUES (%s, %s, %s, %s) RETURNING id; """, (komentar.id_uporabnika, komentar.id_recepta, komentar.vsebina, komentar.datum_objave))
+        komentar.id = self.cur.fetchone()[0]
+        self.conn.commit()
+        return komentar
 
 
     def dodaj_nutrientsko_vrednost(self, nutrientska_vrednost: NutrientskeVrednosti) -> NutrientskeVrednosti:
@@ -655,3 +676,19 @@ class Repo:
         uporabnik.id = self.cur.fetchone()[0]
         self.conn.commit()
         return uporabnik
+
+
+    def slovar_komentarja(self, komentar: Komentarji):
+        self.cur.execute("""
+            SELECT id, uporabnisko_ime FROM uporabnik
+            WHERE id = %s;
+            """, ([komentar.id_uporabnika]))
+
+        row = self.cur.fetchone()
+        if row:
+            slovar = {
+                'ime_uporabnika' : row[1],
+                'datum_objave' : komentar.datum_objave,
+                'vsebina' : komentar.vsebina
+            }
+        return slovar

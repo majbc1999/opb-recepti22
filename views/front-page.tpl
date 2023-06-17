@@ -7,6 +7,12 @@
                 <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
             </form>
         </th>
+        <th class="nav-stolpec-1">
+            <form action="/recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Vsi recepti</button>
+            </form>
+        </th>
+        <th class="nav-stolpec-1"></th>
         <th class="nav-stolpec-mid">
             <div class="dropdown">
                 Kategorije
@@ -37,17 +43,23 @@
                 </div>
             </div>
         </th>
-        <th class="nav-stolpec-mid">
-            <div class="button">
-                <a class="button is-link is-light" href="/prijava" method="GET">Prijava</a><br>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1">
+            <div class="dropdown" style="text-align: center;">
+                ° ° °
+                <div class="dropdown-content">
+                    <div class="button">
+                        <a class="button" href="/prijava" method="GET">Prijava</a><br>
+                    </div>
+                </div>
             </div>
         </th>
-        <th></th>
     </tr>
 </table>
 
-<div class="naslov">
-<h1>RECEPTI</h1>
+<div class="naslov center">
+    <h1>RECEPTI</h1>
 </div>
 
 <table class="tabela" id="recepti">

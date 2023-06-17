@@ -97,3 +97,12 @@ class Uporabnik:
 class UporabnikDto:
     uporabnisko_ime: str = field(default="")
     id: int = field(default=0)
+
+@dataclass_json
+@dataclass
+class Komentarji:
+    id: int = field(default=0),
+    id_uporabnika: int = field(default=0)
+    id_recepta: int = field(default=0)
+    vsebina: str = field(default="")
+    datum_objave: str = field(default="")

@@ -3,8 +3,16 @@
 <table class="navigacija">
     <tr>
         <th class="nav-stolpec-1">
-            Moji recepti
+            <form action="/moji-recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
+            </form>
         </th>
+        <th class="nav-stolpec-1">
+            <form action="/recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Vsi recepti</button>
+            </form>
+        </th>
+        <th class="nav-stolpec-1"></th>
         <th class="nav-stolpec-mid">
             <div class="dropdown">
                 Kategorije
@@ -35,154 +43,166 @@
                 </div>
             </div>
         </th>
-        <th class="nav-stolpec-mid">
-            <div class="button">
-                <a class="button is-link is-light" href="/odjava" method="POST">Odjava</a><br>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1">
+            <div class="dropdown" style="text-align: center;">
+                ° ° °
+                <div class="dropdown-content">
+                    <div class="button">
+                        <a class="button" href="/prijava" method="GET">Prijava</a><br>
+                    </div>
+                    <div class="button">
+                        <a class="button" href="/odjava" method="POST">Odjava</a><br>
+                    </div>
+                </div>
             </div>
         </th>
-        <th></th>
     </tr>
 </table>
 
-<div class="naslov postopek" style="color: darkred;">
-    <h1>{{recept.ime}}</h1>
-    
-    <form action="/izbrisi-recept/{{recept.id}}" method="POST">
-        <button class="gumb gumb-izbrisi" type="submit">Izbriši</button>
-    </form>
+
+<form action="/izbrisi-recept/{{recept.id}}" method="POST">
+    <button class="gumb gumb-izbrisi" type="submit">Izbriši</button>
+</form>
+
+<div class="naslov center">
+    <h1 style="color: darkred;">{{recept.ime}}</h1>
 </div>
+    
+
+<div class="flex-container">
+
+    <div>
+        <h2>SESTAVINE</h2>
+        <table class="tabela" id="sestavine_recepta" style="width:100%">
+            <tr class="prva-vrstica">
+                <td>sestavina</td>
+                <td>količina</td>
+            </tr>
+            % for sestavina in sestavine_recepta:
+            <tr class="vrstica">
+                <td style="text-align: left; padding-left: 8px;">{{sestavina.sestavina}}</td>
+                <td>{{sestavina.kolicina}} {{sestavina.enota}}</td>
+                <td>
+                    <form action="/izbrisi-sestavino/{{recept.id}}" method="POST">
+                        <button class="gumb" name="sestavina" value="{{sestavina.sestavina}}" type="submit">Izbriši</button>
+                    </form>
+                </td>
+            </tr>
+            % end
+        </table>
+    
+        <p class="mali-tisk">Izpolni spodnjo predlogo, da dodaš sestavino.</p>
+        <form action="/dodaj-sestavino/{{recept.id}}" method="POST">
+            <datalist id="vse_sestavine">
+                % for sestavina in vse_sestavine:
+                <option>{{sestavina.ime}}</option>
+                %end
+            </datalist>
+            <input name="dodana-sestavina" class="dodaj-sestavino" autocomplete="on" list="vse_sestavine" placeholder="Sestavina" required/>
+    
+            <input name="dodana-kolicina" class="dodaj-sestavino" type="number" placeholder="Količina" step="0.01" required>
+    
+            <label for="enota">Enota:</label>
+            <select class="dodaj-sestavino izbira" name="dodana-enota" id="enota">
+                <option value="g">g</option>
+                <option value="ml">ml</option>
+                <option value="cup">cup</option>
+                <option value="cup">ounce</option>
+                <option value="cup">pound</option>
+                <option value="cup">tbsp</option>
+                <option value="cup">tsp</option>
+                <option value="cup">bunch</option>
+                <option value="cup">scoop</option>
+                <option value="cup">egg</option>
+            </select>
+    
+            <button class="gumb gumb-sestavina" type="submit" >Dodaj sestavino</button>
+        </form>
+    </div>
+
+    <div>
+        <h2 style="text-align: left;">POSTOPEK</h2>
+        <table class="tabela" id="postopek">
+            % for korak in postopek:
+            <tr class="vrstica">
+                <td style="padding: 3px 7px;">{{korak.st_koraka}}</td>
+                <td style="text-align: left;padding: 3px 7px;">{{korak.postopek}}</td>
+                <td>
+                    <form action="/izbrisi-postopek/{{recept.id}}" method="POST">
+                        <button class="gumb" name="korak" value="{{korak.postopek}}" type="submit">Izbriši</button>
+                    </form>
+                </td>
+                <td>
+                    <input type="button" class="gumb" name="answer" value="Uredi" onclick="showDiv()" />
+                    <script>
+                        function showDiv() {
+                           document.getElementById('welcomeDiv').style.display = "block";
+                        }
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <div id="welcomeDiv"  style="display:none; margin-bottom: 15px;" class="answer_list" >
+                    <p class="mali-tisk">Uredi korak #{{korak.st_koraka}}</p>
+                    <form action="/uredi-postopek/{{recept.id}}" method="POST">
+                        <textarea name="spremenjen-postopek" class="dodaj-postopek" rows="2" cols="90" placeholder="{{korak.postopek}}" required>{{korak.postopek}}</textarea>
+                        <button class="gumb gumb-postopek" name="nov_korak" value="{{korak.st_koraka}}" type="submit">Končaj urejanje</button>
+                    </form>
+                </div>
+            </tr>
+            % end
+        </table>
+
+        <p class="mali-tisk">Izpolni spodnjo predlogo, da dodaš korak postopka.</p>
+        <form action="/dodaj-postopek/{{recept.id}}" method="POST">
+            <textarea name="dodan-postopek" class="dodaj-postopek" rows="3" cols="90" placeholder="Postopek" required></textarea>
+            <button class="gumb gumb-postopek" type="submit" >Dodaj korak</button>
+        </form>
+    </div>
 
 
-<div class="postopek">
-    <h2 style="text-align: left;">POSTOPEK</h2>
-    <table class="tabela" id="postopek">
-        % for korak in postopek:
-        <tr class="vrstica">
-            <td style="padding: 3px 7px;">{{korak.st_koraka}}</td>
-            <td style="text-align: left;padding: 3px 7px;">{{korak.postopek}}</td>
-            <td>
-                <form action="/izbrisi-postopek/{{recept.id}}" method="POST">
-                    <button class="gumb" name="korak" value="{{korak.postopek}}" type="submit">Izbriši</button>
-                </form>
-            </td>
-            <td>
-                <input type="button" class="gumb" name="answer" value="Uredi" onclick="showDiv()" />
-                <script>
-                    function showDiv() {
-                       document.getElementById('welcomeDiv').style.display = "block";
-                    }
-                </script>
-            </td>
-        </tr>
-        <tr>
-            <div id="welcomeDiv"  style="display:none; margin-bottom: 15px;" class="answer_list" >
-                <p class="mali-tisk">Uredi korak #{{korak.st_koraka}}</p>
-                <form action="/uredi-postopek/{{recept.id}}" method="POST">
-                    <textarea name="spremenjen-postopek" class="dodaj-postopek" rows="2" cols="90" placeholder="{{korak.postopek}}" required>{{korak.postopek}}</textarea>
-                    <button class="gumb gumb-postopek" name="nov_korak" value="{{korak.st_koraka}}" type="submit">Končaj urejanje</button>
-                </form>
-            </div>
-        </tr>
+    <div class="okvir">
+        <h3>NUTRIENTSKE VREDNOSTI</h3>
+        <p class="podatki" style="margin-bottom: 0;">Kalorije: {{nutrientske_vrednosti.kalorije}} Cal</p>
+        <p class="podatki" style="margin-bottom: 0;">Ogljikovi hidrati: {{nutrientske_vrednosti.ogljikovi_hidrati}} g</p>
+        <p class="podatki" style="margin-bottom: 0;">Maščobe: {{nutrientske_vrednosti.mascobe}} g</p>
+        <p class="podatki" style="margin-bottom: 0;">Beljakovine: {{nutrientske_vrednosti.proteini}} g</p>
+
+        <h3>KATEGORIJE</h3>
+        % for kategorija in kategorije_recepta:
+        <div class="podatki" style="display: flex;height: 25px;">
+            <p style="flex:1;margin-top: 0;">{{kategorija}}</p>
+            <form action="/izbrisi-kategorijo/{{recept.id}}" method="POST">
+                <button class="gumb-link" name="kategorija" value="{{kategorija}}" type="submit">Izbriši</button>
+            </form>
+        </div>
         % end
-    </table>
 
-    <p class="mali-tisk">Izpolni spodnjo predlogo, da dodaš korak postopka.</p>
-    <form action="/dodaj-postopek/{{recept.id}}" method="POST">
-        <textarea name="dodan-postopek" class="dodaj-postopek" rows="3" cols="90" placeholder="Postopek" required></textarea>
-        <button class="gumb gumb-postopek" type="submit" >Dodaj korak</button>
-    </form>
-</div>
-    
-
-<div class="sestavine">
-    <h2>SESTAVINE</h2>
-    <table class="tabela" id="sestavine_recepta" style="width:100%">
-        <tr class="prva-vrstica">
-            <td>sestavina</td>
-            <td>količina</td>
-        </tr>
-        % for sestavina in sestavine_recepta:
-        <tr class="vrstica">
-            <td style="text-align: left; padding-left: 8px;">{{sestavina.sestavina}}</td>
-            <td>{{sestavina.kolicina}} {{sestavina.enota}}</td>
-            <td>
-                <form action="/izbrisi-sestavino/{{recept.id}}" method="POST">
-                    <button class="gumb" name="sestavina" value="{{sestavina.sestavina}}" type="submit">Izbriši</button>
-                </form>
-            </td>
-        </tr>
+        <h3>KULINARIKE</h3> 
+        % for kulinarika in kulinarike_recepta:
+        <div class="podatki" style="display: flex;height: 25px;">
+            <p style="flex:1;margin-top: 0;">{{kulinarika}}</p>
+            <form action="/izbrisi-kulinariko/{{recept.id}}" method="POST">
+                <button class="gumb-link" name="kulinarika" value="{{kulinarika}}" type="submit">Izbriši</button>
+            </form>
+        </div>
         % end
-    </table>
 
-    <p class="mali-tisk">Izpolni spodnjo predlogo, da dodaš sestavino.</p>
-    <form action="/dodaj-sestavino/{{recept.id}}" method="POST">
-        <datalist id="vse_sestavine">
-            % for sestavina in vse_sestavine:
-            <option>{{sestavina.ime}}</option>
-            %end
-        </datalist>
-        <input name="dodana-sestavina" class="dodaj-sestavino" autocomplete="on" list="vse_sestavine" placeholder="Sestavina" required/>
-
-        <input name="dodana-kolicina" class="dodaj-sestavino" type="number" placeholder="Količina" step="0.01" required>
-
-        <label for="enota">Enota:</label>
-        <select class="dodaj-sestavino izbira" name="dodana-enota" id="enota">
-            <option value="g">g</option>
-            <option value="ml">ml</option>
-            <option value="cup">cup</option>
-            <option value="cup">ounce</option>
-            <option value="cup">pound</option>
-            <option value="cup">tbsp</option>
-            <option value="cup">tsp</option>
-            <option value="cup">bunch</option>
-            <option value="cup">scoop</option>
-            <option value="cup">egg</option>
-        </select>
-
-        <button class="gumb gumb-sestavina" type="submit" >Dodaj sestavino</button>
-    </form>
+        <h3>OZNAKE</h3>
+        % for oznaka in oznake_recepta:
+        <div class="podatki" style="display: flex;height: 25px;">
+            <p style="flex:1;margin-top: 0;">{{oznaka}}</p>
+            <form action="/izbrisi-oznako/{{recept.id}}" method="POST">
+                <button class="gumb-link" name="oznaka" value="{{oznaka}}" type="submit">Izbriši</button>
+            </form>
+        </div>
+        % end
+    </div>
 </div>
 
-
-<div class="okvir" style="margin-right: 2%;">
-    <h3>NUTRIENTSKE VREDNOSTI</h3>
-    <p class="podatki" style="margin-bottom: 0;">Kalorije: {{nutrientske_vrednosti.kalorije}} Cal</p>
-    <p class="podatki" style="margin-bottom: 0;">Ogljikovi hidrati: {{nutrientske_vrednosti.ogljikovi_hidrati}} g</p>
-    <p class="podatki" style="margin-bottom: 0;">Maščobe: {{nutrientske_vrednosti.mascobe}} g</p>
-    <p class="podatki" style="margin-bottom: 0;">Beljakovine: {{nutrientske_vrednosti.proteini}} g</p>
-    
-    <h3>KATEGORIJE</h3>
-    % for kategorija in kategorije_recepta:
-    <div class="podatki" style="display: flex;height: 25px;">
-        <p style="flex:1;margin-top: 0;">{{kategorija}}</p>
-        <form action="/izbrisi-kategorijo/{{recept.id}}" method="POST">
-            <button class="gumb-link" name="kategorija" value="{{kategorija}}" type="submit">Izbriši</button>
-        </form>
-    </div>
-    % end
-    
-    <h3>KULINARIKE</h3> 
-    % for kulinarika in kulinarike_recepta:
-    <div class="podatki" style="display: flex;height: 25px;">
-        <p style="flex:1;margin-top: 0;">{{kulinarika}}</p>
-        <form action="/izbrisi-kulinariko/{{recept.id}}" method="POST">
-            <button class="gumb-link" name="kulinarika" value="{{kulinarika}}" type="submit">Izbriši</button>
-        </form>
-    </div>
-    % end
-    
-    <h3>OZNAKE</h3>
-    % for oznaka in oznake_recepta:
-    <div class="podatki" style="display: flex;height: 25px;">
-        <p style="flex:1;margin-top: 0;">{{oznaka}}</p>
-        <form action="/izbrisi-oznako/{{recept.id}}" method="POST">
-            <button class="gumb-link" name="oznaka" value="{{oznaka}}" type="submit">Izbriši</button>
-        </form>
-    </div>
-    % end
-</div>
-
-<div class="postopek" style="margin-top: 50px;">
+<div class="center" style="margin-top: 50px; width: 50%;">
 <h3>Izberite označbe, ki jih želite dodati.</h3>
 
 <div class="v-vrsto">
@@ -219,10 +239,13 @@
 </div>
 </div>
 
+
 <div id="footer">
-    <div class="control">
-        <a class="gumb gumb-kategorije" href='/recepti'>Končano</a>
-    </div>
+    <form action="/recepti" method="GET">
+        <div class="center" style="width:40%">    
+            <button class="gumb gumb-kategorije" type="submit">Končano</a>
+        </div>
+    </form>
 </div>
 
     

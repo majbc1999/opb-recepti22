@@ -7,6 +7,12 @@
                 <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
             </form>
         </th>
+        <th class="nav-stolpec-1">
+            <form action="/recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Vsi recepti</button>
+            </form>
+        </th>
+        <th class="nav-stolpec-1"></th>
         <th class="nav-stolpec-mid">
             <div class="dropdown">
                 Kategorije
@@ -31,19 +37,33 @@
             <div class="dropdown">
                 Oznake
                 <div class="dropdown-content" style="height: 500px;">
-                    % for ozn in oznake:
-                        <a href="/recepti-oznake/{{ozn}}">{{ozn}}</a><br>
+                    % for oznaka in oznake:
+                        <a href="/recepti-oznake/{{oznaka}}">{{oznaka}}</a><br>
                     % end
                 </div>
             </div>
         </th>
-        <th></th>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1">
+            <div class="dropdown" style="text-align: center;">
+                ° ° °
+                <div class="dropdown-content">
+                    <div class="button">
+                        <a class="button" href="/prijava" method="GET">Prijava</a><br>
+                    </div>
+                    <div class="button">
+                        <a class="button" href="/odjava" method="POST">Odjava</a><br>
+                    </div>
+                </div>
+            </div>
+        </th>
     </tr>
 </table>
 
 
-<div class="naslov postopek" style="color: darkred;">
-    <h1>{{oznaka}}</h1>
+<div class="center" style="color: darkred;top: 100px;">
+    <h1>{{izb_oznaka}}</h1>
 </div>
 
 
@@ -67,9 +87,3 @@
         </tr>
     %end
 </table>
-
-<div id="footer">
-    <div class="control">
-        <a class="button is-link is-light" href='/'>Domov</a>
-    </div>
-</div>
