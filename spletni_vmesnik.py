@@ -1,3 +1,4 @@
+from sqlite3 import Timestamp
 from bottletext import get, post, run, request, template, redirect, static_file, url, response, template_user
 
 import bottletext
@@ -8,6 +9,7 @@ import Database
 from Database import Repo
 from uporabnik import AuthService
 from functools import wraps
+from datetime import datetime
 
 import os
 
@@ -313,12 +315,12 @@ def dodaj_komentar(id):
     id_uporabnika = int(bottle.request.get_cookie('id'))
     vsebina = str(bottle.request.forms.getunicode('dodan-komentar'))
     vsi_komentarji = r.dobi_vse_gen_id(model.Komentarji, id, "id_recepta")
-    najvecji_id = max([x.id_komentarja for x in vsi_komentarji] + [0])
     
     r.dodaj_komentar(model.Komentarji(
         id_uporabnika = id_uporabnika,
         id_recepta = id,
-        vsebina = vsebina
+        vsebina = vsebina,
+        datum_objave = datetime.now()
     ))
     bottle.redirect('/recept/{}'.format(id))
 
