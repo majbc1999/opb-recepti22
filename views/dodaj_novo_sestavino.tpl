@@ -7,6 +7,12 @@
                 <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
             </form>
         </th>
+        <th class="nav-stolpec-1">
+            <form action="/recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Vsi recepti</button>
+            </form>
+        </th>
+        <th class="nav-stolpec-1"></th>
         <th class="nav-stolpec-mid">
             <div class="dropdown">
                 Kategorije
@@ -37,7 +43,21 @@
                 </div>
             </div>
         </th>
-        <th></th>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1">
+            <div class="dropdown" style="text-align: center;">
+                ° ° °
+                <div class="dropdown-content">
+                    <div class="button">
+                        <a class="button" href="/prijava" method="GET">Prijava</a><br>
+                    </div>
+                    <div class="button">
+                        <a class="button" href="/odjava" method="POST">Odjava</a><br>
+                    </div>
+                </div>
+            </div>
+        </th>
     </tr>
 </table>
 
@@ -45,7 +65,7 @@
     <h1>DODAJ SESTAVINO</h1>
     <div class="dodaj_tabela">
         <form action="/dodaj-novo-sestavino" method="POST">
-            <table style="width:40%;align=center"> 
+            <table style="width:40%; align-items:center;"> 
                 <tr> <th>Ime sestavine:</th> <td><input type="text" name="ime"></td></tr>
                 <tr> <th>Kolicina kalorij:</th> <td><input type="number" name="kalorije"><td></tr>
                 <tr> <th>Kolicina proteinov:</th> <td><input type="number" name="proteini"><td></tr>
@@ -54,11 +74,5 @@
             </table>
         <button class="gumb gumb-recept" type="submit" >Dodaj</button>
         </form>
-    </div>
-</div>
-
-<div id="footer">
-    <div class="control">
-        <a class="button is-link is-light" href='/recepti'>Prekliči</a>
     </div>
 </div>

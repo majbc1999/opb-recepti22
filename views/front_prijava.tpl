@@ -7,6 +7,12 @@
                 <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
             </form>
         </th>
+        <th class="nav-stolpec-1">
+            <form action="/recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Vsi recepti</button>
+            </form>
+        </th>
+        <th class="nav-stolpec-1"></th>
         <th class="nav-stolpec-mid">
             <div class="dropdown">
                 Kategorije
@@ -37,25 +43,37 @@
                 </div>
             </div>
         </th>
-        <th class="nav-stolpec-mid">
-            <div class="button">
-                <a class="button is-link is-light" href="/odjava" method="POST">Odjava</a><br>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1">
+            <div class="dropdown" style="text-align: center;">
+                ° ° °
+                <div class="dropdown-content">
+                    <div class="button">
+                        <a class="button" href="/prijava" method="GET">Prijava</a><br>
+                    </div>
+                    <div class="button">
+                        <a class="button" href="/odjava" method="POST">Odjava</a><br>
+                    </div>
+                </div>
             </div>
         </th>
-        <th></th>
     </tr>
 </table>
 
-<div class="naslov">
-<h1>RECEPTI</h1>
 
 <form action="/dodaj-recept" method="GET">
-    <button class="gumb gumb-dodaj" type="submit">Dodaj nov recept</button>
+    <button class="gumb gumb-dodaj" style="right:20%" type="submit">Dodaj nov recept</button>
 </form>
+
 <form action="/dodaj-novo-sestavino" method="GET">
-    <button class="gumb gumb-dodaj" type="submit">Dodaj novo sestavino</button>
+    <button class="gumb gumb-dodaj" style="right:10%" type="submit">Dodaj novo sestavino</button>
 </form>
+
+<div class="naslov center">
+    <h1>RECEPTI</h1>
 </div>
+
 
 <table class="tabela" id="recepti">
     <tr class="prva-vrstica">

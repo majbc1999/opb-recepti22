@@ -7,6 +7,12 @@
                 <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
             </form>
         </th>
+        <th class="nav-stolpec-1">
+            <form action="/recepti" method="GET">
+                <button class="gumb-moji-recepti" type="submit">Vsi recepti</button>
+            </form>
+        </th>
+        <th class="nav-stolpec-1"></th>
         <th class="nav-stolpec-mid">
             <div class="dropdown">
                 Kategorije
@@ -21,8 +27,8 @@
             <div class="dropdown">
                 Kulinarike
                 <div class="dropdown-content">
-                    % for kul in kulinarike:
-                        <a href="/recepti-kulinarike/{{kul}}">{{kul}}</a><br>
+                    % for kulinarika in kulinarike:
+                        <a href="/recepti-kulinarike/{{kulinarika}}">{{kulinarika}}</a><br>
                     % end
                 </div>
             </div>
@@ -37,13 +43,27 @@
                 </div>
             </div>
         </th>
-        <th></th>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1"></th>
+        <th class="nav-stolpec-1">
+            <div class="dropdown" style="text-align: center;">
+                ° ° °
+                <div class="dropdown-content">
+                    <div class="button">
+                        <a class="button" href="/prijava" method="GET">Prijava</a><br>
+                    </div>
+                    <div class="button">
+                        <a class="button" href="/odjava" method="POST">Odjava</a><br>
+                    </div>
+                </div>
+            </div>
+        </th>
     </tr>
 </table>
 
 
-<div class="naslov postopek" style="color: darkred;">
-    <h1>{{kulinarika}}</h1>
+<div class="center" style="color: darkred;top: 100px;">
+    <h1>{{izb_kulinarika}}</h1>
 </div>
 
 
@@ -67,9 +87,3 @@
         </tr>
     %end
 </table>
-
-<div id="footer">
-    <div class="control">
-        <a class="button is-link is-light" href='/'>Domov</a>
-    </div>
-</div>

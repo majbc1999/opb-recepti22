@@ -32,21 +32,33 @@
             }
 
             .gumb-moji-recepti {
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              font-weight: bold;
               border: none;
-              background-color: none;
+              background: none;
+              padding: 0 0;
+              margin-top: 7px;
+              width: 100%;
+              height: 1cm;
+              cursor: pointer;
             }
+            .gumb-moji-recepti:hover {
+              color: indianred;
+            }
+
             .gumb-dodaj{
                 width: inherit;
                 height: inherit;
+                position: absolute;
                 margin-top: 80px;
-                margin-left:5px;
-                margin-right: 5px;
                 margin-bottom: 5px;
                 background-color:rgb(172, 201, 204);
             }
             .gumb-izbrisi {
+                right: 15%;
+                position:absolute;
                 width: inherit;
-                margin-top: 80px;
+                margin-top: 85px;
                 background-color:rgb(204, 172, 172);
             }
             .gumb-sestavina {
@@ -61,7 +73,6 @@
             }
             .gumb-kategorije {
               margin-top: 10px;
-              width: 2cm
             }
             .gumb-link {
               border: none;
@@ -98,21 +109,13 @@
             }
 
 
-            .okvir {
-              position: absolute;
-              top: 180px;
-              right: 2%;
-              border: solid gainsboro;
-              border-radius: 10px;
-              padding: 0 10px;
-            }
-
-
             h1 {
                 text-align: center;
                 font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
                 margin-bottom: 1%;
                 margin-top: 100px;
+                margin-left: auto;
+                margin-right: auto;
             }
             h2 {
                 text-align: center;
@@ -141,7 +144,27 @@
               margin-top: 35px;
             }
 
+            .prijava {
+              border: 3px solid indianred;
+              border-radius: 9px;
+              top: 100px;
+            }
 
+
+            .flex-container {
+              display: flex;
+              flex-wrap: nowrap;
+              justify-content: center;
+              align-items: stretch;
+            }
+            .flex-container > div {
+              margin: 10px;
+            }
+
+            .okvir {
+              border: solid gainsboro;
+              border-radius: 10px;
+            }
             .podatki {
               background-color: whitesmoke;
               border-radius: 3px;
@@ -150,18 +173,6 @@
               margin-bottom: 0;
               padding: 2px;
               height: fit-content;
-            }
-            .sestavine {
-              width: 15%;
-              position: absolute;
-              left: 5%;
-              top: 167px;
-            }
-            .postopek {
-              width: 40%;
-              margin-right: auto;
-              margin-left: auto;
-              padding: 8px;
             }
 
 
@@ -178,11 +189,11 @@
             }
             .nav-stolpec-1 {
                 text-align: left;
-                width: 26%;
+                width: 8%;
                 color: white;
             }
             .nav-stolpec-mid {
-                width: 16%;
+                width: 17.3%;
             }
 
 
@@ -194,6 +205,7 @@
             }
             .dropdown-content {
               font:small;
+              text-align: center;
               display: none;
               position: absolute;
               width: 100%;
@@ -240,6 +252,10 @@
             .v-vrsto {
               display: flex;
               justify-content: space-evenly;
+            }
+            .center {
+              margin: auto;
+              padding: 10px;
             }
 
         
