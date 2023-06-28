@@ -402,20 +402,20 @@ class Repo:
 
     def dodaj_komentar(self, komentar: Komentarji) -> Komentarji:
         # Preverimo, če komentar že obstaja
-        self.cur.execute("""
-            SELECT id, id_uporabnika, id_recepta, vsebina, datum_objave from komentarji
-            WHERE id_komentarja = %s
-          """, (komentar.id,))
-
-        row = self.cur.fetchone()
-        if row:
-            komentar.id = row[0]
-            return komentar
+        #self.cur.execute("""
+        #    SELECT id, id_uporabnika, id_recepta, vsebina from komentarji1
+        #    WHERE id = %s
+        #  """, (komentar.id,))
+#
+        #row = self.cur.fetchone()
+        #if row:
+        #    komentar.id = row[0]
+        #    return komentar
         
         # Sedaj dodamo komentar
         self.cur.execute("""
             INSERT INTO komentarji (id_uporabnika, id_recepta, vsebina, datum_objave)
-              VALUES (%s, %s, %s, %s) RETURNING id; """, (komentar.id_uporabnika, komentar.id_recepta, komentar.vsebina, komentar.datum_objave))
+              VALUES (%s, %s, %s, %s) RETURNING id; """, (komentar.id_uporabnika, komentar.id_recepta, komentar.vsebina, komentar.datum_objave, ))
         komentar.id = self.cur.fetchone()[0]
         self.conn.commit()
         return komentar

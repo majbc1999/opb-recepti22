@@ -130,17 +130,14 @@
     <button class="gumb gumb-postopek" type="submit" >Objavi</button>
 </form>
 
-<table class="tabela" id="postopek">
+
+<table class="center" style="width: 60%;">
     % for komentar in slovarji_komentarjev:
-    <tr class="vrstica">
-        <td>
-            {{komentar['ime_uporabnika']}} -- {{komentar['datum_objave']}}<br>
+    <tr>
+        <td class="komentar">
+            <div style="color: gray;">{{komentar['ime_uporabnika']}} -- {{komentar['datum_objave']}}</div><br>
             {{komentar['vsebina']}}
         </td>
     </tr>
     % end
 </table>
-
-
-
-

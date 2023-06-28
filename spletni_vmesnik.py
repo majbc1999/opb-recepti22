@@ -318,12 +318,12 @@ def dodaj_komentar(id):
     a = datetime.now()
     datum = str(a.year) + "-" + str(a.month) + "-" + str(a.day)
     cas = str(a.hour) + ":" + str(a.minute) + ":" + str(a.second)
-    
+
     r.dodaj_komentar(model.Komentarji(
         id_uporabnika = id_uporabnika,
         id_recepta = id,
         vsebina = vsebina,
-        datum_objave= datum + " " + cas
+        datum_objave = datum + '  ' + cas
     ))
     bottle.redirect('/recept/{}'.format(id))
 
