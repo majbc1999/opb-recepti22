@@ -1,7 +1,8 @@
 from dataclasses import dataclass, field
-from dataclasses_json import dataclass_json
+#from dataclasses_json import dataclass_json
+from datetime import datetime
 
-@dataclass_json
+#@dataclass_json
 @dataclass
 
 class Recepti:
@@ -23,7 +24,7 @@ class ReceptPosSes:
     postopek: str = field(default='')
     sestavine: str = field(default='')
 
-@dataclass_json
+#@dataclass_json
 @dataclass
 
 class Postopki:
@@ -31,7 +32,7 @@ class Postopki:
     st_koraka: int = field(default=0)
     postopek: str = field(default="")
 
-@dataclass_json
+#@dataclass_json
 @dataclass
 
 class SestavineReceptov:
@@ -40,7 +41,7 @@ class SestavineReceptov:
     enota: str = field(default='')
     sestavina: str = field(default='')
 
-@dataclass_json
+#@dataclass_json
 @dataclass
 
 class Sestavine:
@@ -61,31 +62,31 @@ class NutrientskeVrednosti:
     mascobe : int = field(default=0)
 
 
-@dataclass_json
+#@dataclass_json
 @dataclass
 
 class Kategorije:
     id_recepta: int = field(default=0)
     kategorija: str = field(default="")
 
-@dataclass_json
+#@dataclass_json
 
 class VseKategorije:
     kategorija: str = field(default="")
 
-@dataclass_json
+#@dataclass_json
 @dataclass
 class Kulinarike:
     id_recepta: int = field(default=0)
     kulinarika: str = field(default="")
 
-@dataclass_json
+#@dataclass_json
 @dataclass
 class Oznake:
     id_recepta: int = field(default=0)
     oznaka: str = field(default="")
 
-@dataclass_json
+#@dataclass_json
 @dataclass
 class Uporabnik:
     uporabnisko_ime: str = field(default="")
@@ -98,7 +99,7 @@ class UporabnikDto:
     uporabnisko_ime: str = field(default="")
     id: int = field(default=0)
 
-@dataclass_json
+#@dataclass_json
 @dataclass
 class Komentarji:
     id: int = field(default=0),

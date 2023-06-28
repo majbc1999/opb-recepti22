@@ -1,3 +1,4 @@
+from calendar import month
 from sqlite3 import Timestamp
 from bottletext import get, post, run, request, template, redirect, static_file, url, response, template_user
 
@@ -314,13 +315,15 @@ def uredi_postopek(id):
 def dodaj_komentar(id):
     id_uporabnika = int(bottle.request.get_cookie('id'))
     vsebina = str(bottle.request.forms.getunicode('dodan-komentar'))
-    vsi_komentarji = r.dobi_vse_gen_id(model.Komentarji, id, "id_recepta")
+    a = datetime.now()
+    datum = str(a.year) + "-" + str(a.month) + "-" + str(a.day)
+    cas = str(a.hour) + ":" + str(a.minute) + ":" + str(a.second)
     
     r.dodaj_komentar(model.Komentarji(
         id_uporabnika = id_uporabnika,
         id_recepta = id,
         vsebina = vsebina,
-        datum_objave = datetime.now()
+        datum_objave= datum + " " + cas
     ))
     bottle.redirect('/recept/{}'.format(id))
 

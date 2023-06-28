@@ -68,7 +68,7 @@ class Repo:
         sql_cmd = f'SELECT * FROM {tbl_name} WHERE {id_col} = %s';
         self.cur.execute(sql_cmd, (id,))
 
-        ## Zaradi zakomentirane kode nama ne izpiše vrstice, ki jo najde z ukazom fetchone()
+        ## Zaradi zakomentirane kode nama ne izpiše prve vrstice, ki jo najde z ukazom fetchone()
         #d = self.cur.fetchone()
         #if d is None:
         #    raise Exception(f'Vrstica z id-jem {id} ne obstaja v {tbl_name}');
