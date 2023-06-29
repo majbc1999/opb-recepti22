@@ -191,7 +191,7 @@ def recept(id):
     kategorije_recepta = [x.kategorija for x in r.dobi_vse_gen_id(model.Kategorije, id,'id_recepta')]
     kulinarike_recepta = [x.kulinarika for x in r.dobi_vse_gen_id(model.Kulinarike, id,'id_recepta')]
     oznake_recepta = [x.oznaka for x in r.dobi_vse_gen_id(model.Oznake, id,'id_recepta')]
-    komentarji = r.dobi_vse_gen_id(model.Komentarji, id, 'id_recepta')
+    komentarji = r.dobi_vse_gen_id(model.Komentarji2, id, 'id_recepta')
     slovarji_komentarjev = [r.slovar_komentarja(x) for x in komentarji]
     return bottle.template('views/recept.tpl', id=recept.id,
                                                          kategorije=kategorije,
@@ -315,15 +315,11 @@ def uredi_postopek(id):
 def dodaj_komentar(id):
     id_uporabnika = int(bottle.request.get_cookie('id'))
     vsebina = str(bottle.request.forms.getunicode('dodan-komentar'))
-    a = datetime.now()
-    datum = str(a.year) + "-" + str(a.month) + "-" + str(a.day)
-    cas = str(a.hour) + ":" + str(a.minute) + ":" + str(a.second)
-
-    r.dodaj_komentar(model.Komentarji(
+    
+    r.dodaj_komentar(model.Komentarji2(
         id_uporabnika = id_uporabnika,
         id_recepta = id,
-        vsebina = vsebina,
-        datum_objave = datum + '  ' + cas
+        vsebina = vsebina
     ))
     bottle.redirect('/recept/{}'.format(id))
 

@@ -101,7 +101,7 @@ class UporabnikDto:
 
 @dataclass_json
 @dataclass
-class Komentarji:
+class Komentarji2:
     id: int = field(default=0),
     id_uporabnika: int = field(default=0)
     id_recepta: int = field(default=0)

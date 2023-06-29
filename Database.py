@@ -27,7 +27,7 @@ T = TypeVar(
     Kategorije,
     Kulinarike,
     Oznake,
-    Komentarji
+    Komentarji2
     )
 
 class Repo:
@@ -400,7 +400,7 @@ class Repo:
         self.conn.commit()
         return recept
 
-    def dodaj_komentar(self, komentar: Komentarji) -> Komentarji:
+    def dodaj_komentar(self, komentar: Komentarji2) -> Komentarji2:
         # Preverimo, če komentar že obstaja
         #self.cur.execute("""
         #    SELECT id, id_uporabnika, id_recepta, vsebina from komentarji1
@@ -414,8 +414,8 @@ class Repo:
         
         # Sedaj dodamo komentar
         self.cur.execute("""
-            INSERT INTO komentarji (id_uporabnika, id_recepta, vsebina, datum_objave)
-              VALUES (%s, %s, %s, %s) RETURNING id; """, (komentar.id_uporabnika, komentar.id_recepta, komentar.vsebina, komentar.datum_objave, ))
+            INSERT INTO komentarji2 (id_uporabnika, id_recepta, vsebina)
+              VALUES (%s, %s, %s) RETURNING id; """, (komentar.id_uporabnika, komentar.id_recepta, komentar.vsebina, ))
         komentar.id = self.cur.fetchone()[0]
         self.conn.commit()
         return komentar
@@ -678,7 +678,7 @@ class Repo:
         return uporabnik
 
 
-    def slovar_komentarja(self, komentar: Komentarji):
+    def slovar_komentarja(self, komentar: Komentarji2):
         self.cur.execute("""
             SELECT id, uporabnisko_ime FROM uporabnik
             WHERE id = %s;
