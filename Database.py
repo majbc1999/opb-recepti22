@@ -112,7 +112,42 @@ class Repo:
         sql_cmd = f'''SELECT DISTINCT {ime_stolpca} FROM {tbl_name} LIMIT {take} OFFSET {skip};'''
         self.cur.execute(sql_cmd)
         return [typ.from_dict(d) for d in self.cur.fetchall()]
+    
 
+    def dobi_razlicne_gen_po_abecedi(self, typ: Type[T], ime_stolpca) -> List[T]:
+        """ 
+        Generična metoda, ki za podan vhodni dataclass vrne seznam teh objektov iz baze.
+        Predpostavljamo, da je tabeli ime natanko tako kot je ime posameznemu dataclassu.
+        """
+        # ustvarimo sql select stavek, kjer je ime tabele typ.__name__ oz. ime razreda
+        tbl_name = typ.__name__
+        sql_cmd = f'''SELECT DISTINCT {ime_stolpca} FROM {tbl_name} ORDER BY {ime_stolpca};'''
+        self.cur.execute(sql_cmd)
+        return [typ.from_dict(d) for d in self.cur.fetchall()]
+
+
+    def gen_urejeno(self, typ: Type[T], ime_stolpca) -> List[T]:
+        """
+        Generična metoda, ki za podan vhodni dataclass vrne seznem teh objektov iz baze.
+        Seznam nato uredi po naraščajočem vrstnem redu glede na 'ime_stolpca'
+        """
+        tbl_name = typ.__name__
+        sql_cmd = f'''SELECT * FROM {tbl_name} ORDER BY {ime_stolpca};'''
+        self.cur.execute(sql_cmd)
+        return [typ.from_dict(d) for d in self.cur.fetchall()]
+    
+
+    def dobi_vse_gen_id_urejeno(self, typ: Type[T], ime_stolpca, id: int, id_col = "id") -> T:
+        """
+        Generična metoda, ki vrne dataclass objekt pridobljen iz baze na podlagi njegovega idja.
+        Seznam nato uredi po naraščajočem vrstnem redu glede na 'ime_stolpca'
+        """
+        tbl_name = typ.__name__
+        sql_cmd = f'SELECT * FROM {tbl_name} WHERE {id_col} = %s ORDER BY {ime_stolpca}';
+        self.cur.execute(sql_cmd, (id,))    
+        return [typ.from_dict(s) for s in self.cur.fetchall()]
+    
+    
     
     def dodaj_gen(self, typ: T, serial_col="id", auto_commit=True):
         """
@@ -363,6 +398,7 @@ class Repo:
             return Recepti(id, ime, st_porcij, cas_priprave, cas_kuhanja, id_uporabnika)
         
         raise Exception("Recept z imenom " + ime_recepta + " ne obstaja")
+
 
     def dobi_nutrientske_vrednosti(self, id: int) -> NutrientskeVrednosti:
         self.cur.execute("""
