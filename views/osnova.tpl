@@ -47,7 +47,7 @@
             }
 
             .gumb-dodaj{
-                width: inherit;
+                width: 14%;
                 height: inherit;
                 position: absolute;
                 margin-top: 80px;

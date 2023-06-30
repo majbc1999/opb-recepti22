@@ -454,9 +454,6 @@ class Repo:
             INSERT INTO komentarji2 (id_uporabnika, id_recepta, vsebina)
               VALUES (%s, %s, %s) RETURNING id; """, (komentar.id_uporabnika, komentar.id_recepta, komentar.vsebina, ))
 
-            #INSERT INTO komentarji (id_uporabnika, id_recepta, vsebina, datum_objave)
-            #  VALUES (%s, %s, %s, %s) RETURNING id; """, (komentar.id_uporabnika, komentar.id_recepta, komentar.vsebina, datetime.now()))
-#
         komentar.id = self.cur.fetchone()[0]
         self.conn.commit()
         return komentar

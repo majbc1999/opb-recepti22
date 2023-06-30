@@ -63,7 +63,7 @@
 
 
 <form action="/dodaj-recept" method="GET">
-    <button class="gumb gumb-dodaj" style="right:20%" type="submit">Dodaj nov recept</button>
+    <button class="gumb gumb-dodaj" style="right:25%" type="submit">Dodaj nov recept</button>
 </form>
 
 <form action="/dodaj-novo-sestavino" method="GET">
