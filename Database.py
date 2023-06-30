@@ -9,7 +9,7 @@ import model
 from pandas import DataFrame
 from re import sub
 import avtor as auth
-from datetime import date
+from datetime import datetime
 from dataclasses_json import dataclass_json
 
 import dataclasses
@@ -415,7 +415,7 @@ class Repo:
         # Sedaj dodamo komentar
         self.cur.execute("""
             INSERT INTO komentarji (id_uporabnika, id_recepta, vsebina, datum_objave)
-              VALUES (%s, %s, %s, %s) RETURNING id; """, (komentar.id_uporabnika, komentar.id_recepta, komentar.vsebina, komentar.datum_objave))
+              VALUES (%s, %s, %s, %s) RETURNING id; """, (komentar.id_uporabnika, komentar.id_recepta, komentar.vsebina, datetime.now()))
         komentar.id = self.cur.fetchone()[0]
         self.conn.commit()
         return komentar
