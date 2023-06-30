@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
+from datetime import datetime
 
 @dataclass_json
 @dataclass
@@ -100,7 +101,7 @@ class UporabnikDto:
 
 @dataclass_json
 @dataclass
-class Komentarji:
+class Komentarji2:
     id: int = field(default=0),
     id_uporabnika: int = field(default=0)
     id_recepta: int = field(default=0)

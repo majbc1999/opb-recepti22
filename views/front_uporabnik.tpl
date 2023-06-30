@@ -62,35 +62,43 @@
 </table>
 
 
-<div class="center" style="color: darkred;top: 100px;">
-    <h1>{{izb_oznaka}}</h1>
+<form action="/dodaj-recept" method="GET">
+    <button class="gumb gumb-dodaj" style="right:20%" type="submit">Dodaj nov recept</button>
+</form>
+
+<form action="/dodaj-novo-sestavino" method="GET">
+    <button class="gumb gumb-dodaj" style="right:10%" type="submit">Dodaj novo sestavino</button>
+</form>
+
+<div class="naslov center">
+    <h1>RECEPTI</h1>
 </div>
 
 
 <table class="tabela" id="recepti">
     <tr class="prva-vrstica">
         <td>
-            <form action="/ime/recepti-oznake/{{izb_oznaka}}" method="get">
+            <form action="{{url('uredi_moji', param='ime')}}" method="get">
                 <a href="#" onclick="this.parentElement.submit()" class="th-link" style="color: black;">ime recepta ⏷</a>
             </form>
         </td>
         <td>
-            <form action="/st_porcij/recepti-oznake/{{izb_oznaka}}" method="get">
+            <form action="{{url('uredi_moji', param='st_porcij')}}" method="get">
                 <a href="#" onclick="this.parentElement.submit()" class="th-link" style="color: black;">število porcij ⏷</a>
             </form>
         </td>
         <td>
-            <form action="/cas_priprave/recepti-oznake/{{izb_oznaka}}" method="get">
+            <form action="{{url('uredi_moji', param='cas_priprave')}}" method="get">
                 <a href="#" onclick="this.parentElement.submit()" class="th-link" style="color: black;">čas priprave ⏷</a>
             </form>
         </td>
         <td>
-            <form action="/cas_kuhanja/recepti-oznake/{{izb_oznaka}}" method="get">
+            <form action="{{url('uredi_moji', param='cas_kuhanja')}}" method="get">
                 <a href="#" onclick="this.parentElement.submit()" class="th-link" style="color: black;">čas kuhanja ⏷</a>
             </form>
         </td>
     </tr>
-     % for recept in recepti:
+    % for recept in recepti:
         <tr class="vrstica">
             <td>
                 <form action='/{{recept.id}}/' method="POST">
@@ -100,6 +108,18 @@
             <td>{{recept.st_porcij}}</td>
             <td>{{recept.cas_priprave}}</td>
             <td>{{recept.cas_kuhanja}}</td>
+            % if id_uporabnika == recept.id_uporabnika:
+            <td>
+                <form action="/urejanje-recepta/{{recept.id}}" method="GET">
+                    <button class="gumb" type="submit">Uredi</button>
+                </form>
+            </td>
+            <td>
+                <form action="/izbrisi-recept" method="POST">
+                    <button class="gumb" name="recept" value="{{recept.id}}" type="submit">Izbriši</button>
+                </form>
+            </td>
+            % end
         </tr>
     %end
-</table>
+</table>  

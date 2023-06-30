@@ -1,3 +1,4 @@
+from calendar import month
 from sqlite3 import Timestamp
 from bottletext import get, post, run, request, template, redirect, static_file, url, response, template_user
 
@@ -6,6 +7,7 @@ from operator import mod
 import bottle 
 import model
 import Database
+import operator
 from Database import Repo
 from uporabnik import AuthService
 from functools import wraps
@@ -48,6 +50,13 @@ def vsi_recepti():
                                             oznake=oznake,
                                             recepti=recepti)
 
+@bottle.get('/<param>/uredi')
+def uredi(param: str):
+    recepti = r.gen_urejeno(model.Recepti, param)
+    return template('views/front-page.tpl', kategorije=kategorije,
+                                            kulinarike=kulinarike,
+                                            oznake=oznake,
+                                            recepti=recepti)
 
 @bottle.get('/prijava')
 def prijava_get():
@@ -113,9 +122,9 @@ def odjava():
 
 
 
-kategorije = [x.kategorija for x in r.dobi_razlicne_gen(model.Kategorije, 'kategorija', 181, 0)]
-kulinarike = [x.kulinarika for x in r.dobi_razlicne_gen(model.Kulinarike, 'kulinarika', 181, 0)]
-oznake = [x.oznaka for x in r.dobi_razlicne_gen(model.Oznake, 'oznaka', 181, 0)]
+kategorije = [x.kategorija for x in r.dobi_razlicne_gen_po_abecedi(model.Kategorije, 'kategorija')]
+kulinarike = [x.kulinarika for x in r.dobi_razlicne_gen_po_abecedi(model.Kulinarike, 'kulinarika')]
+oznake = [x.oznaka for x in r.dobi_razlicne_gen_po_abecedi(model.Oznake, 'oznaka')]
 vse_sestavine = r.dobi_vse_gen(model.Sestavine)
 
 
@@ -130,13 +139,37 @@ def vsi_recepti_prijava():
                                                     recepti=recepti,
                                                     id_uporabnika=id_uporabnika)
 
+@bottle.get('/<param>/uredi_vsi')
+@cookie_required
+def uredi_vsi(param: str):
+    recepti = r.gen_urejeno(model.Recepti, param)
+    id_uporabnika = int(bottle.request.get_cookie('id'))
+    return template_user('views/front_prijava.tpl', kategorije=kategorije,
+                                                    kulinarike=kulinarike,
+                                                    oznake=oznake,
+                                                    recepti=recepti,
+                                                    id_uporabnika=id_uporabnika)
+
+
 @bottle.get('/moji-recepti')
 @cookie_required
 def moji_recepti():
     uporabnik = bottle.request.get_cookie('id')
     uporabnikovi_recepti = r.dobi_vse_gen_id(model.Recepti, uporabnik, "id_uporabnika")
     id_uporabnika = int(bottle.request.get_cookie('id'))
-    return template_user('views/front_prijava.tpl', kategorije=kategorije,
+    return template_user('views/front_uporabnik.tpl', kategorije=kategorije,
+                                                    kulinarike=kulinarike,
+                                                    oznake=oznake,
+                                                    recepti=uporabnikovi_recepti,
+                                                    id_uporabnika=id_uporabnika)
+
+@bottle.get('/<param>/uredi_moji')
+@cookie_required
+def uredi_moji(param: str):
+    uporabnik = bottle.request.get_cookie('id')
+    uporabnikovi_recepti = r.dobi_vse_gen_id_urejeno(model.Recepti, param, uporabnik, "id_uporabnika")
+    id_uporabnika = int(bottle.request.get_cookie('id'))
+    return template_user('views/front_uporabnik.tpl', kategorije=kategorije,
                                                     kulinarike=kulinarike,
                                                     oznake=oznake,
                                                     recepti=uporabnikovi_recepti,
@@ -153,6 +186,20 @@ def doloceni_recepti(kategorija):
                                                                     oznake=oznake,
                                                                     recepti=recepti_izbrane_kategorije)
 
+
+@bottle.get('/<param>/uredi_kategorija/<kategorija>')
+def uredi_kategorija(param, kategorija):
+    seznam_idjev = r.dobi_gen_ime(model.Kategorije, kategorija, 'kategorija')
+    recepti_izbrane_kategorije = [r.dobi_gen_id(model.Recepti, x.id_recepta,'id') for x in seznam_idjev]
+    recepti_izbrane_kategorije.sort(key = operator.attrgetter(param))
+
+    return template_user('views/doloceni_recepti_kategorije.tpl', izb_kategorija=kategorija,
+                                                                    kategorije=kategorije,
+                                                                    kulinarike=kulinarike,
+                                                                    oznake=oznake,
+                                                                    recepti=recepti_izbrane_kategorije)
+
+
 @bottle.get('/recepti-kulinarike/<kulinarika>')
 def doloceni_recepti(kulinarika):
     seznam_idjev = r.dobi_gen_ime(model.Kulinarike, kulinarika, 'kulinarika')
@@ -164,10 +211,34 @@ def doloceni_recepti(kulinarika):
                                                                     oznake=oznake,
                                                                     recepti=recepti_izbrane_kulinarike)
 
+@bottle.get('/<param>/recepti-kulinarike/<kulinarika>')
+def uredi_kulinarika(param, kulinarika):
+    seznam_idjev = r.dobi_gen_ime(model.Kulinarike, kulinarika, 'kulinarika')
+    recepti_izbrane_kulinarike = [r.dobi_gen_id(model.Recepti, x.id_recepta,'id') for x in seznam_idjev]
+    recepti_izbrane_kulinarike.sort(key = operator.attrgetter(param))
+
+    return template_user('views/doloceni_recepti_kulinarike.tpl', izb_kulinarika=kulinarika,
+                                                                    kategorije=kategorije,
+                                                                    kulinarike=kulinarike,
+                                                                    oznake=oznake,
+                                                                    recepti=recepti_izbrane_kulinarike)
+
 @bottle.get('/recepti-oznake/<oznaka>')
 def doloceni_recepti(oznaka):
     seznam_idjev = r.dobi_gen_ime(model.Oznake, oznaka, 'oznaka')
     recepti_izbrane_oznake = [r.dobi_gen_id(model.Recepti, x.id_recepta,'id') for x in seznam_idjev]
+
+    return template_user('views/doloceni_recepti_oznake.tpl', izb_oznaka=oznaka,
+                                                                kategorije=kategorije,
+                                                                kulinarike=kulinarike,
+                                                                oznake=oznake,
+                                                                recepti=recepti_izbrane_oznake)
+
+@bottle.get('/<param>/recepti-oznake/<oznaka>')
+def uredi_oznaka(param, oznaka):
+    seznam_idjev = r.dobi_gen_ime(model.Oznake, oznaka, 'oznaka')
+    recepti_izbrane_oznake = [r.dobi_gen_id(model.Recepti, x.id_recepta,'id') for x in seznam_idjev]
+    recepti_izbrane_oznake.sort(key = operator.attrgetter(param))
 
     return template_user('views/doloceni_recepti_oznake.tpl', izb_oznaka=oznaka,
                                                                 kategorije=kategorije,
@@ -190,7 +261,7 @@ def recept(id):
     kategorije_recepta = [x.kategorija for x in r.dobi_vse_gen_id(model.Kategorije, id,'id_recepta')]
     kulinarike_recepta = [x.kulinarika for x in r.dobi_vse_gen_id(model.Kulinarike, id,'id_recepta')]
     oznake_recepta = [x.oznaka for x in r.dobi_vse_gen_id(model.Oznake, id,'id_recepta')]
-    komentarji = r.dobi_vse_gen_id(model.Komentarji, id, 'id_recepta')
+    komentarji = r.dobi_vse_gen_id(model.Komentarji2, id, 'id_recepta')
     slovarji_komentarjev = [r.slovar_komentarja(x) for x in komentarji]
     return bottle.template('views/recept.tpl', id=recept.id,
                                                          kategorije=kategorije,
@@ -314,13 +385,16 @@ def uredi_postopek(id):
 def dodaj_komentar(id):
     id_uporabnika = int(bottle.request.get_cookie('id'))
     vsebina = str(bottle.request.forms.getunicode('dodan-komentar'))
-    vsi_komentarji = r.dobi_vse_gen_id(model.Komentarji, id, "id_recepta")
-    
-    r.dodaj_komentar(model.Komentarji(
+
+    r.dodaj_komentar(model.Komentarji2(
         id_uporabnika = id_uporabnika,
         id_recepta = id,
-        vsebina = vsebina,
-        #datum_objave = datetime.now()
+
+        vsebina = vsebina
+
+       #vsebina = vsebina,
+       ##datum_objave = datetime.now()
+
     ))
     bottle.redirect('/recept/{}'.format(id))
 

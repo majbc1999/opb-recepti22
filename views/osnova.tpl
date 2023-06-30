@@ -249,6 +249,15 @@
               background-color: white;
             }
 
+            .komentar {
+              background-color: rgb(247, 244, 244);
+              border-color: darkgray;
+              border-radius: 5px;
+              text-align: left;
+              margin-top: 5px;
+              padding: 2%;
+            } 
+
             .v-vrsto {
               display: flex;
               justify-content: space-evenly;

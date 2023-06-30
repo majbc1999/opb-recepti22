@@ -69,10 +69,26 @@
 
 <table class="tabela" id="recepti">
     <tr class="prva-vrstica">
-        <td>ime recepta</td>
-        <td>število porcij</td>
-        <td>čas priprave</td>
-        <td>čas kuhanja</td>
+        <td>
+            <form action="/ime/recepti-kulinarike/{{izb_kulinarika}}" method="get">
+                <a href="#" onclick="this.parentElement.submit()" class="th-link" style="color: black;">ime recepta ⏷</a>
+            </form>
+        </td>
+        <td>
+            <form action="/st_porcij/recepti-kulinarike/{{izb_kulinarika}}" method="get">
+                <a href="#" onclick="this.parentElement.submit()" class="th-link" style="color: black;">število porcij ⏷</a>
+            </form>
+        </td>
+        <td>
+            <form action="/cas_priprave/recepti-kulinarike/{{izb_kulinarika}}" method="get">
+                <a href="#" onclick="this.parentElement.submit()" class="th-link" style="color: black;">čas priprave ⏷</a>
+            </form>
+        </td>
+        <td>
+            <form action="/cas_kuhanja/recepti-kulinarike/{{izb_kulinarika}}" method="get">
+                <a href="#" onclick="this.parentElement.submit()" class="th-link" style="color: black;">čas kuhanja ⏷</a>
+            </form>
+        </td>
     </tr>
      % for recept in recepti:
         <tr class="vrstica">
