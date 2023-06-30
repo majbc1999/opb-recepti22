@@ -389,7 +389,12 @@ def dodaj_komentar(id):
     r.dodaj_komentar(model.Komentarji2(
         id_uporabnika = id_uporabnika,
         id_recepta = id,
+
         vsebina = vsebina
+
+       #vsebina = vsebina,
+       ##datum_objave = datetime.now()
+
     ))
     bottle.redirect('/recept/{}'.format(id))
 
@@ -687,8 +692,6 @@ run(host='localhost', port=SERVER_PORT, reloader=RELOADER)
 
 
 #PROBLEMI:
-#na doloceni kategoriji, oznaki, kulinariki izpise napacno ime
-#dodajanje kulinarike, oznake in kategorije ne dela? men se stvari ne shranijo v baze. ne vem zakaj ne
+
 #kako ze res nrdis da neka spletna stran ne dela ce nimas prave funkcije, v najinem primeru id_uporabnika
-#kaj ce dodamo novo sestavino ki se ne obstaja, treba jo je pol se dat v bazo sestavine
 #in se da ne moras dodat recepta brez da ma vsaj vsako stvar po enkrat
