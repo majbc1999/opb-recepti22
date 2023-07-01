@@ -63,8 +63,9 @@
 
 <div class='recept'>
     <h1>DODAJ SESTAVINO</h1>
+    <div style = "position: absolute;" > To sestavino morate najprej dodati na seznam! </div>
     <div class="dodaj_tabela">
-        <form action="/dodaj-novo-sestavino" method="POST">
+        <form action="/dodaj-novo-sestavino/{{id}}" method="POST">
             <table style="width:40%; align-items:center;"> 
                 <tr> <th>Ime sestavine:</th> <td><input type="text" name="ime"></td></tr>
                 <tr> <th>Kolicina kalorij:</th> <td><input type="number" name="kalorije"><td></tr>

@@ -63,12 +63,9 @@
 
 
 <form action="/dodaj-recept" method="GET">
-    <button class="gumb gumb-dodaj" style="right:25%" type="submit">Dodaj nov recept</button>
+    <button class="gumb gumb-dodaj" style="right:10%" type="submit">Dodaj nov recept</button>
 </form>
 
-<form action="/dodaj-novo-sestavino" method="GET">
-    <button class="gumb gumb-dodaj" style="right:10%" type="submit">Dodaj novo sestavino</button>
-</form>
 
 <div class="naslov center">
     <h1>RECEPTI</h1>

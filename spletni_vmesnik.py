@@ -351,7 +351,7 @@ def urejanje_recepta(id):
 def dodaj_sestavino(id):
     sestavina = str(bottle.request.forms.getunicode('dodana-sestavina'))
     if sestavina not in vse_sestavine:
-        return template_user('views/dodaj_novo_sestavino.tpl', oznake=oznake,kategorije=kategorije,kulinarike=kulinarike)
+        return bottle.redirect('/dodaj-novo-sestavino/{}'.format(id))
     else:
         enota =  str(bottle.request.forms.getunicode('dodana-enota'))
         kolicina =  str(bottle.request.forms.getunicode('dodana-kolicina'))
@@ -514,13 +514,15 @@ def dodaj_recept_post():
 
 
 
-@bottle.get('/dodaj-novo-sestavino')
+@bottle.get('/dodaj-novo-sestavino/<id>')
 @cookie_required
-def dodaj_novo_sestavino_get():
-    return template_user('views/dodaj_novo_sestavino.tpl', oznake=oznake,kategorije=kategorije,kulinarike=kulinarike)
+def dodaj_novo_sestavino_get(id):
+    recept = r.dobi_gen_id(model.Recepti, id,'id')
+    return bottle.template('views/dodaj_novo_sestavino.tpl', id=recept.id,
+                          oznake=oznake,kategorije=kategorije,kulinarike=kulinarike)
 
-@bottle.post('/dodaj-novo-sestavino')
-def dodaj_novo_sestavino_post():
+@bottle.post('/dodaj-novo-sestavino/<id>')
+def dodaj_novo_sestavino_post(id):
     ime =  str(bottle.request.forms.getunicode('ime'))
     kalorije = float(bottle.request.forms.getunicode('kalorije'))
     proteini = float(bottle.request.forms.getunicode('proteini'))
@@ -534,7 +536,7 @@ def dodaj_novo_sestavino_post():
         ogljikovi_hidrati=ogljikovi_hidrati,
         mascobe=mascobe
     ))
-    bottle.redirect('/recepti')
+    bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 
