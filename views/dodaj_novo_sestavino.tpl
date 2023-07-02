@@ -63,7 +63,7 @@
 
 <div class='recept'>
     <h1>DODAJ SESTAVINO</h1>
-    <div style = "position: absolute;" > To sestavino morate najprej dodati na seznam! </div>
+    <div style = "text-align: center;" ><i>To sestavino morate najprej dodati na seznam! </i></div>
     <div class="dodaj_tabela">
         <form action="/dodaj-novo-sestavino/{{id}}" method="POST">
             <table style="width:40%; align-items:center;"> 
