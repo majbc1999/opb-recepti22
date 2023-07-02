@@ -609,6 +609,22 @@ class Repo:
               VALUES (%s, %s, %s, %s) """, (sestavina.id_recepta, sestavina.kolicina, sestavina.enota, sestavina.sestavina))
         self.conn.commit()
 
+    def najdi_sestavino(self, id, ime):
+        self.cur.execute("""
+            SELECT * from SestavineReceptov
+            WHERE id_recepta = %s AND sestavina = %s
+          """, (id, ime,))
+        
+        row = self.cur.fetchone()
+        
+        if row:
+            sestavina = row
+            return SestavineReceptov(
+                id_recepta=sestavina[0],
+                kolicina=sestavina[1],
+                enota=sestavina[2],
+                sestavina=sestavina[3]
+            )
 
     def dodaj_na_seznam_sestavin(self, sestavina : Sestavine) -> Sestavine:
 
@@ -660,7 +676,6 @@ class Repo:
 
     def pristej_nutriente(self, nutrienti : NutrientskeVrednosti, sestavina : SestavineReceptov) -> NutrientskeVrednosti:
         s = (self.dobi_gen_ime(model.Sestavine, sestavina.sestavina, "ime"))[0]
-        print(s)
         kolicina = float(sestavina.kolicina)
         enota = sestavina.enota
 
@@ -695,39 +710,51 @@ class Repo:
 
 
     def odstej_nutriente(self, nutrienti : NutrientskeVrednosti, sestavina : SestavineReceptov) -> NutrientskeVrednosti:
-        s = (self.dobi_gen_ime(model.Sestavine, sestavina.sestavina, "ime"))[0]
-        print(s)
-        kolicina = float(sestavina.kolicina)
-        enota = sestavina.enota
+        try: 
+            s = (self.dobi_gen_ime(model.Sestavine, sestavina.sestavina, "ime"))[0]
+            kolicina = float(sestavina.kolicina)
+            enota = sestavina.enota
 
-        if enota == "g" or enota == "ml":
-            kolicina *= 0.01
-        if enota == "cup":
-            kolicina *= 1.28
-        if enota == "ounce":
-            kolicina *= 0.28
-        if enota == "pound":
-            kolicina *= 4.54
-        if enota == "tbsp":
-            kolicina *= 0.15
-        if enota == "tsp":
-            kolicina *= 0.03
-        if enota == "bunch":
-            kolicina *= 2
-        if enota == "scoop":
-            kolicina *= 0.3
+            if enota == "g" or enota == "ml":
+                kolicina *= 0.01
+            if enota == "cup":
+                kolicina *= 1.28
+            if enota == "ounce":
+                kolicina *= 0.28
+            if enota == "pound":
+                kolicina *= 4.54
+            if enota == "tbsp":
+                kolicina *= 0.15
+            if enota == "tsp":
+                kolicina *= 0.03
+            if enota == "bunch":
+                kolicina *= 2
+            if enota == "scoop":
+                kolicina *= 0.3
 
-        id_recepta = nutrienti.id_recepta
-        kalorije = float(- kolicina * s.kalorije + nutrienti.kalorije)
-        proteini = float(- kolicina * s.proteini + nutrienti.proteini)
-        mascobe = float(- kolicina * s.mascobe + nutrienti.mascobe)
-        ogljikovi_hidrati = float(- kolicina * s.ogljikovi_hidrati + nutrienti.ogljikovi_hidrati)
+            id_recepta = nutrienti.id_recepta
+            kalorije = float(- kolicina * s.kalorije + nutrienti.kalorije)
+            proteini = float(- kolicina * s.proteini + nutrienti.proteini)
+            mascobe = float(- kolicina * s.mascobe + nutrienti.mascobe)
+            ogljikovi_hidrati = float(- kolicina * s.ogljikovi_hidrati + nutrienti.ogljikovi_hidrati)
 
-        sql_cmd = f'''UPDATE nutrientskevrednosti 
-                      SET kalorije = %s, proteini = %s, ogljikovi_hidrati = %s, mascobe = %s
-                      WHERE id_recepta = %s''';
-        self.cur.execute(sql_cmd, (kalorije, proteini, ogljikovi_hidrati, mascobe, id_recepta))
-        self.conn.commit()
+            sql_cmd = f'''UPDATE nutrientskevrednosti 
+                          SET kalorije = %s, proteini = %s, ogljikovi_hidrati = %s, mascobe = %s
+                          WHERE id_recepta = %s''';
+            self.cur.execute(sql_cmd, (kalorije, proteini, ogljikovi_hidrati, mascobe, id_recepta))
+            self.conn.commit()
+        except:
+            id_recepta = nutrienti.id_recepta
+            kalorije = float(nutrienti.kalorije)
+            proteini = float(nutrienti.proteini)
+            mascobe = float(nutrienti.mascobe)
+            ogljikovi_hidrati = float(nutrienti.ogljikovi_hidrati)
+
+            sql_cmd = f'''UPDATE nutrientskevrednosti 
+                          SET kalorije = %s, proteini = %s, ogljikovi_hidrati = %s, mascobe = %s
+                          WHERE id_recepta = %s''';
+            self.cur.execute(sql_cmd, (kalorije, proteini, ogljikovi_hidrati, mascobe, id_recepta))
+            self.conn.commit()
             
 
             

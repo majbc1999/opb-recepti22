@@ -411,8 +411,7 @@ def dodaj_sestavino(id):
 @bottle.post('/izbrisi-sestavino/<id>')
 def brisi_sestavino(id):
     ime = bottle.request.forms.getunicode('sestavina')
-    s = r.dobi_gen_id(model.SestavineReceptov, id,'id_recepta')
-    print(s)
+    s = r.najdi_sestavino(id,ime)
     nutrienti = r.dobi_nutrientske_vrednosti(id)
     r.odstej_nutriente(nutrienti, s)
     r.izbrisi_gen(model.SestavineReceptov, ime, id_col = "sestavina")
