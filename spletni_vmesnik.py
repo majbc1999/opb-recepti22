@@ -383,7 +383,7 @@ def urejanje_recepta(id):
     except:
         postopek = model.Postopki(
             id_recepta=id,
-            st_koraka=0,
+            st_koraka=-1,
             postopek=""
         )
     try:
@@ -430,7 +430,6 @@ def dodaj_sestavino(id):
 
         nutrienti = r.dobi_nutrientske_vrednosti(id)
         s = model.SestavineReceptov(int(id), kolicina, enota, sestavina)
-        print(s)
         r.pristej_nutriente(nutrienti, s)
 
         bottle.redirect('/urejanje-recepta/{}'.format(id)) 
@@ -465,22 +464,19 @@ def dodaj_postopek_post(id):
 @bottle.post('/izbrisi-postopek/<id>')
 def brisi_postopek(id):
     korak = bottle.request.forms.getunicode('korak')
-    print(korak)
     r.izbrisi_gen(model.Postopki, korak, "postopek")
     bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 @bottle.post('/uredi-postopek/<id>')
-def uredi_postopek(id, st_koraka):
+def uredi_postopek(id):
     opis = str(bottle.request.forms.getunicode('spremenjen-postopek'))
     st_koraka = bottle.request.forms.getunicode('nov_korak')
-    print(st_koraka)
     p = model.Postopki(
         id_recepta=id,
         st_koraka=st_koraka,
         postopek=opis
     )
-    print(p)
     r.uredi_postopek(p)
     bottle.redirect('/urejanje-recepta/{}'.format(id))
 

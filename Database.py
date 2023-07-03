@@ -439,7 +439,6 @@ class Repo:
         self.cur.execute("""
             INSERT INTO postopki (id_recepta, st_koraka, postopek)
               VALUES (%s, %s, %s) """, (postopek.id_recepta, postopek.st_koraka, postopek.postopek,))
-        print(postopek.st_koraka)
         self.conn.commit()
 
 

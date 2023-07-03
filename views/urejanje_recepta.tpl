@@ -147,10 +147,10 @@
             </tr>
             <tr>
                 <div id="welcomeDiv"  style="display:none; margin-bottom: 15px;" class="answer_list" >
-                    <p class="mali-tisk">Uredi korak #{{st_koraka}}</p>
+                    <p class="mali-tisk">Uredi korak #{{korak.st_koraka}}</p>
                     <form action="/uredi-postopek/{{recept.id}}" method="POST">
                         <textarea name="spremenjen-postopek" class="dodaj-postopek" rows="2" cols="90" placeholder="{{korak.postopek}}" required>{{korak.postopek}}</textarea>
-                        <button class="gumb gumb-postopek" name="nov_korak" value="{{st_koraka}}" type="submit">Končaj urejanje</button>
+                        <button class="gumb gumb-postopek" name="nov_korak" value="{{korak.st_koraka}}" type="submit">Končaj urejanje</button>
                     </form>
                 </div>
             </tr>
