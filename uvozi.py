@@ -55,7 +55,7 @@ def uvozi_kategorije(pot):
 
     for row in df.itertuples():
 
-        repo.dodaj_kategorijo(
+        repo.dodaj_gen_brez_serial(
             Kategorije(
             id_recepta = row[1],
             kategorija = row[2]
@@ -67,7 +67,7 @@ def uvozi_kulinarike(pot):
 
     for row in df.itertuples():
 
-        repo.dodaj_kulinariko(
+        repo.dodaj_gen_brez_serial(
             Kulinarike(
             id_recepta = row[1],
             kulinarika = row[2]
@@ -79,7 +79,7 @@ def uvozi_oznake(pot):
 
     for row in df.itertuples():
 
-        repo.dodaj_oznako(
+        repo.dodaj_gen_brez_serial(
             Oznake(
             id_recepta = row[1],
             oznaka = row[2]
@@ -106,7 +106,7 @@ def uvozi_postopke(pot):
 
     for row in df.itertuples():
         repo.dodaj_postopek(
-            Postopek(
+            Postopki(
             id_recepta = row[1],
             st_koraka = row[2],
             postopek = row[3],
@@ -117,8 +117,8 @@ def uvozi_nutrientske_vrednosti(pot):
     df = pd.read_csv(pot, error_bad_lines=False)
 
     for row in df.itertuples():
-        repo.dodaj_nutrientsko_vrednost(
-            NutrienstkaVrednost(
+        repo.dodaj_gen_brez_serial(
+            NutrientskeVrednosti(
             id_recepta = row[1],
             kalorije = row[8],
             proteini = row[11],
@@ -131,7 +131,7 @@ def uvozi_sestavine(pot):
     df = pd.read_csv(pot, error_bad_lines=False)
 
     for row in df.itertuples():
-        repo.dodaj_na_seznam_sestavin(
+        repo.dodaj_gen(
             Sestavine(
             ime = row[1],
             kalorije = row[2],
@@ -167,22 +167,18 @@ def uvozi_csv(pot, ime):
 
 ##pot = "obdelani-podatki/recepti.csv"
 ##pot = "obdelani-podatki/kategorije.csv"
-pot = "obdelani-podatki/sestavine-receptov.csv"
+##pot = "obdelani-podatki/sestavine-receptov.csv"
 ##pot = "obdelani-podatki/postopki.csv"
 ##pot = "obdelani-podatki/kulinarike.csv"
 ##pot = "obdelani-podatki/oznake.csv"
-<<<<<<< HEAD
 ##pot = "obdelani-podatki/sestavine.csv"
-=======
-#pot = "obdelani-podatki/sestavine.csv"
->>>>>>> b4038180c3c03f615b8ea5611cf6501bb4618943
 
 # Uvozi csv s cenami izdelkov v ločene (in povezane) entitete
 # Tabele morajo biti prej ustvarjene, da zadeva deluje
 
 ##uvozi_recepte(pot)
 ##uvozi_kategorije(pot)
-uvozi_sestavine_receptov(pot)
+##uvozi_sestavine_receptov(pot)
 ##uvozi_postopke(pot)
 ##uvozi_kulinarike(pot)
 ##uvozi_oznake(pot)
@@ -210,11 +206,11 @@ uvozi_sestavine_receptov(pot)
 #
 ## Dodamo novo kategorijo
 
-nova_kategorija = Kategorije(
-    kategorija="Nova kategorija"
-    )
-
-repo.dodaj_gen(nova_kategorija)
+#nova_kategorija = Kategorije(
+#    kategorija="Nova kategorija"
+#    )
+#
+#repo.dodaj_gen(nova_kategorija)
 #
 ## vrednost nova_kategorija.id je sedaj določen na podlagi
 ## serial vrednosti iz baze in jo lahko uporabimo naprej.
@@ -230,17 +226,3 @@ repo.dodaj_gen(nova_kategorija)
 #
 ## Dobimo recept z idjem 832
 #recept = repo.dobi_gen_id(Recept, 832)
-#
-## izdelku spremenimo ime in ga posodobimo v bazi
-#recept.ime += " spremenjeno ime"
-#repo.posodobi_gen(recept)
-#
-#
-#
-## spremenimo seznam receptov in ga shranimo v bazo
-#
-#for i in recepti:
-#    i.ime = f'({i.ime})'
-#
-#repo.posodobi_list_gen(recepti)
-#
