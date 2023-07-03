@@ -312,7 +312,7 @@ def recept(id):
     """
     recept = r.dobi_gen_id(model.Recepti, id,'id')
     sestavine = r.dobi_vse_gen_id(model.SestavineReceptov, id,'id_recepta')
-    postopek = r.dobi_vse_gen_id(model.Postopki, id,'id_recepta')
+    postopek = r.dobi_vse_gen_id_urejeno(model.Postopki, 'st_koraka', id,'id_recepta')
     nutrientske_vrednosti = r.dobi_nutrientske_vrednosti(id)
     kategorije_recepta = [x.kategorija for x in r.dobi_vse_gen_id(model.Kategorije, id,'id_recepta')]
     kulinarike_recepta = [x.kulinarika for x in r.dobi_vse_gen_id(model.Kulinarike, id,'id_recepta')]
@@ -379,7 +379,7 @@ def urejanje_recepta(id):
             sestavina=''
         )
     try:
-        postopek = r.dobi_vse_gen_id(model.Postopki, id,'id_recepta')
+        postopek = r.dobi_vse_gen_id_urejeno(model.Postopki, 'st_koraka', id,'id_recepta')
     except:
         postopek = model.Postopki(
             id_recepta=id,
@@ -465,14 +465,16 @@ def dodaj_postopek_post(id):
 @bottle.post('/izbrisi-postopek/<id>')
 def brisi_postopek(id):
     korak = bottle.request.forms.getunicode('korak')
+    print(korak)
     r.izbrisi_gen(model.Postopki, korak, "postopek")
     bottle.redirect('/urejanje-recepta/{}'.format(id))
 
 
 @bottle.post('/uredi-postopek/<id>')
-def uredi_postopek(id):
+def uredi_postopek(id, st_koraka):
     opis = str(bottle.request.forms.getunicode('spremenjen-postopek'))
     st_koraka = bottle.request.forms.getunicode('nov_korak')
+    print(st_koraka)
     p = model.Postopki(
         id_recepta=id,
         st_koraka=st_koraka,
