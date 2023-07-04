@@ -319,7 +319,7 @@ def recept(id):
     oznake_recepta = [x.oznaka for x in r.dobi_vse_gen_id(model.Oznake, id,'id_recepta')]
     komentarji = r.dobi_vse_gen_id(model.Komentarji2, id, 'id_recepta')
     slovarji_komentarjev = [r.slovar_komentarja(x) for x in komentarji]
-    return bottle.template('views/recept.tpl', id=recept.id,
+    return template('views/recept.tpl', id=recept.id,
                                                          kategorije=kategorije,
                                                          kulinarike=kulinarike,
                                                          oznake=oznake,
@@ -331,8 +331,7 @@ def recept(id):
                                                          kulinarike_recepta=kulinarike_recepta,
                                                          slovarji_komentarjev=slovarji_komentarjev,
                                                          oznake_recepta=oznake_recepta,
-                                                         vse_sestavine=vse_sestavine,
-                                                         url=bottle.url)
+                                                         vse_sestavine=vse_sestavine)
 
 
 ########################################### BRISANJE RECEPTA ########################################### 
@@ -582,8 +581,8 @@ def dodaj_recept_post():
 @cookie_required
 def dodaj_novo_sestavino_get(id):
     recept = r.dobi_gen_id(model.Recepti, id,'id')
-    return bottle.template('views/dodaj_novo_sestavino.tpl', id=recept.id,
-                          oznake=oznake,kategorije=kategorije,kulinarike=kulinarike, url=bottle.url)
+    return template('views/dodaj_novo_sestavino.tpl', id=recept.id,
+                          oznake=oznake,kategorije=kategorije,kulinarike=kulinarike)
 
 @bottle.post('/dodaj-novo-sestavino/<id>')
 def dodaj_novo_sestavino_post(id):
