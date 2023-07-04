@@ -19,7 +19,7 @@
   %end
 
   <p>Še niste registrirani?</p>
-  <form action="/registracija" method="GET">
+  <form action="{{url('registracija')}}" method="GET">
     <button type="submit" class="gumb">Registracija</button>
   </form>
 </div>

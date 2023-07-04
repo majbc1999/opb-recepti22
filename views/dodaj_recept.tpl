@@ -3,12 +3,12 @@
 <table class="navigacija">
     <tr>
         <th class="nav-stolpec-1">
-            <form action="/moji-recepti" method="GET">
+            <form action="{{url('moji_recepti')}}" method="GET">
                 <button class="gumb-moji-recepti" type="submit">Moji recepti</button>
             </form>
         </th>
         <th class="nav-stolpec-1">
-            <form action="/recepti" method="GET">
+            <form action="{{url('vsi_recepti_prijava')}}" method="GET">
                 <button class="gumb-moji-recepti" type="submit">Vsi recepti</button>
             </form>
         </th>
@@ -18,7 +18,7 @@
                 Kategorije
                 <div class="dropdown-content">
                     % for kategorija in kategorije:
-                        <a href="/recepti-kategorije/{{kategorija}}">{{kategorija}}</a><br>
+                        <a href="{{url('doloceni_recepti_kat', kategorija=kategorija)}}">{{kategorija}}</a><br>
                     % end
                 </div>
             </div>
@@ -28,7 +28,7 @@
                 Kulinarike
                 <div class="dropdown-content">
                     % for kulinarika in kulinarike:
-                        <a href="/recepti-kulinarike/{{kulinarika}}">{{kulinarika}}</a><br>
+                        <a href="{{url('doloceni_recepti_kul', kulinarika=kulinarika)}}">{{kulinarika}}</a><br>
                     % end
                 </div>
             </div>
@@ -38,7 +38,7 @@
                 Oznake
                 <div class="dropdown-content" style="height: 500px;">
                     % for oznaka in oznake:
-                        <a href="/recepti-oznake/{{oznaka}}">{{oznaka}}</a><br>
+                        <a href="{{url('doloceni_recepti_oz', oznaka=oznaka)}}">{{oznaka}}</a><br>
                     % end
                 </div>
             </div>
@@ -50,10 +50,10 @@
                 ° ° °
                 <div class="dropdown-content">
                     <div class="button">
-                        <a class="button" href="/prijava" method="GET">Prijava</a><br>
+                        <a class="button" href="{{url('prijava_get')}}" method="GET">Prijava</a><br>
                     </div>
                     <div class="button">
-                        <a class="button" href="/odjava" method="POST">Odjava</a><br>
+                        <a class="button" href="{{url('odjava')}}" method="GET">Odjava</a><br>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
 <div class='recept'>
     <h1>DODAJ RECEPT</h1>
     <div class="dodaj_tabela">
-        <form action="/dodaj-recept" method="POST">
+        <form action="{{url('dodaj_recept_post')}}" method="POST">
             <table style="width:40%;"> 
                 <tr> <th>Ime recepta:</th> <td><input type="text" name="ime"></td></tr>
                 <tr> <th>Število porcij:</th> <td><input type="number" name="st_porcij"><td></tr>
