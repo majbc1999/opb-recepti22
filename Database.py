@@ -3,6 +3,7 @@ from turtle import pos
 import psycopg2, psycopg2.extensions, psycopg2.extras
 psycopg2.extensions.register_type(psycopg2.extensions.UNICODE) # se znebimo problemov s šumniki
 
+import os
 from typing import List, TypeVar, Type
 from model import *
 import model
@@ -15,6 +16,8 @@ from dataclasses_json import dataclass_json
 import dataclasses
 # Ustvarimo generično TypeVar spremenljivko. Dovolimo le naše entitene, ki jih imamo tudi v bazi
 # kot njene vrednosti. Ko dodamo novo entiteno, jo moramo dodati tudi v to spremenljivko.
+
+DB_PORT = os.environ.get('POSTGRES_PORT', 5432)
 
 T = TypeVar(
     "T",
@@ -33,7 +36,7 @@ T = TypeVar(
 class Repo:
 
     def __init__(self):
-        self.conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password, port=5432)
+        self.conn = psycopg2.connect(database=auth.db, host=auth.host, user=auth.user, password=auth.password, port=DB_PORT)
         self.cur = self.conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
 
