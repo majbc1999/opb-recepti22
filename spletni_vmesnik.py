@@ -627,7 +627,8 @@ def dodaj_komentar(id):
 
 #bottle.run(reloader=True, debug=True)
 # poženemo strežnik na podanih vratih, npr. http://localhost:8080/
-run(host='localhost', port=SERVER_PORT, reloader=RELOADER)
+if __name__ == "__main__":
+    run(host='localhost', port=SERVER_PORT, reloader=RELOADER)
 
 
 
