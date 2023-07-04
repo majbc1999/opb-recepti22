@@ -331,7 +331,8 @@ def recept(id):
                                                          kulinarike_recepta=kulinarike_recepta,
                                                          slovarji_komentarjev=slovarji_komentarjev,
                                                          oznake_recepta=oznake_recepta,
-                                                         vse_sestavine=vse_sestavine)
+                                                         vse_sestavine=vse_sestavine,
+                                                         url=bottle.url)
 
 
 ########################################### BRISANJE RECEPTA ########################################### 
@@ -582,7 +583,7 @@ def dodaj_recept_post():
 def dodaj_novo_sestavino_get(id):
     recept = r.dobi_gen_id(model.Recepti, id,'id')
     return bottle.template('views/dodaj_novo_sestavino.tpl', id=recept.id,
-                          oznake=oznake,kategorije=kategorije,kulinarike=kulinarike)
+                          oznake=oznake,kategorije=kategorije,kulinarike=kulinarike, url=bottle.url)
 
 @bottle.post('/dodaj-novo-sestavino/<id>')
 def dodaj_novo_sestavino_post(id):
