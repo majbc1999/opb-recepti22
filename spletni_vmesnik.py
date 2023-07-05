@@ -77,7 +77,7 @@ def uredi(param: str):
 
 ########################################### PRIJAVA IN ODJAVA ########################################### 
 
-@bottle.get('/prijava')
+@get('/prijava')
 def prijava_get():
     return template('prijava.tpl', napaka=None)
 
