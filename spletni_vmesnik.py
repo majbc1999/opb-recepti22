@@ -1,8 +1,5 @@
-from calendar import month
-from sqlite3 import Timestamp
-from bottletext import get, post, run, request, template, redirect, static_file, url, response, template_user
+from bottletext import *
 
-import bottletext
 from operator import mod
 import model
 import Database
@@ -18,6 +15,7 @@ import os
 SERVER_PORT = os.environ.get('BOTTLE_PORT', 8080)
 RELOADER = os.environ.get('BOTTLE_RELOADER', True)
 DB_PORT = os.environ.get('POSTGRES_PORT', 5432)
+
 
 
 r = Database.Repo()
