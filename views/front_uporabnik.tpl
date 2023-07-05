@@ -62,7 +62,7 @@
 </table>
 
 
-<form action="{{url('dodaj_recept_get)}}" method="GET">
+<form action="{{url('dodaj_recept_get')}}" method="GET">
     <button class="gumb gumb-dodaj" style="right:10%" type="submit">Dodaj nov recept</button>
 </form>
 
