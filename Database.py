@@ -360,7 +360,7 @@ class Repo:
 
         if row:
             id_recepta, kalorije, proteini, ogljikovi_hidrati, mascobe = row
-            return NutrientskeVrednosti(id_recepta, kalorije, ogljikovi_hidrati, mascobe, proteini)
+            return NutrientskeVrednosti(id_recepta, round(kalorije,2), round(ogljikovi_hidrati,2), round(mascobe,2), round(proteini,2))
         
         raise Exception("Recept ne obstaja")
 
